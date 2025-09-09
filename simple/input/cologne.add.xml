@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+	<chargingStation id="0" name="chargingStation" lane="-25151699#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="1" name="chargingStation" lane="161517204#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="2" name="chargingStation" lane="339562203#0_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="3" name="chargingStation" lane="23493260#4_2" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="4" name="chargingStation" lane="-199517247#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="5" name="chargingStation" lane="-24608748#3_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="6" name="chargingStation" lane="-23840267#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="7" name="chargingStation" lane="6240618#0_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+	<chargingStation id="8" name="chargingStation" lane="25845111#7_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+</additional>
