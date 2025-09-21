@@ -3,6 +3,12 @@ import networkx as nx
 from bs4 import BeautifulSoup
 import os
 
+CROSSOVER_RATE = 0.8
+MUTATION_RATE = 0.1
+NUM_GENERATIONS = 100
+POPULATION_SIZE = 50    
+NUM_STATIONS = 5
+
 # Função de Fitness: calcula a distância total entre os nós e as estações de carregamento
 def fitness_function(graph, stations):
     total_distance = 0
@@ -22,15 +28,19 @@ def generate_initial_population(graph, num_stations, population_size):
 
 # Operador de Crossover
 def crossover(parent1, parent2):
-    half = len(parent1) // 2
-    child = parent1[:half] + parent2[half:]
-    return list(set(child))[:len(parent1)]  # Remove duplicatas e ajusta tamanho
-
+    if random.random() < CROSSOVER_RATE:
+        half = len(parent1) // 2
+        child = parent1[:half] + parent2[half:]
+        return list(set(child))[:len(parent1)]  # Remove duplicatas e ajusta tamanho
+    else:
+        return random.choice([parent1, parent2])
+    
 # Operador de Mutação
 def mutate(stations, graph):
-    nodes = list(graph.nodes)
-    idx = random.randint(0, len(stations) - 1)
-    stations[idx] = random.choice(nodes)
+    if random.random() < MUTATION_RATE:
+        nodes = list(graph.nodes)
+        idx = random.randint(0, len(stations) - 1)
+        stations[idx] = random.choice(nodes)
     return stations
 
 # Algoritmo Genético
@@ -67,14 +77,10 @@ def main():
         for connection in edge.find_all('connection'):
             graph.add_edge(edge_id, connection['to'], length=length)
 
-    # Parâmetros do AG
-    num_stations = 10
-    population_size = 20
-    generations = 50
-
     # Rodar o AG
-    best_solution = genetic_algorithm(graph, num_stations, population_size, generations)
+    best_solution = genetic_algorithm(graph, NUM_STATIONS, POPULATION_SIZE, NUM_GENERATIONS)
     print("Melhores localizações de estações:", best_solution)
 
 if __name__ == "__main__":
     main()
+
