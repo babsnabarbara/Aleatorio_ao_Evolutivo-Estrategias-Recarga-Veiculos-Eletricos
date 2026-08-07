@@ -1,28 +1,25 @@
 """
 Duas seeds independentes por approach, com escopos diferentes de propósito:
 
-    - Seed de ESTAÇÃO (StationSeedRegistry): uma por REPETITION só.
-      Representa "uma evolução da infraestrutura de recarga da cidade" --
-      NÃO varia com cs_amount (é o que permite crescer 9->16->25->36->49
-      mantendo as posições antigas), nem com percentage/minutes (a posição
+    - Seed de ESTAÇÃO (StationSeedRegistry): por (repetition, cs_amount).
+      Cada approach com seed (random, pseudorandom, greedyvoronoi) sorteia
+      a seleção de estações de forma independente pra cada `cs_amount` --
+      não há relação entre as estações escolhidas para tamanhos
+      diferentes. A seed NÃO varia com percentage/minutes (a posição
       física de uma estação não deveria depender de quantos veículos
-      recarregam nem de quanto tempo demora a recarga).
+      recarregam nem de quanto tempo demora a recarga) -- só entre
+      cs_amount diferentes.
 
     - Seed de TRIPS (TripSeedRegistry): por (percentage, repetition).
       Independente da seed de estação -- qual % de veículos é sorteada
       pra recarregar não tem relação com onde as estações estão.
 
-Antes da mudança que você pediu, uma seed só cobria (cs, percentage,
-repetition) e controlava estação+trips juntos no mesmo stream aleatório.
-Separar em duas seeds resolve dois problemas ao mesmo tempo:
-    1. Permite a seed de estação ser estável através de cs_amount
-       (necessário pro crescimento incremental).
-    2. Evita que mudar a seed de estação (agora compartilhada entre TODOS
-       os cs_amount de uma repetition) afete acidentalmente o sorteio de
-       trips, que deveria continuar variando por percentage.
+Duas seeds separadas, em vez de uma seed única cobrindo tudo, porque
+onde a estação fica não deveria depender de quantos veículos recarregam
+(e vice-versa) -- misturar os dois faria mudar `percentage` alterar
+acidentalmente a posição das estações também.
 
-Concorrência e escrita atômica: mesma lógica de antes (arquivo temporário
-+ os.replace).
+Concorrência e escrita atômica: arquivo temporário + os.replace.
 """
 from __future__ import annotations
 
@@ -66,12 +63,10 @@ class _JsonSeedRegistry:
 
 
 class StationSeedRegistry(_JsonSeedRegistry):
-    """Seed de estação. Por padrão, 1 por repetition, compartilhada por
-    TODOS os cs_amount/percentage/minutes dessa repetition -- usada pelos
-    approaches com crescimento incremental (random, pseudorandom), onde
-    representa uma única 'evolução da cidade'. Para approaches sem
-    crescimento incremental (greedyvoronoi), veja o parâmetro cs_amount de
-    get_or_create/apply -- cada cs_amount ganha sua própria seed."""
+    """Seed de estação, por (repetition, cs_amount). Cada approach com
+    seed sorteia de forma independente pra cada cs_amount -- não existe
+    relação entre a seleção de estações de tamanhos diferentes em nenhum
+    dos 3 approaches (random, pseudorandom, greedyvoronoi)."""
 
     def __init__(self, approach: str):
         self.approach = approach
@@ -79,16 +74,11 @@ class StationSeedRegistry(_JsonSeedRegistry):
 
     def get_or_create(self, repetition: int, cs_amount: int | None = None) -> int:
         """
-        Por padrão (cs_amount=None), a chave é só a repetition -- é o modo
-        usado por approaches com crescimento incremental (random,
-        pseudorandom): uma seed cobre TODOS os cs_amount dessa repetition,
-        já que tiers maiores reaproveitam as estações dos tiers menores.
-
-        Se cs_amount for passado, a chave inclui o cs_amount -- usado por
-        approaches SEM crescimento incremental (greedyvoronoi): cada
-        tamanho de estação sorteia do zero, então precisa da sua própria
-        seed independente (senão 9 e 16 estações do greedyvoronoi
-        acabariam usando exatamente os mesmos pontos iniciais do RNG).
+        A chave normalmente inclui `cs_amount` -- é assim que os 3
+        approaches com seed chamam isso hoje (cada cs_amount sorteia do
+        zero, de forma independente). `cs_amount=None` ainda é aceito por
+        compatibilidade (chave só por repetition), mas nenhum approach usa
+        esse caminho atualmente.
         """
         key = f"{repetition}rep" if cs_amount is None else f"{repetition}rep_{cs_amount}cs"
         return self._get_or_create(key)
@@ -96,8 +86,7 @@ class StationSeedRegistry(_JsonSeedRegistry):
     def apply(self, repetition: int, cs_amount: int | None = None) -> int:
         """Busca/gera a seed de estação e popula random/np.random.
         Chame isso ANTES de qualquer chamada a station_strategies para
-        essa repetition (e, para approaches sem crescimento incremental,
-        também para esse cs_amount especificamente)."""
+        essa (repetition, cs_amount)."""
         seed = self.get_or_create(repetition, cs_amount)
         _seed_global_rngs(seed)
         return seed

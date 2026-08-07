@@ -87,10 +87,12 @@ def _setup_logging(approach: str) -> None:
 # Fase 1 -- geração
 # ---------------------------------------------------------------------------
 def _station_seed_key(approach: str, cs_amount: int) -> int | None:
-    """greedyvoronoi usa uma seed por cs_amount (sem crescimento
-    incremental); os demais usam uma seed só por repetition (ver
-    seed_registry.py / station_strategies/evolution.py)."""
-    return cs_amount if approach == "greedyvoronoi" else None
+    """Todos os approaches com seed (random, pseudorandom, greedyvoronoi)
+    sorteiam de forma independente por cs_amount agora -- então a chave
+    da seed de estação sempre inclui cs_amount. `greedy` não usa seed
+    nenhuma (é determinístico), então o valor aqui simplesmente não é
+    consultado nesse caso."""
+    return cs_amount
 
 
 def generate_combo(approach: str, minutes: int, cs_amount: int, percentage: int,
