@@ -35,7 +35,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
-from scipy.spatial import Voronoi, voronoi_plot_2d
+from scipy.spatial import Voronoi
 
 import config
 from sim_job import SimJob
@@ -77,18 +77,39 @@ def _find_regions(coords, vor: Voronoi) -> set:
     return regions
 
 
+def _plot_voronoi_manual(ax, vor: Voronoi) -> None:
+    """
+    Desenha o diagrama de Voronoi na mão (pontos + arestas finitas),
+    sem depender de scipy.spatial.voronoi_plot_2d -- essa função tem um bug
+    conhecido em algumas versões do scipy (o decorador interno
+    `_held_figure` quebra com "takes from 2 to 3 positional arguments but 4
+    were given", mesmo passando `ax` explícito). Isso é só um PNG de
+    diagnóstico, não precisa da função pronta: desenhamos os pontos de
+    entrada e as arestas finitas do diagrama (arestas que vão até o
+    infinito são só puladas -- não afeta a leitura visual das regiões).
+    """
+    ax.plot(vor.points[:, 0], vor.points[:, 1], "o", markersize=4, color="tab:blue")
+    for ridge in vor.ridge_vertices:
+        if -1 in ridge:
+            continue  # aresta infinita -- não desenhável sem extrapolar, pula
+        p1 = vor.vertices[ridge[0]]
+        p2 = vor.vertices[ridge[1]]
+        ax.plot([p1[0], p2[0]], [p1[1], p2[1]], "k--", linewidth=0.8)
+
+
 def _save_diagnostic(repetition: int, cs_amount: int, points: np.ndarray,
                       vor: Voronoi, ok: bool) -> None:
     out_dir = config.voronoi_stations_dir()
     out_dir.mkdir(parents=True, exist_ok=True)
     tag = f"seed_{repetition}_{cs_amount}stations"
 
-    voronoi_plot_2d(vor, line_colors="k", line_style="--", show_vertices=False)
+    fig, ax = plt.subplots()
+    _plot_voronoi_manual(ax, vor)
     for point, region_index in zip(points, vor.point_region):
-        plt.text(point[0], point[1], f"Região {region_index}", color="red",
-                  ha="center", va="center")
-    plt.savefig(out_dir / f"{tag}.png")
-    plt.close()
+        ax.text(point[0], point[1], f"Região {region_index}", color="red",
+                 ha="center", va="center")
+    fig.savefig(out_dir / f"{tag}.png")
+    plt.close(fig)
 
     (out_dir / f"FLAGARCHIVE-{tag}.txt").write_text("deu certo" if ok else "não deu certo")
 
@@ -121,6 +142,13 @@ def _build(cs_amount: int) -> set:
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
+    """
+    Se sobrarem regiões sem nenhuma lane visitada tocando nelas, o
+    resultado pode ter menos de `cs_amount` estações -- não é erro (mesma
+    decisão aplicada ao approach 'greedy'). O `FLAGARCHIVE-*.txt` continua
+    registrando "deu certo"/"não deu certo" como diagnóstico, só não trava
+    mais a execução.
+    """
     from seed_registry import StationSeedRegistry
     StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
 
@@ -130,12 +158,6 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
 
     chosen, points, vor, ok = _build(job.cs_amount)
     _save_diagnostic(job.repetition, job.cs_amount, points, vor, ok)
-
-    if not ok:
-        raise RuntimeError(
-            f"Só {len(chosen)}/{job.cs_amount} regiões preenchidas em "
-            f"greedyvoronoi/seed_{job.repetition}/{job.cs_amount}."
-        )
 
     evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
     return chosen

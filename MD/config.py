@@ -10,8 +10,8 @@ Estrutura real no disco (confirmada em TCC/):
 
     TCC/
     ├── input/                      -> INPUT_DIR
+    ├── output/                     -> OUTPUT_DIR
     └── MD/                         -> MD_ROOT (onde este config.py mora)
-        └── output/                 -> OUTPUT_DIR
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ MD_ROOT = Path(__file__).resolve().parent           # .../TCC/MD
 TCC_ROOT = MD_ROOT.parent                             # .../TCC
 
 INPUT_DIR = TCC_ROOT / "input"
-OUTPUT_DIR = MD_ROOT / "output"
+OUTPUT_DIR = TCC_ROOT / "output"
 
 NET_FILE = INPUT_DIR / "cologne.net.xml"
 TRIPS_FILE = INPUT_DIR / "cologne6to8.trips.xml"
@@ -47,7 +47,13 @@ REPETITIONS = tuple(range(1, 6))         # 1..5
 
 # Parâmetros que hoje são fixos no seu grid mas continuam configuráveis
 DEFAULT_VEHICLES = 8000
-DEFAULT_MAX_VEHICLES_PER_CS = 15
+# Não é "quantos plugues tem o posto" -- é uma checagem espacial (ver
+# station_strategies/pseudorandom_strategy.py): a lane escolhida precisa
+# caber esse número de comprimentos de veículo. 6 representa um hub de
+# recarga pública de porte médio urbano; ajuste conforme a densidade de
+# rede que você está modelando (rede esparsa de hubs grandes -> valor
+# maior; rede densa de pontos pequenos de bairro -> valor menor).
+DEFAULT_MAX_VEHICLES_PER_CS = 6
 
 # ---------------------------------------------------------------------------
 # Parâmetros de infraestrutura do SUMO -- antes espalhados como literais

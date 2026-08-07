@@ -142,7 +142,10 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> None:
         info["edge"] = traci.lane.getEdgeID(info["lane"])
 
     cars = read_sorted_cars(job)
-    duration_s = str(job.minutes * 60)
+    duration_s = job.minutes * 60.0  # float, não string -- versões recentes do
+    # TraCI empacotam 'duration' diretamente como double (struct.pack "...d...");
+    # passar string aqui (como o main.py original fazia) quebra com
+    # "struct.error: required argument is not a float" nessas versões.
 
     for car_id, attrs in cars.items():
         source = attrs["from"]
@@ -158,6 +161,11 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> None:
 
         traci.route.add(car_id, whole_route)
         traci.vehicle.add(car_id, typeID="soulEV65", depart=depart, routeID=car_id)
+        # STOP_PARKING (flags=1): o carro precisa sair da via e ocupar a vaga
+        # na estação, não só parar na própria lane. Isso reintroduz o risco
+        # de a parada ser cortada antes da duração pedida (ver nota abaixo,
+        # e a investigação em andamento sobre rerouting automático de
+        # estacionamento cortando paradas de recarga).
         traci.vehicle.setChargingStationStop(car_id, stop_spot, duration=duration_s, flags=1)
 
 
@@ -249,6 +257,7 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
         "-c", str(job.cfg_file),
         "--log", str(job.log_file),
         "--tripinfo-output", str(job.tripinfo_output_file),
+        "--battery-output", str(job.battery_output_file),
     ]
 
     start_time = datetime.datetime.now()

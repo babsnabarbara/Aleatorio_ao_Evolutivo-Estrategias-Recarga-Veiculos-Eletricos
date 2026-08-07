@@ -47,7 +47,7 @@ TCC/
 │   ├── mostVisited.xml
 │   ├── cologne_landmark_distances.txt
 │   └── lanesInEachQuadrant/
-│       └── 49quadrants.xml      # malha fixa usada pelo approach pseudorandom
+│       └── 49quadrants.xml      # uma das 5 malhas geradas por quadrants.py (9,16,25,36,49)
 └── MD/                          # config.MD_ROOT -- todo o código roda daqui
     ├── config.py
     ├── graph_utils.py
@@ -134,10 +134,11 @@ chamada direta em processo.
 
 - **`random_strategy.py`** — sorteia trincas de `<connection>`, valida
   ciclo alcançável no grafo, aceita a lane do meio.
-- **`pseudorandom_strategy.py`** — usa a malha fixa de 49 quadrantes
-  (`lanesInEachQuadrant/49quadrants.xml`), sorteia 3 lanes por quadrante e
-  valida ciclo + capacidade mínima (`lane_length / vehicle_length >=
-  max_vehicles_per_cs`).
+- **`pseudorandom_strategy.py`** — usa a malha de quadrantes do mesmo
+  tamanho que `cs_amount` (`lanesInEachQuadrant/9quadrants.xml` para 9
+  estações, `16quadrants.xml` para 16, ...), sorteia 3 lanes por quadrante
+  e valida ciclo + capacidade mínima (`lane_length / vehicle_length >=
+  max_vehicles_per_cs`). Sem crescimento incremental (ver seção 5.3).
 - **`greedy_strategy.py`** — determinística, sem seed: associa as lanes
   mais visitadas (`mostVisited.xml`) à primeira quadrante ainda vazia que
   as contém.
@@ -182,7 +183,7 @@ Só housekeeping, não mais código novo:
 
 | Seed | Escopo | Controla |
 |---|---|---|
-| **Seed de estação** | `(approach, repetition)` — exceto `greedyvoronoi`, que usa `(approach, repetition, cs_amount)` (ver 5.3) | Onde as estações ficam. |
+| **Seed de estação** | `(approach, repetition)` para `random`; `(approach, repetition, cs_amount)` para `pseudorandom`/`greedyvoronoi` (ver 5.3) | Onde as estações ficam. |
 | **Seed de trips** | `(approach, percentage, repetition)` | Quais veículos são sorteados para recarregar. Independente de `cs_amount`/`minutes`. |
 
 Justificativa: a posição de uma estação não deveria depender de quantos
@@ -242,34 +243,38 @@ Isso significa que pedir diretamente `cs_amount=25` (sem nunca ter gerado 9
 ou 16 antes) já constrói a cadeia inteira sozinho, na ordem certa, uma vez só
 — não precisa gerar tier por tier manualmente.
 
-**Por que cada approach precisou de uma solução diferente:**
+**Por que cada approach ficou diferente:**
 
-- **`random`**: o algoritmo já era, por natureza, uma amostragem sequencial
-  sem nenhuma dependência do `target` nas decisões de aceitar/rejeitar um
-  candidato — reaproveitar `already_chosen` e continuar sorteando "encaixa"
-  sem mudança estrutural.
-- **`pseudorandom`**: **mudança estrutural obrigatória**. O approach
-  original usava um arquivo de quadrantes *diferente* por `cs_amount`
-  (`9quadrants.xml`, `16quadrants.xml`, ...) — malhas espaciais sem relação
-  entre si, impossíveis de "estender". Agora usa sempre a malha mais fina
-  (49 quadrantes) como partição fixa; cada tier preenche mais células dessa
-  mesma malha.
+- **`random`**: **tem crescimento incremental**. O algoritmo já era, por
+  natureza, uma amostragem sequencial sem nenhuma dependência do `target`
+  nas decisões de aceitar/rejeitar um candidato — reaproveitar
+  `already_chosen` e continuar sorteando "encaixa" sem mudança estrutural.
+  Usa `StationSeedRegistry.apply(repetition)` (seed só por repetição,
+  compartilhada entre todos os `cs_amount`).
+- **`pseudorandom`**: **sem crescimento incremental, revertido por decisão
+  explícita** (mesma razão do `greedyvoronoi` abaixo). Usa a malha de
+  quadrantes do mesmo tamanho que `cs_amount` (`9quadrants.xml` para 9,
+  `16quadrants.xml` para 16, ...) — malhas espaciais sem relação entre si,
+  então nem a mesma seed preserva as estações antigas ao crescer (a
+  sequência de números aleatórios é igual, mas aplicada a uma estrutura de
+  dados diferente a cada tamanho). Seed por `(repetition, cs_amount)`,
+  igual ao `greedyvoronoi`.
 - **`greedyvoronoi`**: **sem crescimento incremental, por decisão explícita** —
-  ao contrário de `random`/`pseudorandom`, cada `cs_amount` sorteia seu
-  próprio diagrama de Voronoi do zero, de forma independente (mesmo
-  comportamento do código original). A seed de estação, para este approach
-  especificamente, inclui `cs_amount` na chave
-  (`StationSeedRegistry.apply(repetition, cs_amount)`) — diferente de
-  `random`/`pseudorandom`, que usam só `repetition`. Isso ainda garante que
-  `10min/20min/40min/60min` de um mesmo `(cs_amount, repetition)` usem o
-  mesmo diagrama entre si (comparação pareada no tempo de recarga), só não
-  entre `cs_amount` diferentes. Cada resultado é cacheado em disco (mesmo
-  local de arquivo que os estágios de `random`/`pseudorandom`, só que aqui
-  cada `cs_amount` é independente, não uma cadeia).
-- **`greedy`**: fora do escopo desta mudança (não usa seed — é determinístico
-  já). Estruturalmente tem o mesmo problema do `pseudorandom` (também lê um
-  arquivo de quadrantes por `cs_amount`), mas não foi alterado por não ter
-  sido pedido.
+  cada `cs_amount` sorteia seu próprio diagrama de Voronoi do zero, de
+  forma independente (mesmo comportamento do código original). A seed de
+  estação, para este approach, inclui `cs_amount` na chave
+  (`StationSeedRegistry.apply(repetition, cs_amount)`). Isso ainda garante
+  que `10min/20min/40min/60min` de um mesmo `(cs_amount, repetition)` usem
+  a mesma seleção entre si (comparação pareada no tempo de recarga), só
+  não entre `cs_amount` diferentes.
+- **`greedy`**: fora do escopo dessas mudanças (não usa seed — é
+  determinístico já). Estruturalmente tem o mesmo problema de malha
+  variável por `cs_amount`, mas não foi alterado por não ter sido pedido.
+
+Tanto `pseudorandom` quanto `greedyvoronoi` cacheiam o resultado em disco
+por `(approach, repetition, cs_amount)` (mesmo local de arquivo que os
+estágios do `random`, só que aqui cada `cs_amount` é independente, não uma
+cadeia) — não recalculam à toa entre `percentage`/`minutes` diferentes.
 
 ---
 

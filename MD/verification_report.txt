@@ -1,0 +1,22 @@
+Relatório de verificação de recarga
+gerado em: 2026-08-06 23:53:53
+parâmetros: minutes=10 cs=16 percentage=5 repetition=1 vehicles=200
+=== approach: random ===
+  pasta: /home/barbara/TCC/output/random/10min/5percentage16cs
+  percentual de carros certo selecionado? true  (esperado: 10, achado: 10)
+  todos os carros selecionados ficaram >= 600s parados na estação? true
+
+=== approach: pseudorandom ===
+  pasta: /home/barbara/TCC/output/pseudorandom/10min/5percentage16cs
+  percentual de carros certo selecionado? true  (esperado: 10, achado: 10)
+  todos os carros selecionados ficaram >= 600s parados na estação? true
+
+=== approach: greedy ===
+  pasta: /home/barbara/TCC/output/greedy/10min/5percentage16cs
+  percentual de carros certo selecionado? true  (esperado: 10, achado: 10)
+  todos os carros selecionados ficaram >= 600s parados na estação? true
+
+=== approach: greedyvoronoi ===
+  pasta: /home/barbara/TCC/output/greedyvoronoi/10min/5percentage16cs
+  percentual de carros certo selecionado? true  (esperado: 10, achado: 10)
+  todos os carros selecionados ficaram >= 600s parados na estação? true

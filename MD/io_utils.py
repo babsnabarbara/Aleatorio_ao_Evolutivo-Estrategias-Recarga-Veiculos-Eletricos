@@ -78,6 +78,38 @@ def read_selected_lanes_file(path: Path) -> set[str]:
 # ---------------------------------------------------------------------------
 # Sorteio de trips por percentual
 # ---------------------------------------------------------------------------
+def _strip_vtype_lines(lines: list) -> list:
+    """
+    Remove blocos <vType>...</vType> (ou <vType .../> auto-fechado) das
+    linhas do trips.xml mestre antes de usá-las.
+
+    Motivo: sample_trips copia pro arquivo de "restantes" (que vira o
+    route-files do .cfg) tudo que não é uma linha <trip> sorteada -- se o
+    trips.xml mestre já tiver um <vType id="soulEV65"> embutido (comum em
+    arquivos gerados por ferramentas do próprio SUMO), ele se duplica
+    contra o electric_vehicle.xml que carregamos explicitamente como
+    additional-file, e o SUMO recusa a simulação com "Another vehicle type
+    ... exists". A definição oficial e única do soulEV65 é sempre
+    config.ELECTRIC_VEHICLE_TYPE_FILE -- nenhum outro arquivo deveria
+    carregar um <vType> com esse id.
+    """
+    result = []
+    skipping = False
+    for line in lines:
+        stripped = line.strip()
+        if skipping:
+            if "</vType>" in stripped:
+                skipping = False
+            continue
+        if stripped.startswith("<vType"):
+            if stripped.endswith("/>"):
+                continue  # auto-fechado, uma linha só -- já removido
+            skipping = True
+            continue
+        result.append(line)
+    return result
+
+
 def sample_trips(job: SimJob) -> None:
     """
     A partir do trips.xml mestre (config.TRIPS_FILE), sorteia
@@ -94,7 +126,7 @@ def sample_trips(job: SimJob) -> None:
     quantidade = int((job.percentage / 100) * job.vehicles)
 
     with open(config.TRIPS_FILE, "r", encoding="utf-8") as f:
-        linhas = f.readlines()
+        linhas = _strip_vtype_lines(f.readlines())
 
     linhas_com_trip = [linha.strip() for linha in linhas if "<trip" in linha]
     if quantidade > len(linhas_com_trip):
@@ -142,7 +174,15 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
     input_el = ET.SubElement(root, "input")
     ET.SubElement(input_el, "net-file").set("value", str(config.NET_FILE))
     ET.SubElement(input_el, "route-files").set("value", job.trips_file.name)
-    ET.SubElement(input_el, "additional-files").set("value", job.add_file.name)
+    # FIX: o .add.xml (estações) sozinho aqui NÃO carrega o vType "soulEV65"
+    # -- sem isso, traci.vehicle.add(..., typeID="soulEV65", ...) usa um tipo
+    # padrão silenciosamente (sem device.battery), e os "veículos elétricos"
+    # não têm bateria de verdade pra recarregar. Esse bug já existia no
+    # projeto original (electric_vehicle.xml só era referenciado em código
+    # morto) -- corrigido carregando os dois arquivos como additional-files.
+    ET.SubElement(input_el, "additional-files").set(
+        "value", f"{job.add_file.name},{config.ELECTRIC_VEHICLE_TYPE_FILE}"
+    )
 
     time_el = ET.SubElement(root, "time")
     ET.SubElement(time_el, "begin").set("value", str(config.SIM_BEGIN_TIME_S))
