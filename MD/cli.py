@@ -188,28 +188,51 @@ def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
 # Modo batch -- grid inteiro
 # ---------------------------------------------------------------------------
 def batch(approach: str, workers: int, vehicles: int, max_vehicles_per_cs: int,
-          sumo_command: str, routing_threads: int | None) -> None:
+          sumo_command: str, routing_threads: int | None,
+          minutes_list=None, cs_list=None, percentages_list=None,
+          repetitions_list=None) -> None:
+    minutes_values = minutes_list or config.MINUTES_RECHARGING
+    cs_values = cs_list or config.STATIONS_AMOUNTS
+    percentage_values = percentages_list or config.PERCENTAGES
+    repetition_values = repetitions_list or config.REPETITIONS
+
+    # generate_combo/run_combo usam config.REPETITIONS internamente (fixo,
+    # não recebem por parâmetro) -- pra permitir encolher também as
+    # repetições num teste local, sobrescrevemos temporariamente aqui e
+    # devolvemos ao valor original no final, mesmo se der erro no meio.
+    original_repetitions = config.REPETITIONS
+    config.REPETITIONS = tuple(repetition_values)
+
     _setup_logging(approach)
-    total_combos = len(config.MINUTES_RECHARGING) * len(config.STATIONS_AMOUNTS) * len(config.PERCENTAGES)
+    total_combos = len(minutes_values) * len(cs_values) * len(percentage_values)
     log.info(f"=== batch: approach={approach} | {total_combos} combinações x "
-             f"{len(config.REPETITIONS)} repetições ===")
+             f"{len(repetition_values)} repetições ===")
+    if (minutes_list, cs_list, percentages_list, repetitions_list) != (None, None, None, None):
+        log.info(
+            f"    (grid customizado pra teste -- minutes={minutes_values}, "
+            f"cs={cs_values}, percentages={percentage_values}, "
+            f"repetitions={repetition_values})"
+        )
 
     all_failed: list[str] = []
     combo_idx = 0
-    for minutes in config.MINUTES_RECHARGING:
-        for cs_amount in config.STATIONS_AMOUNTS:
-            for percentage in config.PERCENTAGES:
-                combo_idx += 1
-                log.info(
-                    f"--- combinação {combo_idx}/{total_combos}: "
-                    f"{minutes}min {cs_amount}cs {percentage}% ---"
-                )
-                jobs = generate_combo(
-                    approach, minutes, cs_amount, percentage,
-                    vehicles, max_vehicles_per_cs, routing_threads,
-                )
-                failed = run_combo(jobs, workers=workers, sumo_command=sumo_command)
-                all_failed.extend(failed)
+    try:
+        for minutes in minutes_values:
+            for cs_amount in cs_values:
+                for percentage in percentage_values:
+                    combo_idx += 1
+                    log.info(
+                        f"--- combinação {combo_idx}/{total_combos}: "
+                        f"{minutes}min {cs_amount}cs {percentage}% ---"
+                    )
+                    jobs = generate_combo(
+                        approach, minutes, cs_amount, percentage,
+                        vehicles, max_vehicles_per_cs, routing_threads,
+                    )
+                    failed = run_combo(jobs, workers=workers, sumo_command=sumo_command)
+                    all_failed.extend(failed)
+    finally:
+        config.REPETITIONS = original_repetitions
 
     log.info(f"=== batch concluído: {len(all_failed)} job(s) falharam ===")
     for manifest_id in all_failed:
@@ -266,7 +289,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Pipeline de simulação de estações de recarga")
     sub = parser.add_subparsers(dest="mode", required=True)
 
-    p_batch = sub.add_parser("batch", help="Gera e roda o grid inteiro de um approach")
+    p_batch = sub.add_parser("batch", help="Gera e roda o grid inteiro (ou um subconjunto) de um approach")
     p_batch.add_argument("--approach", required=True, choices=config.APPROACHES)
     p_batch.add_argument("--workers", type=int, default=_default_workers(),
                           help="Processos simultâneos por combinação (default: "
@@ -275,6 +298,26 @@ def _build_parser() -> argparse.ArgumentParser:
     p_batch.add_argument("--vehicles", type=int, default=config.DEFAULT_VEHICLES)
     p_batch.add_argument("--max-vehicles-per-cs", type=int, default=config.DEFAULT_MAX_VEHICLES_PER_CS)
     p_batch.add_argument("--sumo-command", default="sumo")
+    p_batch.add_argument(
+        "--minutes", type=int, nargs="+", default=None, dest="minutes_list",
+        help=f"Quais valores de tempo de recarga rodar (default: todos -- "
+             f"{list(config.MINUTES_RECHARGING)})",
+    )
+    p_batch.add_argument(
+        "--cs", type=int, nargs="+", default=None, dest="cs_list",
+        choices=list(config.STATIONS_AMOUNTS),
+        help=f"Quais quantidades de estação rodar (default: todos -- "
+             f"{list(config.STATIONS_AMOUNTS)})",
+    )
+    p_batch.add_argument(
+        "--percentage", type=int, nargs="+", default=None, dest="percentages_list",
+        help=f"Quais porcentagens de veículos rodar (default: todos -- "
+             f"{list(config.PERCENTAGES)})",
+    )
+    p_batch.add_argument(
+        "--repetition", type=int, nargs="+", default=None, dest="repetitions_list",
+        help=f"Quais repetições rodar (default: todas -- {list(config.REPETITIONS)})",
+    )
     p_batch.add_argument("--routing-threads", type=int, default=None,
                           help="Sobrescreve config.ROUTING_THREADS (ajuste fino para "
                                "quando várias simulações rodam ao mesmo tempo)")
@@ -303,7 +346,9 @@ def main() -> None:
 
     if args.mode == "batch":
         batch(args.approach, args.workers, args.vehicles, args.max_vehicles_per_cs,
-              args.sumo_command, args.routing_threads)
+              args.sumo_command, args.routing_threads,
+              minutes_list=args.minutes_list, cs_list=args.cs_list,
+              percentages_list=args.percentages_list, repetitions_list=args.repetitions_list)
     elif args.mode == "run":
         if not args.from_manifest and not all(
             v is not None for v in (args.approach, args.minutes, args.cs, args.percentage, args.repetition)

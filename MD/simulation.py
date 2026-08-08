@@ -257,7 +257,16 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
         "-c", str(job.cfg_file),
         "--log", str(job.log_file),
         "--tripinfo-output", str(job.tripinfo_output_file),
-        "--battery-output", str(job.battery_output_file),
+        # FIX: --battery-output removido. Esse arquivo não é lido por
+        # NENHUMA parte do pipeline (verify_recharge.py usa o tripinfo,
+        # não o battery-output) -- e, no requisito real deste projeto, a
+        # recarga em si não precisa acontecer, só a parada precisa durar
+        # o tempo certo (já validado via tripinfo/stopTime). Uma única
+        # simulação de 200 veículos já gerava ~470MB nesse arquivo; no
+        # grid completo (120 combinações x 5 repetições) isso estourou o
+        # disco no meio de uma rodada real ("No space left on device").
+        # Removendo, cada simulação passa a gravar só o tripinfo (poucos
+        # KB/MB), que é tudo que o pipeline realmente usa.
     ]
 
     start_time = datetime.datetime.now()

@@ -1,2 +1,4 @@
 # Arquivo de rede SUMO grande
 input/cologne.net.xml
+output/
+MD/batch.log

@@ -87,22 +87,6 @@ class SimJob:
         )
 
     @property
-    def battery_output_file(self) -> Path:
-        """
-        XML com o estado da bateria (capacidade atual, potência de carga
-        etc.) de cada veículo elétrico a cada passo de simulação --
-        --battery-output do SUMO. É o jeito mais direto de conferir se os
-        carros estão recarregando de verdade: a `actualBatteryCapacity` de
-        um veículo deveria SUBIR durante o intervalo em que ele está parado
-        na estação (setChargingStationStop), não só mostrar que ele parou
-        no lugar certo.
-        """
-        return (
-            self.folder
-            / f"{self.repetition}battery{self.percentage}percentage{self.cs_amount}cs.xml"
-        )
-
-    @property
     def report_file(self) -> Path:
         return (
             self.reports_dir
