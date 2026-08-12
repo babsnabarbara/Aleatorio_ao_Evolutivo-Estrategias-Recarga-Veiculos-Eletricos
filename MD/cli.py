@@ -60,16 +60,46 @@ log = logging.getLogger("cli")
 
 
 def _default_workers() -> int:
-    """
-    Sem número fixo: usa o quanto a máquina tem disponível (os.cpu_count()),
-    limitado pelo número de repetições (5) -- não adianta pedir mais
-    processos do que existem jobs pra rodar dentro de uma combinação. Num
-    servidor com poucos cores, cai automaticamente para o que existir; num
-    servidor com 48, usa 5 (o teto do desenho atual -- ver seção 4 do
-    ARQUITETURA.md sobre a folga de cores que isso deixa).
-    """
+    """Fallback simples (só CPU) usado fora do batch() -- ex: no `run`
+    single-job, onde não faz sentido calcular RAM disponível pra 1 job só."""
     available = os.cpu_count() or 1
     return max(1, min(available, len(config.REPETITIONS)))
+
+
+def _auto_workers(total_jobs: int) -> int:
+    """
+    Calcula quantos processos SUMO rodar em paralelo, considerando CPU E
+    RAM disponíveis -- RAM costuma ser o gargalo real (cada instância do
+    SUMO carrega o mapa inteiro de Colônia na memória; já vimos um batch
+    inteiro morrer com BrokenProcessPool num PC com pouca RAM disponível).
+
+    ESTIMATED_RAM_PER_JOB_GB é um valor conservador, ainda NÃO medido com
+    precisão para uma simulação de 8000 veículos (só testamos memória com
+    simulações bem menores). Se rodar `free -h` num terminal separado
+    durante um batch e ver que cada processo consome bem menos ou bem mais
+    que isso, ajuste essa constante.
+    """
+    ESTIMATED_RAM_PER_JOB_GB = 2.0
+    SAFETY_MARGIN_GB = 4.0  # reserva pro SO e outros programas abertos
+
+    cpu_available = os.cpu_count() or 1
+    cpu_based = max(1, cpu_available - 2)  # deixa 2 threads de folga pro SO
+
+    ram_based = cpu_based  # fallback se não der pra ler /proc/meminfo
+    try:
+        meminfo: dict[str, str] = {}
+        with open("/proc/meminfo") as f:
+            for line in f:
+                key, _, rest = line.partition(":")
+                meminfo[key] = rest.strip()
+        available_kb = int(meminfo["MemAvailable"].split()[0])
+        available_gb = available_kb / (1024 * 1024)
+        usable_gb = max(0.0, available_gb - SAFETY_MARGIN_GB)
+        ram_based = max(1, int(usable_gb / ESTIMATED_RAM_PER_JOB_GB))
+    except (FileNotFoundError, KeyError, ValueError):
+        pass  # não é Linux, ou /proc/meminfo não disponível -- usa só CPU
+
+    return max(1, min(cpu_based, ram_based, total_jobs))
 
 
 def _setup_logging(approach: str) -> None:
@@ -163,11 +193,14 @@ def _run_job_in_worker(manifest_path_str: str, sumo_command: str) -> tuple[str, 
 
 
 def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
-    """Roda os jobs de uma combinação em paralelo. Devolve a lista de
-    manifest_ids que FALHARAM (vazia se tudo deu certo)."""
+    """Roda uma lista de jobs em paralelo (pode ser de uma combinação só,
+    ou do grid inteiro -- ver batch()). Devolve a lista de manifest_ids
+    que FALHARAM (vazia se tudo deu certo)."""
     manifest_paths = [str(j.manifest_path) for j in jobs]
     workers = max(1, min(workers, len(jobs)))
     failed: list[str] = []
+    total = len(jobs)
+    done = 0
 
     with ProcessPoolExecutor(max_workers=workers, initializer=_init_worker) as pool:
         futures = {
@@ -176,10 +209,11 @@ def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
         }
         for future in as_completed(futures):
             manifest_id, error = future.result()
+            done += 1
             if error is None:
-                log.info(f"OK: {manifest_id}")
+                log.info(f"OK ({done}/{total}): {manifest_id}")
             else:
-                log.error(f"FALHOU: {manifest_id} -- {error}")
+                log.error(f"FALHOU ({done}/{total}): {manifest_id} -- {error}")
                 failed.append(manifest_id)
     return failed
 
@@ -187,7 +221,7 @@ def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
 # ---------------------------------------------------------------------------
 # Modo batch -- grid inteiro
 # ---------------------------------------------------------------------------
-def batch(approach: str, workers: int, vehicles: int, max_vehicles_per_cs: int,
+def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs: int,
           sumo_command: str, routing_threads: int | None,
           minutes_list=None, cs_list=None, percentages_list=None,
           repetitions_list=None) -> None:
@@ -214,23 +248,34 @@ def batch(approach: str, workers: int, vehicles: int, max_vehicles_per_cs: int,
             f"repetitions={repetition_values})"
         )
 
-    all_failed: list[str] = []
-    combo_idx = 0
     try:
+        # Geração continua sequencial (rápida -- só escreve arquivo, não
+        # roda SUMO), mas agora TODOS os jobs do grid inteiro são
+        # acumulados numa lista só, em vez de rodados combinação por
+        # combinação. Isso é o que permite os processos ficarem ocupados
+        # o tempo todo: assim que um job termina, o pool já pega o
+        # próximo disponível (de QUALQUER combinação), em vez de esperar
+        # os 5 jobs da combinação atual terminarem antes de começar a
+        # próxima -- é isso que deixava a CPU ociosa em servidores com
+        # muito mais que 5 núcleos livres.
+        all_jobs: list[SimJob] = []
         for minutes in minutes_values:
             for cs_amount in cs_values:
                 for percentage in percentage_values:
-                    combo_idx += 1
-                    log.info(
-                        f"--- combinação {combo_idx}/{total_combos}: "
-                        f"{minutes}min {cs_amount}cs {percentage}% ---"
-                    )
                     jobs = generate_combo(
                         approach, minutes, cs_amount, percentage,
                         vehicles, max_vehicles_per_cs, routing_threads,
                     )
-                    failed = run_combo(jobs, workers=workers, sumo_command=sumo_command)
-                    all_failed.extend(failed)
+                    all_jobs.extend(jobs)
+
+        resolved_workers = workers if workers is not None else _auto_workers(len(all_jobs))
+        log.info(
+            f"{len(all_jobs)} job(s) gerados, rodando com {resolved_workers} "
+            f"workers em paralelo "
+            f"({'auto-detectado por CPU+RAM' if workers is None else 'fixo via --workers'})"
+        )
+
+        all_failed = run_combo(all_jobs, workers=resolved_workers, sumo_command=sumo_command)
     finally:
         config.REPETITIONS = original_repetitions
 
@@ -291,10 +336,11 @@ def _build_parser() -> argparse.ArgumentParser:
 
     p_batch = sub.add_parser("batch", help="Gera e roda o grid inteiro (ou um subconjunto) de um approach")
     p_batch.add_argument("--approach", required=True, choices=config.APPROACHES)
-    p_batch.add_argument("--workers", type=int, default=_default_workers(),
-                          help="Processos simultâneos por combinação (default: "
-                               "auto-detectado via os.cpu_count(), sem exceder o "
-                               "número de repetições)")
+    p_batch.add_argument("--workers", type=int, default=None,
+                          help="Processos simultâneos rodando ao mesmo tempo, "
+                               "no grid inteiro (default: auto-detectado por "
+                               "CPU e RAM disponíveis -- ver _auto_workers em "
+                               "cli.py). Passe um número pra fixar manualmente.")
     p_batch.add_argument("--vehicles", type=int, default=config.DEFAULT_VEHICLES)
     p_batch.add_argument("--max-vehicles-per-cs", type=int, default=config.DEFAULT_MAX_VEHICLES_PER_CS)
     p_batch.add_argument("--sumo-command", default="sumo")
