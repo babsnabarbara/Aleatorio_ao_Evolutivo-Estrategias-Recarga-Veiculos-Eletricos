@@ -21,6 +21,8 @@ import xml.etree.ElementTree as ET
 import networkx as nx
 
 import config
+import graph_utils
+import io_utils
 from sim_job import SimJob
 
 
@@ -67,14 +69,18 @@ def _quadrants_lanes(cs_amount: int) -> list[tuple[str, str, list[str]]]:
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
     Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
-    associa à primeira quadrante ainda vazia que a contém. Um quadrante sem
-    NENHUMA lane visitada simplesmente fica sem estação -- não é erro, é
-    esperado (região pouco/nada percorrida na simulação usada pra gerar as
-    contagens). O resultado pode ter menos de `cs_amount` estações nesse
-    caso.
+    associa à primeira quadrante ainda vazia que a contém E que tenha
+    comprimento suficiente para `max_vehicles_per_cs` (ver
+    graph_utils.has_min_capacity -- comprovado empiricamente que ignorar
+    isso causa "skips stop" + teleporte em runtime). Um quadrante sem
+    NENHUMA lane visitada com capacidade suficiente simplesmente fica sem
+    estação -- não é erro, é esperado. O resultado pode ter menos de
+    `cs_amount` estações nesse caso.
     """
     quadrants = _quadrants_lanes(job.cs_amount)
     most_visited = _most_visited_lanes()  # já ordenado por count decrescente
+    lane_lengths = graph_utils.lane_lengths()
+    veh_length = io_utils.vehicle_length("soulEV65")
 
     quadrant_filled = [False] * len(quadrants)
     chosen: set[str] = set()
@@ -83,6 +89,8 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
         if len(chosen) >= len(quadrants):
             break
         if lane_id in chosen:
+            continue
+        if not graph_utils.has_min_capacity(lane_id, job.max_vehicles_per_cs, lane_lengths, veh_length):
             continue
 
         for idx, (_x, _y, lanes) in enumerate(quadrants):

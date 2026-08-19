@@ -161,12 +161,16 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> None:
 
         traci.route.add(car_id, whole_route)
         traci.vehicle.add(car_id, typeID="soulEV65", depart=depart, routeID=car_id)
-        # STOP_PARKING (flags=1): o carro precisa sair da via e ocupar a vaga
-        # na estação, não só parar na própria lane. Isso reintroduz o risco
-        # de a parada ser cortada antes da duração pedida (ver nota abaixo,
-        # e a investigação em andamento sobre rerouting automático de
-        # estacionamento cortando paradas de recarga).
-        traci.vehicle.setChargingStationStop(car_id, stop_spot, duration=duration_s, flags=1)
+        # setParkingAreaStop (não setChargingStationStop) -- a parkingArea
+        # (mesmo id, mesma lane, ver io_utils.write_add_file) é quem impõe
+        # o limite real de capacidade via roadsideCapacity. Se a
+        # parkingArea já estiver cheia quando esse veículo chegar, o
+        # próprio SUMO faz ele esperar na via (fila), sem código nosso.
+        # STOP_PARKING (flags=1): continua igual -- o carro sai da via de
+        # verdade pra ocupar a vaga (não é opcional pra parkingArea,
+        # inclusive: parar numa parkingArea sem STOP_PARKING não faz
+        # sentido fisicamente).
+        traci.vehicle.setParkingAreaStop(car_id, stop_spot, duration=duration_s, flags=1)
 
 
 # ---------------------------------------------------------------------------

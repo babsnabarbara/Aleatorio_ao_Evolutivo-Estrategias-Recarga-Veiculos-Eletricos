@@ -85,8 +85,7 @@ def _build(cs_amount: int, graph: nx.DiGraph, max_vehicles_per_cs: int) -> set:
                 continue
             if b in chosen:
                 continue
-            length = lane_lengths.get(b)
-            if length is None or (length / veh_length) < max_vehicles_per_cs:
+            if not graph_utils.has_min_capacity(b, max_vehicles_per_cs, lane_lengths, veh_length):
                 continue
             chosen.add(b)
             found = True
@@ -105,10 +104,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     from seed_registry import StationSeedRegistry
     StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
 
-    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
+    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs)
     if cached is not None:
         return cached
 
     chosen = _build(job.cs_amount, graph, job.max_vehicles_per_cs)
-    evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
+    evolution.save_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs, chosen)
     return chosen

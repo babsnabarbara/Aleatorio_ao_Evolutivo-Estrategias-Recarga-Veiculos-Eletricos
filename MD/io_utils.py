@@ -211,9 +211,21 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
 # ---------------------------------------------------------------------------
 def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
     """
-    Gera o .add.xml com as <chargingStation> desta repetição.
+    Gera o .add.xml com <chargingStation> + <parkingArea> desta repetição.
     Se `lanes` não for passado, lê de job.selected_lanes_file (o arquivo
     já deve ter sido gerado pela station strategy antes de chamar isso).
+
+    Cada estação agora é DOIS elementos na mesma lane, com o mesmo id:
+    - <parkingArea roadsideCapacity=job.max_vehicles_per_cs> -- é ela que
+      dá o limite de capacidade de verdade (nativo do SUMO -- quando cheia,
+      o próximo veículo que tenta parar ali fica na fila na própria via,
+      sem intervenção nossa). Antes disso, max_vehicles_per_cs só era usado
+      como checagem espacial na escolha da lane (pseudorandom_strategy.py)
+      -- nunca limitava quantos veículos paravam ao mesmo tempo de verdade.
+    - <chargingStation> continua igual, na mesma lane -- é ela que dá a
+      potência de recarga. Um veículo parado na parkingArea (via
+      setParkingAreaStop, ver simulation.py) recarrega normalmente se sua
+      posição cair dentro do trecho da chargingStation associada.
     """
     if lanes is None:
         lanes = read_selected_lanes_file(job.selected_lanes_file)
@@ -223,6 +235,12 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
     root.set("xsi:noNamespaceSchemaLocation", "http://sumo.dlr.de/xsd/additional_file.xsd")
 
     for i, lane_id in enumerate(sorted(lanes)):
+        pa = ET.SubElement(root, "parkingArea")
+        pa.set("id", str(i))
+        pa.set("name", "chargingStation")
+        pa.set("lane", lane_id)
+        pa.set("roadsideCapacity", str(job.max_vehicles_per_cs))
+
         cs = ET.SubElement(root, "chargingStation")
         cs.set("id", str(i))
         cs.set("name", "chargingStation")

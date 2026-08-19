@@ -25,6 +25,7 @@ import random
 import networkx as nx
 
 import graph_utils
+import io_utils
 from sim_job import SimJob
 from station_strategies import evolution
 
@@ -37,10 +38,13 @@ def _forms_cycle(graph: nx.DiGraph, a: str, b: str, c: str) -> bool:
     )
 
 
-def _build(cs_amount: int, graph: nx.DiGraph) -> set:
+def _build(cs_amount: int, graph: nx.DiGraph, max_vehicles_per_cs: int) -> set:
     connections = graph_utils.list_connections()
     if len(connections) < 3:
         raise ValueError("net.xml tem menos de 3 <connection> -- impossível formar trincas")
+
+    lane_lengths = graph_utils.lane_lengths()
+    veh_length = io_utils.vehicle_length("soulEV65")
 
     chosen: set = set()
     max_attempts = max(cs_amount, 1) * 2000
@@ -54,12 +58,19 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
         if not _forms_cycle(graph, *edges):
             continue
         candidate = f"{edges[1]}_{c2['fromLane']}"
-        if candidate not in chosen:
-            chosen.add(candidate)
+        if candidate in chosen:
+            continue
+        # FIX: comprovado empiricamente (não só teórico) que uma lane curta
+        # demais causa "skips stop" + teleporte em runtime -- ver
+        # graph_utils.has_min_capacity para o raciocínio completo.
+        if not graph_utils.has_min_capacity(candidate, max_vehicles_per_cs, lane_lengths, veh_length):
+            continue
+        chosen.add(candidate)
 
     if len(chosen) < cs_amount:
         raise RuntimeError(
-            f"Não foi possível completar {cs_amount} estações "
+            f"Não foi possível completar {cs_amount} estações com capacidade "
+            f"mínima para {max_vehicles_per_cs} veículos "
             f"(achadas: {len(chosen)}, tentativas: {attempts})."
         )
     return chosen
@@ -69,10 +80,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     from seed_registry import StationSeedRegistry
     StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
 
-    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
+    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs)
     if cached is not None:
         return cached
 
-    chosen = _build(job.cs_amount, graph)
-    evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
+    chosen = _build(job.cs_amount, graph, job.max_vehicles_per_cs)
+    evolution.save_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs, chosen)
     return chosen

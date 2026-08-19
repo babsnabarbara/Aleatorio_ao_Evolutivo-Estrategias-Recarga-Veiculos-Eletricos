@@ -164,3 +164,28 @@ def lane_lengths(netfile: Path | str = None) -> dict:
         for lane_tag in edge_tag.find_all("lane"):
             lengths[lane_tag["id"]] = float(lane_tag["length"])
     return lengths
+
+
+def has_min_capacity(lane_id: str, max_vehicles_per_cs: int,
+                      lane_lengths_dict: dict, vehicle_length: float) -> bool:
+    """
+    Confere se `lane_id` tem comprimento físico suficiente pra `roadsideCapacity`
+    (a parkingArea da estação, ver io_utils.write_add_file/simulation.py)
+    realmente caber `max_vehicles_per_cs` veículos, sem estourar o trecho da
+    lane -- que, pelo modo como o SUMO distribui as vagas de uma parkingArea
+    sem <space> customizado, é limitado ao próprio comprimento da lane.
+
+    Comprovado empiricamente (não só teoricamente) que ignorar isso causa
+    'skips stop' seguido de teleporte quando a lane é curta demais pro
+    max_vehicles_per_cs pedido -- por isso essa checagem vale pra QUALQUER
+    approach que escolhe estação, não só o pseudorandom (que já tinha essa
+    lógica desde o código original).
+
+    Usado por: pseudorandom, random, greedy, greedyvoronoi (como filtro na
+    escolha de candidatos) e genetic (como validação pós-hoc, já que as
+    posições vêm de fora e não há candidato alternativo pra tentar).
+    """
+    length = lane_lengths_dict.get(lane_id)
+    if length is None:
+        return False
+    return (length / vehicle_length) >= max_vehicles_per_cs

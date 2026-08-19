@@ -6,6 +6,7 @@ direta em processo, com a mesma assinatura para todo approach.
 from __future__ import annotations
 
 from station_strategies import (
+    genetic_strategy,
     greedy_strategy,
     greedy_voronoi_strategy,
     pseudorandom_strategy,
@@ -18,6 +19,7 @@ REGISTRY: dict[str, StationStrategy] = {
     "pseudorandom": pseudorandom_strategy.select_charging_points,
     "greedy": greedy_strategy.select_charging_points,
     "greedyvoronoi": greedy_voronoi_strategy.select_charging_points,
+    "genetic": genetic_strategy.select_charging_points,
 }
 
 

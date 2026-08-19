@@ -35,15 +35,34 @@ LANDMARK_DISTANCES_FILE = INPUT_DIR / "cologne_landmark_distances.txt"
 LANES_IN_EACH_QUADRANT_DIR = INPUT_DIR / "lanesInEachQuadrant"
 MOST_VISITED_LANES_IN_EACH_QUADRANT_DIR = INPUT_DIR / "mostVisitedLanesInEachQuadrant"
 
+
+def genetic_result_file(cs_amount: int, seed: int) -> Path:
+    """input/exhaustive_genetic<cs_amount>/resultado_final_k<cs_amount>_seed<seed>.json
+    -- resultado pré-computado do algoritmo genético (rodado fora deste
+    pipeline), consumido por station_strategies/genetic_strategy.py."""
+    return (
+        INPUT_DIR
+        / f"exhaustive_genetic{cs_amount}"
+        / f"resultado_final_k{cs_amount}_seed{seed}.json"
+    )
+
 # ---------------------------------------------------------------------------
 # Grid do experimento
 # ---------------------------------------------------------------------------
-APPROACHES = ("random", "pseudorandom", "greedy", "greedyvoronoi")
+APPROACHES = ("random", "pseudorandom", "greedy", "greedyvoronoi", "genetic")
 
 MINUTES_RECHARGING = (10, 20, 40, 60)
 STATIONS_AMOUNTS = (9, 16, 25, 36, 49)
 PERCENTAGES = tuple(range(5, 31, 5))     # 5, 10, 15, 20, 25, 30
 REPETITIONS = tuple(range(1, 6))         # 1..5
+
+# Seeds usadas nas rodadas pré-computadas do algoritmo genético (exhaustive
+# GA, rodado fora deste pipeline). A ordem aqui define o mapeamento
+# repetition -> seed: repetition 1 usa GENETIC_SEEDS[0] (42), repetition 2
+# usa GENETIC_SEEDS[1] (123), e assim por diante -- só pra ter as mesmas 5
+# "repetições" que os outros approaches usam, mesmo não sendo geradas por
+# este código.
+GENETIC_SEEDS = (42, 123, 555, 777, 2024)
 
 # Parâmetros que hoje são fixos no seu grid mas continuam configuráveis
 DEFAULT_VEHICLES = 8000
