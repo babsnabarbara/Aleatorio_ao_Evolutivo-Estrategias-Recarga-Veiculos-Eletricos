@@ -1,0 +1,396 @@
+2026-08-10 20:42:06 | ======================================================================
+2026-08-10 20:42:06 | Iniciando execução — k25_seed123
+2026-08-10 20:42:06 | Seed utilizada: 123
+2026-08-10 20:42:06 | Arquivo existe? True
+2026-08-10 20:42:17 | Número de nós no grafo completo: 71368
+2026-08-10 20:42:17 | Número de estações desejadas: 25
+2026-08-10 20:42:17 | Componente gigante: 71073 de 71368 nós (295 nós de fora, em 257 componentes menores).
+2026-08-10 20:42:22 | Geração 0 (inicial) — melhor fitness: 277470742
+2026-08-10 20:42:35 | Geração 1/250 — melhor fitness: 264881433 | sem melhora há 0 geração(ões)
+2026-08-10 20:42:49 | Geração 2/250 — melhor fitness: 259352391 | sem melhora há 0 geração(ões)
+2026-08-10 20:43:02 | Geração 3/250 — melhor fitness: 259352391 | sem melhora há 1 geração(ões)
+2026-08-10 20:43:14 | Geração 4/250 — melhor fitness: 259352391 | sem melhora há 2 geração(ões)
+2026-08-10 20:43:29 | Geração 5/250 — melhor fitness: 257745067 | sem melhora há 0 geração(ões)
+2026-08-10 20:43:42 | Geração 6/250 — melhor fitness: 254632210 | sem melhora há 0 geração(ões)
+2026-08-10 20:43:55 | Geração 7/250 — melhor fitness: 254632210 | sem melhora há 1 geração(ões)
+2026-08-10 20:44:08 | Geração 8/250 — melhor fitness: 252047259 | sem melhora há 0 geração(ões)
+2026-08-10 20:44:20 | Geração 9/250 — melhor fitness: 252047259 | sem melhora há 1 geração(ões)
+2026-08-10 20:44:33 | Geração 10/250 — melhor fitness: 250470892 | sem melhora há 0 geração(ões)
+2026-08-10 20:44:46 | Geração 11/250 — melhor fitness: 250470892 | sem melhora há 1 geração(ões)
+2026-08-10 20:44:59 | Geração 12/250 — melhor fitness: 246235113 | sem melhora há 0 geração(ões)
+2026-08-10 20:45:11 | Geração 13/250 — melhor fitness: 246235113 | sem melhora há 1 geração(ões)
+2026-08-10 20:45:24 | Geração 14/250 — melhor fitness: 246235113 | sem melhora há 2 geração(ões)
+2026-08-10 20:45:38 | Geração 15/250 — melhor fitness: 244928990 | sem melhora há 0 geração(ões)
+2026-08-10 20:45:50 | Geração 16/250 — melhor fitness: 244766530 | sem melhora há 0 geração(ões)
+2026-08-10 20:46:04 | Geração 17/250 — melhor fitness: 244766530 | sem melhora há 1 geração(ões)
+2026-08-10 20:46:16 | Geração 18/250 — melhor fitness: 244766530 | sem melhora há 2 geração(ões)
+2026-08-10 20:46:28 | Geração 19/250 — melhor fitness: 244766530 | sem melhora há 3 geração(ões)
+2026-08-10 20:46:40 | Geração 20/250 — melhor fitness: 241891958 | sem melhora há 0 geração(ões)
+2026-08-10 20:46:53 | Geração 21/250 — melhor fitness: 241891958 | sem melhora há 1 geração(ões)
+2026-08-10 20:47:06 | Geração 22/250 — melhor fitness: 241743250 | sem melhora há 0 geração(ões)
+2026-08-10 20:47:19 | Geração 23/250 — melhor fitness: 241222978 | sem melhora há 0 geração(ões)
+2026-08-10 20:47:31 | Geração 24/250 — melhor fitness: 241222978 | sem melhora há 1 geração(ões)
+2026-08-10 20:47:45 | Geração 25/250 — melhor fitness: 240368886 | sem melhora há 0 geração(ões)
+2026-08-10 20:47:57 | Geração 26/250 — melhor fitness: 240072276 | sem melhora há 0 geração(ões)
+2026-08-10 20:48:10 | Geração 27/250 — melhor fitness: 240072276 | sem melhora há 1 geração(ões)
+2026-08-10 20:48:21 | Geração 28/250 — melhor fitness: 239484799 | sem melhora há 0 geração(ões)
+2026-08-10 20:48:34 | Geração 29/250 — melhor fitness: 239484799 | sem melhora há 1 geração(ões)
+2026-08-10 20:48:47 | Geração 30/250 — melhor fitness: 239484799 | sem melhora há 2 geração(ões)
+2026-08-10 20:48:59 | Geração 31/250 — melhor fitness: 239484799 | sem melhora há 3 geração(ões)
+2026-08-10 20:49:12 | Geração 32/250 — melhor fitness: 239484799 | sem melhora há 4 geração(ões)
+2026-08-10 20:49:24 | Geração 33/250 — melhor fitness: 239484799 | sem melhora há 5 geração(ões)
+2026-08-10 20:49:37 | Geração 34/250 — melhor fitness: 239484799 | sem melhora há 6 geração(ões)
+2026-08-10 20:49:49 | Geração 35/250 — melhor fitness: 239484799 | sem melhora há 7 geração(ões)
+2026-08-10 20:50:01 | Geração 36/250 — melhor fitness: 237859995 | sem melhora há 0 geração(ões)
+2026-08-10 20:50:14 | Geração 37/250 — melhor fitness: 237859995 | sem melhora há 1 geração(ões)
+2026-08-10 20:50:27 | Geração 38/250 — melhor fitness: 237859995 | sem melhora há 2 geração(ões)
+2026-08-10 20:50:40 | Geração 39/250 — melhor fitness: 237859995 | sem melhora há 3 geração(ões)
+2026-08-10 20:50:53 | Geração 40/250 — melhor fitness: 237859995 | sem melhora há 4 geração(ões)
+2026-08-10 20:51:05 | Geração 41/250 — melhor fitness: 237859995 | sem melhora há 5 geração(ões)
+2026-08-10 20:51:18 | Geração 42/250 — melhor fitness: 235530901 | sem melhora há 0 geração(ões)
+2026-08-10 20:51:31 | Geração 43/250 — melhor fitness: 235530901 | sem melhora há 1 geração(ões)
+2026-08-10 20:51:44 | Geração 44/250 — melhor fitness: 235530901 | sem melhora há 2 geração(ões)
+2026-08-10 20:51:56 | Geração 45/250 — melhor fitness: 235530901 | sem melhora há 3 geração(ões)
+2026-08-10 20:52:09 | Geração 46/250 — melhor fitness: 235530901 | sem melhora há 4 geração(ões)
+2026-08-10 20:52:22 | Geração 47/250 — melhor fitness: 235530901 | sem melhora há 5 geração(ões)
+2026-08-10 20:52:35 | Geração 48/250 — melhor fitness: 234626542 | sem melhora há 0 geração(ões)
+2026-08-10 20:52:48 | Geração 49/250 — melhor fitness: 234626542 | sem melhora há 1 geração(ões)
+2026-08-10 20:53:01 | Geração 50/250 — melhor fitness: 234626542 | sem melhora há 2 geração(ões)
+2026-08-10 20:53:13 | Geração 51/250 — melhor fitness: 233345040 | sem melhora há 0 geração(ões)
+2026-08-10 20:53:26 | Geração 52/250 — melhor fitness: 233345040 | sem melhora há 1 geração(ões)
+2026-08-10 20:53:39 | Geração 53/250 — melhor fitness: 233345040 | sem melhora há 2 geração(ões)
+2026-08-10 20:53:52 | Geração 54/250 — melhor fitness: 233345040 | sem melhora há 3 geração(ões)
+2026-08-10 20:54:05 | Geração 55/250 — melhor fitness: 233345040 | sem melhora há 4 geração(ões)
+2026-08-10 20:54:17 | Geração 56/250 — melhor fitness: 233345040 | sem melhora há 5 geração(ões)
+2026-08-10 20:54:30 | Geração 57/250 — melhor fitness: 233345040 | sem melhora há 6 geração(ões)
+2026-08-10 20:54:43 | Geração 58/250 — melhor fitness: 233345040 | sem melhora há 7 geração(ões)
+2026-08-10 20:54:55 | Geração 59/250 — melhor fitness: 233345040 | sem melhora há 8 geração(ões)
+2026-08-10 20:55:08 | Geração 60/250 — melhor fitness: 233345040 | sem melhora há 9 geração(ões)
+2026-08-10 20:55:21 | Geração 61/250 — melhor fitness: 233345040 | sem melhora há 10 geração(ões)
+2026-08-10 20:55:34 | Geração 62/250 — melhor fitness: 230333563 | sem melhora há 0 geração(ões)
+2026-08-10 20:55:46 | Geração 63/250 — melhor fitness: 230333563 | sem melhora há 1 geração(ões)
+2026-08-10 20:55:58 | Geração 64/250 — melhor fitness: 230333563 | sem melhora há 2 geração(ões)
+2026-08-10 20:56:11 | Geração 65/250 — melhor fitness: 230333563 | sem melhora há 3 geração(ões)
+2026-08-10 20:56:23 | Geração 66/250 — melhor fitness: 229244673 | sem melhora há 0 geração(ões)
+2026-08-10 20:56:36 | Geração 67/250 — melhor fitness: 229244673 | sem melhora há 1 geração(ões)
+2026-08-10 20:56:48 | Geração 68/250 — melhor fitness: 229244673 | sem melhora há 2 geração(ões)
+2026-08-10 20:57:02 | Geração 69/250 — melhor fitness: 229244673 | sem melhora há 3 geração(ões)
+2026-08-10 20:57:14 | Geração 70/250 — melhor fitness: 229244673 | sem melhora há 4 geração(ões)
+2026-08-10 20:57:26 | Geração 71/250 — melhor fitness: 229244673 | sem melhora há 5 geração(ões)
+2026-08-10 20:57:39 | Geração 72/250 — melhor fitness: 229244673 | sem melhora há 6 geração(ões)
+2026-08-10 20:57:52 | Geração 73/250 — melhor fitness: 229244673 | sem melhora há 7 geração(ões)
+2026-08-10 20:58:05 | Geração 74/250 — melhor fitness: 229244673 | sem melhora há 8 geração(ões)
+2026-08-10 20:58:18 | Geração 75/250 — melhor fitness: 229244673 | sem melhora há 9 geração(ões)
+2026-08-10 20:58:31 | Geração 76/250 — melhor fitness: 229244673 | sem melhora há 10 geração(ões)
+2026-08-10 20:58:43 | Geração 77/250 — melhor fitness: 228655072 | sem melhora há 0 geração(ões)
+2026-08-10 20:58:57 | Geração 78/250 — melhor fitness: 228655072 | sem melhora há 1 geração(ões)
+2026-08-10 20:59:10 | Geração 79/250 — melhor fitness: 228655072 | sem melhora há 2 geração(ões)
+2026-08-10 20:59:23 | Geração 80/250 — melhor fitness: 228460446 | sem melhora há 0 geração(ões)
+2026-08-10 20:59:36 | Geração 81/250 — melhor fitness: 228460446 | sem melhora há 1 geração(ões)
+2026-08-10 20:59:49 | Geração 82/250 — melhor fitness: 227877017 | sem melhora há 0 geração(ões)
+2026-08-10 21:00:02 | Geração 83/250 — melhor fitness: 227877017 | sem melhora há 1 geração(ões)
+2026-08-10 21:00:15 | Geração 84/250 — melhor fitness: 227877017 | sem melhora há 2 geração(ões)
+2026-08-10 21:00:28 | Geração 85/250 — melhor fitness: 227780768 | sem melhora há 0 geração(ões)
+2026-08-10 21:00:41 | Geração 86/250 — melhor fitness: 227780768 | sem melhora há 1 geração(ões)
+2026-08-10 21:00:54 | Geração 87/250 — melhor fitness: 227780768 | sem melhora há 2 geração(ões)
+2026-08-10 21:01:07 | Geração 88/250 — melhor fitness: 227780768 | sem melhora há 3 geração(ões)
+2026-08-10 21:01:20 | Geração 89/250 — melhor fitness: 227780768 | sem melhora há 4 geração(ões)
+2026-08-10 21:01:33 | Geração 90/250 — melhor fitness: 227780768 | sem melhora há 5 geração(ões)
+2026-08-10 21:01:47 | Geração 91/250 — melhor fitness: 227780768 | sem melhora há 6 geração(ões)
+2026-08-10 21:02:00 | Geração 92/250 — melhor fitness: 227780768 | sem melhora há 7 geração(ões)
+2026-08-10 21:02:13 | Geração 93/250 — melhor fitness: 227780768 | sem melhora há 8 geração(ões)
+2026-08-10 21:02:26 | Geração 94/250 — melhor fitness: 227780768 | sem melhora há 9 geração(ões)
+2026-08-10 21:02:39 | Geração 95/250 — melhor fitness: 227780768 | sem melhora há 10 geração(ões)
+2026-08-10 21:02:52 | Geração 96/250 — melhor fitness: 227780768 | sem melhora há 11 geração(ões)
+2026-08-10 21:03:05 | Geração 97/250 — melhor fitness: 227780768 | sem melhora há 12 geração(ões)
+2026-08-10 21:03:18 | Geração 98/250 — melhor fitness: 227780768 | sem melhora há 13 geração(ões)
+2026-08-10 21:03:31 | Geração 99/250 — melhor fitness: 227780768 | sem melhora há 14 geração(ões)
+2026-08-10 21:03:43 | Geração 100/250 — melhor fitness: 227780768 | sem melhora há 15 geração(ões)
+2026-08-10 21:03:56 | Geração 101/250 — melhor fitness: 227780768 | sem melhora há 16 geração(ões)
+2026-08-10 21:04:09 | Geração 102/250 — melhor fitness: 227780768 | sem melhora há 17 geração(ões)
+2026-08-10 21:04:21 | Geração 103/250 — melhor fitness: 227780768 | sem melhora há 18 geração(ões)
+2026-08-10 21:04:34 | Geração 104/250 — melhor fitness: 227780768 | sem melhora há 19 geração(ões)
+2026-08-10 21:04:48 | Geração 105/250 — melhor fitness: 227780768 | sem melhora há 20 geração(ões)
+2026-08-10 21:05:00 | Geração 106/250 — melhor fitness: 227780768 | sem melhora há 21 geração(ões)
+2026-08-10 21:05:13 | Geração 107/250 — melhor fitness: 227425449 | sem melhora há 0 geração(ões)
+2026-08-10 21:05:26 | Geração 108/250 — melhor fitness: 227425449 | sem melhora há 1 geração(ões)
+2026-08-10 21:05:37 | Geração 109/250 — melhor fitness: 227425449 | sem melhora há 2 geração(ões)
+2026-08-10 21:05:49 | Geração 110/250 — melhor fitness: 227425449 | sem melhora há 3 geração(ões)
+2026-08-10 21:06:01 | Geração 111/250 — melhor fitness: 227425449 | sem melhora há 4 geração(ões)
+2026-08-10 21:06:14 | Geração 112/250 — melhor fitness: 227425449 | sem melhora há 5 geração(ões)
+2026-08-10 21:06:27 | Geração 113/250 — melhor fitness: 227425449 | sem melhora há 6 geração(ões)
+2026-08-10 21:06:39 | Geração 114/250 — melhor fitness: 227425449 | sem melhora há 7 geração(ões)
+2026-08-10 21:06:52 | Geração 115/250 — melhor fitness: 227425449 | sem melhora há 8 geração(ões)
+2026-08-10 21:07:05 | Geração 116/250 — melhor fitness: 227361023 | sem melhora há 0 geração(ões)
+2026-08-10 21:07:18 | Geração 117/250 — melhor fitness: 227361023 | sem melhora há 1 geração(ões)
+2026-08-10 21:07:30 | Geração 118/250 — melhor fitness: 227361023 | sem melhora há 2 geração(ões)
+2026-08-10 21:07:43 | Geração 119/250 — melhor fitness: 227361023 | sem melhora há 3 geração(ões)
+2026-08-10 21:07:56 | Geração 120/250 — melhor fitness: 227361023 | sem melhora há 4 geração(ões)
+2026-08-10 21:08:08 | Geração 121/250 — melhor fitness: 227361023 | sem melhora há 5 geração(ões)
+2026-08-10 21:08:20 | Geração 122/250 — melhor fitness: 227361023 | sem melhora há 6 geração(ões)
+2026-08-10 21:08:33 | Geração 123/250 — melhor fitness: 227361023 | sem melhora há 7 geração(ões)
+2026-08-10 21:08:45 | Geração 124/250 — melhor fitness: 227361023 | sem melhora há 8 geração(ões)
+2026-08-10 21:08:58 | Geração 125/250 — melhor fitness: 227361023 | sem melhora há 9 geração(ões)
+2026-08-10 21:09:11 | Geração 126/250 — melhor fitness: 227361023 | sem melhora há 10 geração(ões)
+2026-08-10 21:09:23 | Geração 127/250 — melhor fitness: 227138985 | sem melhora há 0 geração(ões)
+2026-08-10 21:09:36 | Geração 128/250 — melhor fitness: 227138985 | sem melhora há 1 geração(ões)
+2026-08-10 21:09:48 | Geração 129/250 — melhor fitness: 227138985 | sem melhora há 2 geração(ões)
+2026-08-10 21:10:01 | Geração 130/250 — melhor fitness: 227138985 | sem melhora há 3 geração(ões)
+2026-08-10 21:10:14 | Geração 131/250 — melhor fitness: 227138985 | sem melhora há 4 geração(ões)
+2026-08-10 21:10:26 | Geração 132/250 — melhor fitness: 227138985 | sem melhora há 5 geração(ões)
+2026-08-10 21:10:39 | Geração 133/250 — melhor fitness: 227138985 | sem melhora há 6 geração(ões)
+2026-08-10 21:10:51 | Geração 134/250 — melhor fitness: 227138985 | sem melhora há 7 geração(ões)
+2026-08-10 21:11:04 | Geração 135/250 — melhor fitness: 227138985 | sem melhora há 8 geração(ões)
+2026-08-10 21:11:17 | Geração 136/250 — melhor fitness: 227138985 | sem melhora há 9 geração(ões)
+2026-08-10 21:11:30 | Geração 137/250 — melhor fitness: 227138985 | sem melhora há 10 geração(ões)
+2026-08-10 21:11:42 | Geração 138/250 — melhor fitness: 227138985 | sem melhora há 11 geração(ões)
+2026-08-10 21:11:55 | Geração 139/250 — melhor fitness: 227138985 | sem melhora há 12 geração(ões)
+2026-08-10 21:12:08 | Geração 140/250 — melhor fitness: 227138985 | sem melhora há 13 geração(ões)
+2026-08-10 21:12:21 | Geração 141/250 — melhor fitness: 227138985 | sem melhora há 14 geração(ões)
+2026-08-10 21:12:34 | Geração 142/250 — melhor fitness: 227138985 | sem melhora há 15 geração(ões)
+2026-08-10 21:12:46 | Geração 143/250 — melhor fitness: 227138985 | sem melhora há 16 geração(ões)
+2026-08-10 21:12:59 | Geração 144/250 — melhor fitness: 227138985 | sem melhora há 17 geração(ões)
+2026-08-10 21:13:12 | Geração 145/250 — melhor fitness: 227138985 | sem melhora há 18 geração(ões)
+2026-08-10 21:13:24 | Geração 146/250 — melhor fitness: 227138985 | sem melhora há 19 geração(ões)
+2026-08-10 21:13:37 | Geração 147/250 — melhor fitness: 227138985 | sem melhora há 20 geração(ões)
+2026-08-10 21:13:50 | Geração 148/250 — melhor fitness: 227138985 | sem melhora há 21 geração(ões)
+2026-08-10 21:14:03 | Geração 149/250 — melhor fitness: 227138985 | sem melhora há 22 geração(ões)
+2026-08-10 21:14:16 | Geração 150/250 — melhor fitness: 227138985 | sem melhora há 23 geração(ões)
+2026-08-10 21:14:29 | Geração 151/250 — melhor fitness: 227138985 | sem melhora há 24 geração(ões)
+2026-08-10 21:14:41 | Geração 152/250 — melhor fitness: 227138985 | sem melhora há 25 geração(ões)
+2026-08-10 21:14:53 | Geração 153/250 — melhor fitness: 227138985 | sem melhora há 26 geração(ões)
+2026-08-10 21:15:05 | Geração 154/250 — melhor fitness: 227138985 | sem melhora há 27 geração(ões)
+2026-08-10 21:15:17 | Geração 155/250 — melhor fitness: 227138985 | sem melhora há 28 geração(ões)
+2026-08-10 21:15:30 | Geração 156/250 — melhor fitness: 227138985 | sem melhora há 29 geração(ões)
+2026-08-10 21:15:42 | Geração 157/250 — melhor fitness: 227138985 | sem melhora há 30 geração(ões)
+2026-08-10 21:15:55 | Geração 158/250 — melhor fitness: 227138985 | sem melhora há 31 geração(ões)
+2026-08-10 21:16:08 | Geração 159/250 — melhor fitness: 225971777 | sem melhora há 0 geração(ões)
+2026-08-10 21:16:20 | Geração 160/250 — melhor fitness: 225971777 | sem melhora há 1 geração(ões)
+2026-08-10 21:16:33 | Geração 161/250 — melhor fitness: 225971777 | sem melhora há 2 geração(ões)
+2026-08-10 21:16:46 | Geração 162/250 — melhor fitness: 225971777 | sem melhora há 3 geração(ões)
+2026-08-10 21:16:58 | Geração 163/250 — melhor fitness: 225971777 | sem melhora há 4 geração(ões)
+2026-08-10 21:17:10 | Geração 164/250 — melhor fitness: 225971777 | sem melhora há 5 geração(ões)
+2026-08-10 21:17:23 | Geração 165/250 — melhor fitness: 225971777 | sem melhora há 6 geração(ões)
+2026-08-10 21:17:36 | Geração 166/250 — melhor fitness: 225971777 | sem melhora há 7 geração(ões)
+2026-08-10 21:17:49 | Geração 167/250 — melhor fitness: 225971777 | sem melhora há 8 geração(ões)
+2026-08-10 21:18:01 | Geração 168/250 — melhor fitness: 225971777 | sem melhora há 9 geração(ões)
+2026-08-10 21:18:14 | Geração 169/250 — melhor fitness: 225971777 | sem melhora há 10 geração(ões)
+2026-08-10 21:18:27 | Geração 170/250 — melhor fitness: 225971777 | sem melhora há 11 geração(ões)
+2026-08-10 21:18:39 | Geração 171/250 — melhor fitness: 225971777 | sem melhora há 12 geração(ões)
+2026-08-10 21:18:52 | Geração 172/250 — melhor fitness: 225971777 | sem melhora há 13 geração(ões)
+2026-08-10 21:19:04 | Geração 173/250 — melhor fitness: 225971777 | sem melhora há 14 geração(ões)
+2026-08-10 21:19:16 | Geração 174/250 — melhor fitness: 225971777 | sem melhora há 15 geração(ões)
+2026-08-10 21:19:29 | Geração 175/250 — melhor fitness: 224959870 | sem melhora há 0 geração(ões)
+2026-08-10 21:19:41 | Geração 176/250 — melhor fitness: 224959870 | sem melhora há 1 geração(ões)
+2026-08-10 21:19:55 | Geração 177/250 — melhor fitness: 224959870 | sem melhora há 2 geração(ões)
+2026-08-10 21:20:07 | Geração 178/250 — melhor fitness: 224959870 | sem melhora há 3 geração(ões)
+2026-08-10 21:20:19 | Geração 179/250 — melhor fitness: 224959870 | sem melhora há 4 geração(ões)
+2026-08-10 21:20:32 | Geração 180/250 — melhor fitness: 224959870 | sem melhora há 5 geração(ões)
+2026-08-10 21:20:44 | Geração 181/250 — melhor fitness: 224959870 | sem melhora há 6 geração(ões)
+2026-08-10 21:20:57 | Geração 182/250 — melhor fitness: 224959870 | sem melhora há 7 geração(ões)
+2026-08-10 21:21:09 | Geração 183/250 — melhor fitness: 224959870 | sem melhora há 8 geração(ões)
+2026-08-10 21:21:22 | Geração 184/250 — melhor fitness: 224959870 | sem melhora há 9 geração(ões)
+2026-08-10 21:21:35 | Geração 185/250 — melhor fitness: 224959870 | sem melhora há 10 geração(ões)
+2026-08-10 21:21:47 | Geração 186/250 — melhor fitness: 224959870 | sem melhora há 11 geração(ões)
+2026-08-10 21:22:00 | Geração 187/250 — melhor fitness: 224959870 | sem melhora há 12 geração(ões)
+2026-08-10 21:22:12 | Geração 188/250 — melhor fitness: 224959870 | sem melhora há 13 geração(ões)
+2026-08-10 21:22:25 | Geração 189/250 — melhor fitness: 224959870 | sem melhora há 14 geração(ões)
+2026-08-10 21:22:38 | Geração 190/250 — melhor fitness: 224959870 | sem melhora há 15 geração(ões)
+2026-08-10 21:22:49 | Geração 191/250 — melhor fitness: 224959870 | sem melhora há 16 geração(ões)
+2026-08-10 21:23:02 | Geração 192/250 — melhor fitness: 224959870 | sem melhora há 17 geração(ões)
+2026-08-10 21:23:14 | Geração 193/250 — melhor fitness: 224959870 | sem melhora há 18 geração(ões)
+2026-08-10 21:23:27 | Geração 194/250 — melhor fitness: 224959870 | sem melhora há 19 geração(ões)
+2026-08-10 21:23:40 | Geração 195/250 — melhor fitness: 224959870 | sem melhora há 20 geração(ões)
+2026-08-10 21:23:53 | Geração 196/250 — melhor fitness: 224959870 | sem melhora há 21 geração(ões)
+2026-08-10 21:24:06 | Geração 197/250 — melhor fitness: 224959870 | sem melhora há 22 geração(ões)
+2026-08-10 21:24:18 | Geração 198/250 — melhor fitness: 224959870 | sem melhora há 23 geração(ões)
+2026-08-10 21:24:31 | Geração 199/250 — melhor fitness: 224526370 | sem melhora há 0 geração(ões)
+2026-08-10 21:24:44 | Geração 200/250 — melhor fitness: 224526370 | sem melhora há 1 geração(ões)
+2026-08-10 21:24:57 | Geração 201/250 — melhor fitness: 224526370 | sem melhora há 2 geração(ões)
+2026-08-10 21:25:10 | Geração 202/250 — melhor fitness: 224526370 | sem melhora há 3 geração(ões)
+2026-08-10 21:25:22 | Geração 203/250 — melhor fitness: 224526370 | sem melhora há 4 geração(ões)
+2026-08-10 21:25:35 | Geração 204/250 — melhor fitness: 224526370 | sem melhora há 5 geração(ões)
+2026-08-10 21:25:47 | Geração 205/250 — melhor fitness: 224352371 | sem melhora há 0 geração(ões)
+2026-08-10 21:26:00 | Geração 206/250 — melhor fitness: 224352371 | sem melhora há 1 geração(ões)
+2026-08-10 21:26:12 | Geração 207/250 — melhor fitness: 224352371 | sem melhora há 2 geração(ões)
+2026-08-10 21:26:25 | Geração 208/250 — melhor fitness: 224352371 | sem melhora há 3 geração(ões)
+2026-08-10 21:26:38 | Geração 209/250 — melhor fitness: 224352371 | sem melhora há 4 geração(ões)
+2026-08-10 21:26:51 | Geração 210/250 — melhor fitness: 224352371 | sem melhora há 5 geração(ões)
+2026-08-10 21:27:03 | Geração 211/250 — melhor fitness: 224352371 | sem melhora há 6 geração(ões)
+2026-08-10 21:27:15 | Geração 212/250 — melhor fitness: 224352371 | sem melhora há 7 geração(ões)
+2026-08-10 21:27:28 | Geração 213/250 — melhor fitness: 224352371 | sem melhora há 8 geração(ões)
+2026-08-10 21:27:41 | Geração 214/250 — melhor fitness: 224352371 | sem melhora há 9 geração(ões)
+2026-08-10 21:27:53 | Geração 215/250 — melhor fitness: 224352371 | sem melhora há 10 geração(ões)
+2026-08-10 21:28:06 | Geração 216/250 — melhor fitness: 224352371 | sem melhora há 11 geração(ões)
+2026-08-10 21:28:19 | Geração 217/250 — melhor fitness: 224352371 | sem melhora há 12 geração(ões)
+2026-08-10 21:28:31 | Geração 218/250 — melhor fitness: 223773657 | sem melhora há 0 geração(ões)
+2026-08-10 21:28:44 | Geração 219/250 — melhor fitness: 223773657 | sem melhora há 1 geração(ões)
+2026-08-10 21:28:56 | Geração 220/250 — melhor fitness: 223773657 | sem melhora há 2 geração(ões)
+2026-08-10 21:29:09 | Geração 221/250 — melhor fitness: 223773657 | sem melhora há 3 geração(ões)
+2026-08-10 21:29:21 | Geração 222/250 — melhor fitness: 223773657 | sem melhora há 4 geração(ões)
+2026-08-10 21:29:34 | Geração 223/250 — melhor fitness: 223773657 | sem melhora há 5 geração(ões)
+2026-08-10 21:29:47 | Geração 224/250 — melhor fitness: 223773657 | sem melhora há 6 geração(ões)
+2026-08-10 21:29:59 | Geração 225/250 — melhor fitness: 222723152 | sem melhora há 0 geração(ões)
+2026-08-10 21:30:11 | Geração 226/250 — melhor fitness: 222723152 | sem melhora há 1 geração(ões)
+2026-08-10 21:30:24 | Geração 227/250 — melhor fitness: 222723152 | sem melhora há 2 geração(ões)
+2026-08-10 21:30:36 | Geração 228/250 — melhor fitness: 222723152 | sem melhora há 3 geração(ões)
+2026-08-10 21:30:48 | Geração 229/250 — melhor fitness: 222723152 | sem melhora há 4 geração(ões)
+2026-08-10 21:31:00 | Geração 230/250 — melhor fitness: 222723152 | sem melhora há 5 geração(ões)
+2026-08-10 21:31:13 | Geração 231/250 — melhor fitness: 222723152 | sem melhora há 6 geração(ões)
+2026-08-10 21:31:26 | Geração 232/250 — melhor fitness: 222723152 | sem melhora há 7 geração(ões)
+2026-08-10 21:31:39 | Geração 233/250 — melhor fitness: 222723152 | sem melhora há 8 geração(ões)
+2026-08-10 21:31:51 | Geração 234/250 — melhor fitness: 222723152 | sem melhora há 9 geração(ões)
+2026-08-10 21:32:04 | Geração 235/250 — melhor fitness: 222723152 | sem melhora há 10 geração(ões)
+2026-08-10 21:32:16 | Geração 236/250 — melhor fitness: 222723152 | sem melhora há 11 geração(ões)
+2026-08-10 21:32:29 | Geração 237/250 — melhor fitness: 222723152 | sem melhora há 12 geração(ões)
+2026-08-10 21:32:42 | Geração 238/250 — melhor fitness: 222723152 | sem melhora há 13 geração(ões)
+2026-08-10 21:32:55 | Geração 239/250 — melhor fitness: 222723152 | sem melhora há 14 geração(ões)
+2026-08-10 21:33:07 | Geração 240/250 — melhor fitness: 222723152 | sem melhora há 15 geração(ões)
+2026-08-10 21:33:20 | Geração 241/250 — melhor fitness: 222723152 | sem melhora há 16 geração(ões)
+2026-08-10 21:33:33 | Geração 242/250 — melhor fitness: 222723152 | sem melhora há 17 geração(ões)
+2026-08-10 21:33:46 | Geração 243/250 — melhor fitness: 222723152 | sem melhora há 18 geração(ões)
+2026-08-10 21:33:59 | Geração 244/250 — melhor fitness: 222723152 | sem melhora há 19 geração(ões)
+2026-08-10 21:34:11 | Geração 245/250 — melhor fitness: 222723152 | sem melhora há 20 geração(ões)
+2026-08-10 21:34:23 | Geração 246/250 — melhor fitness: 222723152 | sem melhora há 21 geração(ões)
+2026-08-10 21:34:35 | Geração 247/250 — melhor fitness: 222344781 | sem melhora há 0 geração(ões)
+2026-08-10 21:34:48 | Geração 248/250 — melhor fitness: 222344781 | sem melhora há 1 geração(ões)
+2026-08-10 21:35:01 | Geração 249/250 — melhor fitness: 222344781 | sem melhora há 2 geração(ões)
+2026-08-10 21:35:14 | Geração 250/250 — melhor fitness: 222344781 | sem melhora há 3 geração(ões)
+2026-08-10 21:35:14 | AG concluído em 0h 52m 56s — melhor fitness: 222344781
+2026-08-10 21:35:14 | Melhores localizações de estações (antes do refinamento): ['37289468#2', '-10272255#1', '172558755#2', '4674648', '-22981366#3', '-10211390#3', '-24641237#1', '34565268#1', '-150266838', '30350825', '132408312#1', '-27452183#1', '59051472', '25063396#0', '-108872703', '-24689160', '-25761189#1', '-26188668#2', '-25978570#1', '-24794059#4', '24772884#1', '-25218894#11', '-48752248#6', '25760990#0', '45254794#0']
+2026-08-10 21:35:14 | [Hill-climbing] fitness inicial: 222344781 (modo exaustivo: True)
+2026-08-10 21:49:17 | [Hill-climbing] rodada 1, gene 0 testado (71048 candidatos) — melhor até agora: 42555150 | fitness: 221470494
+2026-08-10 22:04:04 | [Hill-climbing] rodada 1, gene 1 testado (71048 candidatos) — melhor até agora: 116000765#0 | fitness: 220296132
+2026-08-10 22:19:09 | [Hill-climbing] rodada 1, gene 2 testado (71048 candidatos) — melhor até agora: 41216440#0 | fitness: 219466128
+2026-08-10 22:34:10 | [Hill-climbing] rodada 1, gene 3 testado (71048 candidatos) — melhor até agora: -93090396 | fitness: 219362455
+2026-08-10 22:49:21 | [Hill-climbing] rodada 1, gene 4 testado (71048 candidatos) — melhor até agora: 32038319#0 | fitness: 218385509
+2026-08-10 23:04:16 | [Hill-climbing] rodada 1, gene 5 testado (71048 candidatos) — melhor até agora: 298334807#0 | fitness: 217882955
+2026-08-10 23:19:10 | [Hill-climbing] rodada 1, gene 6 testado (71048 candidatos) — melhor até agora: 24659224#2 | fitness: 217655443
+2026-08-10 23:33:58 | [Hill-climbing] rodada 1, gene 7 testado (71048 candidatos) — melhor até agora: 328430636#5 | fitness: 216670117
+2026-08-10 23:48:49 | [Hill-climbing] rodada 1, gene 8 testado (71048 candidatos) — melhor até agora: 235839983#5 | fitness: 216383789
+2026-08-11 00:03:44 | [Hill-climbing] rodada 1, gene 9 testado (71048 candidatos) — melhor até agora: 42940829 | fitness: 215544753
+2026-08-11 00:18:43 | [Hill-climbing] rodada 1, gene 10 testado (71048 candidatos) — melhor até agora: -132409800#6 | fitness: 213631381
+2026-08-11 00:33:38 | [Hill-climbing] rodada 1, gene 11 testado (71048 candidatos) — melhor até agora: 8440336#0 | fitness: 212529397
+2026-08-11 00:48:26 | [Hill-climbing] rodada 1, gene 12 testado (71048 candidatos) — melhor até agora: -362554780#6 | fitness: 210914772
+2026-08-11 01:03:18 | [Hill-climbing] rodada 1, gene 13 testado (71048 candidatos) — melhor até agora: 5980452#6 | fitness: 209401531
+2026-08-11 01:18:00 | [Hill-climbing] rodada 1, gene 14 testado (71048 candidatos) — melhor até agora: 25546117#5 | fitness: 208476816
+2026-08-11 01:32:43 | [Hill-climbing] rodada 1, gene 15 testado (71048 candidatos) — melhor até agora: 161758922 | fitness: 206528755
+2026-08-11 01:47:28 | [Hill-climbing] rodada 1, gene 16 testado (71048 candidatos) — melhor até agora: 28675510#0 | fitness: 205284610
+2026-08-11 02:02:08 | [Hill-climbing] rodada 1, gene 17 testado (71048 candidatos) — melhor até agora: 32514789#0 | fitness: 205000397
+2026-08-11 02:16:56 | [Hill-climbing] rodada 1, gene 18 testado (71048 candidatos) — melhor até agora: 58102619#0 | fitness: 204433432
+2026-08-11 02:31:39 | [Hill-climbing] rodada 1, gene 19 testado (71048 candidatos) — melhor até agora: -52613198#4 | fitness: 203559920
+2026-08-11 02:46:28 | [Hill-climbing] rodada 1, gene 20 testado (71048 candidatos) — melhor até agora: -23238606#16 | fitness: 203117956
+2026-08-11 03:01:11 | [Hill-climbing] rodada 1, gene 21 testado (71048 candidatos) — melhor até agora: 132648130#0 | fitness: 202987269
+2026-08-11 03:15:54 | [Hill-climbing] rodada 1, gene 22 testado (71048 candidatos) — melhor até agora: 4808860#1 | fitness: 202686216
+2026-08-11 03:30:39 | [Hill-climbing] rodada 1, gene 23 testado (71048 candidatos) — melhor até agora: -8093938#1 | fitness: 202355094
+2026-08-11 03:45:23 | [Hill-climbing] rodada 1, gene 24 testado (71048 candidatos) — melhor até agora: 5062348 | fitness: 202104860
+2026-08-11 03:45:23 | [Hill-climbing] rodada 1 concluída em 6h 10m 08s (média por rodada: 6h 10m 08s) — melhorou nesta rodada: True | tempo total até agora: 6h 10m 08s | ETA aproximado p/ conclusão: 18h 30m 26s
+2026-08-11 04:00:00 | [Hill-climbing] rodada 2, gene 0 testado (71048 candidatos) — melhor até agora: 42555150 | fitness: 202104860
+2026-08-11 04:14:36 | [Hill-climbing] rodada 2, gene 1 testado (71048 candidatos) — melhor até agora: -43791771 | fitness: 202058275
+2026-08-11 04:29:19 | [Hill-climbing] rodada 2, gene 2 testado (71048 candidatos) — melhor até agora: 314167768 | fitness: 201928206
+2026-08-11 04:44:04 | [Hill-climbing] rodada 2, gene 3 testado (71048 candidatos) — melhor até agora: 35861018#0 | fitness: 201922055
+2026-08-11 04:58:47 | [Hill-climbing] rodada 2, gene 4 testado (71048 candidatos) — melhor até agora: 32038319#0 | fitness: 201922055
+2026-08-11 05:13:26 | [Hill-climbing] rodada 2, gene 5 testado (71048 candidatos) — melhor até agora: 156422655#0 | fitness: 201862999
+2026-08-11 05:28:05 | [Hill-climbing] rodada 2, gene 6 testado (71048 candidatos) — melhor até agora: 24659224#2 | fitness: 201862999
+2026-08-11 05:42:39 | [Hill-climbing] rodada 2, gene 7 testado (71048 candidatos) — melhor até agora: 328430636#5 | fitness: 201862999
+2026-08-11 05:57:10 | [Hill-climbing] rodada 2, gene 8 testado (71048 candidatos) — melhor até agora: 235839983#5 | fitness: 201862999
+2026-08-11 06:11:46 | [Hill-climbing] rodada 2, gene 9 testado (71048 candidatos) — melhor até agora: 189913664#0 | fitness: 201844158
+2026-08-11 06:26:28 | [Hill-climbing] rodada 2, gene 10 testado (71048 candidatos) — melhor até agora: -132530891#2 | fitness: 201777222
+2026-08-11 06:41:01 | [Hill-climbing] rodada 2, gene 11 testado (71048 candidatos) — melhor até agora: 8440336#0 | fitness: 201777222
+2026-08-11 06:55:34 | [Hill-climbing] rodada 2, gene 12 testado (71048 candidatos) — melhor até agora: -362554780#6 | fitness: 201777222
+2026-08-11 07:10:23 | [Hill-climbing] rodada 2, gene 13 testado (71048 candidatos) — melhor até agora: 5980452#6 | fitness: 201777222
+2026-08-11 07:25:00 | [Hill-climbing] rodada 2, gene 14 testado (71048 candidatos) — melhor até agora: 25546117#5 | fitness: 201777222
+2026-08-11 07:39:37 | [Hill-climbing] rodada 2, gene 15 testado (71048 candidatos) — melhor até agora: 161758922 | fitness: 201777222
+2026-08-11 07:54:15 | [Hill-climbing] rodada 2, gene 16 testado (71048 candidatos) — melhor até agora: 28675510#0 | fitness: 201777222
+2026-08-11 08:08:43 | [Hill-climbing] rodada 2, gene 17 testado (71048 candidatos) — melhor até agora: 32514789#0 | fitness: 201777222
+2026-08-11 08:23:18 | [Hill-climbing] rodada 2, gene 18 testado (71048 candidatos) — melhor até agora: 58102619#0 | fitness: 201777222
+2026-08-11 08:37:54 | [Hill-climbing] rodada 2, gene 19 testado (71048 candidatos) — melhor até agora: -52613198#4 | fitness: 201777222
+2026-08-11 08:52:25 | [Hill-climbing] rodada 2, gene 20 testado (71048 candidatos) — melhor até agora: -23238606#16 | fitness: 201777222
+2026-08-11 09:07:00 | [Hill-climbing] rodada 2, gene 21 testado (71048 candidatos) — melhor até agora: 132648130#0 | fitness: 201777222
+2026-08-11 09:21:15 | [Hill-climbing] rodada 2, gene 22 testado (71048 candidatos) — melhor até agora: 4808860#1 | fitness: 201777222
+2026-08-11 09:35:06 | [Hill-climbing] rodada 2, gene 23 testado (71048 candidatos) — melhor até agora: -8093938#1 | fitness: 201777222
+2026-08-11 09:48:43 | [Hill-climbing] rodada 2, gene 24 testado (71048 candidatos) — melhor até agora: 5062348 | fitness: 201777222
+2026-08-11 09:48:43 | [Hill-climbing] rodada 2 concluída em 6h 03m 20s (média por rodada: 6h 06m 44s) — melhorou nesta rodada: True | tempo total até agora: 12h 13m 29s | ETA aproximado p/ conclusão: 18h 20m 13s
+2026-08-11 10:02:22 | [Hill-climbing] rodada 3, gene 0 testado (71048 candidatos) — melhor até agora: 42555150 | fitness: 201777222
+2026-08-11 10:16:20 | [Hill-climbing] rodada 3, gene 1 testado (71048 candidatos) — melhor até agora: -43791771 | fitness: 201777222
+2026-08-11 10:30:28 | [Hill-climbing] rodada 3, gene 2 testado (71048 candidatos) — melhor até agora: 314167768 | fitness: 201777222
+2026-08-11 10:44:49 | [Hill-climbing] rodada 3, gene 3 testado (71048 candidatos) — melhor até agora: 35861018#0 | fitness: 201777222
+2026-08-11 10:59:13 | [Hill-climbing] rodada 3, gene 4 testado (71048 candidatos) — melhor até agora: 32038319#0 | fitness: 201777222
+2026-08-11 11:12:59 | [Hill-climbing] rodada 3, gene 5 testado (71048 candidatos) — melhor até agora: 156422655#0 | fitness: 201777222
+2026-08-11 11:26:24 | [Hill-climbing] rodada 3, gene 6 testado (71048 candidatos) — melhor até agora: 24659224#2 | fitness: 201777222
+2026-08-11 11:39:43 | [Hill-climbing] rodada 3, gene 7 testado (71048 candidatos) — melhor até agora: 328430636#5 | fitness: 201777222
+2026-08-11 11:52:58 | [Hill-climbing] rodada 3, gene 8 testado (71048 candidatos) — melhor até agora: 235839983#5 | fitness: 201777222
+2026-08-11 12:06:18 | [Hill-climbing] rodada 3, gene 9 testado (71048 candidatos) — melhor até agora: -146505402#3 | fitness: 201630511
+2026-08-11 12:19:34 | [Hill-climbing] rodada 3, gene 10 testado (71048 candidatos) — melhor até agora: -132530891#2 | fitness: 201630511
+2026-08-11 12:32:53 | [Hill-climbing] rodada 3, gene 11 testado (71048 candidatos) — melhor até agora: 8440336#0 | fitness: 201630511
+2026-08-11 12:46:07 | [Hill-climbing] rodada 3, gene 12 testado (71048 candidatos) — melhor até agora: -362554780#6 | fitness: 201630511
+2026-08-11 12:59:22 | [Hill-climbing] rodada 3, gene 13 testado (71048 candidatos) — melhor até agora: 5980452#6 | fitness: 201630511
+2026-08-11 13:12:35 | [Hill-climbing] rodada 3, gene 14 testado (71048 candidatos) — melhor até agora: 25546117#5 | fitness: 201630511
+2026-08-11 13:25:50 | [Hill-climbing] rodada 3, gene 15 testado (71048 candidatos) — melhor até agora: 161758922 | fitness: 201630511
+2026-08-11 13:39:05 | [Hill-climbing] rodada 3, gene 16 testado (71048 candidatos) — melhor até agora: 28675510#0 | fitness: 201630511
+2026-08-11 13:52:05 | [Hill-climbing] rodada 3, gene 17 testado (71048 candidatos) — melhor até agora: 32514789#0 | fitness: 201630511
+2026-08-11 14:05:07 | [Hill-climbing] rodada 3, gene 18 testado (71048 candidatos) — melhor até agora: 58102619#0 | fitness: 201630511
+2026-08-11 14:18:12 | [Hill-climbing] rodada 3, gene 19 testado (71048 candidatos) — melhor até agora: -52613198#4 | fitness: 201630511
+2026-08-11 14:31:18 | [Hill-climbing] rodada 3, gene 20 testado (71048 candidatos) — melhor até agora: -23238606#16 | fitness: 201630511
+2026-08-11 14:44:22 | [Hill-climbing] rodada 3, gene 21 testado (71048 candidatos) — melhor até agora: 132648130#0 | fitness: 201630511
+2026-08-11 14:57:30 | [Hill-climbing] rodada 3, gene 22 testado (71048 candidatos) — melhor até agora: 4808860#1 | fitness: 201630511
+2026-08-11 15:10:36 | [Hill-climbing] rodada 3, gene 23 testado (71048 candidatos) — melhor até agora: -8093938#1 | fitness: 201630511
+2026-08-11 15:23:49 | [Hill-climbing] rodada 3, gene 24 testado (71048 candidatos) — melhor até agora: 5062348 | fitness: 201630511
+2026-08-11 15:23:49 | [Hill-climbing] rodada 3 concluída em 5h 35m 05s (média por rodada: 5h 56m 11s) — melhorou nesta rodada: True | tempo total até agora: 17h 48m 34s | ETA aproximado p/ conclusão: 17h 48m 34s
+2026-08-11 15:36:52 | [Hill-climbing] rodada 4, gene 0 testado (71048 candidatos) — melhor até agora: 42555150 | fitness: 201630511
+2026-08-11 15:49:52 | [Hill-climbing] rodada 4, gene 1 testado (71048 candidatos) — melhor até agora: -43791771 | fitness: 201630511
+2026-08-11 16:02:59 | [Hill-climbing] rodada 4, gene 2 testado (71048 candidatos) — melhor até agora: 314167768 | fitness: 201630511
+2026-08-11 16:16:06 | [Hill-climbing] rodada 4, gene 3 testado (71048 candidatos) — melhor até agora: 35861018#0 | fitness: 201630511
+2026-08-11 16:29:21 | [Hill-climbing] rodada 4, gene 4 testado (71048 candidatos) — melhor até agora: 32038319#0 | fitness: 201630511
+2026-08-11 16:42:30 | [Hill-climbing] rodada 4, gene 5 testado (71048 candidatos) — melhor até agora: 156422655#0 | fitness: 201630511
+2026-08-11 16:55:29 | [Hill-climbing] rodada 4, gene 6 testado (71048 candidatos) — melhor até agora: 24659224#2 | fitness: 201630511
+2026-08-11 17:08:32 | [Hill-climbing] rodada 4, gene 7 testado (71048 candidatos) — melhor até agora: 328430636#5 | fitness: 201630511
+2026-08-11 17:21:47 | [Hill-climbing] rodada 4, gene 8 testado (71048 candidatos) — melhor até agora: 235839983#5 | fitness: 201630511
+2026-08-11 17:35:02 | [Hill-climbing] rodada 4, gene 9 testado (71048 candidatos) — melhor até agora: -146505402#3 | fitness: 201630511
+2026-08-11 17:48:27 | [Hill-climbing] rodada 4, gene 10 testado (71048 candidatos) — melhor até agora: -132530891#2 | fitness: 201630511
+2026-08-11 18:01:57 | [Hill-climbing] rodada 4, gene 11 testado (71048 candidatos) — melhor até agora: 8440336#0 | fitness: 201630511
+2026-08-11 18:15:26 | [Hill-climbing] rodada 4, gene 12 testado (71048 candidatos) — melhor até agora: -362554780#6 | fitness: 201630511
+2026-08-11 18:29:00 | [Hill-climbing] rodada 4, gene 13 testado (71048 candidatos) — melhor até agora: 5980452#6 | fitness: 201630511
+2026-08-11 18:42:33 | [Hill-climbing] rodada 4, gene 14 testado (71048 candidatos) — melhor até agora: 25546117#5 | fitness: 201630511
+2026-08-11 18:56:07 | [Hill-climbing] rodada 4, gene 15 testado (71048 candidatos) — melhor até agora: 161758922 | fitness: 201630511
+2026-08-11 19:09:46 | [Hill-climbing] rodada 4, gene 16 testado (71048 candidatos) — melhor até agora: 28675510#0 | fitness: 201630511
+2026-08-11 19:23:15 | [Hill-climbing] rodada 4, gene 17 testado (71048 candidatos) — melhor até agora: 32514789#0 | fitness: 201630511
+2026-08-11 19:36:50 | [Hill-climbing] rodada 4, gene 18 testado (71048 candidatos) — melhor até agora: 58102619#0 | fitness: 201630511
+2026-08-11 19:50:29 | [Hill-climbing] rodada 4, gene 19 testado (71048 candidatos) — melhor até agora: -52613198#4 | fitness: 201630511
+2026-08-11 20:04:06 | [Hill-climbing] rodada 4, gene 20 testado (71048 candidatos) — melhor até agora: -23238606#16 | fitness: 201630511
+2026-08-11 20:17:42 | [Hill-climbing] rodada 4, gene 21 testado (71048 candidatos) — melhor até agora: 132648130#0 | fitness: 201630511
+2026-08-11 20:31:16 | [Hill-climbing] rodada 4, gene 22 testado (71048 candidatos) — melhor até agora: 4808860#1 | fitness: 201630511
+2026-08-11 20:44:51 | [Hill-climbing] rodada 4, gene 23 testado (71048 candidatos) — melhor até agora: -8093938#1 | fitness: 201630511
+2026-08-11 20:58:29 | [Hill-climbing] rodada 4, gene 24 testado (71048 candidatos) — melhor até agora: 5062348 | fitness: 201630511
+2026-08-11 20:58:29 | [Hill-climbing] rodada 4 concluída em 5h 34m 40s (média por rodada: 5h 50m 48s) — melhorou nesta rodada: False | tempo total até agora: 23h 23m 14s | ETA aproximado p/ conclusão: 5h 50m 48s
+2026-08-11 21:12:05 | [Hill-climbing] rodada 5, gene 0 testado (71048 candidatos) — melhor até agora: 42555150 | fitness: 201630511
+2026-08-11 21:25:40 | [Hill-climbing] rodada 5, gene 1 testado (71048 candidatos) — melhor até agora: -43791771 | fitness: 201630511
+2026-08-11 21:39:12 | [Hill-climbing] rodada 5, gene 2 testado (71048 candidatos) — melhor até agora: 314167768 | fitness: 201630511
+2026-08-11 21:52:53 | [Hill-climbing] rodada 5, gene 3 testado (71048 candidatos) — melhor até agora: 35861018#0 | fitness: 201630511
+2026-08-11 22:06:36 | [Hill-climbing] rodada 5, gene 4 testado (71048 candidatos) — melhor até agora: 32038319#0 | fitness: 201630511
+2026-08-11 22:20:14 | [Hill-climbing] rodada 5, gene 5 testado (71048 candidatos) — melhor até agora: 156422655#0 | fitness: 201630511
+2026-08-11 22:33:50 | [Hill-climbing] rodada 5, gene 6 testado (71048 candidatos) — melhor até agora: 24659224#2 | fitness: 201630511
+2026-08-11 22:47:24 | [Hill-climbing] rodada 5, gene 7 testado (71048 candidatos) — melhor até agora: 328430636#5 | fitness: 201630511
+2026-08-11 23:00:58 | [Hill-climbing] rodada 5, gene 8 testado (71048 candidatos) — melhor até agora: 235839983#5 | fitness: 201630511
+2026-08-11 23:14:36 | [Hill-climbing] rodada 5, gene 9 testado (71048 candidatos) — melhor até agora: -146505402#3 | fitness: 201630511
+2026-08-11 23:28:18 | [Hill-climbing] rodada 5, gene 10 testado (71048 candidatos) — melhor até agora: -132530891#2 | fitness: 201630511
+2026-08-11 23:41:44 | [Hill-climbing] rodada 5, gene 11 testado (71048 candidatos) — melhor até agora: 8440336#0 | fitness: 201630511
+2026-08-11 23:55:09 | [Hill-climbing] rodada 5, gene 12 testado (71048 candidatos) — melhor até agora: -362554780#6 | fitness: 201630511
+2026-08-12 00:08:34 | [Hill-climbing] rodada 5, gene 13 testado (71048 candidatos) — melhor até agora: 5980452#6 | fitness: 201630511
+2026-08-12 00:21:57 | [Hill-climbing] rodada 5, gene 14 testado (71048 candidatos) — melhor até agora: 25546117#5 | fitness: 201630511
+2026-08-12 00:35:17 | [Hill-climbing] rodada 5, gene 15 testado (71048 candidatos) — melhor até agora: 161758922 | fitness: 201630511
+2026-08-12 00:48:46 | [Hill-climbing] rodada 5, gene 16 testado (71048 candidatos) — melhor até agora: 28675510#0 | fitness: 201630511
+2026-08-12 01:02:02 | [Hill-climbing] rodada 5, gene 17 testado (71048 candidatos) — melhor até agora: 32514789#0 | fitness: 201630511
+2026-08-12 01:15:26 | [Hill-climbing] rodada 5, gene 18 testado (71048 candidatos) — melhor até agora: 58102619#0 | fitness: 201630511
+2026-08-12 01:28:49 | [Hill-climbing] rodada 5, gene 19 testado (71048 candidatos) — melhor até agora: -52613198#4 | fitness: 201630511
+2026-08-12 01:42:09 | [Hill-climbing] rodada 5, gene 20 testado (71048 candidatos) — melhor até agora: -23238606#16 | fitness: 201630511
+2026-08-12 01:55:26 | [Hill-climbing] rodada 5, gene 21 testado (71048 candidatos) — melhor até agora: 132648130#0 | fitness: 201630511
+2026-08-12 02:08:42 | [Hill-climbing] rodada 5, gene 22 testado (71048 candidatos) — melhor até agora: 4808860#1 | fitness: 201630511
+2026-08-12 02:22:01 | [Hill-climbing] rodada 5, gene 23 testado (71048 candidatos) — melhor até agora: -8093938#1 | fitness: 201630511
+2026-08-12 02:35:27 | [Hill-climbing] rodada 5, gene 24 testado (71048 candidatos) — melhor até agora: 5062348 | fitness: 201630511
+2026-08-12 02:35:27 | [Hill-climbing] rodada 5 concluída em 5h 36m 57s (média por rodada: 5h 48m 02s) — melhorou nesta rodada: False | tempo total até agora: 29h 00m 12s | ETA aproximado p/ conclusão: 0h 00m 00s
+2026-08-12 02:35:27 | [Hill-climbing] fitness final: 201630511
+2026-08-12 02:35:27 | Refinamento concluído em 29h 00m 12s
+2026-08-12 02:35:27 | Tempo total de execução: 29h 53m 20s
+2026-08-12 02:35:27 | Solução final: ['42555150', '-43791771', '314167768', '35861018#0', '32038319#0', '156422655#0', '24659224#2', '328430636#5', '235839983#5', '-146505402#3', '-132530891#2', '8440336#0', '-362554780#6', '5980452#6', '25546117#5', '161758922', '28675510#0', '32514789#0', '58102619#0', '-52613198#4', '-23238606#16', '132648130#0', '4808860#1', '-8093938#1', '5062348'] | fitness: 201630511
+2026-08-12 02:35:27 | ======================================================================
