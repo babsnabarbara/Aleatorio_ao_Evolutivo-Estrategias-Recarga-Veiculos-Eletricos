@@ -1,0 +1,7 @@
+input/cologne.net.xml
+output/
+MD/batch.log
+__pycache__/
+*.pyc
+
+
