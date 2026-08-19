@@ -1,0 +1,12 @@
+{
+  "approach": "greedy",
+  "minutes": 60,
+  "cs_amount": 16,
+  "percentage": 10,
+  "repetition": 2,
+  "vehicles": 8000,
+  "max_vehicles_per_cs": 6,
+  "seed": 2023265169,
+  "trip_seed": 852581259,
+  "port": null
+}
