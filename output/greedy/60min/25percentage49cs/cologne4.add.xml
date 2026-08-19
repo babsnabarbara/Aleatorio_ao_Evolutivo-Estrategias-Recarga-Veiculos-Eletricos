@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <chargingStation id="0" name="chargingStation" lane="-132643002#15_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="1" name="chargingStation" lane="-175807732#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="2" name="chargingStation" lane="-200936205_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="3" name="chargingStation" lane="-209682819#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="4" name="chargingStation" lane="-23463776#0_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="5" name="chargingStation" lane="-24044001#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="6" name="chargingStation" lane="-29122011#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="7" name="chargingStation" lane="-47003441#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="8" name="chargingStation" lane="10376030#4_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="9" name="chargingStation" lane="116462562_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="10" name="chargingStation" lane="118427328#3_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="11" name="chargingStation" lane="118430520_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="12" name="chargingStation" lane="145024227_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="13" name="chargingStation" lane="146235963_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="14" name="chargingStation" lane="161677221#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="15" name="chargingStation" lane="178254509#2_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="16" name="chargingStation" lane="219698233_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="17" name="chargingStation" lane="22616331_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="18" name="chargingStation" lane="26493930_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="19" name="chargingStation" lane="283068678_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="20" name="chargingStation" lane="283080937_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="21" name="chargingStation" lane="283080938_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="22" name="chargingStation" lane="286321028_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="23" name="chargingStation" lane="286321028_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="24" name="chargingStation" lane="29210064#3_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="25" name="chargingStation" lane="310367474#0_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="26" name="chargingStation" lane="310367474#0_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="27" name="chargingStation" lane="317336982_1" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="28" name="chargingStation" lane="36796617_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="29" name="chargingStation" lane="37744227#6_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="30" name="chargingStation" lane="4400126_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="31" name="chargingStation" lane="4406066#1_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="32" name="chargingStation" lane="5217076_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+    <chargingStation id="33" name="chargingStation" lane="7796746#0_0" power="20000.00" chargeInTransit="1" chargeDelay="100"/>
+</additional>
