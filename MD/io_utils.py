@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Iterable
 
 import config
+import graph_utils
 from sim_job import SimJob
 
 
@@ -215,31 +216,40 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
     Se `lanes` não for passado, lê de job.selected_lanes_file (o arquivo
     já deve ter sido gerado pela station strategy antes de chamar isso).
 
-    Cada estação agora é DOIS elementos na mesma lane, com o mesmo id:
-    - <parkingArea roadsideCapacity=job.max_vehicles_per_cs> -- é ela que
-      dá o limite de capacidade de verdade (nativo do SUMO -- quando cheia,
-      o próximo veículo que tenta parar ali fica na fila na própria via,
-      sem intervenção nossa). Antes disso, max_vehicles_per_cs só era usado
-      como checagem espacial na escolha da lane (pseudorandom_strategy.py)
-      -- nunca limitava quantos veículos paravam ao mesmo tempo de verdade.
-    - <chargingStation> continua igual, na mesma lane -- é ela que dá a
-      potência de recarga. Um veículo parado na parkingArea (via
-      setParkingAreaStop, ver simulation.py) recarrega normalmente se sua
-      posição cair dentro do trecho da chargingStation associada.
+    Cada estação é DOIS elementos na mesma lane, com o mesmo id:
+    - <parkingArea roadsideCapacity=...> -- capacidade REAL, calculada por
+      lane (ver graph_utils.realized_capacity): min(job.max_vehicles_per_cs,
+      quantos veículos cabem fisicamente naquela lane específica), nunca
+      menos que 1. Decisão metodológica: a seleção de estação (nas 5
+      strategies) NÃO filtra mais por capacidade -- qualquer lane escolhida
+      é aceita, e a capacidade só se ajusta aqui, na hora de gerar o
+      arquivo, à geometria real daquela posição específica.
+    - <chargingStation parkingArea="<mesmo id>"> -- dá a potência de
+      recarga. O atributo `parkingArea` (documentado em
+      https://sumo.dlr.de/docs/Models/Electric.html#charging_stations) liga
+      as duas explicitamente: "vehicles will only charge after reaching the
+      parking".
     """
     if lanes is None:
         lanes = read_selected_lanes_file(job.selected_lanes_file)
+
+    lane_lengths = graph_utils.lane_lengths()
+    veh_length = vehicle_length("soulEV65")
 
     root = ET.Element("additional")
     root.set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root.set("xsi:noNamespaceSchemaLocation", "http://sumo.dlr.de/xsd/additional_file.xsd")
 
     for i, lane_id in enumerate(sorted(lanes)):
+        capacity = graph_utils.realized_capacity(
+            lane_id, job.max_vehicles_per_cs, lane_lengths, veh_length
+        )
+
         pa = ET.SubElement(root, "parkingArea")
         pa.set("id", str(i))
         pa.set("name", "chargingStation")
         pa.set("lane", lane_id)
-        pa.set("roadsideCapacity", str(job.max_vehicles_per_cs))
+        pa.set("roadsideCapacity", str(capacity))
 
         cs = ET.SubElement(root, "chargingStation")
         cs.set("id", str(i))
@@ -248,6 +258,7 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
         cs.set("power", config.CHARGING_POWER_W)
         cs.set("chargeInTransit", config.CHARGE_IN_TRANSIT)
         cs.set("chargeDelay", config.CHARGE_DELAY_S)
+        cs.set("parkingArea", str(i))  # liga explicitamente à parkingArea de mesmo id
 
     _pretty_write(root, job.add_file)
 

@@ -59,13 +59,6 @@ from sim_job import SimJob
 log = logging.getLogger("cli")
 
 
-def _default_workers() -> int:
-    """Fallback simples (só CPU) usado fora do batch() -- ex: no `run`
-    single-job, onde não faz sentido calcular RAM disponível pra 1 job só."""
-    available = os.cpu_count() or 1
-    return max(1, min(available, len(config.REPETITIONS)))
-
-
 def _auto_workers(total_jobs: int) -> int:
     """
     Calcula quantos processos SUMO rodar em paralelo, considerando CPU E
@@ -128,7 +121,7 @@ def _station_seed_key(approach: str, cs_amount: int) -> int | None:
 def generate_combo(approach: str, minutes: int, cs_amount: int, percentage: int,
                     vehicles: int, max_vehicles_per_cs: int,
                     routing_threads: int | None = None) -> list[SimJob]:
-    graph = graph_utils.default_graph()
+    graph = graph_utils.default_giant_graph()
     strategy = station_strategies.get_strategy(approach)
     station_reg = StationSeedRegistry(approach)
     trip_reg = TripSeedRegistry(approach)
@@ -307,7 +300,7 @@ def run_single(args: argparse.Namespace) -> None:
 
     needs_generation = not (args.skip_generation and job.is_generated())
     if needs_generation:
-        graph = graph_utils.default_graph()
+        graph = graph_utils.default_giant_graph()
         strategy = station_strategies.get_strategy(job.approach)
         stations = strategy(job, graph)
         io_utils.write_selected_lanes_file(job, stations)

@@ -14,6 +14,22 @@ cada edge; o GA opera no nível de rua/edge, não de lane específica).
 
 Usa o campo "solucao_final_refinada" do JSON (pós-refinamento), não
 "solucao_ga" (saída bruta, pré-refinamento) -- decisão explícita.
+
+Sempre aceita as posições exatas do GA, sem filtrar por
+capacidade/comprimento de lane -- a capacidade real de cada estação é
+calculada depois, na hora de gerar o .add.xml (ver
+graph_utils.realized_capacity), adaptada à geometria de cada lane. Isso é
+especialmente importante aqui: como as posições vêm de um algoritmo
+externo já publicado, não faz sentido rejeitar ou alterar o que ele
+decidiu por um critério (comprimento de rua) que ele nunca considerou.
+
+O `graph` recebido aqui já vem restrito ao componente gigante do mapa
+(ver cli.py/graph_utils.default_giant_graph) -- mesmo componente que o
+script original do algoritmo genético usa internamente
+(get_giant_component/candidate_nodes), então a checagem "edge existe no
+grafo" abaixo já é consistente com o universo de candidatos que o próprio
+GA usou pra gerar essas posições, e com os outros 4 approaches (que agora
+também só escolhem estações dentro desse mesmo componente).
 """
 from __future__ import annotations
 
@@ -22,8 +38,6 @@ import json
 import networkx as nx
 
 import config
-import graph_utils
-import io_utils
 from sim_job import SimJob
 
 
@@ -45,7 +59,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
         raise FileNotFoundError(
             f"{result_file} não existe -- confirme que o algoritmo genético "
             f"já rodou para cs_amount={job.cs_amount} com seed={seed}, e "
-            f"que o resultado foi copiado para essa pasta."
+            f"que o resultado foi copiado para essa pasta. Rode "
+            f"`python3 check_genetic_files.py` para ver de uma vez quais "
+            f"arquivos faltam em TODOS os cs_amount/seeds, antes de disparar "
+            f"um batch inteiro (evita descobrir um por um, job a job)."
         )
 
     with open(result_file, encoding="utf-8") as f:
@@ -69,32 +86,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     if missing:
         raise ValueError(
             f"{result_file}: {len(missing)} edge(s) de 'solucao_final_refinada' "
-            f"não existem no grafo atual (net.xml mudou desde que o GA rodou?): "
+            f"não pertencem ao componente gigante do grafo atual (net.xml "
+            f"mudou desde que o GA rodou? Ou o `graph` recebido aqui não é "
+            f"o componente gigante -- ver cli.py/graph_utils.default_giant_graph): "
             f"{missing}"
         )
 
-    lanes = {f"{edge_id}_0" for edge_id in edge_ids}
-
-    # FIX: comprovado empiricamente que uma lane curta demais causa "skips
-    # stop" + teleporte em runtime (ver graph_utils.has_min_capacity). Como
-    # essas posições vêm de fora (já decididas pelo GA), não há candidato
-    # alternativo pra tentar -- só valida e avisa claramente, em vez de
-    # filtrar silenciosamente (silenciar aqui mudaria o resultado do GA sem
-    # você saber).
-    lane_lengths = graph_utils.lane_lengths()
-    veh_length = io_utils.vehicle_length("soulEV65")
-    too_short = [
-        lane for lane in lanes
-        if not graph_utils.has_min_capacity(lane, job.max_vehicles_per_cs, lane_lengths, veh_length)
-    ]
-    if too_short:
-        raise ValueError(
-            f"{result_file}: {len(too_short)} lane(s) escolhidas pelo GA não "
-            f"têm comprimento suficiente para max_vehicles_per_cs="
-            f"{job.max_vehicles_per_cs}: {too_short}. O GA não considera esse "
-            f"critério na otimização -- ou reduza max_vehicles_per_cs pra "
-            f"essa rodada, ou aceite que essas posições podem causar "
-            f"'skips stop'/teleporte na simulação."
-        )
-
-    return lanes
+    return {f"{edge_id}_0" for edge_id in edge_ids}

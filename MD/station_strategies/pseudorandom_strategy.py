@@ -2,29 +2,30 @@
 Approach 'pseudorandom' -- substitui
 findingPseudoRandom.py::findAndSaveValidChargingPoints.
 
-REVERTIDO para o comportamento original, por decisão explícita: usa a
-malha de quadrantes do MESMO TAMANHO que cs_amount (9quadrants.xml para 9
-estações, 16quadrants.xml para 16, ...) -- ou seja, cada cs_amount usa uma
-partição espacial DIFERENTE do mapa, sem relação entre si.
+Usa a malha de quadrantes do MESMO TAMANHO que cs_amount (9quadrants.xml
+para 9 estações, 16quadrants.xml para 16, ...) -- cada cs_amount usa uma
+partição espacial DIFERENTE do mapa, sem relação entre si. Sem crescimento
+incremental (mesmo trade-off do 'greedyvoronoi').
 
-Isso significa que este approach NÃO tem crescimento incremental: ao
-crescer de 9 para 16 estações, a malha muda de forma inteira, então não há
-garantia (nem seed que resolva -- mesma sequência de números aleatórios
-aplicada a uma estrutura de dados diferente não produz resultados
-relacionados) de que as 9 posições antigas continuem entre as 16 novas.
-Mesmo comportamento/trade-off do approach 'greedyvoronoi' (ver aquele
-arquivo para mais detalhes do raciocínio).
+Seed inclui `cs_amount` na chave (StationSeedRegistry.apply(repetition,
+cs_amount)) -- cada tamanho de malha sorteia do zero, de forma
+independente, mas cacheada (mesma seleção reaproveitada entre
+minutes/percentage diferentes de uma mesma (cs_amount, repetition)).
 
-Por isso a seed usada aqui inclui `cs_amount` na chave
-(StationSeedRegistry.apply(repetition, cs_amount)) -- cada tamanho de malha
-sorteia do zero, de forma independente, mas ainda determinística e
-cacheada (mesma seleção reaproveitada entre minutes/percentage diferentes
-de uma mesma (cs_amount, repetition)).
+NÃO filtra candidatos por capacidade/comprimento de lane (o código original
+tinha essa checagem via TraCI ao vivo -- removida por decisão
+metodológica): a capacidade real de cada estação é calculada DEPOIS, na
+hora de gerar o .add.xml (ver graph_utils.realized_capacity), adaptada à
+geometria de cada lane, em vez de rejeitar posições que não caibam
+max_vehicles_per_cs veículos. Isso mantém a regra simétrica entre os 5
+approaches -- nenhum tem tratamento especial de capacidade na seleção.
 
-FIX (herdado, mantido): a checagem de capacidade
-(`lane.getLength / vehicletype.getLength >= max_vehicles_per_cs`) usava
-TraCI ao vivo; aqui é lida estaticamente do net.xml/electric_vehicle.xml,
-pois a fase de geração roda antes de qualquer SUMO ser iniciado.
+Candidatos são restritos ao componente gigante do mapa (o `graph` recebido
+já vem assim de cli.py/graph_utils.default_giant_graph) -- mesmo padrão do
+algoritmo genético original, agora unificado nos 5 approaches. Como todo
+par de nós dentro do componente gigante já é mutuamente alcançável por
+definição, "pertence ao grafo recebido" já é suficiente -- não precisa
+mais confirmar caminho entre eles com nx.has_path.
 """
 from __future__ import annotations
 
@@ -34,21 +35,8 @@ import xml.etree.ElementTree as ET
 import networkx as nx
 
 import config
-import graph_utils
-import io_utils
 from sim_job import SimJob
 from station_strategies import evolution
-
-
-def _forms_cycle(graph: nx.DiGraph, a_lane: str, b_lane: str, c_lane: str) -> bool:
-    a, b, c = a_lane[:-2], b_lane[:-2], c_lane[:-2]
-    if not all(n in graph for n in (a, b, c)):
-        return False
-    return (
-        nx.has_path(graph, a, b)
-        and nx.has_path(graph, b, c)
-        and nx.has_path(graph, c, a)
-    )
 
 
 def _quadrants_for(cs_amount: int) -> list:
@@ -63,10 +51,8 @@ def _quadrants_for(cs_amount: int) -> list:
     ]
 
 
-def _build(cs_amount: int, graph: nx.DiGraph, max_vehicles_per_cs: int) -> set:
+def _build(cs_amount: int, graph: nx.DiGraph) -> set:
     quadrants = _quadrants_for(cs_amount)
-    lane_lengths = graph_utils.lane_lengths()
-    veh_length = io_utils.vehicle_length("soulEV65")
 
     chosen: set = set()
     max_attempts_per_quadrant = 5000
@@ -81,11 +67,10 @@ def _build(cs_amount: int, graph: nx.DiGraph, max_vehicles_per_cs: int) -> set:
         found = False
         for _ in range(max_attempts_per_quadrant):
             a, b, c = random.sample(quadrant_lanes, 3)
-            if not _forms_cycle(graph, a, b, c):
+            # a[:-2] converte lane id -> edge id (remove o sufixo "_0")
+            if not all(lane[:-2] in graph for lane in (a, b, c)):
                 continue
             if b in chosen:
-                continue
-            if not graph_utils.has_min_capacity(b, max_vehicles_per_cs, lane_lengths, veh_length):
                 continue
             chosen.add(b)
             found = True
@@ -104,10 +89,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     from seed_registry import StationSeedRegistry
     StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
 
-    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs)
+    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
     if cached is not None:
         return cached
 
-    chosen = _build(job.cs_amount, graph, job.max_vehicles_per_cs)
-    evolution.save_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs, chosen)
+    chosen = _build(job.cs_amount, graph)
+    evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
     return chosen

@@ -66,66 +66,44 @@ def default_graph() -> nx.DiGraph:
     return build_graph_from_netfile(config.NET_FILE)
 
 
-def get_connections(netfile: Path | str = None) -> list[dict[str, str]]:
-    """
-    Lista de <connection> crua do net.xml (from/to/fromLane), usada pelas
-    estratégias random/pseudorandom para montar candidatos a estação
-    (id da estação = "<edge>_<fromLane>", como no código original).
-    """
-    netfile = Path(netfile) if netfile is not None else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    return [
-        {
-            "from": c["from"],
-            "to": c["to"],
-            "fromLane": c.get("fromLane", "0"),
-        }
-        for c in soup.find_all("connection")
-    ]
-
-
-def get_lane_lengths(netfile: Path | str = None) -> dict[str, float]:
-    """
-    Comprimento de cada LANE individual (não do edge) -- necessário para o
-    critério de capacidade mínima da estratégia pseudorandom
-    (comprimento da lane >= maxVehiclesPerCS * comprimento do veículo).
-    """
-    netfile = Path(netfile) if netfile is not None else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    lengths: dict[str, float] = {}
-    for edge_tag in soup.find_all("edge"):
-        for lane_tag in edge_tag.find_all("lane"):
-            lengths[lane_tag["id"]] = float(lane_tag["length"])
-    return lengths
-
-
-def has_path(graph: nx.DiGraph, source: str, target: str) -> bool:
-    try:
-        nx.dijkstra_path(graph, source, target)
-        return True
-    except (nx.NetworkXNoPath, nx.NodeNotFound):
-        return False
-
-
-def forms_triangle_cycle(graph: nx.DiGraph, a: str, b: str, c: str) -> bool:
-    """
-    Testa se os 3 edges formam um ciclo alcançável (a->b->c->a) no grafo.
-    Usado como critério de "candidato válido" pelas estratégias
-    random/pseudorandom -- evita escolher uma lane isolada/sem saída como
-    estação de recarga.
-    """
-    return has_path(graph, a, b) and has_path(graph, b, c) and has_path(graph, c, a)
-
-
 def get_giant_component(graph: nx.DiGraph) -> nx.DiGraph:
     """Maior componente fortemente conexo -- evita que nós inalcançáveis
     do grafo completo distorçam buscas de caminho/fitness."""
     components = sorted(nx.strongly_connected_components(graph), key=len, reverse=True)
     return graph.subgraph(components[0]).copy()
+
+
+@lru_cache(maxsize=1)
+def default_giant_graph() -> nx.DiGraph:
+    """
+    Versão cacheada de get_giant_component(default_graph()) -- é este o
+    "grafo de trabalho" usado na fase de SELEÇÃO de estação, pelas 5
+    station strategies (ver cli.py: generate_combo/run_single), não o
+    grafo completo.
+
+    IMPORTANTE: isso é diferente do grafo usado na fase de SIMULAÇÃO (ver
+    cli.py: _worker_graph / simulation.run_simulation), que continua sendo
+    o grafo completo -- um veículo pode legitimamente estar em qualquer
+    edge do mapa quando é sorteado para recarregar, então o cálculo de
+    rota até a estação precisa poder buscar a partir de qualquer posição,
+    não só dentro do componente gigante.
+
+    FIX: esta restrição já era usada internamente pelo algoritmo genético
+    original (get_giant_component/candidate_nodes ali) -- mas nunca tinha
+    sido aplicada às outras 4 estratégias, que validavam conectividade de
+    um jeito mais fraco e inconsistente entre si (random/pseudorandom só
+    conferiam se as 3 lanes sorteadas formavam ciclo ENTRE SI, sem garantir
+    que pertenciam ao núcleo bem conectado do mapa; greedy/greedyvoronoi
+    não conferiam nada; genetic_strategy.py só conferia "existe no grafo
+    completo"). Unificar todos os 5 approaches para escolherem estações
+    apenas dentro do mesmo componente gigante corrige essa inconsistência.
+
+    Efeito colateral útil: como todo par de nós dentro do componente
+    fortemente conexo é, por definição, mutuamente alcançável, a checagem
+    de ciclo (_forms_cycle) em random/pseudorandom deixa de ser necessária
+    -- basta o candidato pertencer a este grafo.
+    """
+    return get_giant_component(default_graph())
 
 
 @lru_cache(maxsize=1)
@@ -166,26 +144,30 @@ def lane_lengths(netfile: Path | str = None) -> dict:
     return lengths
 
 
-def has_min_capacity(lane_id: str, max_vehicles_per_cs: int,
-                      lane_lengths_dict: dict, vehicle_length: float) -> bool:
+def realized_capacity(lane_id: str, max_vehicles_per_cs: int,
+                       lane_lengths_dict: dict, vehicle_length: float) -> int:
     """
-    Confere se `lane_id` tem comprimento físico suficiente pra `roadsideCapacity`
-    (a parkingArea da estação, ver io_utils.write_add_file/simulation.py)
-    realmente caber `max_vehicles_per_cs` veículos, sem estourar o trecho da
-    lane -- que, pelo modo como o SUMO distribui as vagas de uma parkingArea
-    sem <space> customizado, é limitado ao próprio comprimento da lane.
+    Capacidade REAL de uma estação, dado o comprimento físico da lane onde
+    ela vai ficar: min(max_vehicles_per_cs, quantos veículos cabem de
+    verdade), nunca menos que 1.
 
-    Comprovado empiricamente (não só teoricamente) que ignorar isso causa
-    'skips stop' seguido de teleporte quando a lane é curta demais pro
-    max_vehicles_per_cs pedido -- por isso essa checagem vale pra QUALQUER
-    approach que escolhe estação, não só o pseudorandom (que já tinha essa
-    lógica desde o código original).
+    Decisão metodológica (não um bug/limitação técnica): em vez de REJEITAR
+    uma posição de estação por não caber `max_vehicles_per_cs` veículos (o
+    que travaria approaches sem candidato alternativo, como o genetic, cujas
+    posições vêm de um algoritmo externo já publicado), a capacidade da
+    estação se ADAPTA ao que a rua realmente comporta -- min() com o pedido,
+    nunca inventando espaço que não existe. Isso espelha uma restrição real
+    de infraestrutura (não dá pra instalar uma estação de 6 vagas numa rua
+    que só cabe 2) e se aplica igualmente aos 5 approaches -- nenhum se
+    beneficia ou é prejudicado sistematicamente por isso.
 
-    Usado por: pseudorandom, random, greedy, greedyvoronoi (como filtro na
-    escolha de candidatos) e genetic (como validação pós-hoc, já que as
-    posições vêm de fora e não há candidato alternativo pra tentar).
+    A seleção de ONDE colocar uma estação não depende mais deste valor --
+    qualquer lane escolhida por qualquer approach é aceita; só a capacidade
+    escrita no .add.xml (ver io_utils.write_add_file) é que se ajusta à
+    geometria real de cada uma.
     """
     length = lane_lengths_dict.get(lane_id)
     if length is None:
-        return False
-    return (length / vehicle_length) >= max_vehicles_per_cs
+        return 1
+    fits = int(length // vehicle_length)
+    return max(1, min(max_vehicles_per_cs, fits))
