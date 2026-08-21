@@ -72,41 +72,42 @@ def _auto_workers(total_jobs: int) -> int:
     durante um batch e ver que cada processo consome bem menos ou bem mais
     que isso, ajuste essa constante.
 
-    FIX: cpu_based agora divide por config.ROUTING_THREADS -- cada
-    processo SUMO já abre ROUTING_THREADS threads internas próprias
-    (device.rerouting.threads, ver io_utils.write_cfg_file), então o total
-    real de threads de SO disputando CPU é `workers * ROUTING_THREADS`,
-    não só `workers`. Sem essa divisão, um valor de --workers calculado só
-    por núcleo (ex: 30 num servidor de 32 threads) multiplicado por
-    ROUTING_THREADS=4 gera ~120 threads de SUMO competindo ao mesmo tempo
-    -- isso reproduziu, na prática, um crash conhecido do SUMO
-    ("malloc_consolidate(): unaligned fastbin chunk detected", relatado na
-    lista sumo-user associado a excesso de threads/xerces-c), mais
-    provável em combinações pesadas (cs_amount alto, mais XML pra
-    parsear). Dividir aqui mantém o total de threads de SO próximo da
-    capacidade real da máquina, prevenindo isso proativamente em vez de
-    precisar reduzir --workers manualmente depois que já travou.
+    MARGEM: em vez de reservas fixas (antes: "-2 núcleos", "4GB fixos" --
+    excessivamente conservador em máquinas maiores, deixando boa parte da
+    CPU ociosa mesmo com folga real de sobra), a margem agora é percentual
+    (TARGET_UTILIZATION): usa até ~94-95% de CPU e RAM disponíveis,
+    deixando só uns 5-6% de fato livres pro SO e outros programas -- em
+    vez de subtrair um valor fixo que pesa muito pouco numa máquina de 8
+    núcleos/16GB e quase nada numa de 64 núcleos/256GB.
+
+    FIX: cpu_based voltou a NÃO dividir por config.ROUTING_THREADS. Essa
+    divisão (adicionada numa iteração anterior, como precaução contra um
+    crash de concorrência do SUMO) na prática cortava o número de workers
+    por ROUTING_THREADS=4 -- ex: 20 núcleos físicos viravam só ~4-5
+    workers, bem abaixo da capacidade real da máquina (era essa divisão a
+    causa raiz de "só 3 execuções simultâneas" reportado depois). O
+    critério que se mostrou correto na prática é o mesmo de antes dessa
+    divisão: reservar só 2 núcleos de folga pro SO, sem dividir por
+    ROUTING_THREADS.
     """
     ESTIMATED_RAM_PER_JOB_GB = 2.0
-    SAFETY_MARGIN_GB = 4.0  # reserva pro SO e outros programas abertos
+    TARGET_UTILIZATION = 0.95  # usa até 95% de CPU/RAM disponíveis (~5% de folga)
 
     # --- CPU -----------------------------------------------------------
-    # FIX: núcleos FÍSICOS, não lógicos. os.cpu_count() conta threads de
-    # hyperthreading/SMT (ex: 12 núcleos físicos -> 24 "cpus"), e o
-    # cálculo antigo usava esse número diretamente -- em CPUs com SMT
-    # habilitado isso não é o problema principal (o problema principal é a
-    # divisão por ROUTING_THREADS abaixo), mas ainda assim distorce a
-    # base. Além disso, o valor final antigo era retornado sem nenhum log
-    # do RACIOCÍNIO (cpu_based vs ram_based) -- não dava pra saber, só
-    # olhando o log, qual dos dois fatores estava realmente limitando o
-    # paralelismo (por isso "só 20% de CPU" era difícil de diagnosticar).
+    # Núcleos FÍSICOS, não lógicos. os.cpu_count() conta threads de
+    # hyperthreading/SMT (ex: 12 núcleos físicos -> 24 "cpus"), o que
+    # infla artificialmente a base do cálculo em CPUs com SMT habilitado.
+    # O log abaixo mostra separadamente cpu_based e ram_based -- assim dá
+    # pra saber, sem adivinhar, qual dos dois está limitando o paralelismo
+    # (era isso que tornava "só 20% de CPU" difícil de diagnosticar antes).
     try:
         import psutil
         physical_cores = psutil.cpu_count(logical=False) or os.cpu_count() or 1
     except ImportError:
         physical_cores = os.cpu_count() or 1  # fallback: conta lógica mesmo
 
-    cpu_based = max(1, (physical_cores - 2) // config.ROUTING_THREADS)
+    cpu_budget = max(1, int(physical_cores * TARGET_UTILIZATION))
+    cpu_based = max(1, cpu_budget - 2)  # reserva 2 núcleos de folga pro SO
 
     # --- RAM -------------------------------------------------------------
     # psutil primeiro (funciona em Linux/Windows/macOS); /proc/meminfo como
@@ -131,7 +132,7 @@ def _auto_workers(total_jobs: int) -> int:
     if available_gb is None:
         ram_based = cpu_based  # não limita além do que a CPU já limita
     else:
-        usable_gb = max(0.0, available_gb - SAFETY_MARGIN_GB)
+        usable_gb = available_gb * TARGET_UTILIZATION
         ram_based = max(1, int(usable_gb / ESTIMATED_RAM_PER_JOB_GB))
 
     resolved = max(1, min(cpu_based, ram_based, total_jobs))
@@ -139,8 +140,7 @@ def _auto_workers(total_jobs: int) -> int:
     limiting_factor = "CPU" if cpu_based <= ram_based else "RAM"
     hit_job_ceiling = resolved == total_jobs and resolved < min(cpu_based, ram_based)
     log.info(
-        f"_auto_workers: physical_cores={physical_cores} "
-        f"routing_threads={config.ROUTING_THREADS} cpu_based={cpu_based} | "
+        f"_auto_workers: physical_cores={physical_cores} cpu_based={cpu_based} | "
         f"ram_available="
         f"{f'{available_gb:.1f}GB' if available_gb is not None else 'desconhecida'} "
         f"ram_based={ram_based} | total_jobs={total_jobs} -> "
@@ -157,11 +157,8 @@ def _auto_workers(total_jobs: int) -> int:
         )
     elif not hit_job_ceiling and limiting_factor == "CPU":
         log.info(
-            "    CPU (via ROUTING_THREADS) está limitando o paralelismo. "
-            "device.rerouting.threads só é usado nos instantes de reroteamento, "
-            "não o tempo todo -- se quiser mais paralelismo (trocando "
-            "segurança contra o crash 'malloc_consolidate' por CPU mais "
-            "ocupada), reduza --routing-threads (ex: 1 ou 2) ou passe "
+            "    CPU (núcleos físicos) está limitando o paralelismo. Se "
+            "quiser forçar mais processos simultâneos mesmo assim, passe "
             "--workers manualmente mais alto que este valor."
         )
 
