@@ -175,12 +175,14 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
     input_el = ET.SubElement(root, "input")
     ET.SubElement(input_el, "net-file").set("value", str(config.NET_FILE))
     ET.SubElement(input_el, "route-files").set("value", job.trips_file.name)
-    # FIX: o .add.xml (estações) sozinho aqui NÃO carrega o vType "soulEV65"
-    # -- sem isso, traci.vehicle.add(..., typeID="soulEV65", ...) usa um tipo
-    # padrão silenciosamente (sem device.battery), e os "veículos elétricos"
-    # não têm bateria de verdade pra recarregar. Esse bug já existia no
-    # projeto original (electric_vehicle.xml só era referenciado em código
-    # morto) -- corrigido carregando os dois arquivos como additional-files.
+    # O .add.xml (estações) sozinho aqui NÃO carrega o vType "soulEV65" --
+    # sem isso, traci.vehicle.add(..., typeID="soulEV65", ...) usa um tipo
+    # padrão silenciosamente, com atributos (ex. comprimento) diferentes do
+    # que graph_utils.realized_capacity assume ao calcular roadsideCapacity.
+    # electric_vehicle.xml continua sendo carregado por isso -- só não tem
+    # mais device.battery no vType (recarga foi removida do projeto, ver
+    # write_add_file), então "soulEV65" hoje é só um nome legado do tipo de
+    # veículo, sem nada elétrico de fato nele.
     ET.SubElement(input_el, "additional-files").set(
         "value", f"{job.add_file.name},{config.ELECTRIC_VEHICLE_TYPE_FILE}"
     )
@@ -212,11 +214,24 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
 # ---------------------------------------------------------------------------
 def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
     """
-    Gera o .add.xml com <chargingStation> + <parkingArea> desta repetição.
-    Se `lanes` não for passado, lê de job.selected_lanes_file (o arquivo
-    já deve ter sido gerado pela station strategy antes de chamar isso).
+    Gera o .add.xml com <parkingArea> desta repetição -- só isso, sem
+    <chargingStation>. Se `lanes` não for passado, lê de
+    job.selected_lanes_file (o arquivo já deve ter sido gerado pela
+    station strategy antes de chamar isso).
 
-    Cada estação é DOIS elementos na mesma lane, com o mesmo id:
+    <chargingStation> foi removida de propósito: o objetivo deste projeto
+    nunca dependeu da recarga em si acontecer (ver comentário sobre
+    --battery-output em simulation.py), só de o veículo ficar parado o
+    tempo certo -- e quem garante isso é o STOP_PARKING via
+    setParkingAreaStop em simulation.py, que não depende de nenhuma
+    chargingStation existir. Removida junto (fora deste arquivo, ver
+    electric_vehicle.xml) a definição de device.battery do vType
+    soulEV65 -- sem chargingStation pra devolver energia, manter a
+    bateria ativa só faria veículos serem removidos à força (vaporized)
+    ao ficarem sem carga, contaminando o tripinfo que verify_recharge.py
+    usa como fonte de verdade.
+
+    A cada estação:
     - <parkingArea roadsideCapacity=...> -- capacidade REAL, calculada por
       lane (ver graph_utils.realized_capacity): min(job.max_vehicles_per_cs,
       quantos veículos cabem fisicamente naquela lane específica), nunca
@@ -224,11 +239,6 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
       strategies) NÃO filtra mais por capacidade -- qualquer lane escolhida
       é aceita, e a capacidade só se ajusta aqui, na hora de gerar o
       arquivo, à geometria real daquela posição específica.
-    - <chargingStation parkingArea="<mesmo id>"> -- dá a potência de
-      recarga. O atributo `parkingArea` (documentado em
-      https://sumo.dlr.de/docs/Models/Electric.html#charging_stations) liga
-      as duas explicitamente: "vehicles will only charge after reaching the
-      parking".
     """
     if lanes is None:
         lanes = read_selected_lanes_file(job.selected_lanes_file)
@@ -247,18 +257,9 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
 
         pa = ET.SubElement(root, "parkingArea")
         pa.set("id", str(i))
-        pa.set("name", "chargingStation")
+        pa.set("name", "parkingArea")
         pa.set("lane", lane_id)
         pa.set("roadsideCapacity", str(capacity))
-
-        cs = ET.SubElement(root, "chargingStation")
-        cs.set("id", str(i))
-        cs.set("name", "chargingStation")
-        cs.set("lane", lane_id)
-        cs.set("power", config.CHARGING_POWER_W)
-        cs.set("chargeInTransit", config.CHARGE_IN_TRANSIT)
-        cs.set("chargeDelay", config.CHARGE_DELAY_S)
-        cs.set("parkingArea", str(i))  # liga explicitamente à parkingArea de mesmo id
 
     _pretty_write(root, job.add_file)
 

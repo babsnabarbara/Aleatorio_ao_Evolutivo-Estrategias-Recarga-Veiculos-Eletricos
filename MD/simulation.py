@@ -41,11 +41,18 @@ _ATTR_RE = {
 # Leitura de arquivos já gerados (fase de geração já deve ter rodado)
 # ---------------------------------------------------------------------------
 def read_charging_stations(job: SimJob) -> dict:
-    """Lê o .add.xml do job e devolve {station_id: {'lane': lane_id}}."""
+    """Lê o .add.xml do job e devolve {station_id: {'lane': lane_id}}.
+
+    Lê de <parkingArea>, não de <chargingStation> -- este projeto não usa
+    mais chargingStation (recarga removida de propósito, ver
+    io_utils.write_add_file); as posições das estações agora vêm só das
+    parkingAreas, que continuam existindo no .add.xml normalmente. O nome
+    da função foi mantido (mesmo assinatura/retorno) para não exigir
+    mudança em quem já chama isso."""
     root = ET.parse(job.add_file).getroot()
     stations = {}
-    for cs in root.findall(".//chargingStation"):
-        stations[cs.get("id")] = {"lane": cs.get("lane")}
+    for pa in root.findall(".//parkingArea"):
+        stations[pa.get("id")] = {"lane": pa.get("lane")}
     return stations
 
 

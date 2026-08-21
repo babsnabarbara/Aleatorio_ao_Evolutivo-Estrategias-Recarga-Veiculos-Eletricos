@@ -1,6 +1,6 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <vType id="soulEV65" length="4" minGap="2.50" maxSpeed="29.06" color="white" accel="1.0" decel="1.0" sigma="0.0" emissionClass="Energy/unknown">
-        <param key="has.battery.device" value="true"/>
+        <param key="has.battery.device" value="false"/>
         <param key="airDragCoefficient" value="0.35"/>
         <param key="constantPowerIntake" value="0"/>
         <param key="frontSurfaceArea" value="2.6"/>
