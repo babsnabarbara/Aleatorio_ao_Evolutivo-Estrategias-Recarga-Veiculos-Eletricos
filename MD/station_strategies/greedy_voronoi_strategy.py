@@ -38,8 +38,6 @@ import numpy as np
 from scipy.spatial import Voronoi
 
 import config
-import graph_utils
-import io_utils
 from sim_job import SimJob
 from station_strategies import evolution
 from station_strategies.greedy_strategy import _most_visited_lanes
@@ -116,15 +114,13 @@ def _save_diagnostic(repetition: int, cs_amount: int, points: np.ndarray,
     (out_dir / f"FLAGARCHIVE-{tag}.txt").write_text("deu certo" if ok else "não deu certo")
 
 
-def _build(cs_amount: int, max_vehicles_per_cs: int) -> set:
+def _build(cs_amount: int, graph: nx.DiGraph) -> set:
     x_min, y_min, x_max, y_max = _conv_boundary()
     points = np.random.uniform([x_min, y_min], [x_max, y_max], size=(cs_amount, 2))
     vor = Voronoi(points)
 
     most_visited = _most_visited_lanes()
     lanes_and_coords = _lanes_and_coordinates()
-    lane_lengths = graph_utils.lane_lengths()
-    veh_length = io_utils.vehicle_length("soulEV65")
 
     region_filled = {region: False for region in vor.point_region}
     chosen: set = set()
@@ -134,9 +130,8 @@ def _build(cs_amount: int, max_vehicles_per_cs: int) -> set:
             break
         if lane_id not in lanes_and_coords:
             continue
-        # FIX: comprovado empiricamente que uma lane curta demais causa
-        # "skips stop" + teleporte em runtime -- ver graph_utils.has_min_capacity.
-        if not graph_utils.has_min_capacity(lane_id, max_vehicles_per_cs, lane_lengths, veh_length):
+        # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
+        if lane_id[:-2] not in graph:
             continue
         touched = _find_regions(lanes_and_coords[lane_id], vor)
         for region in touched:
@@ -151,21 +146,30 @@ def _build(cs_amount: int, max_vehicles_per_cs: int) -> set:
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     """
-    Se sobrarem regiões sem nenhuma lane visitada tocando nelas, o
+    Se sobrarem regiões sem nenhuma lane visitada elegível tocando nelas, o
     resultado pode ter menos de `cs_amount` estações -- não é erro (mesma
     decisão aplicada ao approach 'greedy'). O `FLAGARCHIVE-*.txt` continua
     registrando "deu certo"/"não deu certo" como diagnóstico, só não trava
     mais a execução.
+
+    FIX: agora também exige que a lane pertença ao componente gigante do
+    mapa (o `graph` recebido já vem restrito a esse componente -- ver
+    cli.py/graph_utils.default_giant_graph), mesmo padrão unificado nos 5
+    approaches.
+
+    NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
+    cada estação é calculada depois, na hora de gerar o .add.xml (ver
+    graph_utils.realized_capacity).
     """
     from seed_registry import StationSeedRegistry
     StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
 
-    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs)
+    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
     if cached is not None:
         return cached
 
-    chosen, points, vor, ok = _build(job.cs_amount, job.max_vehicles_per_cs)
+    chosen, points, vor, ok = _build(job.cs_amount, graph)
     _save_diagnostic(job.repetition, job.cs_amount, points, vor, ok)
 
-    evolution.save_stage(job.approach, job.repetition, job.cs_amount, job.max_vehicles_per_cs, chosen)
+    evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
     return chosen

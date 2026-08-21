@@ -7,12 +7,26 @@ arquivo -- ver _most_visited_lanes) e, para cada uma, associa à primeira
 quadrante ainda vazia que a contenha, até preencher todas as `cs_amount`
 quadrantes.
 
-Não usa `graph` (não há validação de ciclo aqui no original) nem sorteio
-algum -- por isso, ao contrário dos outros 3 approaches, as 5 repetições de
-'greedy' para uma mesma (cs, percentage) são sempre idênticas entre si (não
-há fonte de aleatoriedade na escolha da estação em si; a única variação
-entre repetições vem do sorteio de trips, que continua usando a seed do
-job normalmente).
+FIX: agora também exige que a lane pertença ao componente gigante do mapa
+(o `graph` recebido já vem restrito a esse componente -- ver
+cli.py/graph_utils.default_giant_graph). Antes, este approach não conferia
+conectividade de forma alguma -- diferente dos outros 4, que (com graus
+variados de rigor) já tinham algum tipo de checagem. Unificado agora: uma
+lane mais visitada que esteja isolada/fora do núcleo bem conectado do mapa
+é ignorada, como as outras 4 estratégias já fazem.
+
+Não usa sorteio nenhum -- por isso, ao contrário dos outros approaches, as
+5 repetições de 'greedy' para uma mesma (cs, percentage) são sempre
+idênticas entre si (não há fonte de aleatoriedade na escolha da estação em
+si; a única variação entre repetições vem do sorteio de trips, que
+continua usando a seed do job normalmente).
+
+FIX: agora usa o mesmo cache em disco que random/pseudorandom/greedyvoronoi
+(station_strategies/evolution.py) -- antes recalculava do zero em TODA
+chamada, mesmo sendo sempre o mesmo resultado para um dado cs_amount (até
+600 vezes redundantes ao longo de um grid completo). Como 'greedy' não usa
+seed nenhuma, o cache aqui é só por (approach, repetition, cs_amount) --
+sem StationSeedRegistry envolvida.
 """
 from __future__ import annotations
 
@@ -21,9 +35,8 @@ import xml.etree.ElementTree as ET
 import networkx as nx
 
 import config
-import graph_utils
-import io_utils
 from sim_job import SimJob
+from station_strategies import evolution
 
 
 def _most_visited_lanes() -> dict[str, int]:
@@ -69,18 +82,22 @@ def _quadrants_lanes(cs_amount: int) -> list[tuple[str, str, list[str]]]:
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
     Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
-    associa à primeira quadrante ainda vazia que a contém E que tenha
-    comprimento suficiente para `max_vehicles_per_cs` (ver
-    graph_utils.has_min_capacity -- comprovado empiricamente que ignorar
-    isso causa "skips stop" + teleporte em runtime). Um quadrante sem
-    NENHUMA lane visitada com capacidade suficiente simplesmente fica sem
-    estação -- não é erro, é esperado. O resultado pode ter menos de
-    `cs_amount` estações nesse caso.
+    associa à primeira quadrante ainda vazia que a contém E cujo edge
+    pertença ao componente gigante do mapa. Um quadrante sem NENHUMA lane
+    visitada elegível simplesmente fica sem estação -- não é erro, é
+    esperado. O resultado pode ter menos de `cs_amount` estações nesse
+    caso.
+
+    NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
+    cada estação é calculada depois, na hora de gerar o .add.xml (ver
+    graph_utils.realized_capacity).
     """
+    cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
+    if cached is not None:
+        return cached
+
     quadrants = _quadrants_lanes(job.cs_amount)
     most_visited = _most_visited_lanes()  # já ordenado por count decrescente
-    lane_lengths = graph_utils.lane_lengths()
-    veh_length = io_utils.vehicle_length("soulEV65")
 
     quadrant_filled = [False] * len(quadrants)
     chosen: set[str] = set()
@@ -90,7 +107,8 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
             break
         if lane_id in chosen:
             continue
-        if not graph_utils.has_min_capacity(lane_id, job.max_vehicles_per_cs, lane_lengths, veh_length):
+        # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
+        if lane_id[:-2] not in graph:
             continue
 
         for idx, (_x, _y, lanes) in enumerate(quadrants):
@@ -101,4 +119,5 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
                 chosen.add(lane_id)
                 break
 
+    evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
     return chosen
