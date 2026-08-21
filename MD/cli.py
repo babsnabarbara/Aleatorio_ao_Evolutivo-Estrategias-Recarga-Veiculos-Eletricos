@@ -94,20 +94,25 @@ def _auto_workers(total_jobs: int) -> int:
     TARGET_UTILIZATION = 0.95  # usa até 95% de CPU/RAM disponíveis (~5% de folga)
 
     # --- CPU -----------------------------------------------------------
-    # Núcleos FÍSICOS, não lógicos. os.cpu_count() conta threads de
-    # hyperthreading/SMT (ex: 12 núcleos físicos -> 24 "cpus"), o que
-    # infla artificialmente a base do cálculo em CPUs com SMT habilitado.
-    # O log abaixo mostra separadamente cpu_based e ram_based -- assim dá
-    # pra saber, sem adivinhar, qual dos dois está limitando o paralelismo
-    # (era isso que tornava "só 20% de CPU" difícil de diagnosticar antes).
+    # FIX: CPUs LÓGICAS, não físicas. A tentativa anterior de usar núcleos
+    # físicos (psutil.cpu_count(logical=False)) partiu do pressuposto de
+    # que threads de SMT/hyperthreading não ajudam workloads como este --
+    # mas na prática (ver `top` real: 13 workers a ~100% cada resultando
+    # em só 40,6% de %Cpu(s) agregado) a máquina tem 2x mais CPUs lógicas
+    # que núcleos físicos reportados, e cada processo SUMO ocupa
+    # predominantemente 1 CPU lógica (a maior parte do tempo de simulação
+    # é single-threaded; o rerouting multi-thread só ocorre em rajadas
+    # periódicas) -- 13/32 lógicas bate exatamente com os 40,6% vistos,
+    # confirmando que o teto estava contando só metade da capacidade real.
+    # Usar CPUs lógicas aproveita esse SMT em vez de descartá-lo.
     try:
         import psutil
-        physical_cores = psutil.cpu_count(logical=False) or os.cpu_count() or 1
+        cpu_count = psutil.cpu_count(logical=True) or os.cpu_count() or 1
     except ImportError:
-        physical_cores = os.cpu_count() or 1  # fallback: conta lógica mesmo
+        cpu_count = os.cpu_count() or 1
 
-    cpu_budget = max(1, int(physical_cores * TARGET_UTILIZATION))
-    cpu_based = max(1, cpu_budget - 2)  # reserva 2 núcleos de folga pro SO
+    cpu_budget = max(1, int(cpu_count * TARGET_UTILIZATION))
+    cpu_based = max(1, cpu_budget - 2)  # reserva 2 CPUs de folga pro SO
 
     # --- RAM -------------------------------------------------------------
     # psutil primeiro (funciona em Linux/Windows/macOS); /proc/meminfo como
@@ -140,7 +145,7 @@ def _auto_workers(total_jobs: int) -> int:
     limiting_factor = "CPU" if cpu_based <= ram_based else "RAM"
     hit_job_ceiling = resolved == total_jobs and resolved < min(cpu_based, ram_based)
     log.info(
-        f"_auto_workers: physical_cores={physical_cores} cpu_based={cpu_based} | "
+        f"_auto_workers: logical_cpus={cpu_count} cpu_based={cpu_based} | "
         f"ram_available="
         f"{f'{available_gb:.1f}GB' if available_gb is not None else 'desconhecida'} "
         f"ram_based={ram_based} | total_jobs={total_jobs} -> "
