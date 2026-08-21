@@ -77,10 +77,13 @@ DEFAULT_MAX_VEHICLES_PER_CS = 6
 # ---------------------------------------------------------------------------
 # Parâmetros de infraestrutura do SUMO -- antes espalhados como literais
 # mágicos ("20000.00", "100", "4", ...) repetidos em 5+ arquivos diferentes.
+#
+# CHARGING_POWER_W / CHARGE_DELAY_S / CHARGE_IN_TRANSIT foram removidos --
+# eram usados só para escrever o <chargingStation> no .add.xml, e esse
+# elemento foi tirado do projeto (ver io_utils.write_add_file): o objetivo
+# nunca dependeu da recarga em si acontecer, só do veículo ficar parado o
+# tempo certo (garantido via STOP_PARKING, não via chargingStation).
 # ---------------------------------------------------------------------------
-CHARGING_POWER_W = "20000.00"
-CHARGE_DELAY_S = "100"          # tempo de setup antes de começar a carregar
-CHARGE_IN_TRANSIT = "1"
 
 # Threads internas de rerouting por simulação SUMO (astar). Isso importa
 # para o multiprocessing: se N simulações rodam em paralelo, cada uma usando
