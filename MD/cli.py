@@ -90,24 +90,82 @@ def _auto_workers(total_jobs: int) -> int:
     ESTIMATED_RAM_PER_JOB_GB = 2.0
     SAFETY_MARGIN_GB = 4.0  # reserva pro SO e outros programas abertos
 
-    cpu_available = os.cpu_count() or 1
-    cpu_based = max(1, (cpu_available - 2) // config.ROUTING_THREADS)
-
-    ram_based = cpu_based  # fallback se não der pra ler /proc/meminfo
+    # --- CPU -----------------------------------------------------------
+    # FIX: núcleos FÍSICOS, não lógicos. os.cpu_count() conta threads de
+    # hyperthreading/SMT (ex: 12 núcleos físicos -> 24 "cpus"), e o
+    # cálculo antigo usava esse número diretamente -- em CPUs com SMT
+    # habilitado isso não é o problema principal (o problema principal é a
+    # divisão por ROUTING_THREADS abaixo), mas ainda assim distorce a
+    # base. Além disso, o valor final antigo era retornado sem nenhum log
+    # do RACIOCÍNIO (cpu_based vs ram_based) -- não dava pra saber, só
+    # olhando o log, qual dos dois fatores estava realmente limitando o
+    # paralelismo (por isso "só 20% de CPU" era difícil de diagnosticar).
     try:
-        meminfo: dict[str, str] = {}
-        with open("/proc/meminfo") as f:
-            for line in f:
-                key, _, rest = line.partition(":")
-                meminfo[key] = rest.strip()
-        available_kb = int(meminfo["MemAvailable"].split()[0])
-        available_gb = available_kb / (1024 * 1024)
+        import psutil
+        physical_cores = psutil.cpu_count(logical=False) or os.cpu_count() or 1
+    except ImportError:
+        physical_cores = os.cpu_count() or 1  # fallback: conta lógica mesmo
+
+    cpu_based = max(1, (physical_cores - 2) // config.ROUTING_THREADS)
+
+    # --- RAM -------------------------------------------------------------
+    # psutil primeiro (funciona em Linux/Windows/macOS); /proc/meminfo como
+    # fallback só-Linux; se nenhum dos dois estiver disponível, RAM não
+    # limita o resultado (só CPU decide).
+    available_gb: float | None = None
+    try:
+        import psutil
+        available_gb = psutil.virtual_memory().available / (1024 ** 3)
+    except ImportError:
+        try:
+            meminfo: dict[str, str] = {}
+            with open("/proc/meminfo") as f:
+                for line in f:
+                    key, _, rest = line.partition(":")
+                    meminfo[key] = rest.strip()
+            available_kb = int(meminfo["MemAvailable"].split()[0])
+            available_gb = available_kb / (1024 * 1024)
+        except (FileNotFoundError, KeyError, ValueError):
+            pass  # RAM não medível nesta máquina -- só CPU decide
+
+    if available_gb is None:
+        ram_based = cpu_based  # não limita além do que a CPU já limita
+    else:
         usable_gb = max(0.0, available_gb - SAFETY_MARGIN_GB)
         ram_based = max(1, int(usable_gb / ESTIMATED_RAM_PER_JOB_GB))
-    except (FileNotFoundError, KeyError, ValueError):
-        pass  # não é Linux, ou /proc/meminfo não disponível -- usa só CPU
 
-    return max(1, min(cpu_based, ram_based, total_jobs))
+    resolved = max(1, min(cpu_based, ram_based, total_jobs))
+
+    limiting_factor = "CPU" if cpu_based <= ram_based else "RAM"
+    hit_job_ceiling = resolved == total_jobs and resolved < min(cpu_based, ram_based)
+    log.info(
+        f"_auto_workers: physical_cores={physical_cores} "
+        f"routing_threads={config.ROUTING_THREADS} cpu_based={cpu_based} | "
+        f"ram_available="
+        f"{f'{available_gb:.1f}GB' if available_gb is not None else 'desconhecida'} "
+        f"ram_based={ram_based} | total_jobs={total_jobs} -> "
+        f"resolved={resolved} workers "
+        f"(fator limitante: {'total_jobs' if hit_job_ceiling else limiting_factor})"
+    )
+    if not hit_job_ceiling and limiting_factor == "RAM":
+        log.info(
+            "    RAM está limitando o paralelismo. Se ESTIMATED_RAM_PER_JOB_GB "
+            f"({ESTIMATED_RAM_PER_JOB_GB}GB) estiver superestimado pra este "
+            "cenário (rode `free -h`/`htop` -- ou o Gerenciador de Tarefas no "
+            "Windows -- durante um job só pra medir o consumo real por "
+            "processo SUMO), ajuste essa constante para aumentar o paralelismo."
+        )
+    elif not hit_job_ceiling and limiting_factor == "CPU":
+        log.info(
+            "    CPU (via ROUTING_THREADS) está limitando o paralelismo. "
+            "device.rerouting.threads só é usado nos instantes de reroteamento, "
+            "não o tempo todo -- se quiser mais paralelismo (trocando "
+            "segurança contra o crash 'malloc_consolidate' por CPU mais "
+            "ocupada), reduza --routing-threads (ex: 1 ou 2) ou passe "
+            "--workers manualmente mais alto que este valor."
+        )
+
+    return resolved
 
 
 def _setup_logging(approach: str) -> None:
