@@ -71,12 +71,27 @@ def _auto_workers(total_jobs: int) -> int:
     simulações bem menores). Se rodar `free -h` num terminal separado
     durante um batch e ver que cada processo consome bem menos ou bem mais
     que isso, ajuste essa constante.
+
+    FIX: cpu_based agora divide por config.ROUTING_THREADS -- cada
+    processo SUMO já abre ROUTING_THREADS threads internas próprias
+    (device.rerouting.threads, ver io_utils.write_cfg_file), então o total
+    real de threads de SO disputando CPU é `workers * ROUTING_THREADS`,
+    não só `workers`. Sem essa divisão, um valor de --workers calculado só
+    por núcleo (ex: 30 num servidor de 32 threads) multiplicado por
+    ROUTING_THREADS=4 gera ~120 threads de SUMO competindo ao mesmo tempo
+    -- isso reproduziu, na prática, um crash conhecido do SUMO
+    ("malloc_consolidate(): unaligned fastbin chunk detected", relatado na
+    lista sumo-user associado a excesso de threads/xerces-c), mais
+    provável em combinações pesadas (cs_amount alto, mais XML pra
+    parsear). Dividir aqui mantém o total de threads de SO próximo da
+    capacidade real da máquina, prevenindo isso proativamente em vez de
+    precisar reduzir --workers manualmente depois que já travou.
     """
     ESTIMATED_RAM_PER_JOB_GB = 2.0
     SAFETY_MARGIN_GB = 4.0  # reserva pro SO e outros programas abertos
 
     cpu_available = os.cpu_count() or 1
-    cpu_based = max(1, cpu_available - 2)  # deixa 2 threads de folga pro SO
+    cpu_based = max(1, (cpu_available - 2) // config.ROUTING_THREADS)
 
     ram_based = cpu_based  # fallback se não der pra ler /proc/meminfo
     try:
@@ -268,7 +283,37 @@ def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs
             f"({'auto-detectado por CPU+RAM' if workers is None else 'fixo via --workers'})"
         )
 
+        jobs_by_manifest_id = {job.manifest_id: job for job in all_jobs}
         all_failed = run_combo(all_jobs, workers=resolved_workers, sumo_command=sumo_command)
+
+        # FIX: retry automático com paralelismo reduzido -- alguns crashes
+        # (ex: "malloc_consolidate" do SUMO sob concorrência excessiva) não
+        # são reproduzíveis de forma confiável; mesmo calculando workers
+        # com folga, pode sobrar algum job travado por azar de timing. Em
+        # vez de só reportar "precisa reexecutar" e esperar você rodar de
+        # novo na mão, tenta de novo sozinho, algumas vezes, reduzindo o
+        # paralelismo a cada tentativa -- só os jobs que falharam, não o
+        # grid inteiro.
+        MAX_RETRIES = 3
+        retry_workers = resolved_workers
+        attempt = 1
+        while all_failed and attempt <= MAX_RETRIES:
+            retry_workers = max(1, retry_workers // 2)
+            log.info(
+                f"=== retry {attempt}/{MAX_RETRIES}: {len(all_failed)} job(s) "
+                f"falharam, tentando de novo com {retry_workers} workers ==="
+            )
+            retry_jobs = [jobs_by_manifest_id[mid] for mid in all_failed]
+            all_failed = run_combo(retry_jobs, workers=retry_workers, sumo_command=sumo_command)
+            attempt += 1
+
+        if all_failed:
+            log.error(
+                f"=== {len(all_failed)} job(s) continuam falhando após "
+                f"{MAX_RETRIES} tentativa(s) de retry automático -- "
+                f"provavelmente não é um problema de concorrência, precisa "
+                f"de investigação manual (ver mensagens de erro acima) ==="
+            )
     finally:
         config.REPETITIONS = original_repetitions
 
