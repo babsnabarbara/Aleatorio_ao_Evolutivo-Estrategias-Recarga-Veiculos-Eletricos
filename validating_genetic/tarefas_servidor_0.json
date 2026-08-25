@@ -1,0 +1,4133 @@
+[
+  {
+    "id": 56,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 68,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 80,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 146,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 149,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 161,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 218,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 230,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 242,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 299,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 311,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 323,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 389,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 392,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 404,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 470,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 473,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 485,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 551,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 554,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 566,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 632,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 635,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 647,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 713,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 716,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 728,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 13612.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 64,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 67,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 79,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 145,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 148,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 160,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 226,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 229,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 241,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 307,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 310,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 322,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 388,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 391,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 403,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 469,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 472,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 484,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 541,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 553,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 565,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 622,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 634,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 646,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 703,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 715,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 727,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 9723.0,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 29,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 41,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 53,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 119,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 122,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 134,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 200,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 203,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 215,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 281,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 284,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 296,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 362,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 365,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 377,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 443,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 446,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 458,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 524,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 527,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 539,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 605,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 608,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 620,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 686,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 689,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 701,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 8167.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 37,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 40,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 52,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 63,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 66,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 78,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 118,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 121,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 133,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 144,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 147,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 159,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 199,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 202,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 214,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 225,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 228,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 240,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 280,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 283,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 295,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 306,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 309,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 321,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 361,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 364,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 376,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 387,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 390,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 402,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 442,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 445,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 457,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 468,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 471,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 483,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 523,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 526,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 538,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 549,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 552,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 564,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 604,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 607,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 619,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 630,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 633,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 645,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 685,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 688,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 700,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 711,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 714,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 726,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 5833.8,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 11,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 14,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 26,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 92,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 95,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 107,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 173,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 176,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 188,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 245,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 257,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 269,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 326,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 338,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 350,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 407,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 419,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 431,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 488,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 500,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 512,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 569,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 581,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 593,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 650,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 662,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 674,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "tempo_estimado_segundos": 5444.9,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 1,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 13,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 25,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 82,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 94,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 106,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 163,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 175,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 187,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 244,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 256,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 268,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 325,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 337,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 349,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 406,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 418,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 430,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 487,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 499,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 511,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 568,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 580,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 592,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 649,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 661,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 673,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "tempo_estimado_segundos": 3889.2,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 27,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 39,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 51,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 108,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 120,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 132,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 189,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 201,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 213,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 270,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 282,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 294,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 351,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 363,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 375,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 432,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 444,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 456,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 513,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 525,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 537,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 594,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 606,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 618,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 675,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 687,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 699,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 3500.3,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 0,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 12,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 24,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 81,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 93,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 105,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 162,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 174,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 186,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 243,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 255,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 267,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 324,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 336,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 348,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 405,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 417,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 429,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 486,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 498,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 510,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 567,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 579,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 591,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 648,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 660,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  },
+  {
+    "id": 672,
+    "k": 25,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "tempo_estimado_segundos": 2333.5,
+    "status": "pendente",
+    "servidor_atribuido": 0,
+    "tempo_real_segundos": null,
+    "resultado": null
+  }
+]

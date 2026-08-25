@@ -1,0 +1,15 @@
+nohup: ignoring input
+Resumo da distribuição (LPT, balanceada por tempo de parede estimado):
+
+Servidor  Peso   Nº tarefas  Trabalho (h)   Tempo parede   ~dias   
+0         1.5    243         437.5          291.7          12.15   
+           (k=25:243)
+1         1.0    162         291.7          291.7          12.15   
+           (k=25:162)
+2         1.0    162         291.7          291.7          12.15   
+           (k=25:162)
+3         1.0    162         291.7          291.7          12.15   
+           (k=25:162)
+
+Desbalanceamento de tempo de parede entre servidores: 0.0h (0.0% do maior)
+Arquivos gerados: tarefas_servidor_0.json ... tarefas_servidor_3.json
