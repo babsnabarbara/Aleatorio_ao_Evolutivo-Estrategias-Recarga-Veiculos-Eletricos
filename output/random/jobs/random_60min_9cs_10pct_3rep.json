@@ -1,0 +1,12 @@
+{
+  "approach": "random",
+  "minutes": 60,
+  "cs_amount": 9,
+  "percentage": 10,
+  "repetition": 3,
+  "vehicles": 8000,
+  "max_vehicles_per_cs": 6,
+  "seed": 1882496922,
+  "trip_seed": 3703869457,
+  "port": null
+}
