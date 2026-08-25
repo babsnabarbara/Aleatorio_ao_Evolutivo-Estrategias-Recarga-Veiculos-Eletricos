@@ -1,0 +1,12 @@
+{
+  "approach": "genetic",
+  "minutes": 60,
+  "cs_amount": 16,
+  "percentage": 15,
+  "repetition": 1,
+  "vehicles": 8000,
+  "max_vehicles_per_cs": 6,
+  "seed": 2624001893,
+  "trip_seed": 2422523349,
+  "port": null
+}

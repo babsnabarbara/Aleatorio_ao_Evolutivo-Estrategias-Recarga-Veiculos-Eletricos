@@ -1,0 +1,1205 @@
+2026-08-21 15:41:41 | INFO | === batch: approach=genetic | 120 combinações x 5 repetições ===
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_5pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_5pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_5pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_5pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_5pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_10pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_10pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_10pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_10pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_10pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_15pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_15pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_15pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_15pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_15pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_20pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_20pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_20pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_20pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_20pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_25pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_25pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_25pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_25pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_25pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_30pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_30pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_30pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_30pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_9cs_30pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_5pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_5pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_5pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_5pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_5pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_10pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_10pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_10pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_10pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_10pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_15pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_15pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_15pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_15pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_15pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_20pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_20pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_20pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_20pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_20pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_25pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_25pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_25pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_25pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_25pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_30pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_30pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_30pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_30pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_16cs_30pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_5pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_5pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_5pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_5pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_5pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_10pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_10pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_10pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_10pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_10pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_15pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_15pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_15pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_15pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_15pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_20pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_20pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_20pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_20pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_20pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_25pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_25pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_25pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_25pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_25pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_30pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_30pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_30pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_30pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_25cs_30pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_5pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_5pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_5pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_5pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_5pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_10pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_10pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_10pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_10pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_10pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_15pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_15pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_15pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_15pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_15pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_20pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_20pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_20pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_20pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_20pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_25pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_25pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_25pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_25pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_25pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_30pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_30pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_30pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_30pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_36cs_30pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_5pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_5pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_5pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_5pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_5pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_10pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_10pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_10pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_10pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_10pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_15pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_15pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_15pct_3rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_15pct_4rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_15pct_5rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_20pct_1rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_20pct_2rep
+2026-08-21 15:42:03 | INFO | gerado: genetic_10min_49cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_10min_49cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_20pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_20pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_9cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_20pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_20pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_16cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_20pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_20pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_25cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_20pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_20pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_36cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_20pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_20pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_20pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_20pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_20pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_25pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_25pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_25pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_25pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_25pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_30pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_30pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_30pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_30pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_20min_49cs_30pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_5pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_5pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_5pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_5pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_5pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_10pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_10pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_10pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_10pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_10pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_15pct_1rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_15pct_2rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_15pct_3rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_15pct_4rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_15pct_5rep
+2026-08-21 15:42:04 | INFO | gerado: genetic_40min_9cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_9cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_15pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_15pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_15pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_16cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_15pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_15pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_15pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_25cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_15pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_15pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_15pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_36cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_15pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_15pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_15pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_40min_49cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_15pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_15pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_15pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_20pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_20pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_20pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_20pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_20pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_25pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_25pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_25pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_25pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_25pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_30pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_30pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_30pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_30pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_9cs_30pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_5pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_5pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_5pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_5pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_5pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_10pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_10pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_10pct_3rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_10pct_4rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_10pct_5rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_15pct_1rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_15pct_2rep
+2026-08-21 15:42:05 | INFO | gerado: genetic_60min_16cs_15pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_15pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_15pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_20pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_20pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_20pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_20pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_20pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_25pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_25pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_25pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_25pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_25pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_30pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_30pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_30pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_30pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_16cs_30pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_5pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_5pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_5pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_5pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_5pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_10pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_10pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_10pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_10pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_10pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_15pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_15pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_15pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_15pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_15pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_20pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_20pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_20pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_20pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_20pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_25pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_25pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_25pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_25pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_25pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_30pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_30pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_30pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_30pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_25cs_30pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_5pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_5pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_5pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_5pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_5pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_10pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_10pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_10pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_10pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_10pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_15pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_15pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_15pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_15pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_15pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_20pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_20pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_20pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_20pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_20pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_25pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_25pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_25pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_25pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_25pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_30pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_30pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_30pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_30pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_36cs_30pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_5pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_5pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_5pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_5pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_5pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_10pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_10pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_10pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_10pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_10pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_15pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_15pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_15pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_15pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_15pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_20pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_20pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_20pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_20pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_20pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_25pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_25pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_25pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_25pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_25pct_5rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_30pct_1rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_30pct_2rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_30pct_3rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_30pct_4rep
+2026-08-21 15:42:06 | INFO | gerado: genetic_60min_49cs_30pct_5rep
+2026-08-21 15:42:06 | INFO | _auto_workers: logical_cpus=32 cpu_based=28 | ram_available=122.5GB ram_based=58 | total_jobs=600 -> resolved=28 workers (fator limitante: CPU)
+2026-08-21 15:42:06 | INFO |     CPU (núcleos físicos) está limitando o paralelismo. Se quiser forçar mais processos simultâneos mesmo assim, passe --workers manualmente mais alto que este valor.
+2026-08-21 15:42:06 | INFO | 600 job(s) gerados, rodando com 28 workers em paralelo (auto-detectado por CPU+RAM)
+2026-08-21 16:06:44 | INFO | OK (1/600): genetic_10min_9cs_5pct_3rep
+2026-08-21 16:08:15 | INFO | OK (2/600): genetic_10min_9cs_5pct_5rep
+2026-08-21 16:09:17 | INFO | OK (3/600): genetic_10min_9cs_5pct_1rep
+2026-08-21 16:10:09 | INFO | OK (4/600): genetic_10min_9cs_5pct_2rep
+2026-08-21 16:11:05 | INFO | OK (5/600): genetic_10min_9cs_5pct_4rep
+2026-08-21 16:30:10 | INFO | OK (6/600): genetic_10min_9cs_10pct_5rep
+2026-08-21 16:34:00 | INFO | OK (7/600): genetic_10min_9cs_10pct_3rep
+2026-08-21 16:34:11 | INFO | OK (8/600): genetic_10min_9cs_10pct_2rep
+2026-08-21 16:34:28 | INFO | OK (9/600): genetic_10min_9cs_10pct_1rep
+2026-08-21 16:37:40 | INFO | OK (10/600): genetic_10min_9cs_10pct_4rep
+2026-08-21 16:56:01 | INFO | OK (11/600): genetic_10min_16cs_5pct_2rep
+2026-08-21 16:56:33 | INFO | OK (12/600): genetic_10min_16cs_5pct_3rep
+2026-08-21 16:56:36 | INFO | OK (13/600): genetic_10min_16cs_5pct_1rep
+2026-08-21 16:56:43 | INFO | OK (14/600): genetic_10min_9cs_15pct_4rep
+2026-08-21 16:59:02 | INFO | OK (15/600): genetic_10min_9cs_15pct_1rep
+2026-08-21 17:00:36 | INFO | OK (16/600): genetic_10min_9cs_15pct_2rep
+2026-08-21 17:02:16 | INFO | OK (17/600): genetic_10min_9cs_15pct_3rep
+2026-08-21 17:02:56 | INFO | OK (18/600): genetic_10min_9cs_15pct_5rep
+2026-08-21 17:13:09 | INFO | OK (19/600): genetic_10min_16cs_5pct_4rep
+2026-08-21 17:21:01 | INFO | OK (20/600): genetic_10min_9cs_20pct_3rep
+2026-08-21 17:21:44 | INFO | OK (21/600): genetic_10min_9cs_20pct_1rep
+2026-08-21 17:22:10 | INFO | OK (22/600): genetic_10min_16cs_5pct_5rep
+2026-08-21 17:22:28 | INFO | OK (23/600): genetic_10min_9cs_20pct_2rep
+2026-08-21 17:25:27 | INFO | OK (24/600): genetic_10min_9cs_20pct_5rep
+2026-08-21 17:26:02 | INFO | OK (25/600): genetic_10min_9cs_20pct_4rep
+2026-08-21 17:44:54 | INFO | OK (26/600): genetic_10min_9cs_25pct_2rep
+2026-08-21 17:48:56 | INFO | OK (27/600): genetic_10min_9cs_25pct_1rep
+2026-08-21 17:50:37 | INFO | OK (28/600): genetic_10min_9cs_25pct_5rep
+2026-08-21 17:51:35 | INFO | OK (29/600): genetic_10min_9cs_25pct_4rep
+2026-08-21 17:53:04 | INFO | OK (30/600): genetic_10min_9cs_25pct_3rep
+2026-08-21 18:01:16 | INFO | OK (31/600): genetic_10min_16cs_10pct_3rep
+2026-08-21 18:02:18 | INFO | OK (32/600): genetic_10min_16cs_10pct_2rep
+2026-08-21 18:04:08 | INFO | OK (33/600): genetic_10min_16cs_10pct_1rep
+2026-08-21 18:05:32 | INFO | OK (34/600): genetic_10min_9cs_30pct_1rep
+2026-08-21 18:06:48 | INFO | OK (35/600): genetic_10min_9cs_30pct_2rep
+2026-08-21 18:13:10 | INFO | OK (36/600): genetic_10min_9cs_30pct_3rep
+2026-08-21 18:27:29 | INFO | OK (37/600): genetic_10min_16cs_10pct_5rep
+2026-08-21 18:30:14 | INFO | OK (38/600): genetic_10min_16cs_10pct_4rep
+2026-08-21 18:40:34 | INFO | OK (39/600): genetic_10min_9cs_30pct_5rep
+2026-08-21 18:46:54 | INFO | OK (40/600): genetic_10min_9cs_30pct_4rep
+2026-08-21 19:05:43 | INFO | OK (41/600): genetic_10min_16cs_15pct_3rep
+2026-08-21 19:07:37 | INFO | OK (42/600): genetic_10min_16cs_15pct_2rep
+2026-08-21 19:09:11 | INFO | OK (43/600): genetic_10min_16cs_15pct_1rep
+2026-08-21 19:15:11 | INFO | OK (44/600): genetic_10min_25cs_5pct_1rep
+2026-08-21 19:17:39 | INFO | OK (45/600): genetic_10min_16cs_15pct_4rep
+2026-08-21 19:19:55 | INFO | OK (46/600): genetic_10min_16cs_15pct_5rep
+2026-08-21 19:20:13 | INFO | OK (47/600): genetic_10min_25cs_5pct_2rep
+2026-08-21 19:25:08 | INFO | OK (48/600): genetic_10min_25cs_5pct_3rep
+2026-08-21 19:25:34 | INFO | OK (49/600): genetic_10min_25cs_5pct_4rep
+2026-08-21 19:43:29 | INFO | OK (50/600): genetic_10min_25cs_5pct_5rep
+2026-08-21 19:59:18 | INFO | OK (51/600): genetic_10min_16cs_20pct_2rep
+2026-08-21 20:04:36 | INFO | OK (52/600): genetic_10min_16cs_20pct_1rep
+2026-08-21 20:05:09 | INFO | OK (53/600): genetic_10min_16cs_20pct_3rep
+2026-08-21 20:15:10 | INFO | OK (54/600): genetic_10min_16cs_20pct_5rep
+2026-08-21 20:24:38 | INFO | OK (55/600): genetic_10min_16cs_20pct_4rep
+2026-08-21 20:52:27 | INFO | OK (56/600): genetic_10min_25cs_10pct_2rep
+2026-08-21 20:53:18 | INFO | OK (57/600): genetic_10min_25cs_10pct_1rep
+2026-08-21 20:55:13 | INFO | OK (58/600): genetic_10min_16cs_25pct_3rep
+2026-08-21 20:56:31 | INFO | OK (59/600): genetic_10min_16cs_25pct_2rep
+2026-08-21 20:57:48 | INFO | OK (60/600): genetic_10min_16cs_25pct_1rep
+2026-08-21 21:15:55 | INFO | OK (61/600): genetic_10min_25cs_10pct_3rep
+2026-08-21 21:30:03 | INFO | OK (62/600): genetic_10min_25cs_10pct_4rep
+2026-08-21 21:34:03 | INFO | OK (63/600): genetic_10min_16cs_25pct_4rep
+2026-08-21 21:34:56 | INFO | OK (64/600): genetic_10min_25cs_10pct_5rep
+2026-08-21 21:38:29 | INFO | OK (65/600): genetic_10min_16cs_25pct_5rep
+2026-08-21 21:59:00 | INFO | OK (66/600): genetic_10min_16cs_30pct_2rep
+2026-08-21 22:09:43 | INFO | OK (67/600): genetic_10min_16cs_30pct_3rep
+2026-08-21 22:15:25 | INFO | OK (68/600): genetic_10min_16cs_30pct_1rep
+2026-08-21 22:23:19 | INFO | OK (69/600): genetic_10min_16cs_30pct_5rep
+2026-08-21 22:35:55 | INFO | OK (70/600): genetic_10min_16cs_30pct_4rep
+2026-08-21 22:47:35 | INFO | OK (71/600): genetic_10min_25cs_15pct_1rep
+2026-08-21 22:54:04 | INFO | OK (72/600): genetic_10min_25cs_15pct_5rep
+2026-08-21 22:56:06 | INFO | OK (73/600): genetic_10min_25cs_15pct_2rep
+2026-08-21 23:05:33 | INFO | OK (74/600): genetic_10min_25cs_15pct_4rep
+2026-08-21 23:11:06 | INFO | OK (75/600): genetic_10min_25cs_15pct_3rep
+2026-08-21 23:17:26 | INFO | OK (76/600): genetic_10min_36cs_5pct_2rep
+2026-08-21 23:20:28 | INFO | OK (77/600): genetic_10min_36cs_5pct_1rep
+2026-08-21 23:26:22 | INFO | OK (78/600): genetic_10min_36cs_5pct_3rep
+2026-08-21 23:36:40 | INFO | OK (79/600): genetic_10min_36cs_5pct_4rep
+2026-08-21 23:59:20 | INFO | OK (80/600): genetic_10min_36cs_5pct_5rep
+2026-08-22 00:13:44 | INFO | OK (81/600): genetic_10min_25cs_20pct_1rep
+2026-08-22 00:21:52 | INFO | OK (82/600): genetic_10min_25cs_20pct_2rep
+2026-08-22 00:47:25 | INFO | OK (83/600): genetic_10min_25cs_20pct_5rep
+2026-08-22 00:47:37 | INFO | OK (84/600): genetic_10min_25cs_20pct_4rep
+2026-08-22 00:50:15 | INFO | OK (85/600): genetic_10min_25cs_20pct_3rep
+2026-08-22 01:43:55 | INFO | OK (86/600): genetic_10min_36cs_10pct_2rep
+2026-08-22 01:52:54 | INFO | OK (87/600): genetic_10min_25cs_25pct_1rep
+2026-08-22 01:52:59 | INFO | OK (88/600): genetic_10min_36cs_10pct_1rep
+2026-08-22 02:05:12 | INFO | OK (89/600): genetic_10min_36cs_10pct_4rep
+2026-08-22 02:06:42 | INFO | OK (90/600): genetic_10min_36cs_10pct_3rep
+2026-08-22 02:20:47 | INFO | OK (91/600): genetic_10min_25cs_25pct_2rep
+2026-08-22 02:25:00 | INFO | OK (92/600): genetic_10min_36cs_10pct_5rep
+2026-08-22 02:26:20 | INFO | OK (93/600): genetic_10min_25cs_25pct_3rep
+2026-08-22 02:40:00 | INFO | OK (94/600): genetic_10min_25cs_25pct_4rep
+2026-08-22 02:56:42 | INFO | OK (95/600): genetic_10min_25cs_25pct_5rep
+2026-08-22 03:51:15 | INFO | OK (96/600): genetic_10min_25cs_30pct_2rep
+2026-08-22 04:05:01 | INFO | OK (97/600): genetic_10min_25cs_30pct_1rep
+2026-08-22 04:10:40 | INFO | OK (98/600): genetic_10min_25cs_30pct_3rep
+2026-08-22 04:12:09 | INFO | OK (99/600): genetic_10min_36cs_15pct_3rep
+2026-08-22 04:18:09 | INFO | OK (100/600): genetic_10min_36cs_15pct_5rep
+2026-08-22 04:21:04 | INFO | OK (101/600): genetic_10min_25cs_30pct_4rep
+2026-08-22 04:21:37 | INFO | OK (102/600): genetic_10min_36cs_15pct_4rep
+2026-08-22 04:24:54 | INFO | OK (103/600): genetic_10min_36cs_15pct_2rep
+2026-08-22 04:28:08 | INFO | OK (104/600): genetic_10min_36cs_15pct_1rep
+2026-08-22 04:28:27 | INFO | OK (105/600): genetic_10min_25cs_30pct_5rep
+2026-08-22 04:50:48 | INFO | OK (106/600): genetic_10min_49cs_5pct_1rep
+2026-08-22 05:04:03 | INFO | OK (107/600): genetic_10min_49cs_5pct_2rep
+2026-08-22 05:07:17 | INFO | OK (108/600): genetic_10min_49cs_5pct_3rep
+2026-08-22 06:15:56 | INFO | OK (109/600): genetic_10min_49cs_5pct_4rep
+2026-08-22 06:16:15 | INFO | OK (110/600): genetic_10min_49cs_5pct_5rep
+2026-08-22 06:38:37 | INFO | OK (111/600): genetic_10min_36cs_20pct_2rep
+2026-08-22 06:39:21 | INFO | OK (112/600): genetic_10min_36cs_20pct_1rep
+2026-08-22 06:51:31 | INFO | OK (113/600): genetic_10min_36cs_20pct_3rep
+2026-08-22 07:04:09 | INFO | OK (114/600): genetic_10min_36cs_20pct_4rep
+2026-08-22 07:29:38 | INFO | OK (115/600): genetic_10min_36cs_20pct_5rep
+2026-08-22 08:45:25 | INFO | OK (116/600): genetic_10min_49cs_10pct_1rep
+2026-08-22 09:00:09 | INFO | OK (117/600): genetic_10min_49cs_10pct_5rep
+2026-08-22 09:02:39 | INFO | OK (118/600): genetic_10min_49cs_10pct_3rep
+2026-08-22 09:08:10 | INFO | OK (119/600): genetic_10min_49cs_10pct_2rep
+2026-08-22 09:12:07 | INFO | OK (120/600): genetic_10min_49cs_10pct_4rep
+2026-08-22 09:25:13 | INFO | OK (121/600): genetic_10min_36cs_25pct_2rep
+2026-08-22 09:28:16 | INFO | OK (122/600): genetic_10min_36cs_25pct_3rep
+2026-08-22 09:46:32 | INFO | OK (123/600): genetic_10min_36cs_25pct_1rep
+2026-08-22 09:49:58 | INFO | OK (124/600): genetic_10min_36cs_25pct_4rep
+2026-08-22 10:12:42 | INFO | OK (125/600): genetic_20min_9cs_5pct_2rep
+2026-08-22 10:13:13 | INFO | OK (126/600): genetic_20min_9cs_5pct_1rep
+2026-08-22 10:33:43 | INFO | OK (127/600): genetic_10min_36cs_25pct_5rep
+2026-08-22 10:41:29 | INFO | OK (128/600): genetic_20min_9cs_5pct_3rep
+2026-08-22 10:42:22 | INFO | OK (129/600): genetic_20min_9cs_5pct_4rep
+2026-08-22 11:02:31 | INFO | OK (130/600): genetic_20min_9cs_5pct_5rep
+2026-08-22 11:11:47 | INFO | OK (131/600): genetic_10min_49cs_15pct_1rep
+2026-08-22 11:22:28 | INFO | OK (132/600): genetic_10min_49cs_15pct_3rep
+2026-08-22 11:33:51 | INFO | OK (133/600): genetic_20min_9cs_10pct_1rep
+2026-08-22 11:34:58 | INFO | OK (134/600): genetic_20min_9cs_10pct_2rep
+2026-08-22 11:43:10 | INFO | OK (135/600): genetic_10min_49cs_15pct_2rep
+2026-08-22 11:44:48 | INFO | OK (136/600): genetic_10min_49cs_15pct_5rep
+2026-08-22 11:54:37 | INFO | OK (137/600): genetic_20min_9cs_10pct_3rep
+2026-08-22 11:55:32 | INFO | OK (138/600): genetic_10min_49cs_15pct_4rep
+2026-08-22 12:06:45 | INFO | OK (139/600): genetic_20min_9cs_10pct_4rep
+2026-08-22 12:10:40 | INFO | OK (140/600): genetic_10min_36cs_30pct_1rep
+2026-08-22 12:11:46 | INFO | OK (141/600): genetic_20min_9cs_10pct_5rep
+2026-08-22 12:12:04 | INFO | OK (142/600): genetic_10min_36cs_30pct_3rep
+2026-08-22 12:32:18 | INFO | OK (143/600): genetic_10min_36cs_30pct_2rep
+2026-08-22 12:34:27 | INFO | OK (144/600): genetic_10min_36cs_30pct_4rep
+2026-08-22 12:49:02 | INFO | OK (145/600): genetic_20min_9cs_15pct_1rep
+2026-08-22 12:51:11 | INFO | OK (146/600): genetic_20min_9cs_15pct_2rep
+2026-08-22 12:57:31 | INFO | OK (147/600): genetic_20min_9cs_15pct_3rep
+2026-08-22 12:58:12 | INFO | OK (148/600): genetic_10min_36cs_30pct_5rep
+2026-08-22 13:01:37 | INFO | OK (149/600): genetic_20min_9cs_15pct_4rep
+2026-08-22 13:10:43 | INFO | OK (150/600): genetic_20min_9cs_15pct_5rep
+2026-08-22 13:35:11 | INFO | OK (151/600): genetic_20min_9cs_20pct_1rep
+2026-08-22 13:47:14 | INFO | OK (152/600): genetic_20min_9cs_20pct_2rep
+2026-08-22 13:52:35 | INFO | OK (153/600): genetic_20min_9cs_20pct_3rep
+2026-08-22 13:54:28 | INFO | OK (154/600): genetic_20min_9cs_20pct_4rep
+2026-08-22 14:00:35 | INFO | OK (155/600): genetic_20min_9cs_20pct_5rep
+2026-08-22 14:33:59 | INFO | OK (156/600): genetic_20min_9cs_25pct_1rep
+2026-08-22 14:34:17 | INFO | OK (157/600): genetic_20min_9cs_25pct_2rep
+2026-08-22 14:35:14 | INFO | OK (158/600): genetic_20min_16cs_5pct_1rep
+2026-08-22 14:40:51 | INFO | OK (159/600): genetic_20min_16cs_5pct_2rep
+2026-08-22 14:42:52 | INFO | OK (160/600): genetic_20min_16cs_5pct_3rep
+2026-08-22 14:45:06 | INFO | OK (161/600): genetic_10min_49cs_20pct_1rep
+2026-08-22 14:52:47 | INFO | OK (162/600): genetic_20min_9cs_25pct_3rep
+2026-08-22 14:57:09 | INFO | OK (163/600): genetic_20min_9cs_25pct_4rep
+2026-08-22 15:05:10 | INFO | OK (164/600): genetic_20min_9cs_25pct_5rep
+2026-08-22 15:18:39 | INFO | OK (165/600): genetic_20min_9cs_30pct_1rep
+2026-08-22 15:19:37 | INFO | OK (166/600): genetic_20min_16cs_5pct_5rep
+2026-08-22 15:21:02 | INFO | OK (167/600): genetic_20min_16cs_5pct_4rep
+2026-08-22 15:24:47 | INFO | OK (168/600): genetic_10min_49cs_20pct_3rep
+2026-08-22 15:29:25 | INFO | OK (169/600): genetic_20min_9cs_30pct_2rep
+2026-08-22 15:41:56 | INFO | OK (170/600): genetic_20min_9cs_30pct_3rep
+2026-08-22 15:44:58 | INFO | OK (171/600): genetic_10min_49cs_20pct_2rep
+2026-08-22 15:57:27 | INFO | OK (172/600): genetic_10min_49cs_20pct_5rep
+2026-08-22 16:07:21 | INFO | OK (173/600): genetic_20min_16cs_10pct_1rep
+2026-08-22 16:08:46 | INFO | OK (174/600): genetic_20min_16cs_10pct_3rep
+2026-08-22 16:10:01 | INFO | OK (175/600): genetic_10min_49cs_20pct_4rep
+2026-08-22 16:10:34 | INFO | OK (176/600): genetic_20min_16cs_10pct_2rep
+2026-08-22 16:11:43 | INFO | OK (177/600): genetic_20min_16cs_10pct_4rep
+2026-08-22 16:14:51 | INFO | OK (178/600): genetic_20min_9cs_30pct_4rep
+2026-08-22 16:22:32 | INFO | OK (179/600): genetic_20min_9cs_30pct_5rep
+2026-08-22 16:23:19 | INFO | OK (180/600): genetic_20min_16cs_10pct_5rep
+2026-08-22 17:13:11 | INFO | OK (181/600): genetic_20min_16cs_15pct_1rep
+2026-08-22 17:14:03 | INFO | OK (182/600): genetic_20min_16cs_15pct_2rep
+2026-08-22 17:24:44 | INFO | OK (183/600): genetic_20min_16cs_15pct_3rep
+2026-08-22 17:32:57 | INFO | OK (184/600): genetic_20min_16cs_15pct_5rep
+2026-08-22 17:40:14 | INFO | OK (185/600): genetic_20min_16cs_15pct_4rep
+2026-08-22 18:15:35 | INFO | OK (186/600): genetic_20min_16cs_20pct_1rep
+2026-08-22 18:25:25 | INFO | OK (187/600): genetic_20min_16cs_20pct_2rep
+2026-08-22 18:33:07 | INFO | OK (188/600): genetic_20min_16cs_20pct_3rep
+2026-08-22 18:39:23 | INFO | OK (189/600): genetic_20min_16cs_20pct_4rep
+2026-08-22 18:40:33 | INFO | OK (190/600): genetic_10min_49cs_25pct_2rep
+2026-08-22 18:41:09 | INFO | OK (191/600): genetic_20min_25cs_5pct_1rep
+2026-08-22 18:44:54 | INFO | OK (192/600): genetic_10min_49cs_25pct_1rep
+2026-08-22 18:46:07 | INFO | OK (193/600): genetic_20min_25cs_5pct_2rep
+2026-08-22 18:51:12 | INFO | OK (194/600): genetic_10min_49cs_25pct_3rep
+2026-08-22 18:54:55 | INFO | OK (195/600): genetic_20min_25cs_5pct_3rep
+2026-08-22 18:57:23 | INFO | OK (196/600): genetic_20min_16cs_20pct_5rep
+2026-08-22 19:30:00 | INFO | OK (197/600): genetic_20min_25cs_5pct_4rep
+2026-08-22 19:37:24 | INFO | OK (198/600): genetic_20min_16cs_25pct_2rep
+2026-08-22 19:39:24 | INFO | OK (199/600): genetic_20min_16cs_25pct_3rep
+2026-08-22 19:41:22 | INFO | OK (200/600): genetic_20min_25cs_5pct_5rep
+2026-08-22 19:43:43 | INFO | OK (201/600): genetic_10min_49cs_25pct_4rep
+2026-08-22 19:45:23 | INFO | OK (202/600): genetic_20min_16cs_25pct_1rep
+2026-08-22 19:55:10 | INFO | OK (203/600): genetic_20min_16cs_25pct_5rep
+2026-08-22 19:57:57 | INFO | OK (204/600): genetic_20min_16cs_25pct_4rep
+2026-08-22 20:11:30 | INFO | OK (205/600): genetic_10min_49cs_25pct_5rep
+2026-08-22 20:39:05 | INFO | OK (206/600): genetic_20min_16cs_30pct_3rep
+2026-08-22 20:40:07 | INFO | OK (207/600): genetic_20min_16cs_30pct_1rep
+2026-08-22 20:43:49 | INFO | OK (208/600): genetic_20min_16cs_30pct_2rep
+2026-08-22 20:55:06 | INFO | OK (209/600): genetic_20min_25cs_10pct_1rep
+2026-08-22 21:00:54 | INFO | OK (210/600): genetic_20min_25cs_10pct_2rep
+2026-08-22 21:04:56 | INFO | OK (211/600): genetic_20min_25cs_10pct_5rep
+2026-08-22 21:05:20 | INFO | OK (212/600): genetic_20min_25cs_10pct_3rep
+2026-08-22 21:07:48 | INFO | OK (213/600): genetic_20min_25cs_10pct_4rep
+2026-08-22 21:43:02 | INFO | OK (214/600): genetic_20min_16cs_30pct_4rep
+2026-08-22 21:47:58 | INFO | OK (215/600): genetic_20min_16cs_30pct_5rep
+2026-08-22 22:13:09 | INFO | OK (216/600): genetic_20min_25cs_15pct_1rep
+2026-08-22 22:24:19 | INFO | OK (217/600): genetic_20min_25cs_15pct_2rep
+2026-08-22 22:39:26 | INFO | OK (218/600): genetic_20min_25cs_15pct_4rep
+2026-08-22 22:45:52 | INFO | OK (219/600): genetic_20min_25cs_15pct_3rep
+2026-08-22 22:50:26 | INFO | OK (220/600): genetic_20min_36cs_5pct_1rep
+2026-08-22 22:57:11 | INFO | OK (221/600): genetic_10min_49cs_30pct_1rep
+2026-08-22 22:57:54 | INFO | OK (222/600): genetic_10min_49cs_30pct_3rep
+2026-08-22 23:02:26 | INFO | OK (223/600): genetic_10min_49cs_30pct_5rep
+2026-08-22 23:08:52 | INFO | OK (224/600): genetic_10min_49cs_30pct_4rep
+2026-08-22 23:09:07 | INFO | OK (225/600): genetic_20min_25cs_15pct_5rep
+2026-08-22 23:24:00 | INFO | OK (226/600): genetic_20min_36cs_5pct_3rep
+2026-08-22 23:29:49 | INFO | OK (227/600): genetic_10min_49cs_30pct_2rep
+2026-08-22 23:32:55 | INFO | OK (228/600): genetic_20min_36cs_5pct_2rep
+2026-08-22 23:55:34 | INFO | OK (229/600): genetic_20min_36cs_5pct_4rep
+2026-08-23 00:12:42 | INFO | OK (230/600): genetic_20min_25cs_20pct_4rep
+2026-08-23 00:15:48 | INFO | OK (231/600): genetic_20min_36cs_5pct_5rep
+2026-08-23 00:27:21 | INFO | OK (232/600): genetic_20min_25cs_20pct_1rep
+2026-08-23 00:28:09 | INFO | OK (233/600): genetic_20min_25cs_20pct_2rep
+2026-08-23 00:30:52 | INFO | OK (234/600): genetic_20min_25cs_20pct_5rep
+2026-08-23 00:41:23 | INFO | OK (235/600): genetic_20min_25cs_20pct_3rep
+2026-08-23 01:58:07 | INFO | OK (236/600): genetic_20min_25cs_25pct_2rep
+2026-08-23 02:05:33 | INFO | OK (237/600): genetic_20min_36cs_10pct_5rep
+2026-08-23 02:07:24 | INFO | OK (238/600): genetic_20min_25cs_25pct_3rep
+2026-08-23 02:13:21 | INFO | OK (239/600): genetic_20min_25cs_25pct_1rep
+2026-08-23 02:20:27 | INFO | OK (240/600): genetic_20min_36cs_10pct_1rep
+2026-08-23 02:23:37 | INFO | OK (241/600): genetic_20min_36cs_10pct_3rep
+2026-08-23 02:25:32 | INFO | OK (242/600): genetic_20min_25cs_25pct_4rep
+2026-08-23 02:26:38 | INFO | OK (243/600): genetic_20min_36cs_10pct_4rep
+2026-08-23 02:31:03 | INFO | OK (244/600): genetic_20min_36cs_10pct_2rep
+2026-08-23 02:51:01 | INFO | OK (245/600): genetic_20min_25cs_25pct_5rep
+2026-08-23 03:46:09 | INFO | OK (246/600): genetic_20min_25cs_30pct_2rep
+2026-08-23 04:04:05 | INFO | OK (247/600): genetic_20min_36cs_15pct_1rep
+2026-08-23 04:05:48 | INFO | OK (248/600): genetic_20min_25cs_30pct_1rep
+2026-08-23 04:17:01 | INFO | OK (249/600): genetic_20min_25cs_30pct_3rep
+2026-08-23 04:18:47 | INFO | OK (250/600): genetic_20min_25cs_30pct_4rep
+2026-08-23 04:20:04 | INFO | OK (251/600): genetic_20min_25cs_30pct_5rep
+2026-08-23 04:24:51 | INFO | OK (252/600): genetic_20min_36cs_15pct_3rep
+2026-08-23 04:27:36 | INFO | OK (253/600): genetic_20min_36cs_15pct_2rep
+2026-08-23 04:29:14 | INFO | OK (254/600): genetic_20min_36cs_15pct_4rep
+2026-08-23 04:51:51 | INFO | OK (255/600): genetic_20min_49cs_5pct_1rep
+2026-08-23 04:56:53 | INFO | OK (256/600): genetic_20min_49cs_5pct_2rep
+2026-08-23 05:06:39 | INFO | OK (257/600): genetic_20min_49cs_5pct_3rep
+2026-08-23 05:07:30 | INFO | OK (258/600): genetic_20min_36cs_15pct_5rep
+2026-08-23 06:10:40 | INFO | OK (259/600): genetic_20min_49cs_5pct_4rep
+2026-08-23 06:26:10 | INFO | OK (260/600): genetic_20min_49cs_5pct_5rep
+2026-08-23 06:44:29 | INFO | OK (261/600): genetic_20min_36cs_20pct_1rep
+2026-08-23 06:44:50 | INFO | OK (262/600): genetic_20min_36cs_20pct_2rep
+2026-08-23 06:48:55 | INFO | OK (263/600): genetic_20min_36cs_20pct_4rep
+2026-08-23 07:07:06 | INFO | OK (264/600): genetic_20min_36cs_20pct_3rep
+2026-08-23 07:33:32 | INFO | OK (265/600): genetic_20min_36cs_20pct_5rep
+2026-08-23 08:39:41 | INFO | OK (266/600): genetic_20min_49cs_10pct_3rep
+2026-08-23 08:50:24 | INFO | OK (267/600): genetic_20min_49cs_10pct_1rep
+2026-08-23 08:53:09 | INFO | OK (268/600): genetic_20min_36cs_25pct_2rep
+2026-08-23 09:01:57 | INFO | OK (269/600): genetic_20min_49cs_10pct_4rep
+2026-08-23 09:03:53 | INFO | OK (270/600): genetic_20min_49cs_10pct_5rep
+2026-08-23 09:05:17 | INFO | OK (271/600): genetic_20min_49cs_10pct_2rep
+2026-08-23 09:12:17 | INFO | OK (272/600): genetic_20min_36cs_25pct_1rep
+2026-08-23 09:25:26 | INFO | OK (273/600): genetic_20min_36cs_25pct_3rep
+2026-08-23 09:49:19 | INFO | OK (274/600): genetic_40min_9cs_5pct_1rep
+2026-08-23 09:50:28 | INFO | OK (275/600): genetic_20min_36cs_25pct_4rep
+2026-08-23 10:16:41 | INFO | OK (276/600): genetic_40min_9cs_5pct_2rep
+2026-08-23 10:17:25 | INFO | OK (277/600): genetic_40min_9cs_5pct_3rep
+2026-08-23 10:45:44 | INFO | OK (278/600): genetic_40min_9cs_5pct_5rep
+2026-08-23 10:45:48 | INFO | OK (279/600): genetic_40min_9cs_5pct_4rep
+2026-08-23 10:54:56 | INFO | OK (280/600): genetic_20min_36cs_25pct_5rep
+2026-08-23 11:14:02 | INFO | OK (281/600): genetic_20min_49cs_15pct_1rep
+2026-08-23 11:33:48 | INFO | OK (282/600): genetic_40min_9cs_10pct_2rep
+2026-08-23 11:33:48 | INFO | OK (283/600): genetic_40min_9cs_10pct_1rep
+2026-08-23 11:44:22 | INFO | OK (284/600): genetic_40min_9cs_10pct_3rep
+2026-08-23 11:48:01 | INFO | OK (285/600): genetic_20min_49cs_15pct_5rep
+2026-08-23 11:48:48 | INFO | OK (286/600): genetic_20min_49cs_15pct_2rep
+2026-08-23 11:49:24 | INFO | OK (287/600): genetic_20min_49cs_15pct_3rep
+2026-08-23 12:07:26 | INFO | OK (288/600): genetic_40min_9cs_10pct_4rep
+2026-08-23 12:11:40 | INFO | OK (289/600): genetic_20min_49cs_15pct_4rep
+2026-08-23 12:16:42 | INFO | OK (290/600): genetic_20min_36cs_30pct_1rep
+2026-08-23 12:28:08 | INFO | OK (291/600): genetic_40min_9cs_10pct_5rep
+2026-08-23 12:28:25 | INFO | OK (292/600): genetic_20min_36cs_30pct_4rep
+2026-08-23 12:39:52 | INFO | OK (293/600): genetic_20min_36cs_30pct_3rep
+2026-08-23 12:47:39 | INFO | OK (294/600): genetic_20min_36cs_30pct_2rep
+2026-08-23 12:50:27 | INFO | OK (295/600): genetic_40min_9cs_15pct_1rep
+2026-08-23 13:01:38 | INFO | OK (296/600): genetic_40min_9cs_15pct_3rep
+2026-08-23 13:01:44 | INFO | OK (297/600): genetic_40min_9cs_15pct_2rep
+2026-08-23 13:03:52 | INFO | OK (298/600): genetic_20min_36cs_30pct_5rep
+2026-08-23 13:09:47 | INFO | OK (299/600): genetic_40min_9cs_15pct_5rep
+2026-08-23 13:10:17 | INFO | OK (300/600): genetic_40min_9cs_15pct_4rep
+2026-08-23 13:41:27 | INFO | OK (301/600): genetic_40min_9cs_20pct_1rep
+2026-08-23 13:55:02 | INFO | OK (302/600): genetic_40min_9cs_20pct_2rep
+2026-08-23 13:58:32 | INFO | OK (303/600): genetic_40min_9cs_20pct_3rep
+2026-08-23 14:10:22 | INFO | OK (304/600): genetic_40min_9cs_20pct_4rep
+2026-08-23 14:12:19 | INFO | OK (305/600): genetic_40min_9cs_20pct_5rep
+2026-08-23 14:29:27 | INFO | OK (306/600): genetic_20min_49cs_20pct_1rep
+2026-08-23 14:40:05 | INFO | OK (307/600): genetic_40min_16cs_5pct_1rep
+2026-08-23 14:42:10 | INFO | OK (308/600): genetic_40min_9cs_25pct_1rep
+2026-08-23 14:48:14 | INFO | OK (309/600): genetic_40min_9cs_25pct_3rep
+2026-08-23 14:55:03 | INFO | OK (310/600): genetic_40min_9cs_25pct_2rep
+2026-08-23 14:56:14 | INFO | OK (311/600): genetic_40min_16cs_5pct_2rep
+2026-08-23 14:57:53 | INFO | OK (312/600): genetic_40min_16cs_5pct_3rep
+2026-08-23 15:07:31 | INFO | OK (313/600): genetic_20min_49cs_20pct_3rep
+2026-08-23 15:10:07 | INFO | OK (314/600): genetic_40min_9cs_25pct_5rep
+2026-08-23 15:12:09 | INFO | OK (315/600): genetic_40min_9cs_25pct_4rep
+2026-08-23 15:17:03 | INFO | OK (316/600): genetic_40min_16cs_5pct_4rep
+2026-08-23 15:26:43 | INFO | OK (317/600): genetic_40min_16cs_5pct_5rep
+2026-08-23 15:29:00 | INFO | OK (318/600): genetic_40min_9cs_30pct_1rep
+2026-08-23 15:30:18 | INFO | OK (319/600): genetic_40min_9cs_30pct_2rep
+2026-08-23 15:33:50 | INFO | OK (320/600): genetic_20min_49cs_20pct_2rep
+2026-08-23 15:46:12 | INFO | OK (321/600): genetic_40min_9cs_30pct_3rep
+2026-08-23 15:49:48 | INFO | OK (322/600): genetic_20min_49cs_20pct_5rep
+2026-08-23 16:03:49 | INFO | OK (323/600): genetic_20min_49cs_20pct_4rep
+2026-08-23 16:11:47 | INFO | OK (324/600): genetic_40min_16cs_10pct_2rep
+2026-08-23 16:13:57 | INFO | OK (325/600): genetic_40min_16cs_10pct_1rep
+2026-08-23 16:20:36 | INFO | OK (326/600): genetic_40min_16cs_10pct_3rep
+2026-08-23 16:20:52 | INFO | OK (327/600): genetic_40min_16cs_10pct_5rep
+2026-08-23 16:24:57 | INFO | OK (328/600): genetic_40min_9cs_30pct_4rep
+2026-08-23 16:25:43 | INFO | OK (329/600): genetic_40min_16cs_10pct_4rep
+2026-08-23 16:30:41 | INFO | OK (330/600): genetic_40min_9cs_30pct_5rep
+2026-08-23 17:18:05 | INFO | OK (331/600): genetic_40min_16cs_15pct_3rep
+2026-08-23 17:20:25 | INFO | OK (332/600): genetic_40min_16cs_15pct_1rep
+2026-08-23 17:22:40 | INFO | OK (333/600): genetic_40min_16cs_15pct_2rep
+2026-08-23 17:29:31 | INFO | OK (334/600): genetic_40min_16cs_15pct_4rep
+2026-08-23 17:43:53 | INFO | OK (335/600): genetic_40min_16cs_15pct_5rep
+2026-08-23 18:16:48 | INFO | OK (336/600): genetic_20min_49cs_25pct_1rep
+2026-08-23 18:20:22 | INFO | OK (337/600): genetic_40min_16cs_20pct_3rep
+2026-08-23 18:21:43 | INFO | OK (338/600): genetic_40min_16cs_20pct_1rep
+2026-08-23 18:22:25 | INFO | OK (339/600): genetic_40min_16cs_20pct_2rep
+2026-08-23 18:26:27 | INFO | OK (340/600): genetic_40min_25cs_5pct_1rep
+2026-08-23 18:42:52 | INFO | OK (341/600): genetic_20min_49cs_25pct_2rep
+2026-08-23 18:46:24 | INFO | OK (342/600): genetic_40min_25cs_5pct_2rep
+2026-08-23 18:49:43 | INFO | OK (343/600): genetic_40min_16cs_20pct_4rep
+2026-08-23 18:49:46 | INFO | OK (344/600): genetic_40min_16cs_20pct_5rep
+2026-08-23 18:59:39 | INFO | OK (345/600): genetic_40min_25cs_5pct_3rep
+2026-08-23 19:08:07 | INFO | OK (346/600): genetic_20min_49cs_25pct_3rep
+2026-08-23 19:25:26 | INFO | OK (347/600): genetic_40min_25cs_5pct_5rep
+2026-08-23 19:27:55 | INFO | OK (348/600): genetic_40min_25cs_5pct_4rep
+2026-08-23 19:40:10 | INFO | OK (349/600): genetic_40min_16cs_25pct_1rep
+2026-08-23 19:48:59 | INFO | OK (350/600): genetic_40min_16cs_25pct_2rep
+2026-08-23 19:50:19 | INFO | OK (351/600): genetic_40min_16cs_25pct_3rep
+2026-08-23 19:56:45 | INFO | OK (352/600): genetic_40min_16cs_25pct_4rep
+2026-08-23 20:02:22 | INFO | OK (353/600): genetic_40min_16cs_25pct_5rep
+2026-08-23 20:26:04 | INFO | OK (354/600): genetic_20min_49cs_25pct_4rep
+2026-08-23 20:40:55 | INFO | OK (355/600): genetic_40min_25cs_10pct_2rep
+2026-08-23 20:41:37 | INFO | OK (356/600): genetic_40min_16cs_30pct_2rep
+2026-08-23 20:47:49 | INFO | OK (357/600): genetic_40min_25cs_10pct_1rep
+2026-08-23 20:49:35 | INFO | OK (358/600): genetic_20min_49cs_25pct_5rep
+2026-08-23 20:52:54 | INFO | OK (359/600): genetic_40min_16cs_30pct_3rep
+2026-08-23 20:56:19 | INFO | OK (360/600): genetic_40min_16cs_30pct_1rep
+2026-08-23 21:02:34 | INFO | OK (361/600): genetic_40min_25cs_10pct_4rep
+2026-08-23 21:04:16 | INFO | OK (362/600): genetic_40min_25cs_10pct_3rep
+2026-08-23 21:07:15 | INFO | OK (363/600): genetic_40min_25cs_10pct_5rep
+2026-08-23 21:51:44 | INFO | OK (364/600): genetic_40min_16cs_30pct_4rep
+2026-08-23 21:52:38 | INFO | OK (365/600): genetic_40min_16cs_30pct_5rep
+2026-08-23 22:24:18 | INFO | OK (366/600): genetic_20min_49cs_30pct_1rep
+2026-08-23 22:25:19 | INFO | OK (367/600): genetic_40min_25cs_15pct_2rep
+2026-08-23 22:31:32 | INFO | OK (368/600): genetic_40min_25cs_15pct_1rep
+2026-08-23 22:38:41 | INFO | OK (369/600): genetic_40min_25cs_15pct_3rep
+2026-08-23 22:43:52 | INFO | OK (370/600): genetic_20min_49cs_30pct_3rep
+2026-08-23 22:45:03 | INFO | OK (371/600): genetic_20min_49cs_30pct_5rep
+2026-08-23 22:48:25 | INFO | OK (372/600): genetic_40min_25cs_15pct_4rep
+2026-08-23 22:56:14 | INFO | OK (373/600): genetic_40min_36cs_5pct_1rep
+2026-08-23 23:00:05 | INFO | OK (374/600): genetic_20min_49cs_30pct_4rep
+2026-08-23 23:00:56 | INFO | OK (375/600): genetic_40min_25cs_15pct_5rep
+2026-08-23 23:32:52 | INFO | OK (376/600): genetic_20min_49cs_30pct_2rep
+2026-08-23 23:41:10 | INFO | OK (377/600): genetic_40min_36cs_5pct_3rep
+2026-08-23 23:41:42 | INFO | OK (378/600): genetic_40min_36cs_5pct_2rep
+2026-08-23 23:59:39 | INFO | OK (379/600): genetic_40min_36cs_5pct_4rep
+2026-08-24 00:11:15 | INFO | OK (380/600): genetic_40min_25cs_20pct_1rep
+2026-08-24 00:16:37 | INFO | OK (381/600): genetic_40min_36cs_5pct_5rep
+2026-08-24 00:25:36 | INFO | OK (382/600): genetic_40min_25cs_20pct_2rep
+2026-08-24 00:35:26 | INFO | OK (383/600): genetic_40min_25cs_20pct_4rep
+2026-08-24 00:47:32 | INFO | OK (384/600): genetic_40min_25cs_20pct_3rep
+2026-08-24 00:52:23 | INFO | OK (385/600): genetic_40min_25cs_20pct_5rep
+2026-08-24 01:38:53 | INFO | OK (386/600): genetic_40min_25cs_25pct_1rep
+2026-08-24 01:59:34 | INFO | OK (387/600): genetic_40min_36cs_10pct_1rep
+2026-08-24 02:07:28 | INFO | OK (388/600): genetic_40min_36cs_10pct_2rep
+2026-08-24 02:14:34 | INFO | OK (389/600): genetic_40min_36cs_10pct_4rep
+2026-08-24 02:20:07 | INFO | OK (390/600): genetic_40min_36cs_10pct_3rep
+2026-08-24 02:26:06 | INFO | OK (391/600): genetic_40min_36cs_10pct_5rep
+2026-08-24 02:31:05 | INFO | OK (392/600): genetic_40min_25cs_25pct_2rep
+2026-08-24 02:39:46 | INFO | OK (393/600): genetic_40min_25cs_25pct_5rep
+2026-08-24 02:47:57 | INFO | OK (394/600): genetic_40min_25cs_25pct_4rep
+2026-08-24 02:50:33 | INFO | OK (395/600): genetic_40min_25cs_25pct_3rep
+2026-08-24 03:39:41 | INFO | OK (396/600): genetic_40min_25cs_30pct_4rep
+2026-08-24 04:09:23 | INFO | OK (397/600): genetic_40min_25cs_30pct_5rep
+2026-08-24 04:11:45 | INFO | OK (398/600): genetic_40min_36cs_15pct_2rep
+2026-08-24 04:13:11 | INFO | OK (399/600): genetic_40min_25cs_30pct_1rep
+2026-08-24 04:13:32 | INFO | OK (400/600): genetic_40min_25cs_30pct_2rep
+2026-08-24 04:14:58 | INFO | OK (401/600): genetic_40min_36cs_15pct_3rep
+2026-08-24 04:17:26 | INFO | OK (402/600): genetic_40min_25cs_30pct_3rep
+2026-08-24 04:18:56 | INFO | OK (403/600): genetic_40min_36cs_15pct_1rep
+2026-08-24 04:34:15 | INFO | OK (404/600): genetic_40min_36cs_15pct_4rep
+2026-08-24 04:56:37 | INFO | OK (405/600): genetic_40min_49cs_5pct_1rep
+2026-08-24 05:01:33 | INFO | OK (406/600): genetic_40min_36cs_15pct_5rep
+2026-08-24 05:03:39 | INFO | OK (407/600): genetic_40min_49cs_5pct_3rep
+2026-08-24 05:07:41 | INFO | OK (408/600): genetic_40min_49cs_5pct_2rep
+2026-08-24 05:53:46 | INFO | OK (409/600): genetic_40min_49cs_5pct_4rep
+2026-08-24 06:25:54 | INFO | OK (410/600): genetic_40min_49cs_5pct_5rep
+2026-08-24 06:47:21 | INFO | OK (411/600): genetic_40min_36cs_20pct_2rep
+2026-08-24 06:50:19 | INFO | OK (412/600): genetic_40min_36cs_20pct_1rep
+2026-08-24 07:00:16 | INFO | OK (413/600): genetic_40min_36cs_20pct_3rep
+2026-08-24 07:08:08 | INFO | OK (414/600): genetic_40min_36cs_20pct_4rep
+2026-08-24 07:36:39 | INFO | OK (415/600): genetic_40min_36cs_20pct_5rep
+2026-08-24 08:38:54 | INFO | OK (416/600): genetic_40min_49cs_10pct_5rep
+2026-08-24 08:59:30 | INFO | OK (417/600): genetic_40min_49cs_10pct_4rep
+2026-08-24 08:59:50 | INFO | OK (418/600): genetic_40min_49cs_10pct_1rep
+2026-08-24 09:04:51 | INFO | OK (419/600): genetic_40min_49cs_10pct_3rep
+2026-08-24 09:11:14 | INFO | OK (420/600): genetic_40min_36cs_25pct_1rep
+2026-08-24 09:13:09 | INFO | OK (421/600): genetic_40min_49cs_10pct_2rep
+2026-08-24 09:17:49 | INFO | OK (422/600): genetic_40min_36cs_25pct_2rep
+2026-08-24 09:24:19 | INFO | OK (423/600): genetic_40min_36cs_25pct_3rep
+2026-08-24 09:51:37 | INFO | OK (424/600): genetic_60min_9cs_5pct_1rep
+2026-08-24 10:07:42 | INFO | OK (425/600): genetic_40min_36cs_25pct_4rep
+2026-08-24 10:19:51 | INFO | OK (426/600): genetic_60min_9cs_5pct_2rep
+2026-08-24 10:34:38 | INFO | OK (427/600): genetic_60min_9cs_5pct_3rep
+2026-08-24 10:46:38 | INFO | OK (428/600): genetic_40min_36cs_25pct_5rep
+2026-08-24 10:49:49 | INFO | OK (429/600): genetic_60min_9cs_5pct_4rep
+2026-08-24 10:50:29 | INFO | OK (430/600): genetic_40min_49cs_15pct_1rep
+2026-08-24 11:03:26 | INFO | OK (431/600): genetic_60min_9cs_5pct_5rep
+2026-08-24 11:29:25 | INFO | OK (432/600): genetic_40min_49cs_15pct_2rep
+2026-08-24 11:40:19 | INFO | OK (433/600): genetic_60min_9cs_10pct_1rep
+2026-08-24 11:41:40 | INFO | OK (434/600): genetic_60min_9cs_10pct_3rep
+2026-08-24 11:42:40 | INFO | OK (435/600): genetic_60min_9cs_10pct_2rep
+2026-08-24 11:49:53 | INFO | OK (436/600): genetic_40min_49cs_15pct_5rep
+2026-08-24 11:52:20 | INFO | OK (437/600): genetic_40min_49cs_15pct_4rep
+2026-08-24 11:55:41 | INFO | OK (438/600): genetic_40min_49cs_15pct_3rep
+2026-08-24 11:59:22 | INFO | OK (439/600): genetic_60min_9cs_10pct_4rep
+2026-08-24 12:22:31 | INFO | OK (440/600): genetic_60min_9cs_10pct_5rep
+2026-08-24 12:38:07 | INFO | OK (441/600): genetic_40min_36cs_30pct_1rep
+2026-08-24 12:41:00 | INFO | OK (442/600): genetic_40min_36cs_30pct_4rep
+2026-08-24 12:44:12 | INFO | OK (443/600): genetic_40min_36cs_30pct_3rep
+2026-08-24 12:58:34 | INFO | OK (444/600): genetic_40min_36cs_30pct_2rep
+2026-08-24 12:58:41 | INFO | OK (445/600): genetic_60min_9cs_15pct_1rep
+2026-08-24 13:01:16 | INFO | OK (446/600): genetic_60min_9cs_15pct_2rep
+2026-08-24 13:04:34 | INFO | OK (447/600): genetic_60min_9cs_15pct_3rep
+2026-08-24 13:06:14 | INFO | OK (448/600): genetic_60min_9cs_15pct_5rep
+2026-08-24 13:10:35 | INFO | OK (449/600): genetic_60min_9cs_15pct_4rep
+2026-08-24 13:27:56 | INFO | OK (450/600): genetic_60min_9cs_20pct_1rep
+2026-08-24 13:31:14 | INFO | OK (451/600): genetic_60min_9cs_20pct_2rep
+2026-08-24 13:35:18 | INFO | OK (452/600): genetic_40min_36cs_30pct_5rep
+2026-08-24 14:05:36 | INFO | OK (453/600): genetic_60min_9cs_20pct_3rep
+2026-08-24 14:05:55 | INFO | OK (454/600): genetic_40min_49cs_20pct_1rep
+2026-08-24 14:16:53 | INFO | OK (455/600): genetic_60min_9cs_20pct_4rep
+2026-08-24 14:21:42 | INFO | OK (456/600): genetic_60min_9cs_20pct_5rep
+2026-08-24 14:49:04 | INFO | OK (457/600): genetic_60min_16cs_5pct_2rep
+2026-08-24 14:50:21 | INFO | OK (458/600): genetic_60min_9cs_25pct_1rep
+2026-08-24 14:53:39 | INFO | OK (459/600): genetic_60min_16cs_5pct_1rep
+2026-08-24 15:00:53 | INFO | OK (460/600): genetic_60min_16cs_5pct_3rep
+2026-08-24 15:03:14 | INFO | OK (461/600): genetic_60min_9cs_25pct_2rep
+2026-08-24 15:04:56 | INFO | OK (462/600): genetic_60min_16cs_5pct_4rep
+2026-08-24 15:05:08 | INFO | OK (463/600): genetic_60min_9cs_25pct_4rep
+2026-08-24 15:08:13 | INFO | OK (464/600): genetic_40min_49cs_20pct_2rep
+2026-08-24 15:10:26 | INFO | OK (465/600): genetic_60min_9cs_25pct_3rep
+2026-08-24 15:17:22 | INFO | OK (466/600): genetic_60min_9cs_25pct_5rep
+2026-08-24 15:30:36 | INFO | OK (467/600): genetic_60min_9cs_30pct_1rep
+2026-08-24 15:34:44 | INFO | OK (468/600): genetic_60min_16cs_5pct_5rep
+2026-08-24 15:40:23 | INFO | OK (469/600): genetic_40min_49cs_20pct_3rep
+2026-08-24 15:40:40 | INFO | OK (470/600): genetic_60min_9cs_30pct_2rep
+2026-08-24 15:58:46 | INFO | OK (471/600): genetic_60min_9cs_30pct_3rep
+2026-08-24 16:03:50 | INFO | OK (472/600): genetic_60min_9cs_30pct_4rep
+2026-08-24 16:07:04 | INFO | OK (473/600): genetic_40min_49cs_20pct_5rep
+2026-08-24 16:13:34 | INFO | OK (474/600): genetic_60min_9cs_30pct_5rep
+2026-08-24 16:20:35 | INFO | OK (475/600): genetic_40min_49cs_20pct_4rep
+2026-08-24 16:21:12 | INFO | OK (476/600): genetic_60min_16cs_10pct_2rep
+2026-08-24 16:22:58 | INFO | OK (477/600): genetic_60min_16cs_10pct_1rep
+2026-08-24 16:25:52 | INFO | OK (478/600): genetic_60min_16cs_10pct_3rep
+2026-08-24 16:31:22 | INFO | OK (479/600): genetic_60min_16cs_10pct_4rep
+2026-08-24 16:33:18 | INFO | OK (480/600): genetic_60min_16cs_10pct_5rep
+2026-08-24 17:09:09 | INFO | OK (481/600): genetic_60min_16cs_15pct_2rep
+2026-08-24 17:13:10 | INFO | OK (482/600): genetic_60min_16cs_15pct_3rep
+2026-08-24 17:19:21 | INFO | OK (483/600): genetic_60min_16cs_15pct_1rep
+2026-08-24 17:25:21 | INFO | OK (484/600): genetic_60min_16cs_15pct_4rep
+2026-08-24 17:46:46 | INFO | OK (485/600): genetic_60min_16cs_15pct_5rep
+2026-08-24 18:26:13 | INFO | OK (486/600): genetic_60min_16cs_20pct_1rep
+2026-08-24 18:32:01 | INFO | OK (487/600): genetic_60min_25cs_5pct_1rep
+2026-08-24 18:34:28 | INFO | OK (488/600): genetic_60min_16cs_20pct_3rep
+2026-08-24 18:35:17 | INFO | OK (489/600): genetic_40min_49cs_25pct_1rep
+2026-08-24 18:37:06 | INFO | OK (490/600): genetic_60min_16cs_20pct_2rep
+2026-08-24 18:40:48 | INFO | OK (491/600): genetic_60min_25cs_5pct_2rep
+2026-08-24 18:41:47 | INFO | OK (492/600): genetic_40min_49cs_25pct_2rep
+2026-08-24 19:01:22 | INFO | OK (493/600): genetic_60min_16cs_20pct_4rep
+2026-08-24 19:04:31 | INFO | OK (494/600): genetic_60min_25cs_5pct_3rep
+2026-08-24 19:06:15 | INFO | OK (495/600): genetic_40min_49cs_25pct_3rep
+2026-08-24 19:07:53 | INFO | OK (496/600): genetic_60min_16cs_20pct_5rep
+2026-08-24 19:40:19 | INFO | OK (497/600): genetic_60min_25cs_5pct_4rep
+2026-08-24 19:41:13 | INFO | OK (498/600): genetic_60min_16cs_25pct_3rep
+2026-08-24 19:44:22 | INFO | OK (499/600): genetic_60min_16cs_25pct_1rep
+2026-08-24 19:48:00 | INFO | OK (500/600): genetic_60min_25cs_5pct_5rep
+2026-08-24 19:51:33 | INFO | OK (501/600): genetic_60min_16cs_25pct_2rep
+2026-08-24 20:04:48 | INFO | OK (502/600): genetic_60min_16cs_25pct_4rep
+2026-08-24 20:04:53 | INFO | OK (503/600): genetic_60min_16cs_25pct_5rep
+2026-08-24 20:19:17 | INFO | OK (504/600): genetic_40min_49cs_25pct_5rep
+2026-08-24 20:21:30 | INFO | OK (505/600): genetic_40min_49cs_25pct_4rep
+2026-08-24 20:43:29 | INFO | OK (506/600): genetic_60min_16cs_30pct_2rep
+2026-08-24 20:48:19 | INFO | OK (507/600): genetic_60min_16cs_30pct_3rep
+2026-08-24 20:52:33 | INFO | OK (508/600): genetic_60min_16cs_30pct_1rep
+2026-08-24 21:00:16 | INFO | OK (509/600): genetic_60min_25cs_10pct_2rep
+2026-08-24 21:03:26 | INFO | OK (510/600): genetic_60min_25cs_10pct_5rep
+2026-08-24 21:04:36 | INFO | OK (511/600): genetic_60min_25cs_10pct_3rep
+2026-08-24 21:05:08 | INFO | OK (512/600): genetic_60min_25cs_10pct_1rep
+2026-08-24 21:11:26 | INFO | OK (513/600): genetic_60min_25cs_10pct_4rep
+2026-08-24 21:24:10 | INFO | OK (514/600): genetic_60min_16cs_30pct_4rep
+2026-08-24 21:46:23 | INFO | OK (515/600): genetic_60min_16cs_30pct_5rep
+2026-08-24 22:34:18 | INFO | OK (516/600): genetic_60min_25cs_15pct_1rep
+2026-08-24 22:38:35 | INFO | OK (517/600): genetic_60min_25cs_15pct_2rep
+2026-08-24 22:45:43 | INFO | OK (518/600): genetic_60min_25cs_15pct_4rep
+2026-08-24 22:45:44 | INFO | OK (519/600): genetic_40min_49cs_30pct_1rep
+2026-08-24 22:52:42 | INFO | OK (520/600): genetic_40min_49cs_30pct_5rep
+2026-08-24 22:53:36 | INFO | OK (521/600): genetic_60min_25cs_15pct_3rep
+2026-08-24 22:54:05 | INFO | OK (522/600): genetic_60min_36cs_5pct_2rep
+2026-08-24 22:59:25 | INFO | OK (523/600): genetic_60min_36cs_5pct_1rep
+2026-08-24 23:03:35 | INFO | OK (524/600): genetic_40min_49cs_30pct_2rep
+2026-08-24 23:06:17 | INFO | OK (525/600): genetic_40min_49cs_30pct_3rep
+2026-08-24 23:15:15 | INFO | OK (526/600): genetic_60min_25cs_15pct_5rep
+2026-08-24 23:33:39 | INFO | OK (527/600): genetic_60min_36cs_5pct_3rep
+2026-08-24 23:45:45 | INFO | OK (528/600): genetic_40min_49cs_30pct_4rep
+2026-08-25 00:15:56 | INFO | OK (529/600): genetic_60min_25cs_20pct_1rep
+2026-08-25 00:20:42 | INFO | OK (530/600): genetic_60min_36cs_5pct_4rep
+2026-08-25 00:28:42 | INFO | OK (531/600): genetic_60min_36cs_5pct_5rep
+2026-08-25 00:41:04 | INFO | OK (532/600): genetic_60min_25cs_20pct_2rep
+2026-08-25 00:49:20 | INFO | OK (533/600): genetic_60min_25cs_20pct_4rep
+2026-08-25 00:55:13 | INFO | OK (534/600): genetic_60min_25cs_20pct_5rep
+2026-08-25 00:58:33 | INFO | OK (535/600): genetic_60min_25cs_20pct_3rep
+2026-08-25 01:56:58 | INFO | OK (536/600): genetic_60min_25cs_25pct_1rep
+2026-08-25 02:12:36 | INFO | OK (537/600): genetic_60min_36cs_10pct_4rep
+2026-08-25 02:14:24 | INFO | OK (538/600): genetic_60min_25cs_25pct_3rep
+2026-08-25 02:14:37 | INFO | OK (539/600): genetic_60min_36cs_10pct_2rep
+2026-08-25 02:18:12 | INFO | OK (540/600): genetic_60min_36cs_10pct_5rep
+2026-08-25 02:18:20 | INFO | OK (541/600): genetic_60min_36cs_10pct_3rep
+2026-08-25 02:21:30 | INFO | OK (542/600): genetic_60min_36cs_10pct_1rep
+2026-08-25 02:26:05 | INFO | OK (543/600): genetic_60min_25cs_25pct_2rep
+2026-08-25 02:33:45 | INFO | OK (544/600): genetic_60min_25cs_25pct_4rep
+2026-08-25 02:52:22 | INFO | OK (545/600): genetic_60min_25cs_25pct_5rep
+2026-08-25 03:40:16 | INFO | OK (546/600): genetic_60min_25cs_30pct_1rep
+2026-08-25 04:06:32 | INFO | OK (547/600): genetic_60min_25cs_30pct_3rep
+2026-08-25 04:07:00 | INFO | OK (548/600): genetic_60min_25cs_30pct_4rep
+2026-08-25 04:08:02 | INFO | OK (549/600): genetic_60min_25cs_30pct_2rep
+2026-08-25 04:15:58 | INFO | OK (550/600): genetic_60min_25cs_30pct_5rep
+2026-08-25 04:15:58 | INFO | OK (551/600): genetic_60min_36cs_15pct_4rep
+2026-08-25 04:17:38 | INFO | OK (552/600): genetic_60min_36cs_15pct_3rep
+2026-08-25 04:26:56 | INFO | OK (553/600): genetic_60min_36cs_15pct_1rep
+2026-08-25 04:30:21 | INFO | OK (554/600): genetic_60min_49cs_5pct_1rep
+2026-08-25 04:33:38 | INFO | OK (555/600): genetic_60min_36cs_15pct_2rep
+2026-08-25 04:55:36 | INFO | OK (556/600): genetic_60min_49cs_5pct_2rep
+2026-08-25 04:58:09 | INFO | OK (557/600): genetic_60min_36cs_15pct_5rep
+2026-08-25 05:16:18 | INFO | OK (558/600): genetic_60min_49cs_5pct_3rep
+2026-08-25 06:03:07 | INFO | OK (559/600): genetic_60min_49cs_5pct_4rep
+2026-08-25 06:26:35 | INFO | OK (560/600): genetic_60min_49cs_5pct_5rep
+2026-08-25 07:07:10 | INFO | OK (561/600): genetic_60min_36cs_20pct_4rep
+2026-08-25 07:07:38 | INFO | OK (562/600): genetic_60min_36cs_20pct_2rep
+2026-08-25 07:15:34 | INFO | OK (563/600): genetic_60min_36cs_20pct_1rep
+2026-08-25 07:18:00 | INFO | OK (564/600): genetic_60min_36cs_20pct_3rep
+2026-08-25 07:50:52 | INFO | OK (565/600): genetic_60min_36cs_20pct_5rep
+2026-08-25 08:28:27 | INFO | OK (566/600): genetic_60min_49cs_10pct_1rep
+2026-08-25 08:51:25 | INFO | OK (567/600): genetic_60min_49cs_10pct_2rep
+2026-08-25 08:54:37 | INFO | OK (568/600): genetic_60min_49cs_10pct_5rep
+2026-08-25 09:01:31 | INFO | OK (569/600): genetic_60min_49cs_10pct_4rep
+2026-08-25 09:05:28 | INFO | OK (570/600): genetic_60min_49cs_10pct_3rep
+2026-08-25 09:35:00 | INFO | OK (571/600): genetic_60min_36cs_25pct_2rep
+2026-08-25 09:37:33 | INFO | OK (572/600): genetic_60min_36cs_25pct_3rep
+2026-08-25 09:55:16 | INFO | OK (573/600): genetic_60min_36cs_25pct_1rep
+2026-08-25 10:24:37 | INFO | OK (574/600): genetic_60min_36cs_25pct_4rep
+2026-08-25 11:04:57 | INFO | OK (575/600): genetic_60min_49cs_15pct_3rep
+2026-08-25 11:15:06 | INFO | OK (576/600): genetic_60min_36cs_25pct_5rep
+2026-08-25 11:28:30 | INFO | OK (577/600): genetic_60min_49cs_15pct_1rep
+2026-08-25 11:29:34 | INFO | OK (578/600): genetic_60min_49cs_15pct_4rep
+2026-08-25 11:30:39 | INFO | OK (579/600): genetic_60min_49cs_15pct_2rep
+2026-08-25 11:49:29 | INFO | OK (580/600): genetic_60min_36cs_30pct_4rep
+2026-08-25 11:49:46 | INFO | OK (581/600): genetic_60min_49cs_15pct_5rep
+2026-08-25 11:59:53 | INFO | OK (582/600): genetic_60min_36cs_30pct_1rep
+2026-08-25 12:04:04 | INFO | OK (583/600): genetic_60min_36cs_30pct_3rep
+2026-08-25 12:22:58 | INFO | OK (584/600): genetic_60min_36cs_30pct_2rep
+2026-08-25 12:30:06 | INFO | OK (585/600): genetic_60min_36cs_30pct_5rep
+2026-08-25 13:17:02 | INFO | OK (586/600): genetic_60min_49cs_20pct_1rep
+2026-08-25 13:51:07 | INFO | OK (587/600): genetic_60min_49cs_20pct_2rep
+2026-08-25 13:51:30 | INFO | OK (588/600): genetic_60min_49cs_20pct_3rep
+2026-08-25 14:20:44 | INFO | OK (589/600): genetic_60min_49cs_20pct_5rep
+2026-08-25 14:23:18 | INFO | OK (590/600): genetic_60min_49cs_20pct_4rep
+2026-08-25 15:13:47 | INFO | OK (591/600): genetic_60min_49cs_25pct_2rep
+2026-08-25 15:29:42 | INFO | OK (592/600): genetic_60min_49cs_25pct_1rep
+2026-08-25 15:30:29 | INFO | OK (593/600): genetic_60min_49cs_25pct_3rep
+2026-08-25 15:39:46 | INFO | OK (594/600): genetic_60min_49cs_25pct_4rep
+2026-08-25 15:47:15 | INFO | OK (595/600): genetic_60min_49cs_25pct_5rep
+2026-08-25 16:33:33 | INFO | OK (596/600): genetic_60min_49cs_30pct_3rep
+2026-08-25 16:39:11 | INFO | OK (597/600): genetic_60min_49cs_30pct_2rep
+2026-08-25 16:41:48 | INFO | OK (598/600): genetic_60min_49cs_30pct_1rep
+2026-08-25 16:49:06 | INFO | OK (599/600): genetic_60min_49cs_30pct_5rep
+2026-08-25 16:50:34 | INFO | OK (600/600): genetic_60min_49cs_30pct_4rep
+2026-08-25 16:50:35 | INFO | === batch concluído: 0 job(s) falharam ===
