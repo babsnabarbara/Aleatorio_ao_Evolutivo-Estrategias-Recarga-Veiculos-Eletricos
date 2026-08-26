@@ -22,7 +22,7 @@ from pathlib import Path
 
 import config
 
-DURATION_RE = re.compile(r"^\s*Duration:\s*([\d.]+)s\s*$", re.MULTILINE)
+DURATION_RE = re.compile(r"^\s*Duration:\s*([\d.]+)(m?s)\s*$", re.MULTILINE)
 SIM_ENDED_RE = re.compile(r"Simulation ended at time:\s*([\d.]+)")
 
 
@@ -38,12 +38,26 @@ def find_log_files(approach: str) -> list[Path]:
 def parse_duration(log_path: Path) -> tuple[float, float] | None:
     """Devolve (duration_segundos, simulated_time_segundos), ou None se o
     log não tiver uma linha 'Duration:' (ex: job que falhou antes de
-    terminar, ou ainda está rodando)."""
+    terminar, ou ainda está rodando).
+
+    FIX: o SUMO reporta essa linha em segundos ("Duration: 65.59s") ou em
+    milissegundos ("Duration: 2728644ms"), dependendo da versão/tamanho da
+    simulação -- sem aviso, o mesmo formato de log pode variar entre
+    servidores. Sem tratar os dois, jobs que terminaram com sucesso (mas
+    cujo log usava "ms") apareciam como "sem Duration registrada", como se
+    tivessem falhado. Convertido sempre para segundos no retorno, pra
+    manter a comparação entre jobs consistente independente do formato
+    original de cada log. Repare que o regex exige 's' ou 'ms' logo após o
+    número -- a linha 'Duration:' de dentro de 'Statistics (avg):' (duração
+    MÉDIA DE VIAGEM dos veículos, não tempo de execução real) não tem essa
+    unidade, então continua sendo ignorada corretamente."""
     text = log_path.read_text(encoding="utf-8", errors="replace")
     duration_match = DURATION_RE.search(text)
     if duration_match is None:
         return None
-    duration = float(duration_match.group(1))
+    raw_value = float(duration_match.group(1))
+    unit = duration_match.group(2)
+    duration = raw_value / 1000.0 if unit == "ms" else raw_value
     sim_match = SIM_ENDED_RE.search(text)
     simulated_time = float(sim_match.group(1)) if sim_match else 0.0
     return duration, simulated_time

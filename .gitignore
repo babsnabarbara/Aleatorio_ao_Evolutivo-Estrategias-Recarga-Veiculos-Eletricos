@@ -3,6 +3,5 @@ input/cologne.net.xml
 MD/batch.log
 __pycache__/
 *.pyc
-output/greedyvoronoi
-output/random
-
+output/pseudorandom
+.gitignore
