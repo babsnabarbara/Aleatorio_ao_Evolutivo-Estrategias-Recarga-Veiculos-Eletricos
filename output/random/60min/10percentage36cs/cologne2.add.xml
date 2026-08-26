@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <parkingArea id="0" name="parkingArea" lane="-141317712#2_0" roadsideCapacity="6"/>
+    <parkingArea id="1" name="parkingArea" lane="-159676152#13_1" roadsideCapacity="6"/>
+    <parkingArea id="2" name="parkingArea" lane="-172190785#1_0" roadsideCapacity="6"/>
+    <parkingArea id="3" name="parkingArea" lane="-186463490#1_0" roadsideCapacity="6"/>
+    <parkingArea id="4" name="parkingArea" lane="-221124338#0_0" roadsideCapacity="6"/>
+    <parkingArea id="5" name="parkingArea" lane="-22953858#3_0" roadsideCapacity="6"/>
+    <parkingArea id="6" name="parkingArea" lane="-25154200_0" roadsideCapacity="6"/>
+    <parkingArea id="7" name="parkingArea" lane="-25193347#4_0" roadsideCapacity="3"/>
+    <parkingArea id="8" name="parkingArea" lane="-25845110#4_0" roadsideCapacity="6"/>
+    <parkingArea id="9" name="parkingArea" lane="-26331972#0_0" roadsideCapacity="6"/>
+    <parkingArea id="10" name="parkingArea" lane="-27340310#2_0" roadsideCapacity="6"/>
+    <parkingArea id="11" name="parkingArea" lane="-28865829_0" roadsideCapacity="6"/>
+    <parkingArea id="12" name="parkingArea" lane="-362127519#1_0" roadsideCapacity="6"/>
+    <parkingArea id="13" name="parkingArea" lane="-5062380_0" roadsideCapacity="6"/>
+    <parkingArea id="14" name="parkingArea" lane="-59471384_0" roadsideCapacity="6"/>
+    <parkingArea id="15" name="parkingArea" lane="-8107287#4_1" roadsideCapacity="6"/>
+    <parkingArea id="16" name="parkingArea" lane="-99407209#0_0" roadsideCapacity="6"/>
+    <parkingArea id="17" name="parkingArea" lane="132618508#0_0" roadsideCapacity="6"/>
+    <parkingArea id="18" name="parkingArea" lane="160379447#2_0" roadsideCapacity="6"/>
+    <parkingArea id="19" name="parkingArea" lane="186623965#1_1" roadsideCapacity="6"/>
+    <parkingArea id="20" name="parkingArea" lane="219594036_1" roadsideCapacity="6"/>
+    <parkingArea id="21" name="parkingArea" lane="23177425#1_1" roadsideCapacity="1"/>
+    <parkingArea id="22" name="parkingArea" lane="23480326#0_1" roadsideCapacity="6"/>
+    <parkingArea id="23" name="parkingArea" lane="24721128#3_1" roadsideCapacity="6"/>
+    <parkingArea id="24" name="parkingArea" lane="25538647#2_0" roadsideCapacity="6"/>
+    <parkingArea id="25" name="parkingArea" lane="25761555#0_0" roadsideCapacity="6"/>
+    <parkingArea id="26" name="parkingArea" lane="26028003#0_0" roadsideCapacity="6"/>
+    <parkingArea id="27" name="parkingArea" lane="26188294_0" roadsideCapacity="6"/>
+    <parkingArea id="28" name="parkingArea" lane="27281231#0_0" roadsideCapacity="6"/>
+    <parkingArea id="29" name="parkingArea" lane="286785998#4_0" roadsideCapacity="6"/>
+    <parkingArea id="30" name="parkingArea" lane="28997049_0" roadsideCapacity="6"/>
+    <parkingArea id="31" name="parkingArea" lane="328974185_0" roadsideCapacity="6"/>
+    <parkingArea id="32" name="parkingArea" lane="340370879#1_0" roadsideCapacity="6"/>
+    <parkingArea id="33" name="parkingArea" lane="35941424#2_0" roadsideCapacity="6"/>
+    <parkingArea id="34" name="parkingArea" lane="35941463#0_0" roadsideCapacity="6"/>
+    <parkingArea id="35" name="parkingArea" lane="36860236#0_0" roadsideCapacity="6"/>
+</additional>
