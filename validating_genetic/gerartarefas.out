@@ -1,5 +1,0 @@
-nohup: ignoring input
-729 combinações de hiperparâmetros geradas para k=25.
-Tempo sequencial total estimado: 1312.6h (~54.7 dias numa única máquina)
-Faixa de tempo estimado por tarefa: 2334s a 13612s (razão 5.8x entre a mais barata e a mais cara)
-Arquivo salvo: tarefas_completas.json

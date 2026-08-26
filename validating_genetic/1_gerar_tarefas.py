@@ -29,7 +29,7 @@ ELITISM_SIZE_OPTS = [4, 8, 12]
 TOURNAMENT_SIZE_OPTS = [5, 7, 10]
 NUM_GENERATIONS_OPTS = [150, 250, 350]
 
-K = 25
+K = 27
 TEMPO_MEDIO_K25_SEGUNDOS = 6482  # âncora: sua média real medida para k=25
 
 
