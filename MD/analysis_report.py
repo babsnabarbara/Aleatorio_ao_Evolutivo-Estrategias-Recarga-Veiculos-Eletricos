@@ -46,7 +46,7 @@ JAM_RE = re.compile(r"Jam:\s*(\d+)")
 YIELD_RE = re.compile(r"Yield:\s*(\d+)")
 WRONG_LANE_RE = re.compile(r"Wrong Lane:\s*(\d+)")
 EMERGENCY_RE = re.compile(r"Emergency Stops:\s*(\d+)")
-STATS_BLOCK_RE = re.compile(r"Statistics \(avg\):(.*?)(?:\nAStarRouter|\Z)", re.DOTALL)
+STATS_BLOCK_RE = re.compile(r"Statistics \(avg(?: of \d+)?\):(.*?)(?:\nAStarRouter|\Z)", re.DOTALL)
 
 COLUMNS = [
     # identificação
