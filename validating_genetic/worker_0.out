@@ -1,0 +1,7 @@
+nohup: ignoring input
+[servidor 0] 243 tarefas no total, 0 já concluídas anteriormente, 243 pendentes.
+
+[servidor 0] Montando grafo a partir de ../input/cologne.net.xml ...
+[servidor 0] Grafo pronto: 71073 nós candidatos.
+
+[servidor 0] Tarefa 56 (1/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 350}
