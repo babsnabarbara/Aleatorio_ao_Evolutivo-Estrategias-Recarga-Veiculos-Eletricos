@@ -72,7 +72,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--servidor", type=int, required=True,
                      help="Índice do servidor (0, 1, 2 ou 3)")
-    ap.add_argument("--netfile", default="input/cologne.net.xml",
+    ap.add_argument("--netfile", default="../input/cologne.net.xml",
                      help="Caminho do arquivo .net.xml da rede viária")
     ap.add_argument("--local-search", action="store_true",
                      help="Se passado, roda o refinamento exaustivo após "
