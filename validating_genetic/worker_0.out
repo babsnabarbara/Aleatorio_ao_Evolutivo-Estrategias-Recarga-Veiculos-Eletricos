@@ -5,3 +5,323 @@ nohup: ignoring input
 [servidor 0] Grafo pronto: 71073 nós candidatos.
 
 [servidor 0] Tarefa 56 (1/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 11477s (estimado: 13612.2s) | fitness: 203085934
+    ETA para terminar este servidor: 10/09 08:10
+
+[servidor 0] Tarefa 68 (2/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 11260s (estimado: 13612.2s) | fitness: 201427168
+    ETA para terminar este servidor: 10/09 04:41
+
+[servidor 0] Tarefa 80 (3/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 11238s (estimado: 13612.2s) | fitness: 199879919
+    ETA para terminar este servidor: 10/09 03:16
+
+[servidor 0] Tarefa 146 (4/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 16102s (estimado: 13612.2s) | fitness: 216672002
+    ETA para terminar este servidor: 11/09 17:39
+
+[servidor 0] Tarefa 149 (5/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 16300s (estimado: 13612.2s) | fitness: 211912615
+    ETA para terminar este servidor: 12/09 17:58
+
+[servidor 0] Tarefa 161 (6/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 16029s (estimado: 13612.2s) | fitness: 209643612
+    ETA para terminar este servidor: 13/09 08:43
+
+[servidor 0] Tarefa 218 (7/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 23577s (estimado: 13612.2s) | fitness: 225947708
+    ETA para terminar este servidor: 15/09 05:55
+
+[servidor 0] Tarefa 230 (8/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 23294s (estimado: 13612.2s) | fitness: 214468030
+    ETA para terminar este servidor: 16/09 14:40
+
+[servidor 0] Tarefa 242 (9/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 23128s (estimado: 13612.2s) | fitness: 212579215
+    ETA para terminar este servidor: 17/09 15:33
+
+[servidor 0] Tarefa 299 (10/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 11359s (estimado: 13612.2s) | fitness: 205497973
+    ETA para terminar este servidor: 16/09 21:38
+
+[servidor 0] Tarefa 311 (11/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 11240s (estimado: 13612.2s) | fitness: 203050052
+    ETA para terminar este servidor: 16/09 06:38
+
+[servidor 0] Tarefa 323 (12/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 11294s (estimado: 13612.2s) | fitness: 200373097
+    ETA para terminar este servidor: 15/09 18:16
+
+[servidor 0] Tarefa 389 (13/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 16149s (estimado: 13612.2s) | fitness: 212443558
+    ETA para terminar este servidor: 15/09 19:49
+
+[servidor 0] Tarefa 392 (14/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 15912s (estimado: 13612.2s) | fitness: 211575222
+    ETA para terminar este servidor: 15/09 20:35
+
+[servidor 0] Tarefa 404 (15/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 16067s (estimado: 13612.2s) | fitness: 204898881
+    ETA para terminar este servidor: 15/09 21:36
+
+[servidor 0] Tarefa 470 (16/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 23183s (estimado: 13612.2s) | fitness: 217373011
+    ETA para terminar este servidor: 16/09 12:46
+
+[servidor 0] Tarefa 473 (17/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 23259s (estimado: 13612.2s) | fitness: 218336851
+    ETA para terminar este servidor: 17/09 02:18
+
+[servidor 0] Tarefa 485 (18/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 23215s (estimado: 13612.2s) | fitness: 215516533
+    ETA para terminar este servidor: 17/09 14:16
+
+[servidor 0] Tarefa 551 (19/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 11253s (estimado: 13612.2s) | fitness: 204221562
+    ETA para terminar este servidor: 17/09 04:43
+
+[servidor 0] Tarefa 554 (20/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 11353s (estimado: 13612.2s) | fitness: 200997213
+    ETA para terminar este servidor: 16/09 20:17
+
+[servidor 0] Tarefa 566 (21/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 11228s (estimado: 13612.2s) | fitness: 199781447
+    ETA para terminar este servidor: 16/09 12:28
+
+[servidor 0] Tarefa 632 (22/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 16192s (estimado: 13612.2s) | fitness: 217844891
+    ETA para terminar este servidor: 16/09 12:37
+
+[servidor 0] Tarefa 635 (23/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 16261s (estimado: 13612.2s) | fitness: 210683563
+    ETA para terminar este servidor: 16/09 12:51
+
+[servidor 0] Tarefa 647 (24/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 16065s (estimado: 13612.2s) | fitness: 206399838
+    ETA para terminar este servidor: 16/09 12:48
+
+[servidor 0] Tarefa 713 (25/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 23351s (estimado: 13612.2s) | fitness: 220722768
+    ETA para terminar este servidor: 16/09 22:07
+
+[servidor 0] Tarefa 716 (26/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 23399s (estimado: 13612.2s) | fitness: 216850047
+    ETA para terminar este servidor: 17/09 06:47
+
+[servidor 0] Tarefa 728 (27/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 23203s (estimado: 13612.2s) | fitness: 217447922
+    ETA para terminar este servidor: 17/09 14:34
+
+[servidor 0] Tarefa 64 (28/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 8137s (estimado: 9723.0s) | fitness: 207752267
+    ETA para terminar este servidor: 17/09 10:00
+
+[servidor 0] Tarefa 67 (29/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 8032s (estimado: 9723.0s) | fitness: 203570564
+    ETA para terminar este servidor: 17/09 05:33
+
+[servidor 0] Tarefa 79 (30/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 8010s (estimado: 9723.0s) | fitness: 200372580
+    ETA para terminar este servidor: 17/09 01:17
+
+[servidor 0] Tarefa 145 (31/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 11497s (estimado: 9723.0s) | fitness: 217364633
+    ETA para terminar este servidor: 17/09 00:59
+
+[servidor 0] Tarefa 148 (32/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 11661s (estimado: 9723.0s) | fitness: 214661942
+    ETA para terminar este servidor: 17/09 00:52
+
+[servidor 0] Tarefa 160 (33/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 11480s (estimado: 9723.0s) | fitness: 210457759
+    ETA para terminar este servidor: 17/09 00:34
+
+[servidor 0] Tarefa 226 (34/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 16653s (estimado: 9723.0s) | fitness: 219738885
+    ETA para terminar este servidor: 17/09 05:29
+
+[servidor 0] Tarefa 229 (35/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 16624s (estimado: 9723.0s) | fitness: 217757303
+    ETA para terminar este servidor: 17/09 10:09
+
+[servidor 0] Tarefa 241 (36/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 16515s (estimado: 9723.0s) | fitness: 213238417
+    ETA para terminar este servidor: 17/09 14:31
+
+[servidor 0] Tarefa 307 (37/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 8074s (estimado: 9723.0s) | fitness: 208760490
+    ETA para terminar este servidor: 17/09 10:45
+
+[servidor 0] Tarefa 310 (38/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 8016s (estimado: 9723.0s) | fitness: 204945143
+    ETA para terminar este servidor: 17/09 07:05
+
+[servidor 0] Tarefa 322 (39/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 8058s (estimado: 9723.0s) | fitness: 202249116
+    ETA para terminar este servidor: 17/09 03:37
+
+[servidor 0] Tarefa 388 (40/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 11542s (estimado: 9723.0s) | fitness: 214505095
+    ETA para terminar este servidor: 17/09 03:21
+
+[servidor 0] Tarefa 391 (41/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 11407s (estimado: 9723.0s) | fitness: 214232207
+    ETA para terminar este servidor: 17/09 03:00
+
+[servidor 0] Tarefa 403 (42/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 11445s (estimado: 9723.0s) | fitness: 206572834
+    ETA para terminar este servidor: 17/09 02:41
+
+[servidor 0] Tarefa 469 (43/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 16587s (estimado: 9723.0s) | fitness: 220472099
+    ETA para terminar este servidor: 17/09 06:40
+
+[servidor 0] Tarefa 472 (44/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 16590s (estimado: 9723.0s) | fitness: 219759118
+    ETA para terminar este servidor: 17/09 10:32
+
+[servidor 0] Tarefa 484 (45/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 16555s (estimado: 9723.0s) | fitness: 218327687
+    ETA para terminar este servidor: 17/09 14:13
+
+[servidor 0] Tarefa 541 (46/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 8079s (estimado: 9723.0s) | fitness: 207537541
+    ETA para terminar este servidor: 17/09 11:03
+
+[servidor 0] Tarefa 553 (47/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 8093s (estimado: 9723.0s) | fitness: 204965960
+    ETA para terminar este servidor: 17/09 08:01
+
+[servidor 0] Tarefa 565 (48/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 8028s (estimado: 9723.0s) | fitness: 202740419
+    ETA para terminar este servidor: 17/09 05:02
+
+[servidor 0] Tarefa 622 (49/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 11617s (estimado: 9723.0s) | fitness: 215164822
+    ETA para terminar este servidor: 17/09 04:51
+
+[servidor 0] Tarefa 634 (50/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 11552s (estimado: 9723.0s) | fitness: 213712000
+    ETA para terminar este servidor: 17/09 04:37
+
+[servidor 0] Tarefa 646 (51/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 11442s (estimado: 9723.0s) | fitness: 209489002
+    ETA para terminar este servidor: 17/09 04:19
+
+[servidor 0] Tarefa 703 (52/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 250}
+    -> concluída em 16793s (estimado: 9723.0s) | fitness: 227463223
+    ETA para terminar este servidor: 17/09 07:52
+
+[servidor 0] Tarefa 715 (53/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 250}
+    -> concluída em 16706s (estimado: 9723.0s) | fitness: 223932717
+    ETA para terminar este servidor: 17/09 11:14
+
+[servidor 0] Tarefa 727 (54/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 500, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 250}
+    -> concluída em 16544s (estimado: 9723.0s) | fitness: 217447922
+    ETA para terminar este servidor: 17/09 14:24
+
+[servidor 0] Tarefa 29 (55/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 4, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 6866s (estimado: 8167.3s) | fitness: 206734087
+    ETA para terminar este servidor: 17/09 12:09
+
+[servidor 0] Tarefa 41 (56/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 6723s (estimado: 8167.3s) | fitness: 202991762
+    ETA para terminar este servidor: 17/09 09:52
+
+[servidor 0] Tarefa 53 (57/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 6745s (estimado: 8167.3s) | fitness: 201296289
+    ETA para terminar este servidor: 17/09 07:39
+
+[servidor 0] Tarefa 119 (58/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 9698s (estimado: 8167.3s) | fitness: 219451238
+    ETA para terminar este servidor: 17/09 07:27
+
+[servidor 0] Tarefa 122 (59/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 9608s (estimado: 8167.3s) | fitness: 211104847
+    ETA para terminar este servidor: 17/09 07:11
+
+[servidor 0] Tarefa 134 (60/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 9628s (estimado: 8167.3s) | fitness: 207186108
+    ETA para terminar este servidor: 17/09 06:57
+
+[servidor 0] Tarefa 200 (61/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 13865s (estimado: 8167.3s) | fitness: 220694051
+    ETA para terminar este servidor: 17/09 09:24
+
+[servidor 0] Tarefa 203 (62/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 13912s (estimado: 8167.3s) | fitness: 219108878
+    ETA para terminar este servidor: 17/09 11:50
+
+[servidor 0] Tarefa 215 (63/243) — k=27 params={'crossover_rate': 0.7, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 13757s (estimado: 8167.3s) | fitness: 214563806
+    ETA para terminar este servidor: 17/09 14:07
+
+[servidor 0] Tarefa 281 (64/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 6838s (estimado: 8167.3s) | fitness: 206315942
+    ETA para terminar este servidor: 17/09 12:06
+
+[servidor 0] Tarefa 284 (65/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 6716s (estimado: 8167.3s) | fitness: 202592206
+    ETA para terminar este servidor: 17/09 10:02
+
+[servidor 0] Tarefa 296 (66/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 6712s (estimado: 8167.3s) | fitness: 200140394
+    ETA para terminar este servidor: 17/09 08:02
+
+[servidor 0] Tarefa 362 (67/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 9586s (estimado: 8167.3s) | fitness: 215753382
+    ETA para terminar este servidor: 17/09 07:46
+
+[servidor 0] Tarefa 365 (68/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 9573s (estimado: 8167.3s) | fitness: 210479275
+    ETA para terminar este servidor: 17/09 07:31
+
+[servidor 0] Tarefa 377 (69/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 9603s (estimado: 8167.3s) | fitness: 208716067
+    ETA para terminar este servidor: 17/09 07:16
+
+[servidor 0] Tarefa 443 (70/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 13818s (estimado: 8167.3s) | fitness: 224705767
+    ETA para terminar este servidor: 17/09 09:28
+
+[servidor 0] Tarefa 446 (71/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 13878s (estimado: 8167.3s) | fitness: 221928031
+    ETA para terminar este servidor: 17/09 11:39
+
+[servidor 0] Tarefa 458 (72/243) — k=27 params={'crossover_rate': 0.8, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 13857s (estimado: 8167.3s) | fitness: 217252104
+    ETA para terminar este servidor: 17/09 13:46
+
+[servidor 0] Tarefa 524 (73/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 6847s (estimado: 8167.3s) | fitness: 204730058
+    ETA para terminar este servidor: 17/09 11:56
+
+[servidor 0] Tarefa 527 (74/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 6844s (estimado: 8167.3s) | fitness: 204452125
+    ETA para terminar este servidor: 17/09 10:09
+
+[servidor 0] Tarefa 539 (75/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.08, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 6719s (estimado: 8167.3s) | fitness: 201403032
+    ETA para terminar este servidor: 17/09 08:20
+
+[servidor 0] Tarefa 605 (76/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 9679s (estimado: 8167.3s) | fitness: 211724014
+    ETA para terminar este servidor: 17/09 08:08
+
+[servidor 0] Tarefa 608 (77/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 9633s (estimado: 8167.3s) | fitness: 209629047
+    ETA para terminar este servidor: 17/09 07:56
+
+[servidor 0] Tarefa 620 (78/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.12, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
+    -> concluída em 9470s (estimado: 8167.3s) | fitness: 209383253
+    ETA para terminar este servidor: 17/09 07:38
+
+[servidor 0] Tarefa 686 (79/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 5, 'num_generations': 350}
+    -> concluída em 13944s (estimado: 8167.3s) | fitness: 222721260
+    ETA para terminar este servidor: 17/09 09:42
+
+[servidor 0] Tarefa 689 (80/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 8, 'tournament_size': 7, 'num_generations': 350}
+    -> concluída em 13856s (estimado: 8167.3s) | fitness: 218291152
+    ETA para terminar este servidor: 17/09 11:41
+
+[servidor 0] Tarefa 701 (81/243) — k=27 params={'crossover_rate': 0.9, 'mutation_rate': 0.18, 'population_size': 300, 'elitism_size': 12, 'tournament_size': 10, 'num_generations': 350}
