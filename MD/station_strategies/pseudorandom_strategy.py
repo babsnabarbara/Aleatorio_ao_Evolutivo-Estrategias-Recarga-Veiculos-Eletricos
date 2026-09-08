@@ -26,6 +26,13 @@ algoritmo genético original, agora unificado nos 5 approaches. Como todo
 par de nós dentro do componente gigante já é mutuamente alcançável por
 definição, "pertence ao grafo recebido" já é suficiente -- não precisa
 mais confirmar caminho entre eles com nx.has_path.
+
+FIX: antes sorteava uma TRINCA de lanes do quadrante e exigia que as 3
+pertencessem ao componente gigante, mesmo só usando a do meio como
+candidato -- resquício de quando essa checagem servia pra validar um ciclo
+entre as 3 (removido numa limpeza anterior). Sortear 1 lane direto por vez
+é mais rápido (menos sorteios desperdiçados quando alguma das 3 falha à
+toa) sem mudar qual candidato acaba sendo aceito.
 """
 from __future__ import annotations
 
@@ -58,21 +65,21 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
     max_attempts_per_quadrant = 5000
 
     for quadrant_lanes in quadrants:
-        if len(quadrant_lanes) < 3:
+        if len(quadrant_lanes) < 1:
             raise ValueError(
-                f"Quadrante com só {len(quadrant_lanes)} lane(s) -- "
-                f"impossível sortear trinca (cs_amount={cs_amount})."
+                f"Quadrante sem nenhuma lane -- "
+                f"impossível sortear candidato (cs_amount={cs_amount})."
             )
 
         found = False
         for _ in range(max_attempts_per_quadrant):
-            a, b, c = random.sample(quadrant_lanes, 3)
-            # a[:-2] converte lane id -> edge id (remove o sufixo "_0")
-            if not all(lane[:-2] in graph for lane in (a, b, c)):
+            lane = random.choice(quadrant_lanes)
+            # lane[:-2] converte lane id -> edge id (remove o sufixo "_0")
+            if lane[:-2] not in graph:
                 continue
-            if b in chosen:
+            if lane in chosen:
                 continue
-            chosen.add(b)
+            chosen.add(lane)
             found = True
             break
 
