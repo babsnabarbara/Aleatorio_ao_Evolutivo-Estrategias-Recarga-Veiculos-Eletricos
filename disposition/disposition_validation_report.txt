@@ -1,0 +1,37 @@
+Validação de disposição de estações (mesma repetition, minutes/percentage diferentes)
+======================================================================
+
+=== random ===
+  9cs: sem dado gerado ainda (pulado)
+  16cs: sem dado gerado ainda (pulado)
+  25cs: sem dado gerado ainda (pulado)
+  36cs: sem dado gerado ainda (pulado)
+  49cs: sem dado gerado ainda (pulado)
+
+=== pseudorandom ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
+
+=== greedy ===
+  9cs: sem dado gerado ainda (pulado)
+  16cs: sem dado gerado ainda (pulado)
+  25cs: sem dado gerado ainda (pulado)
+  36cs: sem dado gerado ainda (pulado)
+  49cs: sem dado gerado ainda (pulado)
+
+=== greedyvoronoi ===
+  9cs: sem dado gerado ainda (pulado)
+  16cs: sem dado gerado ainda (pulado)
+  25cs: sem dado gerado ainda (pulado)
+  36cs: sem dado gerado ainda (pulado)
+  49cs: sem dado gerado ainda (pulado)
+
+=== genetic ===
+  9cs: sem dado gerado ainda (pulado)
+  16cs: sem dado gerado ainda (pulado)
+  25cs: sem dado gerado ainda (pulado)
+  36cs: sem dado gerado ainda (pulado)
+  49cs: sem dado gerado ainda (pulado)
