@@ -1,0 +1,1208 @@
+2026-08-21 15:28:38 | INFO | === batch: approach=greedyvoronoi | 120 combinações x 5 repetições ===
+2026-08-21 15:29:08 | INFO | gerado: greedyvoronoi_10min_9cs_5pct_1rep
+2026-08-21 15:29:10 | INFO | gerado: greedyvoronoi_10min_9cs_5pct_2rep
+2026-08-21 15:29:13 | INFO | gerado: greedyvoronoi_10min_9cs_5pct_3rep
+2026-08-21 15:29:15 | INFO | gerado: greedyvoronoi_10min_9cs_5pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_5pct_5rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_10pct_1rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_10pct_2rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_10pct_3rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_10pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_10pct_5rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_15pct_1rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_15pct_2rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_15pct_3rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_15pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_15pct_5rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_20pct_1rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_20pct_2rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_20pct_3rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_20pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_20pct_5rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_25pct_1rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_25pct_2rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_25pct_3rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_25pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_25pct_5rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_30pct_1rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_30pct_2rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_30pct_3rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_30pct_4rep
+2026-08-21 15:29:17 | INFO | gerado: greedyvoronoi_10min_9cs_30pct_5rep
+2026-08-21 15:29:20 | INFO | gerado: greedyvoronoi_10min_16cs_5pct_1rep
+2026-08-21 15:29:22 | INFO | gerado: greedyvoronoi_10min_16cs_5pct_2rep
+2026-08-21 15:29:25 | INFO | gerado: greedyvoronoi_10min_16cs_5pct_3rep
+2026-08-21 15:29:27 | INFO | gerado: greedyvoronoi_10min_16cs_5pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_5pct_5rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_10pct_1rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_10pct_2rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_10pct_3rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_10pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_10pct_5rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_15pct_1rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_15pct_2rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_15pct_3rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_15pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_15pct_5rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_20pct_1rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_20pct_2rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_20pct_3rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_20pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_20pct_5rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_25pct_1rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_25pct_2rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_25pct_3rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_25pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_25pct_5rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_30pct_1rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_30pct_2rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_30pct_3rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_30pct_4rep
+2026-08-21 15:29:30 | INFO | gerado: greedyvoronoi_10min_16cs_30pct_5rep
+2026-08-21 15:29:32 | INFO | gerado: greedyvoronoi_10min_25cs_5pct_1rep
+2026-08-21 15:29:34 | INFO | gerado: greedyvoronoi_10min_25cs_5pct_2rep
+2026-08-21 15:29:37 | INFO | gerado: greedyvoronoi_10min_25cs_5pct_3rep
+2026-08-21 15:29:40 | INFO | gerado: greedyvoronoi_10min_25cs_5pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_5pct_5rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_10pct_1rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_10pct_2rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_10pct_3rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_10pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_10pct_5rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_15pct_1rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_15pct_2rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_15pct_3rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_15pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_15pct_5rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_20pct_1rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_20pct_2rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_20pct_3rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_20pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_20pct_5rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_25pct_1rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_25pct_2rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_25pct_3rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_25pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_25pct_5rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_30pct_1rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_30pct_2rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_30pct_3rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_30pct_4rep
+2026-08-21 15:29:42 | INFO | gerado: greedyvoronoi_10min_25cs_30pct_5rep
+2026-08-21 15:29:45 | INFO | gerado: greedyvoronoi_10min_36cs_5pct_1rep
+2026-08-21 15:29:47 | INFO | gerado: greedyvoronoi_10min_36cs_5pct_2rep
+2026-08-21 15:29:50 | INFO | gerado: greedyvoronoi_10min_36cs_5pct_3rep
+2026-08-21 15:29:52 | INFO | gerado: greedyvoronoi_10min_36cs_5pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_5pct_5rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_10pct_1rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_10pct_2rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_10pct_3rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_10pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_10pct_5rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_15pct_1rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_15pct_2rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_15pct_3rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_15pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_15pct_5rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_20pct_1rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_20pct_2rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_20pct_3rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_20pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_20pct_5rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_25pct_1rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_25pct_2rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_25pct_3rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_25pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_25pct_5rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_30pct_1rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_30pct_2rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_30pct_3rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_30pct_4rep
+2026-08-21 15:29:55 | INFO | gerado: greedyvoronoi_10min_36cs_30pct_5rep
+2026-08-21 15:29:58 | INFO | gerado: greedyvoronoi_10min_49cs_5pct_1rep
+2026-08-21 15:30:00 | INFO | gerado: greedyvoronoi_10min_49cs_5pct_2rep
+2026-08-21 15:30:03 | INFO | gerado: greedyvoronoi_10min_49cs_5pct_3rep
+2026-08-21 15:30:05 | INFO | gerado: greedyvoronoi_10min_49cs_5pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_5pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_10pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_10pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_10pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_10pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_10pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_15pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_15pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_15pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_15pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_15pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_20pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_20pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_20pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_20pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_20pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_25pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_25pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_25pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_25pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_25pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_30pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_30pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_30pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_30pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_10min_49cs_30pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_5pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_5pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_5pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_5pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_5pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_10pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_10pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_10pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_10pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_10pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_15pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_15pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_15pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_15pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_15pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_20pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_20pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_20pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_20pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_20pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_25pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_25pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_25pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_25pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_25pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_30pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_30pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_30pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_30pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_9cs_30pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_5pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_5pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_5pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_5pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_5pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_10pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_10pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_10pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_10pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_10pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_15pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_15pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_15pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_15pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_15pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_20pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_20pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_20pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_20pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_20pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_25pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_25pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_25pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_25pct_4rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_25pct_5rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_30pct_1rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_30pct_2rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_30pct_3rep
+2026-08-21 15:30:08 | INFO | gerado: greedyvoronoi_20min_16cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_16cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_25cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_36cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_20min_49cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_9cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_16cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_20pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_20pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_20pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_20pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_20pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_25pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_25pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_25pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_25pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_25pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_30pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_30pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_30pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_30pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_25cs_30pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_5pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_5pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_5pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_5pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_5pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_10pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_10pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_10pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_10pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_10pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_15pct_1rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_15pct_2rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_15pct_3rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_15pct_4rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_15pct_5rep
+2026-08-21 15:30:09 | INFO | gerado: greedyvoronoi_40min_36cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_36cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_40min_49cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_9cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_16cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_25cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_36cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_5pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_5pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_5pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_5pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_5pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_10pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_10pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_10pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_10pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_10pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_15pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_15pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_15pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_15pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_15pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_20pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_20pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_20pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_20pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_20pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_25pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_25pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_25pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_25pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_25pct_5rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_30pct_1rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_30pct_2rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_30pct_3rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_30pct_4rep
+2026-08-21 15:30:10 | INFO | gerado: greedyvoronoi_60min_49cs_30pct_5rep
+2026-08-21 15:30:10 | INFO | _auto_workers: logical_cpus=32 cpu_based=28 | ram_available=123.3GB ram_based=58 | total_jobs=600 -> resolved=28 workers (fator limitante: CPU)
+2026-08-21 15:30:10 | INFO |     CPU (núcleos físicos) está limitando o paralelismo. Se quiser forçar mais processos simultâneos mesmo assim, passe --workers manualmente mais alto que este valor.
+2026-08-21 15:30:10 | INFO | 600 job(s) gerados, rodando com 28 workers em paralelo (auto-detectado por CPU+RAM)
+2026-08-21 15:47:26 | INFO | OK (1/600): greedyvoronoi_10min_9cs_5pct_4rep
+2026-08-21 15:47:33 | INFO | OK (2/600): greedyvoronoi_10min_9cs_5pct_1rep
+2026-08-21 15:49:50 | INFO | OK (3/600): greedyvoronoi_10min_9cs_5pct_5rep
+2026-08-21 15:50:59 | INFO | OK (4/600): greedyvoronoi_10min_9cs_5pct_3rep
+2026-08-21 15:55:43 | INFO | OK (5/600): greedyvoronoi_10min_9cs_5pct_2rep
+2026-08-21 16:00:46 | INFO | OK (6/600): greedyvoronoi_10min_9cs_10pct_1rep
+2026-08-21 16:02:12 | INFO | OK (7/600): greedyvoronoi_10min_9cs_10pct_4rep
+2026-08-21 16:07:10 | INFO | OK (8/600): greedyvoronoi_10min_9cs_10pct_3rep
+2026-08-21 16:10:28 | INFO | OK (9/600): greedyvoronoi_10min_9cs_10pct_5rep
+2026-08-21 16:13:35 | INFO | OK (10/600): greedyvoronoi_10min_9cs_15pct_1rep
+2026-08-21 16:14:17 | INFO | OK (11/600): greedyvoronoi_10min_16cs_5pct_1rep
+2026-08-21 16:14:51 | INFO | OK (12/600): greedyvoronoi_10min_9cs_15pct_4rep
+2026-08-21 16:14:55 | ERROR | FALHOU (13/600): greedyvoronoi_10min_9cs_20pct_1rep -- FatalTraCIError: Connection closed by SUMO.
+2026-08-21 16:15:01 | INFO | OK (14/600): greedyvoronoi_10min_16cs_5pct_2rep
+2026-08-21 16:21:09 | INFO | OK (15/600): greedyvoronoi_10min_9cs_10pct_2rep
+2026-08-21 16:25:05 | INFO | OK (16/600): greedyvoronoi_10min_16cs_5pct_3rep
+2026-08-21 16:26:57 | INFO | OK (17/600): greedyvoronoi_10min_9cs_15pct_3rep
+2026-08-21 16:29:41 | INFO | OK (18/600): greedyvoronoi_10min_16cs_5pct_5rep
+2026-08-21 16:30:29 | INFO | OK (19/600): greedyvoronoi_10min_9cs_15pct_5rep
+2026-08-21 16:31:45 | INFO | OK (20/600): greedyvoronoi_10min_9cs_20pct_4rep
+2026-08-21 16:33:50 | INFO | OK (21/600): greedyvoronoi_10min_16cs_5pct_4rep
+2026-08-21 16:37:09 | INFO | OK (22/600): greedyvoronoi_10min_9cs_25pct_1rep
+2026-08-21 16:44:53 | INFO | OK (23/600): greedyvoronoi_10min_9cs_15pct_2rep
+2026-08-21 16:45:18 | INFO | OK (24/600): greedyvoronoi_10min_9cs_20pct_3rep
+2026-08-21 16:45:52 | INFO | OK (25/600): greedyvoronoi_10min_9cs_20pct_5rep
+2026-08-21 16:47:43 | INFO | OK (26/600): greedyvoronoi_10min_9cs_25pct_4rep
+2026-08-21 16:51:37 | INFO | OK (27/600): greedyvoronoi_10min_9cs_30pct_1rep
+2026-08-21 16:52:47 | INFO | OK (28/600): greedyvoronoi_10min_16cs_10pct_1rep
+2026-08-21 17:02:32 | INFO | OK (29/600): greedyvoronoi_10min_16cs_10pct_2rep
+2026-08-21 17:02:58 | INFO | OK (30/600): greedyvoronoi_10min_9cs_25pct_3rep
+2026-08-21 17:04:08 | INFO | OK (31/600): greedyvoronoi_10min_9cs_20pct_2rep
+2026-08-21 17:05:03 | INFO | OK (32/600): greedyvoronoi_10min_9cs_25pct_5rep
+2026-08-21 17:06:36 | INFO | OK (33/600): greedyvoronoi_10min_16cs_10pct_5rep
+2026-08-21 17:11:07 | INFO | OK (34/600): greedyvoronoi_10min_16cs_10pct_3rep
+2026-08-21 17:15:06 | INFO | OK (35/600): greedyvoronoi_10min_9cs_30pct_4rep
+2026-08-21 17:18:18 | INFO | OK (36/600): greedyvoronoi_10min_16cs_10pct_4rep
+2026-08-21 17:20:05 | INFO | OK (37/600): greedyvoronoi_10min_9cs_30pct_3rep
+2026-08-21 17:23:26 | INFO | OK (38/600): greedyvoronoi_10min_9cs_25pct_2rep
+2026-08-21 17:24:41 | INFO | OK (39/600): greedyvoronoi_10min_16cs_15pct_1rep
+2026-08-21 17:27:13 | INFO | OK (40/600): greedyvoronoi_10min_16cs_15pct_2rep
+2026-08-21 17:40:17 | INFO | OK (41/600): greedyvoronoi_10min_9cs_30pct_5rep
+2026-08-21 17:45:04 | INFO | OK (42/600): greedyvoronoi_10min_9cs_30pct_2rep
+2026-08-21 17:45:45 | INFO | OK (43/600): greedyvoronoi_10min_25cs_5pct_2rep
+2026-08-21 17:45:49 | INFO | OK (44/600): greedyvoronoi_10min_16cs_15pct_3rep
+2026-08-21 17:46:17 | INFO | OK (45/600): greedyvoronoi_10min_16cs_15pct_5rep
+2026-08-21 17:49:44 | INFO | OK (46/600): greedyvoronoi_10min_25cs_5pct_4rep
+2026-08-21 17:51:39 | INFO | OK (47/600): greedyvoronoi_10min_25cs_5pct_3rep
+2026-08-21 17:51:50 | INFO | OK (48/600): greedyvoronoi_10min_25cs_5pct_1rep
+2026-08-21 17:58:24 | INFO | OK (49/600): greedyvoronoi_10min_16cs_15pct_4rep
+2026-08-21 17:59:46 | INFO | OK (50/600): greedyvoronoi_10min_16cs_20pct_1rep
+2026-08-21 18:03:11 | INFO | OK (51/600): greedyvoronoi_10min_16cs_20pct_2rep
+2026-08-21 18:03:24 | INFO | OK (52/600): greedyvoronoi_10min_25cs_5pct_5rep
+2026-08-21 18:21:22 | INFO | OK (53/600): greedyvoronoi_10min_16cs_20pct_5rep
+2026-08-21 18:24:25 | INFO | OK (54/600): greedyvoronoi_10min_16cs_20pct_3rep
+2026-08-21 18:30:58 | INFO | OK (55/600): greedyvoronoi_10min_25cs_10pct_3rep
+2026-08-21 18:34:46 | INFO | OK (56/600): greedyvoronoi_10min_25cs_10pct_2rep
+2026-08-21 18:38:35 | INFO | OK (57/600): greedyvoronoi_10min_16cs_25pct_1rep
+2026-08-21 18:40:25 | INFO | OK (58/600): greedyvoronoi_10min_16cs_25pct_2rep
+2026-08-21 18:40:59 | INFO | OK (59/600): greedyvoronoi_10min_16cs_20pct_4rep
+2026-08-21 18:45:08 | INFO | OK (60/600): greedyvoronoi_10min_25cs_10pct_4rep
+2026-08-21 18:46:52 | INFO | OK (61/600): greedyvoronoi_10min_25cs_10pct_1rep
+2026-08-21 19:00:11 | INFO | OK (62/600): greedyvoronoi_10min_16cs_25pct_5rep
+2026-08-21 19:03:16 | INFO | OK (63/600): greedyvoronoi_10min_16cs_25pct_3rep
+2026-08-21 19:04:05 | INFO | OK (64/600): greedyvoronoi_10min_16cs_30pct_1rep
+2026-08-21 19:06:59 | INFO | OK (65/600): greedyvoronoi_10min_25cs_10pct_5rep
+2026-08-21 19:22:42 | INFO | OK (66/600): greedyvoronoi_10min_16cs_25pct_4rep
+2026-08-21 19:26:00 | INFO | OK (67/600): greedyvoronoi_10min_25cs_15pct_4rep
+2026-08-21 19:26:04 | INFO | OK (68/600): greedyvoronoi_10min_16cs_30pct_2rep
+2026-08-21 19:29:31 | INFO | OK (69/600): greedyvoronoi_10min_25cs_15pct_2rep
+2026-08-21 19:33:01 | INFO | OK (70/600): greedyvoronoi_10min_25cs_15pct_3rep
+2026-08-21 19:36:29 | INFO | OK (71/600): greedyvoronoi_10min_16cs_30pct_5rep
+2026-08-21 19:45:00 | INFO | OK (72/600): greedyvoronoi_10min_16cs_30pct_3rep
+2026-08-21 19:52:26 | INFO | OK (73/600): greedyvoronoi_10min_36cs_5pct_2rep
+2026-08-21 19:54:00 | INFO | OK (74/600): greedyvoronoi_10min_25cs_15pct_1rep
+2026-08-21 19:55:44 | INFO | OK (75/600): greedyvoronoi_10min_25cs_15pct_5rep
+2026-08-21 19:56:46 | INFO | OK (76/600): greedyvoronoi_10min_36cs_5pct_3rep
+2026-08-21 19:57:07 | INFO | OK (77/600): greedyvoronoi_10min_36cs_5pct_1rep
+2026-08-21 20:11:41 | INFO | OK (78/600): greedyvoronoi_10min_25cs_20pct_4rep
+2026-08-21 20:13:12 | INFO | OK (79/600): greedyvoronoi_10min_25cs_20pct_3rep
+2026-08-21 20:14:38 | INFO | OK (80/600): greedyvoronoi_10min_25cs_20pct_2rep
+2026-08-21 20:15:41 | INFO | OK (81/600): greedyvoronoi_10min_16cs_30pct_4rep
+2026-08-21 20:24:22 | INFO | OK (82/600): greedyvoronoi_10min_36cs_5pct_5rep
+2026-08-21 20:25:27 | INFO | OK (83/600): greedyvoronoi_10min_36cs_5pct_4rep
+2026-08-21 20:44:17 | INFO | OK (84/600): greedyvoronoi_10min_25cs_20pct_1rep
+2026-08-21 20:44:39 | INFO | OK (85/600): greedyvoronoi_10min_25cs_20pct_5rep
+2026-08-21 21:02:02 | INFO | OK (86/600): greedyvoronoi_10min_25cs_25pct_4rep
+2026-08-21 21:11:13 | INFO | OK (87/600): greedyvoronoi_10min_36cs_10pct_3rep
+2026-08-21 21:12:21 | INFO | OK (88/600): greedyvoronoi_10min_36cs_10pct_2rep
+2026-08-21 21:14:41 | INFO | OK (89/600): greedyvoronoi_10min_36cs_10pct_1rep
+2026-08-21 21:16:01 | INFO | OK (90/600): greedyvoronoi_10min_25cs_25pct_2rep
+2026-08-21 21:20:44 | INFO | OK (91/600): greedyvoronoi_10min_25cs_25pct_3rep
+2026-08-21 21:39:03 | INFO | OK (92/600): greedyvoronoi_10min_36cs_10pct_4rep
+2026-08-21 21:41:25 | INFO | OK (93/600): greedyvoronoi_10min_36cs_10pct_5rep
+2026-08-21 21:43:24 | INFO | OK (94/600): greedyvoronoi_10min_25cs_25pct_1rep
+2026-08-21 21:50:23 | INFO | OK (95/600): greedyvoronoi_10min_25cs_30pct_4rep
+2026-08-21 22:07:36 | INFO | OK (96/600): greedyvoronoi_10min_25cs_25pct_5rep
+2026-08-21 22:08:37 | INFO | OK (97/600): greedyvoronoi_10min_25cs_30pct_2rep
+2026-08-21 22:10:09 | INFO | OK (98/600): greedyvoronoi_10min_25cs_30pct_3rep
+2026-08-21 22:22:21 | INFO | OK (99/600): greedyvoronoi_10min_36cs_15pct_2rep
+2026-08-21 22:29:16 | INFO | OK (100/600): greedyvoronoi_10min_36cs_15pct_3rep
+2026-08-21 22:34:10 | INFO | OK (101/600): greedyvoronoi_10min_49cs_5pct_2rep
+2026-08-21 22:38:38 | INFO | OK (102/600): greedyvoronoi_10min_36cs_15pct_1rep
+2026-08-21 22:40:40 | INFO | OK (103/600): greedyvoronoi_10min_36cs_15pct_5rep
+2026-08-21 22:49:17 | INFO | OK (104/600): greedyvoronoi_10min_36cs_15pct_4rep
+2026-08-21 22:53:43 | INFO | OK (105/600): greedyvoronoi_10min_25cs_30pct_1rep
+2026-08-21 22:54:32 | INFO | OK (106/600): greedyvoronoi_10min_49cs_5pct_1rep
+2026-08-21 22:58:03 | INFO | OK (107/600): greedyvoronoi_10min_25cs_30pct_5rep
+2026-08-21 23:02:06 | INFO | OK (108/600): greedyvoronoi_10min_49cs_5pct_3rep
+2026-08-21 23:06:05 | INFO | OK (109/600): greedyvoronoi_10min_49cs_5pct_4rep
+2026-08-21 23:16:53 | INFO | OK (110/600): greedyvoronoi_10min_49cs_5pct_5rep
+2026-08-21 23:34:16 | INFO | OK (111/600): greedyvoronoi_10min_36cs_20pct_2rep
+2026-08-21 23:34:56 | INFO | OK (112/600): greedyvoronoi_10min_36cs_20pct_3rep
+2026-08-21 23:37:38 | INFO | OK (113/600): greedyvoronoi_10min_36cs_20pct_1rep
+2026-08-22 00:05:27 | INFO | OK (114/600): greedyvoronoi_10min_49cs_10pct_2rep
+2026-08-22 00:16:28 | INFO | OK (115/600): greedyvoronoi_10min_36cs_20pct_5rep
+2026-08-22 00:24:09 | INFO | OK (116/600): greedyvoronoi_10min_36cs_20pct_4rep
+2026-08-22 00:26:38 | INFO | OK (117/600): greedyvoronoi_10min_49cs_10pct_4rep
+2026-08-22 00:27:12 | INFO | OK (118/600): greedyvoronoi_10min_49cs_10pct_1rep
+2026-08-22 00:44:08 | INFO | OK (119/600): greedyvoronoi_10min_36cs_25pct_3rep
+2026-08-22 00:46:11 | INFO | OK (120/600): greedyvoronoi_10min_49cs_10pct_3rep
+2026-08-22 00:53:58 | INFO | OK (121/600): greedyvoronoi_10min_36cs_25pct_1rep
+2026-08-22 00:54:45 | INFO | OK (122/600): greedyvoronoi_10min_49cs_10pct_5rep
+2026-08-22 01:05:05 | INFO | OK (123/600): greedyvoronoi_10min_36cs_25pct_2rep
+2026-08-22 01:21:19 | INFO | OK (124/600): greedyvoronoi_20min_9cs_5pct_1rep
+2026-08-22 01:25:33 | INFO | OK (125/600): greedyvoronoi_10min_49cs_15pct_2rep
+2026-08-22 01:41:23 | INFO | OK (126/600): greedyvoronoi_10min_49cs_15pct_4rep
+2026-08-22 01:46:23 | INFO | OK (127/600): greedyvoronoi_20min_9cs_5pct_3rep
+2026-08-22 01:48:35 | INFO | OK (128/600): greedyvoronoi_20min_9cs_5pct_2rep
+2026-08-22 01:51:04 | INFO | OK (129/600): greedyvoronoi_10min_36cs_25pct_5rep
+2026-08-22 01:58:15 | INFO | OK (130/600): greedyvoronoi_10min_36cs_25pct_4rep
+2026-08-22 01:58:50 | INFO | OK (131/600): greedyvoronoi_20min_9cs_5pct_4rep
+2026-08-22 02:07:12 | INFO | OK (132/600): greedyvoronoi_20min_9cs_5pct_5rep
+2026-08-22 02:07:14 | INFO | OK (133/600): greedyvoronoi_10min_49cs_15pct_3rep
+2026-08-22 02:09:35 | INFO | OK (134/600): greedyvoronoi_10min_49cs_15pct_5rep
+2026-08-22 02:10:46 | INFO | OK (135/600): greedyvoronoi_10min_36cs_30pct_2rep
+2026-08-22 02:13:15 | INFO | OK (136/600): greedyvoronoi_10min_49cs_15pct_1rep
+2026-08-22 02:15:20 | INFO | OK (137/600): greedyvoronoi_10min_36cs_30pct_3rep
+2026-08-22 02:19:22 | INFO | OK (138/600): greedyvoronoi_20min_9cs_10pct_1rep
+2026-08-22 02:30:43 | INFO | OK (139/600): greedyvoronoi_20min_9cs_10pct_4rep
+2026-08-22 02:34:12 | INFO | OK (140/600): greedyvoronoi_10min_49cs_20pct_2rep
+2026-08-22 02:34:51 | INFO | OK (141/600): greedyvoronoi_10min_36cs_30pct_1rep
+2026-08-22 02:34:55 | INFO | OK (142/600): greedyvoronoi_20min_9cs_10pct_3rep
+2026-08-22 02:41:55 | INFO | OK (143/600): greedyvoronoi_20min_9cs_10pct_2rep
+2026-08-22 02:47:08 | INFO | OK (144/600): greedyvoronoi_20min_9cs_10pct_5rep
+2026-08-22 02:51:31 | INFO | OK (145/600): greedyvoronoi_20min_9cs_15pct_1rep
+2026-08-22 02:56:16 | INFO | OK (146/600): greedyvoronoi_20min_9cs_15pct_4rep
+2026-08-22 03:06:21 | INFO | OK (147/600): greedyvoronoi_10min_36cs_30pct_5rep
+2026-08-22 03:07:41 | INFO | OK (148/600): greedyvoronoi_20min_9cs_15pct_3rep
+2026-08-22 03:11:05 | INFO | OK (149/600): greedyvoronoi_10min_36cs_30pct_4rep
+2026-08-22 03:13:03 | INFO | OK (150/600): greedyvoronoi_20min_9cs_15pct_5rep
+2026-08-22 03:13:45 | INFO | OK (151/600): greedyvoronoi_20min_9cs_20pct_1rep
+2026-08-22 03:14:51 | ERROR | FALHOU (152/600): greedyvoronoi_10min_49cs_20pct_4rep -- FatalTraCIError: Connection closed by SUMO.
+2026-08-22 03:21:36 | INFO | OK (153/600): greedyvoronoi_20min_9cs_15pct_2rep
+2026-08-22 03:33:14 | INFO | OK (154/600): greedyvoronoi_20min_9cs_20pct_4rep
+2026-08-22 03:44:25 | INFO | OK (155/600): greedyvoronoi_20min_16cs_5pct_1rep
+2026-08-22 03:46:20 | INFO | OK (156/600): greedyvoronoi_10min_49cs_20pct_3rep
+2026-08-22 03:49:10 | INFO | OK (157/600): greedyvoronoi_20min_9cs_20pct_3rep
+2026-08-22 03:49:57 | INFO | OK (158/600): greedyvoronoi_20min_9cs_25pct_1rep
+2026-08-22 03:52:27 | INFO | OK (159/600): greedyvoronoi_20min_9cs_20pct_5rep
+2026-08-22 03:53:21 | INFO | OK (160/600): greedyvoronoi_10min_49cs_20pct_1rep
+2026-08-22 03:54:17 | INFO | OK (161/600): greedyvoronoi_10min_49cs_20pct_5rep
+2026-08-22 03:58:05 | INFO | OK (162/600): greedyvoronoi_20min_16cs_5pct_2rep
+2026-08-22 04:04:17 | INFO | OK (163/600): greedyvoronoi_20min_9cs_20pct_2rep
+2026-08-22 04:09:38 | INFO | OK (164/600): greedyvoronoi_20min_9cs_25pct_4rep
+2026-08-22 04:14:16 | INFO | OK (165/600): greedyvoronoi_10min_49cs_25pct_2rep
+2026-08-22 04:15:07 | INFO | OK (166/600): greedyvoronoi_20min_16cs_5pct_3rep
+2026-08-22 04:15:09 | INFO | OK (167/600): greedyvoronoi_20min_16cs_5pct_5rep
+2026-08-22 04:19:51 | INFO | OK (168/600): greedyvoronoi_20min_16cs_5pct_4rep
+2026-08-22 04:24:10 | INFO | OK (169/600): greedyvoronoi_20min_9cs_25pct_3rep
+2026-08-22 04:30:35 | INFO | OK (170/600): greedyvoronoi_20min_9cs_30pct_1rep
+2026-08-22 04:34:04 | INFO | OK (171/600): greedyvoronoi_20min_16cs_10pct_1rep
+2026-08-22 04:42:02 | INFO | OK (172/600): greedyvoronoi_20min_9cs_25pct_2rep
+2026-08-22 04:43:46 | INFO | OK (173/600): greedyvoronoi_20min_16cs_10pct_2rep
+2026-08-22 04:44:48 | INFO | OK (174/600): greedyvoronoi_20min_9cs_25pct_5rep
+2026-08-22 04:47:31 | INFO | OK (175/600): greedyvoronoi_20min_9cs_30pct_4rep
+2026-08-22 04:50:32 | INFO | OK (176/600): greedyvoronoi_20min_16cs_10pct_5rep
+2026-08-22 04:51:43 | INFO | OK (177/600): greedyvoronoi_20min_16cs_10pct_3rep
+2026-08-22 04:57:54 | INFO | OK (178/600): greedyvoronoi_20min_16cs_10pct_4rep
+2026-08-22 05:02:12 | INFO | OK (179/600): greedyvoronoi_10min_49cs_25pct_4rep
+2026-08-22 05:04:56 | INFO | OK (180/600): greedyvoronoi_20min_9cs_30pct_3rep
+2026-08-22 05:09:18 | INFO | OK (181/600): greedyvoronoi_20min_16cs_15pct_1rep
+2026-08-22 05:14:31 | INFO | OK (182/600): greedyvoronoi_20min_9cs_30pct_5rep
+2026-08-22 05:22:37 | INFO | OK (183/600): greedyvoronoi_20min_16cs_15pct_2rep
+2026-08-22 05:30:54 | INFO | OK (184/600): greedyvoronoi_20min_16cs_15pct_5rep
+2026-08-22 05:32:57 | INFO | OK (185/600): greedyvoronoi_20min_9cs_30pct_2rep
+2026-08-22 05:38:17 | INFO | OK (186/600): greedyvoronoi_20min_16cs_15pct_3rep
+2026-08-22 05:47:36 | INFO | OK (187/600): greedyvoronoi_10min_49cs_30pct_2rep
+2026-08-22 05:48:47 | INFO | OK (188/600): greedyvoronoi_20min_16cs_15pct_4rep
+2026-08-22 05:49:40 | INFO | OK (189/600): greedyvoronoi_10min_49cs_25pct_1rep
+2026-08-22 05:50:38 | INFO | OK (190/600): greedyvoronoi_20min_16cs_20pct_1rep
+2026-08-22 05:52:11 | INFO | OK (191/600): greedyvoronoi_10min_49cs_25pct_3rep
+2026-08-22 05:53:36 | INFO | OK (192/600): greedyvoronoi_10min_49cs_25pct_5rep
+2026-08-22 05:56:55 | INFO | OK (193/600): greedyvoronoi_20min_16cs_20pct_2rep
+2026-08-22 06:05:32 | INFO | OK (194/600): greedyvoronoi_20min_25cs_5pct_1rep
+2026-08-22 06:06:36 | INFO | OK (195/600): greedyvoronoi_20min_25cs_5pct_2rep
+2026-08-22 06:07:03 | INFO | OK (196/600): greedyvoronoi_20min_25cs_5pct_3rep
+2026-08-22 06:09:41 | INFO | OK (197/600): greedyvoronoi_10min_49cs_30pct_4rep
+2026-08-22 06:10:53 | INFO | OK (198/600): greedyvoronoi_20min_25cs_5pct_4rep
+2026-08-22 06:19:51 | INFO | OK (199/600): greedyvoronoi_20min_16cs_20pct_3rep
+2026-08-22 06:23:10 | INFO | OK (200/600): greedyvoronoi_20min_16cs_20pct_5rep
+2026-08-22 06:30:29 | INFO | OK (201/600): greedyvoronoi_20min_25cs_5pct_5rep
+2026-08-22 06:31:44 | INFO | OK (202/600): greedyvoronoi_20min_16cs_25pct_1rep
+2026-08-22 06:41:04 | INFO | OK (203/600): greedyvoronoi_20min_16cs_25pct_2rep
+2026-08-22 06:45:20 | INFO | OK (204/600): greedyvoronoi_20min_16cs_20pct_4rep
+2026-08-22 06:55:16 | INFO | OK (205/600): greedyvoronoi_20min_16cs_25pct_5rep
+2026-08-22 06:56:02 | INFO | OK (206/600): greedyvoronoi_20min_25cs_10pct_4rep
+2026-08-22 06:57:49 | INFO | OK (207/600): greedyvoronoi_20min_25cs_10pct_2rep
+2026-08-22 06:58:24 | INFO | OK (208/600): greedyvoronoi_20min_25cs_10pct_3rep
+2026-08-22 07:08:36 | INFO | OK (209/600): greedyvoronoi_20min_16cs_30pct_1rep
+2026-08-22 07:14:26 | INFO | OK (210/600): greedyvoronoi_20min_16cs_25pct_3rep
+2026-08-22 07:14:35 | INFO | OK (211/600): greedyvoronoi_20min_25cs_10pct_1rep
+2026-08-22 07:15:03 | INFO | OK (212/600): greedyvoronoi_20min_25cs_10pct_5rep
+2026-08-22 07:21:28 | INFO | OK (213/600): greedyvoronoi_10min_49cs_30pct_3rep
+2026-08-22 07:25:10 | INFO | OK (214/600): greedyvoronoi_20min_16cs_25pct_4rep
+2026-08-22 07:26:07 | INFO | OK (215/600): greedyvoronoi_10min_49cs_30pct_1rep
+2026-08-22 07:27:30 | INFO | OK (216/600): greedyvoronoi_10min_49cs_30pct_5rep
+2026-08-22 07:36:26 | INFO | OK (217/600): greedyvoronoi_20min_16cs_30pct_2rep
+2026-08-22 07:43:13 | INFO | OK (218/600): greedyvoronoi_20min_25cs_15pct_4rep
+2026-08-22 07:49:25 | INFO | OK (219/600): greedyvoronoi_20min_16cs_30pct_5rep
+2026-08-22 07:49:26 | INFO | OK (220/600): greedyvoronoi_20min_25cs_15pct_2rep
+2026-08-22 07:51:10 | INFO | OK (221/600): greedyvoronoi_20min_16cs_30pct_3rep
+2026-08-22 07:51:13 | INFO | OK (222/600): greedyvoronoi_20min_25cs_15pct_3rep
+2026-08-22 08:03:04 | INFO | OK (223/600): greedyvoronoi_20min_25cs_15pct_1rep
+2026-08-22 08:09:26 | INFO | OK (224/600): greedyvoronoi_20min_16cs_30pct_4rep
+2026-08-22 08:14:11 | INFO | OK (225/600): greedyvoronoi_20min_36cs_5pct_2rep
+2026-08-22 08:14:20 | INFO | OK (226/600): greedyvoronoi_20min_25cs_15pct_5rep
+2026-08-22 08:16:51 | INFO | OK (227/600): greedyvoronoi_20min_36cs_5pct_1rep
+2026-08-22 08:18:19 | INFO | OK (228/600): greedyvoronoi_20min_36cs_5pct_3rep
+2026-08-22 08:30:18 | INFO | OK (229/600): greedyvoronoi_20min_25cs_20pct_4rep
+2026-08-22 08:31:38 | INFO | OK (230/600): greedyvoronoi_20min_36cs_5pct_4rep
+2026-08-22 08:35:28 | INFO | OK (231/600): greedyvoronoi_20min_25cs_20pct_2rep
+2026-08-22 08:36:09 | INFO | OK (232/600): greedyvoronoi_20min_36cs_5pct_5rep
+2026-08-22 08:40:44 | INFO | OK (233/600): greedyvoronoi_20min_25cs_20pct_3rep
+2026-08-22 09:00:18 | INFO | OK (234/600): greedyvoronoi_20min_25cs_20pct_1rep
+2026-08-22 09:09:21 | INFO | OK (235/600): greedyvoronoi_20min_25cs_20pct_5rep
+2026-08-22 09:30:12 | INFO | OK (236/600): greedyvoronoi_20min_36cs_10pct_3rep
+2026-08-22 09:33:52 | INFO | OK (237/600): greedyvoronoi_20min_36cs_10pct_1rep
+2026-08-22 09:34:42 | INFO | OK (238/600): greedyvoronoi_20min_36cs_10pct_2rep
+2026-08-22 09:36:08 | INFO | OK (239/600): greedyvoronoi_20min_25cs_25pct_4rep
+2026-08-22 09:43:37 | INFO | OK (240/600): greedyvoronoi_20min_25cs_25pct_2rep
+2026-08-22 09:44:24 | INFO | OK (241/600): greedyvoronoi_20min_36cs_10pct_5rep
+2026-08-22 09:45:22 | INFO | OK (242/600): greedyvoronoi_20min_25cs_25pct_3rep
+2026-08-22 09:54:27 | INFO | OK (243/600): greedyvoronoi_20min_36cs_10pct_4rep
+2026-08-22 10:10:00 | INFO | OK (244/600): greedyvoronoi_20min_25cs_25pct_1rep
+2026-08-22 10:14:08 | INFO | OK (245/600): greedyvoronoi_20min_25cs_25pct_5rep
+2026-08-22 10:18:47 | INFO | OK (246/600): greedyvoronoi_20min_25cs_30pct_4rep
+2026-08-22 10:27:49 | INFO | OK (247/600): greedyvoronoi_20min_36cs_15pct_2rep
+2026-08-22 10:30:09 | INFO | OK (248/600): greedyvoronoi_20min_25cs_30pct_2rep
+2026-08-22 10:37:48 | INFO | OK (249/600): greedyvoronoi_20min_36cs_15pct_1rep
+2026-08-22 10:46:31 | INFO | OK (250/600): greedyvoronoi_20min_25cs_30pct_3rep
+2026-08-22 10:47:07 | INFO | OK (251/600): greedyvoronoi_20min_36cs_15pct_3rep
+2026-08-22 10:58:53 | INFO | OK (252/600): greedyvoronoi_20min_49cs_5pct_2rep
+2026-08-22 11:06:49 | INFO | OK (253/600): greedyvoronoi_20min_36cs_15pct_5rep
+2026-08-22 11:10:35 | INFO | OK (254/600): greedyvoronoi_20min_49cs_5pct_1rep
+2026-08-22 11:14:14 | INFO | OK (255/600): greedyvoronoi_20min_25cs_30pct_1rep
+2026-08-22 11:14:39 | INFO | OK (256/600): greedyvoronoi_20min_25cs_30pct_5rep
+2026-08-22 11:17:10 | INFO | OK (257/600): greedyvoronoi_20min_49cs_5pct_4rep
+2026-08-22 11:18:29 | INFO | OK (258/600): greedyvoronoi_20min_36cs_15pct_4rep
+2026-08-22 11:21:42 | INFO | OK (259/600): greedyvoronoi_20min_49cs_5pct_3rep
+2026-08-22 11:37:47 | INFO | OK (260/600): greedyvoronoi_20min_49cs_5pct_5rep
+2026-08-22 11:41:41 | INFO | OK (261/600): greedyvoronoi_20min_36cs_20pct_3rep
+2026-08-22 11:48:22 | INFO | OK (262/600): greedyvoronoi_20min_36cs_20pct_1rep
+2026-08-22 11:55:26 | INFO | OK (263/600): greedyvoronoi_20min_36cs_20pct_2rep
+2026-08-22 12:14:09 | INFO | OK (264/600): greedyvoronoi_20min_49cs_10pct_2rep
+2026-08-22 12:19:19 | INFO | OK (265/600): greedyvoronoi_20min_36cs_20pct_5rep
+2026-08-22 12:31:40 | INFO | OK (266/600): greedyvoronoi_20min_36cs_20pct_4rep
+2026-08-22 12:33:10 | INFO | OK (267/600): greedyvoronoi_20min_49cs_10pct_4rep
+2026-08-22 12:59:53 | INFO | OK (268/600): greedyvoronoi_20min_49cs_10pct_1rep
+2026-08-22 13:01:46 | INFO | OK (269/600): greedyvoronoi_20min_49cs_10pct_5rep
+2026-08-22 13:07:23 | INFO | OK (270/600): greedyvoronoi_20min_49cs_10pct_3rep
+2026-08-22 13:11:01 | INFO | OK (271/600): greedyvoronoi_20min_36cs_25pct_1rep
+2026-08-22 13:12:01 | INFO | OK (272/600): greedyvoronoi_20min_36cs_25pct_2rep
+2026-08-22 13:21:32 | INFO | OK (273/600): greedyvoronoi_20min_36cs_25pct_3rep
+2026-08-22 13:37:23 | INFO | OK (274/600): greedyvoronoi_20min_49cs_15pct_2rep
+2026-08-22 13:38:00 | INFO | OK (275/600): greedyvoronoi_40min_9cs_5pct_1rep
+2026-08-22 13:58:22 | INFO | OK (276/600): greedyvoronoi_20min_49cs_15pct_4rep
+2026-08-22 13:58:38 | INFO | OK (277/600): greedyvoronoi_40min_9cs_5pct_3rep
+2026-08-22 14:03:36 | INFO | OK (278/600): greedyvoronoi_40min_9cs_5pct_2rep
+2026-08-22 14:13:57 | INFO | OK (279/600): greedyvoronoi_20min_36cs_30pct_2rep
+2026-08-22 14:15:35 | INFO | OK (280/600): greedyvoronoi_40min_9cs_5pct_4rep
+2026-08-22 14:15:59 | INFO | OK (281/600): greedyvoronoi_20min_36cs_25pct_5rep
+2026-08-22 14:19:50 | INFO | OK (282/600): greedyvoronoi_40min_9cs_5pct_5rep
+2026-08-22 14:29:07 | INFO | OK (283/600): greedyvoronoi_20min_49cs_15pct_5rep
+2026-08-22 14:32:31 | INFO | OK (284/600): greedyvoronoi_20min_36cs_25pct_4rep
+2026-08-22 14:32:36 | INFO | OK (285/600): greedyvoronoi_40min_9cs_10pct_1rep
+2026-08-22 14:37:43 | INFO | OK (286/600): greedyvoronoi_20min_49cs_15pct_3rep
+2026-08-22 14:37:50 | INFO | OK (287/600): greedyvoronoi_20min_36cs_30pct_3rep
+2026-08-22 14:47:14 | INFO | OK (288/600): greedyvoronoi_40min_9cs_10pct_4rep
+2026-08-22 14:47:50 | INFO | OK (289/600): greedyvoronoi_20min_49cs_15pct_1rep
+2026-08-22 14:49:14 | INFO | OK (290/600): greedyvoronoi_20min_49cs_20pct_2rep
+2026-08-22 14:53:10 | INFO | OK (291/600): greedyvoronoi_40min_9cs_10pct_3rep
+2026-08-22 14:56:33 | INFO | OK (292/600): greedyvoronoi_40min_9cs_10pct_5rep
+2026-08-22 14:59:43 | INFO | OK (293/600): greedyvoronoi_40min_9cs_10pct_2rep
+2026-08-22 15:00:04 | INFO | OK (294/600): greedyvoronoi_20min_36cs_30pct_1rep
+2026-08-22 15:13:37 | INFO | OK (295/600): greedyvoronoi_40min_9cs_15pct_1rep
+2026-08-22 15:14:29 | INFO | OK (296/600): greedyvoronoi_20min_36cs_30pct_5rep
+2026-08-22 15:23:30 | INFO | OK (297/600): greedyvoronoi_40min_9cs_15pct_4rep
+2026-08-22 15:28:20 | INFO | OK (298/600): greedyvoronoi_40min_9cs_15pct_3rep
+2026-08-22 15:29:52 | INFO | OK (299/600): greedyvoronoi_20min_49cs_20pct_4rep
+2026-08-22 15:32:54 | INFO | OK (300/600): greedyvoronoi_40min_9cs_15pct_5rep
+2026-08-22 15:41:59 | INFO | OK (301/600): greedyvoronoi_40min_9cs_15pct_2rep
+2026-08-22 15:43:19 | INFO | OK (302/600): greedyvoronoi_40min_9cs_20pct_1rep
+2026-08-22 15:47:22 | INFO | OK (303/600): greedyvoronoi_20min_36cs_30pct_4rep
+2026-08-22 15:49:19 | INFO | OK (304/600): greedyvoronoi_40min_9cs_20pct_4rep
+2026-08-22 16:04:43 | INFO | OK (305/600): greedyvoronoi_40min_9cs_20pct_3rep
+2026-08-22 16:06:37 | INFO | OK (306/600): greedyvoronoi_20min_49cs_20pct_3rep
+2026-08-22 16:07:41 | INFO | OK (307/600): greedyvoronoi_40min_9cs_25pct_1rep
+2026-08-22 16:08:49 | INFO | OK (308/600): greedyvoronoi_20min_49cs_20pct_5rep
+2026-08-22 16:10:52 | INFO | OK (309/600): greedyvoronoi_20min_49cs_25pct_2rep
+2026-08-22 16:11:12 | INFO | OK (310/600): greedyvoronoi_40min_9cs_20pct_5rep
+2026-08-22 16:11:23 | INFO | OK (311/600): greedyvoronoi_40min_16cs_5pct_1rep
+2026-08-22 16:13:09 | INFO | OK (312/600): greedyvoronoi_20min_49cs_20pct_1rep
+2026-08-22 16:14:16 | INFO | OK (313/600): greedyvoronoi_40min_16cs_5pct_2rep
+2026-08-22 16:22:12 | INFO | OK (314/600): greedyvoronoi_40min_9cs_20pct_2rep
+2026-08-22 16:26:42 | INFO | OK (315/600): greedyvoronoi_40min_9cs_25pct_4rep
+2026-08-22 16:34:39 | INFO | OK (316/600): greedyvoronoi_40min_16cs_5pct_5rep
+2026-08-22 16:35:28 | INFO | OK (317/600): greedyvoronoi_40min_16cs_5pct_3rep
+2026-08-22 16:39:48 | INFO | OK (318/600): greedyvoronoi_40min_16cs_5pct_4rep
+2026-08-22 16:44:38 | INFO | OK (319/600): greedyvoronoi_40min_9cs_25pct_3rep
+2026-08-22 16:51:09 | INFO | OK (320/600): greedyvoronoi_40min_9cs_30pct_1rep
+2026-08-22 16:52:21 | INFO | OK (321/600): greedyvoronoi_40min_16cs_10pct_1rep
+2026-08-22 16:59:19 | INFO | OK (322/600): greedyvoronoi_40min_16cs_10pct_2rep
+2026-08-22 17:01:08 | INFO | OK (323/600): greedyvoronoi_40min_9cs_25pct_2rep
+2026-08-22 17:01:38 | INFO | OK (324/600): greedyvoronoi_40min_9cs_25pct_5rep
+2026-08-22 17:04:10 | INFO | OK (325/600): greedyvoronoi_40min_16cs_10pct_5rep
+2026-08-22 17:05:12 | INFO | OK (326/600): greedyvoronoi_20min_49cs_25pct_4rep
+2026-08-22 17:08:14 | INFO | OK (327/600): greedyvoronoi_40min_16cs_10pct_3rep
+2026-08-22 17:12:38 | INFO | OK (328/600): greedyvoronoi_40min_9cs_30pct_4rep
+2026-08-22 17:15:06 | INFO | OK (329/600): greedyvoronoi_40min_16cs_10pct_4rep
+2026-08-22 17:20:27 | INFO | OK (330/600): greedyvoronoi_40min_16cs_15pct_1rep
+2026-08-22 17:26:46 | INFO | OK (331/600): greedyvoronoi_40min_9cs_30pct_3rep
+2026-08-22 17:35:52 | INFO | OK (332/600): greedyvoronoi_40min_16cs_15pct_2rep
+2026-08-22 17:40:03 | INFO | OK (333/600): greedyvoronoi_40min_9cs_30pct_5rep
+2026-08-22 17:48:51 | INFO | OK (334/600): greedyvoronoi_40min_16cs_15pct_3rep
+2026-08-22 17:50:29 | INFO | OK (335/600): greedyvoronoi_40min_16cs_15pct_5rep
+2026-08-22 17:59:27 | INFO | OK (336/600): greedyvoronoi_20min_49cs_30pct_2rep
+2026-08-22 17:59:51 | INFO | OK (337/600): greedyvoronoi_40min_9cs_30pct_2rep
+2026-08-22 18:01:12 | INFO | OK (338/600): greedyvoronoi_20min_49cs_25pct_1rep
+2026-08-22 18:01:41 | INFO | OK (339/600): greedyvoronoi_20min_49cs_25pct_3rep
+2026-08-22 18:03:52 | INFO | OK (340/600): greedyvoronoi_20min_49cs_25pct_5rep
+2026-08-22 18:09:11 | INFO | OK (341/600): greedyvoronoi_40min_16cs_20pct_1rep
+2026-08-22 18:09:13 | INFO | OK (342/600): greedyvoronoi_40min_16cs_15pct_4rep
+2026-08-22 18:22:57 | INFO | OK (343/600): greedyvoronoi_40min_25cs_5pct_1rep
+2026-08-22 18:24:02 | INFO | OK (344/600): greedyvoronoi_40min_16cs_20pct_2rep
+2026-08-22 18:24:53 | INFO | OK (345/600): greedyvoronoi_40min_25cs_5pct_2rep
+2026-08-22 18:28:51 | INFO | OK (346/600): greedyvoronoi_40min_25cs_5pct_3rep
+2026-08-22 18:33:36 | INFO | OK (347/600): greedyvoronoi_40min_25cs_5pct_4rep
+2026-08-22 18:39:14 | INFO | OK (348/600): greedyvoronoi_20min_49cs_30pct_4rep
+2026-08-22 18:40:35 | INFO | OK (349/600): greedyvoronoi_40min_25cs_5pct_5rep
+2026-08-22 18:41:12 | INFO | OK (350/600): greedyvoronoi_40min_16cs_20pct_5rep
+2026-08-22 18:42:59 | INFO | OK (351/600): greedyvoronoi_40min_16cs_20pct_3rep
+2026-08-22 18:52:36 | INFO | OK (352/600): greedyvoronoi_40min_16cs_25pct_1rep
+2026-08-22 18:55:25 | INFO | OK (353/600): greedyvoronoi_40min_16cs_20pct_4rep
+2026-08-22 19:04:04 | INFO | OK (354/600): greedyvoronoi_40min_16cs_25pct_2rep
+2026-08-22 19:10:01 | INFO | OK (355/600): greedyvoronoi_40min_25cs_10pct_4rep
+2026-08-22 19:13:06 | INFO | OK (356/600): greedyvoronoi_40min_25cs_10pct_3rep
+2026-08-22 19:13:35 | INFO | OK (357/600): greedyvoronoi_40min_16cs_25pct_5rep
+2026-08-22 19:13:50 | INFO | OK (358/600): greedyvoronoi_40min_25cs_10pct_2rep
+2026-08-22 19:20:02 | INFO | OK (359/600): greedyvoronoi_40min_16cs_25pct_3rep
+2026-08-22 19:26:06 | INFO | OK (360/600): greedyvoronoi_40min_25cs_10pct_1rep
+2026-08-22 19:27:07 | INFO | OK (361/600): greedyvoronoi_40min_16cs_30pct_1rep
+2026-08-22 19:30:29 | INFO | OK (362/600): greedyvoronoi_40min_25cs_10pct_5rep
+2026-08-22 19:38:22 | INFO | OK (363/600): greedyvoronoi_40min_16cs_25pct_4rep
+2026-08-22 19:47:45 | INFO | OK (364/600): greedyvoronoi_40min_16cs_30pct_2rep
+2026-08-22 19:51:08 | INFO | OK (365/600): greedyvoronoi_20min_49cs_30pct_5rep
+2026-08-22 19:54:54 | INFO | OK (366/600): greedyvoronoi_20min_49cs_30pct_3rep
+2026-08-22 20:03:38 | INFO | OK (367/600): greedyvoronoi_40min_16cs_30pct_3rep
+2026-08-22 20:04:19 | INFO | OK (368/600): greedyvoronoi_40min_25cs_15pct_2rep
+2026-08-22 20:05:47 | INFO | OK (369/600): greedyvoronoi_40min_16cs_30pct_5rep
+2026-08-22 20:06:31 | INFO | OK (370/600): greedyvoronoi_40min_25cs_15pct_4rep
+2026-08-22 20:08:12 | INFO | OK (371/600): greedyvoronoi_40min_25cs_15pct_3rep
+2026-08-22 20:08:17 | INFO | OK (372/600): greedyvoronoi_20min_49cs_30pct_1rep
+2026-08-22 20:28:01 | INFO | OK (373/600): greedyvoronoi_40min_25cs_15pct_1rep
+2026-08-22 20:32:03 | INFO | OK (374/600): greedyvoronoi_40min_25cs_15pct_5rep
+2026-08-22 20:33:54 | INFO | OK (375/600): greedyvoronoi_40min_36cs_5pct_1rep
+2026-08-22 20:34:26 | INFO | OK (376/600): greedyvoronoi_40min_16cs_30pct_4rep
+2026-08-22 20:41:08 | INFO | OK (377/600): greedyvoronoi_40min_36cs_5pct_2rep
+2026-08-22 20:43:24 | INFO | OK (378/600): greedyvoronoi_40min_25cs_20pct_4rep
+2026-08-22 20:44:49 | INFO | OK (379/600): greedyvoronoi_40min_36cs_5pct_3rep
+2026-08-22 20:58:56 | INFO | OK (380/600): greedyvoronoi_40min_25cs_20pct_2rep
+2026-08-22 20:59:51 | INFO | OK (381/600): greedyvoronoi_40min_36cs_5pct_4rep
+2026-08-22 21:01:01 | INFO | OK (382/600): greedyvoronoi_40min_36cs_5pct_5rep
+2026-08-22 21:01:37 | INFO | OK (383/600): greedyvoronoi_40min_25cs_20pct_3rep
+2026-08-22 21:23:08 | INFO | OK (384/600): greedyvoronoi_40min_25cs_20pct_1rep
+2026-08-22 21:37:11 | INFO | OK (385/600): greedyvoronoi_40min_25cs_20pct_5rep
+2026-08-22 21:41:29 | INFO | OK (386/600): greedyvoronoi_40min_36cs_10pct_2rep
+2026-08-22 21:46:46 | INFO | OK (387/600): greedyvoronoi_40min_25cs_25pct_4rep
+2026-08-22 21:48:55 | INFO | OK (388/600): greedyvoronoi_40min_36cs_10pct_3rep
+2026-08-22 21:54:17 | INFO | OK (389/600): greedyvoronoi_40min_36cs_10pct_1rep
+2026-08-22 21:54:31 | INFO | OK (390/600): greedyvoronoi_40min_25cs_25pct_3rep
+2026-08-22 21:57:03 | INFO | OK (391/600): greedyvoronoi_40min_36cs_10pct_5rep
+2026-08-22 22:03:34 | INFO | OK (392/600): greedyvoronoi_40min_25cs_25pct_2rep
+2026-08-22 22:08:11 | INFO | OK (393/600): greedyvoronoi_40min_36cs_10pct_4rep
+2026-08-22 22:24:41 | INFO | OK (394/600): greedyvoronoi_40min_25cs_25pct_1rep
+2026-08-22 22:31:51 | INFO | OK (395/600): greedyvoronoi_40min_25cs_25pct_5rep
+2026-08-22 22:36:23 | INFO | OK (396/600): greedyvoronoi_40min_25cs_30pct_4rep
+2026-08-22 22:47:00 | INFO | OK (397/600): greedyvoronoi_40min_25cs_30pct_2rep
+2026-08-22 22:51:12 | INFO | OK (398/600): greedyvoronoi_40min_25cs_30pct_3rep
+2026-08-22 23:02:14 | INFO | OK (399/600): greedyvoronoi_40min_36cs_15pct_2rep
+2026-08-22 23:04:18 | INFO | OK (400/600): greedyvoronoi_40min_36cs_15pct_3rep
+2026-08-22 23:08:57 | INFO | OK (401/600): greedyvoronoi_40min_36cs_15pct_1rep
+2026-08-22 23:15:50 | INFO | OK (402/600): greedyvoronoi_40min_49cs_5pct_2rep
+2026-08-22 23:20:13 | INFO | OK (403/600): greedyvoronoi_40min_49cs_5pct_1rep
+2026-08-22 23:22:26 | INFO | OK (404/600): greedyvoronoi_40min_25cs_30pct_1rep
+2026-08-22 23:33:47 | INFO | OK (405/600): greedyvoronoi_40min_25cs_30pct_5rep
+2026-08-22 23:34:39 | INFO | OK (406/600): greedyvoronoi_40min_49cs_5pct_4rep
+2026-08-22 23:36:46 | INFO | OK (407/600): greedyvoronoi_40min_36cs_15pct_5rep
+2026-08-22 23:37:37 | INFO | OK (408/600): greedyvoronoi_40min_36cs_15pct_4rep
+2026-08-22 23:40:02 | INFO | OK (409/600): greedyvoronoi_40min_49cs_5pct_3rep
+2026-08-22 23:55:29 | INFO | OK (410/600): greedyvoronoi_40min_49cs_5pct_5rep
+2026-08-23 00:08:47 | INFO | OK (411/600): greedyvoronoi_40min_36cs_20pct_2rep
+2026-08-23 00:09:47 | INFO | OK (412/600): greedyvoronoi_40min_36cs_20pct_1rep
+2026-08-23 00:21:25 | INFO | OK (413/600): greedyvoronoi_40min_36cs_20pct_3rep
+2026-08-23 00:38:27 | INFO | OK (414/600): greedyvoronoi_40min_36cs_20pct_5rep
+2026-08-23 00:44:58 | INFO | OK (415/600): greedyvoronoi_40min_49cs_10pct_2rep
+2026-08-23 01:01:47 | INFO | OK (416/600): greedyvoronoi_40min_49cs_10pct_4rep
+2026-08-23 01:07:03 | INFO | OK (417/600): greedyvoronoi_40min_36cs_20pct_4rep
+2026-08-23 01:08:38 | INFO | OK (418/600): greedyvoronoi_40min_49cs_10pct_1rep
+2026-08-23 01:20:42 | INFO | OK (419/600): greedyvoronoi_40min_36cs_25pct_1rep
+2026-08-23 01:21:58 | INFO | OK (420/600): greedyvoronoi_40min_49cs_10pct_3rep
+2026-08-23 01:29:08 | INFO | OK (421/600): greedyvoronoi_40min_49cs_10pct_5rep
+2026-08-23 01:30:13 | INFO | OK (422/600): greedyvoronoi_40min_36cs_25pct_2rep
+2026-08-23 01:44:00 | INFO | OK (423/600): greedyvoronoi_40min_36cs_25pct_3rep
+2026-08-23 01:57:02 | INFO | OK (424/600): greedyvoronoi_40min_49cs_15pct_2rep
+2026-08-23 02:00:33 | INFO | OK (425/600): greedyvoronoi_60min_9cs_5pct_1rep
+2026-08-23 02:18:15 | INFO | OK (426/600): greedyvoronoi_40min_49cs_15pct_4rep
+2026-08-23 02:20:33 | INFO | OK (427/600): greedyvoronoi_60min_9cs_5pct_3rep
+2026-08-23 02:23:58 | INFO | OK (428/600): greedyvoronoi_60min_9cs_5pct_2rep
+2026-08-23 02:34:50 | INFO | OK (429/600): greedyvoronoi_40min_36cs_25pct_5rep
+2026-08-23 02:35:06 | INFO | OK (430/600): greedyvoronoi_60min_9cs_5pct_4rep
+2026-08-23 02:41:34 | INFO | OK (431/600): greedyvoronoi_40min_36cs_25pct_4rep
+2026-08-23 02:42:27 | INFO | OK (432/600): greedyvoronoi_60min_9cs_5pct_5rep
+2026-08-23 02:47:19 | INFO | OK (433/600): greedyvoronoi_40min_49cs_15pct_3rep
+2026-08-23 02:53:26 | INFO | OK (434/600): greedyvoronoi_60min_9cs_10pct_1rep
+2026-08-23 02:53:30 | INFO | OK (435/600): greedyvoronoi_40min_49cs_20pct_2rep
+2026-08-23 02:56:23 | INFO | OK (436/600): greedyvoronoi_40min_49cs_15pct_1rep
+2026-08-23 02:58:54 | INFO | OK (437/600): greedyvoronoi_40min_36cs_30pct_2rep
+2026-08-23 03:03:34 | INFO | OK (438/600): greedyvoronoi_40min_36cs_30pct_3rep
+2026-08-23 03:04:10 | INFO | OK (439/600): greedyvoronoi_40min_49cs_15pct_5rep
+2026-08-23 03:11:29 | INFO | OK (440/600): greedyvoronoi_60min_9cs_10pct_4rep
+2026-08-23 03:13:00 | INFO | OK (441/600): greedyvoronoi_60min_9cs_10pct_3rep
+2026-08-23 03:18:12 | INFO | OK (442/600): greedyvoronoi_40min_36cs_30pct_1rep
+2026-08-23 03:20:09 | INFO | OK (443/600): greedyvoronoi_60min_9cs_10pct_5rep
+2026-08-23 03:22:46 | INFO | OK (444/600): greedyvoronoi_60min_9cs_10pct_2rep
+2026-08-23 03:30:39 | INFO | OK (445/600): greedyvoronoi_60min_9cs_15pct_1rep
+2026-08-23 03:39:39 | INFO | OK (446/600): greedyvoronoi_60min_9cs_15pct_4rep
+2026-08-23 03:41:07 | INFO | OK (447/600): greedyvoronoi_40min_36cs_30pct_4rep
+2026-08-23 03:46:28 | INFO | OK (448/600): greedyvoronoi_60min_9cs_15pct_3rep
+2026-08-23 03:49:19 | INFO | OK (449/600): greedyvoronoi_40min_49cs_20pct_4rep
+2026-08-23 03:52:13 | INFO | OK (450/600): greedyvoronoi_40min_36cs_30pct_5rep
+2026-08-23 03:58:12 | INFO | OK (451/600): greedyvoronoi_60min_9cs_15pct_5rep
+2026-08-23 04:00:40 | INFO | OK (452/600): greedyvoronoi_60min_9cs_20pct_1rep
+2026-08-23 04:05:12 | INFO | OK (453/600): greedyvoronoi_60min_9cs_15pct_2rep
+2026-08-23 04:11:20 | INFO | OK (454/600): greedyvoronoi_60min_9cs_20pct_4rep
+2026-08-23 04:24:01 | INFO | OK (455/600): greedyvoronoi_40min_49cs_20pct_1rep
+2026-08-23 04:24:42 | INFO | OK (456/600): greedyvoronoi_40min_49cs_20pct_3rep
+2026-08-23 04:27:02 | INFO | OK (457/600): greedyvoronoi_60min_9cs_20pct_3rep
+2026-08-23 04:29:21 | INFO | OK (458/600): greedyvoronoi_60min_16cs_5pct_1rep
+2026-08-23 04:30:00 | INFO | OK (459/600): greedyvoronoi_60min_9cs_25pct_1rep
+2026-08-23 04:33:20 | INFO | OK (460/600): greedyvoronoi_40min_49cs_20pct_5rep
+2026-08-23 04:35:27 | INFO | OK (461/600): greedyvoronoi_60min_9cs_20pct_5rep
+2026-08-23 04:37:21 | INFO | OK (462/600): greedyvoronoi_60min_16cs_5pct_2rep
+2026-08-23 04:39:39 | INFO | OK (463/600): greedyvoronoi_60min_9cs_20pct_2rep
+2026-08-23 04:40:13 | INFO | OK (464/600): greedyvoronoi_40min_49cs_25pct_2rep
+2026-08-23 04:53:13 | INFO | OK (465/600): greedyvoronoi_60min_9cs_25pct_4rep
+2026-08-23 04:54:19 | INFO | OK (466/600): greedyvoronoi_60min_16cs_5pct_5rep
+2026-08-23 04:54:22 | INFO | OK (467/600): greedyvoronoi_60min_16cs_5pct_3rep
+2026-08-23 04:58:00 | INFO | OK (468/600): greedyvoronoi_60min_16cs_5pct_4rep
+2026-08-23 05:00:56 | INFO | OK (469/600): greedyvoronoi_60min_9cs_25pct_3rep
+2026-08-23 05:08:42 | INFO | OK (470/600): greedyvoronoi_60min_9cs_30pct_1rep
+2026-08-23 05:13:47 | INFO | OK (471/600): greedyvoronoi_60min_16cs_10pct_1rep
+2026-08-23 05:17:56 | INFO | OK (472/600): greedyvoronoi_60min_9cs_25pct_2rep
+2026-08-23 05:18:11 | INFO | OK (473/600): greedyvoronoi_60min_16cs_10pct_2rep
+2026-08-23 05:20:09 | INFO | OK (474/600): greedyvoronoi_60min_9cs_25pct_5rep
+2026-08-23 05:27:03 | INFO | OK (475/600): greedyvoronoi_60min_16cs_10pct_5rep
+2026-08-23 05:29:34 | INFO | OK (476/600): greedyvoronoi_60min_9cs_30pct_4rep
+2026-08-23 05:30:56 | INFO | OK (477/600): greedyvoronoi_60min_16cs_10pct_3rep
+2026-08-23 05:33:57 | INFO | OK (478/600): greedyvoronoi_40min_49cs_25pct_4rep
+2026-08-23 05:37:08 | INFO | OK (479/600): greedyvoronoi_60min_16cs_10pct_4rep
+2026-08-23 05:43:23 | INFO | OK (480/600): greedyvoronoi_60min_9cs_30pct_3rep
+2026-08-23 05:46:34 | INFO | OK (481/600): greedyvoronoi_60min_16cs_15pct_1rep
+2026-08-23 05:54:18 | INFO | OK (482/600): greedyvoronoi_60min_16cs_15pct_2rep
+2026-08-23 05:56:05 | INFO | OK (483/600): greedyvoronoi_40min_49cs_25pct_3rep
+2026-08-23 06:01:11 | INFO | OK (484/600): greedyvoronoi_60min_9cs_30pct_5rep
+2026-08-23 06:08:54 | INFO | OK (485/600): greedyvoronoi_60min_16cs_15pct_5rep
+2026-08-23 06:09:20 | INFO | OK (486/600): greedyvoronoi_60min_9cs_30pct_2rep
+2026-08-23 06:17:01 | INFO | OK (487/600): greedyvoronoi_60min_16cs_15pct_3rep
+2026-08-23 06:19:33 | INFO | OK (488/600): greedyvoronoi_40min_49cs_25pct_1rep
+2026-08-23 06:22:53 | INFO | OK (489/600): greedyvoronoi_40min_49cs_30pct_2rep
+2026-08-23 06:24:18 | INFO | OK (490/600): greedyvoronoi_60min_16cs_20pct_1rep
+2026-08-23 06:27:12 | INFO | OK (491/600): greedyvoronoi_60min_16cs_15pct_4rep
+2026-08-23 06:38:35 | INFO | OK (492/600): greedyvoronoi_40min_49cs_25pct_5rep
+2026-08-23 06:38:55 | INFO | OK (493/600): greedyvoronoi_60min_25cs_5pct_2rep
+2026-08-23 06:39:43 | INFO | OK (494/600): greedyvoronoi_60min_25cs_5pct_1rep
+2026-08-23 06:41:42 | INFO | OK (495/600): greedyvoronoi_60min_16cs_20pct_2rep
+2026-08-23 06:43:12 | INFO | OK (496/600): greedyvoronoi_40min_49cs_30pct_4rep
+2026-08-23 06:43:29 | INFO | OK (497/600): greedyvoronoi_60min_25cs_5pct_4rep
+2026-08-23 06:47:16 | INFO | OK (498/600): greedyvoronoi_60min_25cs_5pct_3rep
+2026-08-23 06:58:02 | INFO | OK (499/600): greedyvoronoi_60min_16cs_20pct_3rep
+2026-08-23 06:59:32 | INFO | OK (500/600): greedyvoronoi_60min_25cs_5pct_5rep
+2026-08-23 06:59:42 | INFO | OK (501/600): greedyvoronoi_60min_16cs_20pct_5rep
+2026-08-23 07:12:31 | INFO | OK (502/600): greedyvoronoi_60min_16cs_25pct_1rep
+2026-08-23 07:20:49 | INFO | OK (503/600): greedyvoronoi_60min_16cs_20pct_4rep
+2026-08-23 07:25:56 | INFO | OK (504/600): greedyvoronoi_60min_16cs_25pct_2rep
+2026-08-23 07:31:24 | INFO | OK (505/600): greedyvoronoi_60min_25cs_10pct_4rep
+2026-08-23 07:32:35 | INFO | OK (506/600): greedyvoronoi_60min_25cs_10pct_2rep
+2026-08-23 07:34:20 | INFO | OK (507/600): greedyvoronoi_60min_16cs_25pct_5rep
+2026-08-23 07:35:56 | INFO | OK (508/600): greedyvoronoi_60min_25cs_10pct_3rep
+2026-08-23 07:42:37 | INFO | OK (509/600): greedyvoronoi_60min_16cs_30pct_1rep
+2026-08-23 07:42:58 | INFO | OK (510/600): greedyvoronoi_60min_25cs_10pct_1rep
+2026-08-23 07:47:38 | INFO | OK (511/600): greedyvoronoi_60min_16cs_25pct_3rep
+2026-08-23 08:02:22 | INFO | OK (512/600): greedyvoronoi_40min_49cs_30pct_3rep
+2026-08-23 08:03:22 | INFO | OK (513/600): greedyvoronoi_60min_16cs_25pct_4rep
+2026-08-23 08:04:33 | INFO | OK (514/600): greedyvoronoi_60min_25cs_10pct_5rep
+2026-08-23 08:11:16 | INFO | OK (515/600): greedyvoronoi_40min_49cs_30pct_5rep
+2026-08-23 08:13:09 | INFO | OK (516/600): greedyvoronoi_60min_16cs_30pct_2rep
+2026-08-23 08:14:47 | INFO | OK (517/600): greedyvoronoi_60min_25cs_15pct_4rep
+2026-08-23 08:24:53 | INFO | OK (518/600): greedyvoronoi_60min_25cs_15pct_2rep
+2026-08-23 08:27:01 | INFO | OK (519/600): greedyvoronoi_60min_16cs_30pct_5rep
+2026-08-23 08:27:29 | INFO | OK (520/600): greedyvoronoi_60min_25cs_15pct_3rep
+2026-08-23 08:27:57 | INFO | OK (521/600): greedyvoronoi_40min_49cs_30pct_1rep
+2026-08-23 08:30:39 | INFO | OK (522/600): greedyvoronoi_60min_16cs_30pct_3rep
+2026-08-23 08:45:02 | INFO | OK (523/600): greedyvoronoi_60min_25cs_15pct_5rep
+2026-08-23 08:46:56 | INFO | OK (524/600): greedyvoronoi_60min_25cs_15pct_1rep
+2026-08-23 08:50:50 | INFO | OK (525/600): greedyvoronoi_60min_16cs_30pct_4rep
+2026-08-23 08:55:56 | INFO | OK (526/600): greedyvoronoi_60min_36cs_5pct_1rep
+2026-08-23 08:59:36 | INFO | OK (527/600): greedyvoronoi_60min_36cs_5pct_2rep
+2026-08-23 09:01:57 | INFO | OK (528/600): greedyvoronoi_60min_36cs_5pct_3rep
+2026-08-23 09:05:33 | INFO | OK (529/600): greedyvoronoi_60min_25cs_20pct_4rep
+2026-08-23 09:12:06 | INFO | OK (530/600): greedyvoronoi_60min_36cs_5pct_5rep
+2026-08-23 09:13:11 | INFO | OK (531/600): greedyvoronoi_60min_25cs_20pct_2rep
+2026-08-23 09:13:48 | INFO | OK (532/600): greedyvoronoi_60min_25cs_20pct_3rep
+2026-08-23 09:17:09 | INFO | OK (533/600): greedyvoronoi_60min_36cs_5pct_4rep
+2026-08-23 09:36:40 | INFO | OK (534/600): greedyvoronoi_60min_25cs_20pct_1rep
+2026-08-23 09:50:13 | INFO | OK (535/600): greedyvoronoi_60min_25cs_20pct_5rep
+2026-08-23 10:03:09 | INFO | OK (536/600): greedyvoronoi_60min_36cs_10pct_2rep
+2026-08-23 10:07:23 | INFO | OK (537/600): greedyvoronoi_60min_25cs_25pct_4rep
+2026-08-23 10:08:33 | INFO | OK (538/600): greedyvoronoi_60min_36cs_10pct_3rep
+2026-08-23 10:11:27 | INFO | OK (539/600): greedyvoronoi_60min_36cs_10pct_1rep
+2026-08-23 10:17:02 | INFO | OK (540/600): greedyvoronoi_60min_25cs_25pct_3rep
+2026-08-23 10:19:45 | INFO | OK (541/600): greedyvoronoi_60min_25cs_25pct_2rep
+2026-08-23 10:27:05 | INFO | OK (542/600): greedyvoronoi_60min_36cs_10pct_4rep
+2026-08-23 10:28:40 | INFO | OK (543/600): greedyvoronoi_60min_36cs_10pct_5rep
+2026-08-23 10:54:17 | INFO | OK (544/600): greedyvoronoi_60min_25cs_25pct_5rep
+2026-08-23 10:54:31 | INFO | OK (545/600): greedyvoronoi_60min_25cs_30pct_4rep
+2026-08-23 10:56:45 | INFO | OK (546/600): greedyvoronoi_60min_25cs_25pct_1rep
+2026-08-23 11:05:56 | INFO | OK (547/600): greedyvoronoi_60min_25cs_30pct_2rep
+2026-08-23 11:07:09 | INFO | OK (548/600): greedyvoronoi_60min_25cs_30pct_3rep
+2026-08-23 11:18:23 | INFO | OK (549/600): greedyvoronoi_60min_36cs_15pct_2rep
+2026-08-23 11:25:52 | INFO | OK (550/600): greedyvoronoi_60min_36cs_15pct_3rep
+2026-08-23 11:29:06 | INFO | OK (551/600): greedyvoronoi_60min_36cs_15pct_1rep
+2026-08-23 11:44:42 | INFO | OK (552/600): greedyvoronoi_60min_49cs_5pct_1rep
+2026-08-23 11:46:17 | INFO | OK (553/600): greedyvoronoi_60min_49cs_5pct_2rep
+2026-08-23 11:47:02 | INFO | OK (554/600): greedyvoronoi_60min_36cs_15pct_4rep
+2026-08-23 11:49:25 | INFO | OK (555/600): greedyvoronoi_60min_25cs_30pct_1rep
+2026-08-23 11:52:06 | INFO | OK (556/600): greedyvoronoi_60min_49cs_5pct_4rep
+2026-08-23 11:55:34 | INFO | OK (557/600): greedyvoronoi_60min_25cs_30pct_5rep
+2026-08-23 11:57:22 | INFO | OK (558/600): greedyvoronoi_60min_36cs_15pct_5rep
+2026-08-23 12:05:35 | INFO | OK (559/600): greedyvoronoi_60min_49cs_5pct_3rep
+2026-08-23 12:14:50 | INFO | OK (560/600): greedyvoronoi_60min_49cs_5pct_5rep
+2026-08-23 12:21:20 | INFO | OK (561/600): greedyvoronoi_60min_36cs_20pct_3rep
+2026-08-23 12:28:49 | INFO | OK (562/600): greedyvoronoi_60min_36cs_20pct_2rep
+2026-08-23 12:37:31 | INFO | OK (563/600): greedyvoronoi_60min_36cs_20pct_1rep
+2026-08-23 12:58:02 | INFO | OK (564/600): greedyvoronoi_60min_49cs_10pct_2rep
+2026-08-23 13:05:23 | INFO | OK (565/600): greedyvoronoi_60min_36cs_20pct_5rep
+2026-08-23 13:09:04 | INFO | OK (566/600): greedyvoronoi_60min_36cs_20pct_4rep
+2026-08-23 13:16:21 | INFO | OK (567/600): greedyvoronoi_60min_49cs_10pct_4rep
+2026-08-23 13:29:40 | INFO | OK (568/600): greedyvoronoi_60min_49cs_10pct_1rep
+2026-08-23 13:30:02 | INFO | OK (569/600): greedyvoronoi_60min_49cs_10pct_3rep
+2026-08-23 13:52:57 | INFO | OK (570/600): greedyvoronoi_60min_36cs_25pct_2rep
+2026-08-23 13:53:21 | INFO | OK (571/600): greedyvoronoi_60min_36cs_25pct_1rep
+2026-08-23 13:56:06 | INFO | OK (572/600): greedyvoronoi_60min_36cs_25pct_3rep
+2026-08-23 13:56:35 | INFO | OK (573/600): greedyvoronoi_60min_49cs_10pct_5rep
+2026-08-23 14:08:27 | INFO | OK (574/600): greedyvoronoi_60min_49cs_15pct_2rep
+2026-08-23 14:45:02 | INFO | OK (575/600): greedyvoronoi_60min_49cs_15pct_4rep
+2026-08-23 14:50:01 | INFO | OK (576/600): greedyvoronoi_60min_36cs_25pct_4rep
+2026-08-23 14:51:39 | INFO | OK (577/600): greedyvoronoi_60min_36cs_25pct_5rep
+2026-08-23 15:00:32 | INFO | OK (578/600): greedyvoronoi_60min_36cs_30pct_2rep
+2026-08-23 15:02:58 | INFO | OK (579/600): greedyvoronoi_60min_49cs_15pct_3rep
+2026-08-23 15:11:32 | INFO | OK (580/600): greedyvoronoi_60min_49cs_15pct_5rep
+2026-08-23 15:11:38 | INFO | OK (581/600): greedyvoronoi_60min_49cs_20pct_2rep
+2026-08-23 15:15:51 | INFO | OK (582/600): greedyvoronoi_60min_36cs_30pct_3rep
+2026-08-23 15:20:44 | INFO | OK (583/600): greedyvoronoi_60min_36cs_30pct_1rep
+2026-08-23 15:22:12 | INFO | OK (584/600): greedyvoronoi_60min_49cs_15pct_1rep
+2026-08-23 15:39:16 | INFO | OK (585/600): greedyvoronoi_60min_49cs_20pct_4rep
+2026-08-23 15:46:19 | INFO | OK (586/600): greedyvoronoi_60min_36cs_30pct_4rep
+2026-08-23 15:49:15 | INFO | OK (587/600): greedyvoronoi_60min_36cs_30pct_5rep
+2026-08-23 15:58:25 | INFO | OK (588/600): greedyvoronoi_60min_49cs_20pct_3rep
+2026-08-23 16:00:48 | INFO | OK (589/600): greedyvoronoi_60min_49cs_20pct_5rep
+2026-08-23 16:04:48 | INFO | OK (590/600): greedyvoronoi_60min_49cs_20pct_1rep
+2026-08-23 16:13:17 | INFO | OK (591/600): greedyvoronoi_60min_49cs_25pct_2rep
+2026-08-23 16:25:48 | INFO | OK (592/600): greedyvoronoi_60min_49cs_25pct_4rep
+2026-08-23 16:43:46 | INFO | OK (593/600): greedyvoronoi_60min_49cs_25pct_3rep
+2026-08-23 16:44:03 | INFO | OK (594/600): greedyvoronoi_60min_49cs_30pct_2rep
+2026-08-23 16:46:01 | INFO | OK (595/600): greedyvoronoi_60min_49cs_25pct_1rep
+2026-08-23 16:49:30 | INFO | OK (596/600): greedyvoronoi_60min_49cs_25pct_5rep
+2026-08-23 16:57:34 | INFO | OK (597/600): greedyvoronoi_60min_49cs_30pct_4rep
+2026-08-23 17:22:56 | INFO | OK (598/600): greedyvoronoi_60min_49cs_30pct_3rep
+2026-08-23 17:23:12 | INFO | OK (599/600): greedyvoronoi_60min_49cs_30pct_5rep
+2026-08-23 17:25:14 | INFO | OK (600/600): greedyvoronoi_60min_49cs_30pct_1rep
+2026-08-23 17:25:14 | INFO | === retry 1/3: 2 job(s) falharam, tentando de novo com 14 workers ===
+2026-08-23 17:41:38 | INFO | OK (1/2): greedyvoronoi_10min_9cs_20pct_1rep
+2026-08-23 18:28:22 | INFO | OK (2/2): greedyvoronoi_10min_49cs_20pct_4rep
+2026-08-23 18:28:22 | INFO | === batch concluído: 0 job(s) falharam ===

@@ -1,0 +1,12 @@
+{
+  "approach": "greedyvoronoi",
+  "minutes": 20,
+  "cs_amount": 16,
+  "percentage": 30,
+  "repetition": 1,
+  "vehicles": 8000,
+  "max_vehicles_per_cs": 6,
+  "seed": 666988686,
+  "trip_seed": 3763197873,
+  "port": null
+}
