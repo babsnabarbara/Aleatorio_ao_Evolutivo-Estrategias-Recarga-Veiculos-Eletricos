@@ -1,0 +1,12 @@
+{
+  "approach": "pseudorandom",
+  "minutes": 60,
+  "cs_amount": 36,
+  "percentage": 10,
+  "repetition": 5,
+  "vehicles": 8000,
+  "max_vehicles_per_cs": 6,
+  "seed": 1999697664,
+  "trip_seed": 635522336,
+  "port": null
+}

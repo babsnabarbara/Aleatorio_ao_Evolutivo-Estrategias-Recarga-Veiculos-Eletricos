@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <parkingArea id="0" name="parkingArea" lane="-24558546#1_0" roadsideCapacity="6"/>
+    <parkingArea id="1" name="parkingArea" lane="-25410388#1_0" roadsideCapacity="6"/>
+    <parkingArea id="2" name="parkingArea" lane="-27195819#2_0" roadsideCapacity="6"/>
+    <parkingArea id="3" name="parkingArea" lane="-28020929#2_0" roadsideCapacity="5"/>
+    <parkingArea id="4" name="parkingArea" lane="-46420060#2_0" roadsideCapacity="6"/>
+    <parkingArea id="5" name="parkingArea" lane="166271088#1_0" roadsideCapacity="6"/>
+    <parkingArea id="6" name="parkingArea" lane="29372986#0_0" roadsideCapacity="6"/>
+    <parkingArea id="7" name="parkingArea" lane="331774544#4_0" roadsideCapacity="6"/>
+    <parkingArea id="8" name="parkingArea" lane="4119602#0_0" roadsideCapacity="6"/>
+</additional>

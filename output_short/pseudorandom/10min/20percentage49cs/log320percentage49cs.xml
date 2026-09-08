@@ -1,0 +1,29 @@
+[log original: 1.1MB -- reduzido a só o resumo final abaixo]
+
+Simulation ended at time: 53756.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 50965714ms
+ Real time factor: 0.630934
+ UPS: 397.053517
+Vehicles: 
+ Inserted: 8001
+ Running: 0
+ Waiting: 0
+Teleports: 2141 (Collisions: 8, Jam: 365, Yield: 707, Wrong Lane: 1061)
+Emergency Stops: 617
+Statistics (avg):
+ RouteLength: 9871.54
+ Duration: 2529.20
+ WaitingTime: 1533.40
+ TimeLoss: 1705.46
+ DepartDelay: 10.05
+
+AStarRouter answered 7045 queries and explored 1981.66 edges on average.
+AStarRouter spent 46922ms answering queries (6.66ms on average).
+AStarRouter answered 5309 queries and explored 1326.20 edges on average.
+AStarRouter spent 27733ms answering queries (5.22ms on average).
+AStarRouter answered 4727 queries and explored 1239.81 edges on average.
+AStarRouter spent 24640ms answering queries (5.21ms on average).
+AStarRouter answered 4251 queries and explored 1319.76 edges on average.
+AStarRouter spent 23939ms answering queries (5.63ms on average).
