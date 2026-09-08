@@ -1,0 +1,37 @@
+Validação de disposição de estações (mesma repetition, minutes/percentage diferentes)
+======================================================================
+
+=== random ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
+
+=== pseudorandom ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
+
+=== greedy ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
+
+=== greedyvoronoi ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
+
+=== genetic ===
+  9cs: sim
+  16cs: sim
+  25cs: sim
+  36cs: sim
+  49cs: sim
