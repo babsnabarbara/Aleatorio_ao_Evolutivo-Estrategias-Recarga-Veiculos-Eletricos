@@ -1,0 +1,1209 @@
+2026-08-26 19:53:31 | INFO | === batch: approach=pseudorandom | 120 combinações x 5 repetições ===
+2026-08-26 19:53:56 | INFO | gerado: pseudorandom_10min_9cs_5pct_1rep
+2026-08-26 19:53:56 | INFO | gerado: pseudorandom_10min_9cs_5pct_2rep
+2026-08-26 19:53:56 | INFO | gerado: pseudorandom_10min_9cs_5pct_3rep
+2026-08-26 19:53:56 | INFO | gerado: pseudorandom_10min_9cs_5pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_5pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_10pct_1rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_10pct_2rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_10pct_3rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_10pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_10pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_15pct_1rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_15pct_2rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_15pct_3rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_15pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_15pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_20pct_1rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_20pct_2rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_20pct_3rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_20pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_20pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_25pct_1rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_25pct_2rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_25pct_3rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_25pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_25pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_30pct_1rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_30pct_2rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_30pct_3rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_30pct_4rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_9cs_30pct_5rep
+2026-08-26 19:53:58 | INFO | gerado: pseudorandom_10min_16cs_5pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_5pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_5pct_3rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_5pct_4rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_5pct_5rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_10pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_10pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_10pct_3rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_10pct_4rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_10pct_5rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_15pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_15pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_15pct_3rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_15pct_4rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_15pct_5rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_20pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_20pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_20pct_3rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_20pct_4rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_20pct_5rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_25pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_25pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_25pct_3rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_25pct_4rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_25pct_5rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_30pct_1rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_30pct_2rep
+2026-08-26 19:53:59 | INFO | gerado: pseudorandom_10min_16cs_30pct_3rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_16cs_30pct_4rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_16cs_30pct_5rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_25cs_5pct_1rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_25cs_5pct_2rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_25cs_5pct_3rep
+2026-08-26 19:54:00 | INFO | gerado: pseudorandom_10min_25cs_5pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_5pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_10pct_1rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_10pct_2rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_10pct_3rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_10pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_10pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_15pct_1rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_15pct_2rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_15pct_3rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_15pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_15pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_20pct_1rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_20pct_2rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_20pct_3rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_20pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_20pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_25pct_1rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_25pct_2rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_25pct_3rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_25pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_25pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_30pct_1rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_30pct_2rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_30pct_3rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_30pct_4rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_25cs_30pct_5rep
+2026-08-26 19:54:01 | INFO | gerado: pseudorandom_10min_36cs_5pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_5pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_5pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_5pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_5pct_5rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_10pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_10pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_10pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_10pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_10pct_5rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_15pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_15pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_15pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_15pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_15pct_5rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_20pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_20pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_20pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_20pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_20pct_5rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_25pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_25pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_25pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_25pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_25pct_5rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_30pct_1rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_30pct_2rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_30pct_3rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_30pct_4rep
+2026-08-26 19:54:02 | INFO | gerado: pseudorandom_10min_36cs_30pct_5rep
+2026-08-26 19:54:03 | INFO | gerado: pseudorandom_10min_49cs_5pct_1rep
+2026-08-26 19:54:03 | INFO | gerado: pseudorandom_10min_49cs_5pct_2rep
+2026-08-26 19:54:03 | INFO | gerado: pseudorandom_10min_49cs_5pct_3rep
+2026-08-26 19:54:03 | INFO | gerado: pseudorandom_10min_49cs_5pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_5pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_10pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_10pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_10pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_10pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_10pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_15pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_15pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_15pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_15pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_15pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_20pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_20pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_20pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_20pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_20pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_25pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_25pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_25pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_25pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_25pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_30pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_30pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_30pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_30pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_10min_49cs_30pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_5pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_5pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_5pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_5pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_5pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_10pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_10pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_10pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_10pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_10pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_15pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_15pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_15pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_15pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_15pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_20pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_20pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_20pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_20pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_20pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_25pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_25pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_25pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_25pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_25pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_30pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_30pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_30pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_30pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_9cs_30pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_5pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_5pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_5pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_5pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_5pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_10pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_10pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_10pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_10pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_10pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_15pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_15pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_15pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_15pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_15pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_20pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_20pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_20pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_20pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_20pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_25pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_25pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_25pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_25pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_25pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_30pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_30pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_30pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_30pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_16cs_30pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_5pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_5pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_5pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_5pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_5pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_10pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_10pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_10pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_10pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_10pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_15pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_15pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_15pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_15pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_15pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_20pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_20pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_20pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_20pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_20pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_25pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_25pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_25pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_25pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_25pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_30pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_30pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_30pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_30pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_25cs_30pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_5pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_5pct_2rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_5pct_3rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_5pct_4rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_5pct_5rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_10pct_1rep
+2026-08-26 19:54:04 | INFO | gerado: pseudorandom_20min_36cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_36cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_20min_49cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_9cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_16cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_25cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_15pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_15pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_15pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_20pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_20pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_20pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_20pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_20pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_25pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_25pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_25pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_25pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_25pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_30pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_30pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_30pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_30pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_36cs_30pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_5pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_5pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_5pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_5pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_5pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_10pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_10pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_10pct_3rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_10pct_4rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_10pct_5rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_15pct_1rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_15pct_2rep
+2026-08-26 19:54:05 | INFO | gerado: pseudorandom_40min_49cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_40min_49cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_5pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_5pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_5pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_5pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_5pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_10pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_10pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_10pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_10pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_10pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_15pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_15pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_9cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_5pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_5pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_5pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_5pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_5pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_10pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_10pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_10pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_10pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_10pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_15pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_15pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_16cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_5pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_5pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_5pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_5pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_5pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_10pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_10pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_10pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_10pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_10pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_15pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_15pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_25cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_5pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_5pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_5pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_5pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_5pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_10pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_10pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_10pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_10pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_10pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_15pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_15pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_36cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_5pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_5pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_5pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_5pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_5pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_10pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_10pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_10pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_10pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_10pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_15pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_15pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_15pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_15pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_15pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_20pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_20pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_20pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_20pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_20pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_25pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_25pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_25pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_25pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_25pct_5rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_30pct_1rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_30pct_2rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_30pct_3rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_30pct_4rep
+2026-08-26 19:54:06 | INFO | gerado: pseudorandom_60min_49cs_30pct_5rep
+2026-08-26 19:54:06 | INFO | _auto_workers: logical_cpus=32 cpu_based=28 | ram_available=123.0GB ram_based=58 | total_jobs=600 -> resolved=28 workers (fator limitante: CPU)
+2026-08-26 19:54:06 | INFO |     CPU (núcleos físicos) está limitando o paralelismo. Se quiser forçar mais processos simultâneos mesmo assim, passe --workers manualmente mais alto que este valor.
+2026-08-26 19:54:06 | INFO | 600 job(s) gerados, rodando com 28 workers em paralelo (auto-detectado por CPU+RAM)
+2026-08-26 20:34:42 | INFO | OK (1/600): pseudorandom_10min_9cs_5pct_2rep
+2026-08-26 20:36:27 | INFO | OK (2/600): pseudorandom_10min_9cs_5pct_5rep
+2026-08-26 20:37:20 | INFO | OK (3/600): pseudorandom_10min_9cs_5pct_1rep
+2026-08-26 20:38:10 | INFO | OK (4/600): pseudorandom_10min_9cs_5pct_4rep
+2026-08-26 20:42:31 | INFO | OK (5/600): pseudorandom_10min_9cs_5pct_3rep
+2026-08-26 21:10:51 | INFO | OK (6/600): pseudorandom_10min_9cs_10pct_2rep
+2026-08-26 21:15:37 | INFO | OK (7/600): pseudorandom_10min_9cs_10pct_5rep
+2026-08-26 21:16:11 | INFO | OK (8/600): pseudorandom_10min_9cs_10pct_4rep
+2026-08-26 21:17:20 | INFO | OK (9/600): pseudorandom_10min_9cs_10pct_1rep
+2026-08-26 21:32:27 | INFO | OK (10/600): pseudorandom_10min_9cs_10pct_3rep
+2026-08-26 21:39:37 | INFO | OK (11/600): pseudorandom_10min_16cs_5pct_1rep
+2026-08-26 21:44:56 | INFO | OK (12/600): pseudorandom_10min_9cs_15pct_2rep
+2026-08-26 21:50:12 | INFO | OK (13/600): pseudorandom_10min_16cs_5pct_2rep
+2026-08-26 21:51:08 | INFO | OK (14/600): pseudorandom_10min_9cs_15pct_5rep
+2026-08-26 21:53:42 | INFO | OK (15/600): pseudorandom_10min_16cs_5pct_3rep
+2026-08-26 21:58:16 | INFO | OK (16/600): pseudorandom_10min_9cs_15pct_1rep
+2026-08-26 22:00:10 | INFO | OK (17/600): pseudorandom_10min_9cs_15pct_4rep
+2026-08-26 22:08:39 | INFO | OK (18/600): pseudorandom_10min_9cs_15pct_3rep
+2026-08-26 22:20:10 | INFO | OK (19/600): pseudorandom_10min_16cs_5pct_4rep
+2026-08-26 22:20:51 | INFO | OK (20/600): pseudorandom_10min_9cs_20pct_2rep
+2026-08-26 22:21:26 | INFO | OK (21/600): pseudorandom_10min_16cs_5pct_5rep
+2026-08-26 22:32:15 | INFO | OK (22/600): pseudorandom_10min_9cs_20pct_1rep
+2026-08-26 22:33:10 | INFO | OK (23/600): pseudorandom_10min_9cs_20pct_4rep
+2026-08-26 22:35:18 | INFO | OK (24/600): pseudorandom_10min_9cs_20pct_5rep
+2026-08-26 23:00:44 | INFO | OK (25/600): pseudorandom_10min_9cs_20pct_3rep
+2026-08-26 23:04:03 | INFO | OK (26/600): pseudorandom_10min_9cs_25pct_2rep
+2026-08-26 23:14:49 | INFO | OK (27/600): pseudorandom_10min_9cs_25pct_4rep
+2026-08-26 23:16:12 | INFO | OK (28/600): pseudorandom_10min_9cs_25pct_1rep
+2026-08-26 23:19:52 | INFO | OK (29/600): pseudorandom_10min_16cs_10pct_1rep
+2026-08-26 23:25:00 | INFO | OK (30/600): pseudorandom_10min_9cs_25pct_5rep
+2026-08-26 23:37:50 | INFO | OK (31/600): pseudorandom_10min_9cs_25pct_3rep
+2026-08-26 23:40:41 | INFO | OK (32/600): pseudorandom_10min_16cs_10pct_3rep
+2026-08-26 23:41:09 | INFO | OK (33/600): pseudorandom_10min_16cs_10pct_2rep
+2026-08-26 23:45:15 | INFO | OK (34/600): pseudorandom_10min_16cs_10pct_5rep
+2026-08-26 23:45:53 | INFO | OK (35/600): pseudorandom_10min_9cs_30pct_2rep
+2026-08-26 23:48:52 | INFO | OK (36/600): pseudorandom_10min_9cs_30pct_1rep
+2026-08-26 23:57:48 | INFO | OK (37/600): pseudorandom_10min_16cs_10pct_4rep
+2026-08-27 00:33:28 | INFO | OK (38/600): pseudorandom_10min_9cs_30pct_3rep
+2026-08-27 00:43:24 | INFO | OK (39/600): pseudorandom_10min_9cs_30pct_4rep
+2026-08-27 00:44:00 | INFO | OK (40/600): pseudorandom_10min_9cs_30pct_5rep
+2026-08-27 00:51:11 | INFO | OK (41/600): pseudorandom_10min_16cs_15pct_1rep
+2026-08-27 01:09:14 | INFO | OK (42/600): pseudorandom_10min_16cs_15pct_5rep
+2026-08-27 01:16:11 | INFO | OK (43/600): pseudorandom_10min_16cs_15pct_3rep
+2026-08-27 01:22:12 | INFO | OK (44/600): pseudorandom_10min_25cs_5pct_2rep
+2026-08-27 01:22:59 | INFO | OK (45/600): pseudorandom_10min_16cs_15pct_4rep
+2026-08-27 01:23:50 | INFO | OK (46/600): pseudorandom_10min_25cs_5pct_3rep
+2026-08-27 01:26:44 | INFO | OK (47/600): pseudorandom_10min_16cs_15pct_2rep
+2026-08-27 01:34:45 | INFO | OK (48/600): pseudorandom_10min_25cs_5pct_4rep
+2026-08-27 01:36:49 | INFO | OK (49/600): pseudorandom_10min_25cs_5pct_1rep
+2026-08-27 01:44:09 | INFO | OK (50/600): pseudorandom_10min_25cs_5pct_5rep
+2026-08-27 02:07:10 | INFO | OK (51/600): pseudorandom_10min_16cs_20pct_1rep
+2026-08-27 02:33:35 | INFO | OK (52/600): pseudorandom_10min_16cs_20pct_5rep
+2026-08-27 02:45:28 | INFO | OK (53/600): pseudorandom_10min_16cs_20pct_3rep
+2026-08-27 02:47:15 | INFO | OK (54/600): pseudorandom_10min_16cs_20pct_2rep
+2026-08-27 02:51:18 | INFO | OK (55/600): pseudorandom_10min_16cs_20pct_4rep
+2026-08-27 03:40:29 | INFO | OK (56/600): pseudorandom_10min_16cs_25pct_1rep
+2026-08-27 04:00:12 | INFO | OK (57/600): pseudorandom_10min_25cs_10pct_3rep
+2026-08-27 04:09:22 | INFO | OK (58/600): pseudorandom_10min_25cs_10pct_1rep
+2026-08-27 04:19:24 | INFO | OK (59/600): pseudorandom_10min_25cs_10pct_2rep
+2026-08-27 04:20:37 | INFO | OK (60/600): pseudorandom_10min_16cs_25pct_4rep
+2026-08-27 04:21:25 | INFO | OK (61/600): pseudorandom_10min_16cs_25pct_5rep
+2026-08-27 04:27:36 | INFO | OK (62/600): pseudorandom_10min_16cs_25pct_3rep
+2026-08-27 04:31:45 | INFO | OK (63/600): pseudorandom_10min_16cs_25pct_2rep
+2026-08-27 04:34:52 | INFO | OK (64/600): pseudorandom_10min_25cs_10pct_4rep
+2026-08-27 04:35:52 | INFO | OK (65/600): pseudorandom_10min_25cs_10pct_5rep
+2026-08-27 05:43:52 | INFO | OK (66/600): pseudorandom_10min_16cs_30pct_1rep
+2026-08-27 06:00:45 | INFO | OK (67/600): pseudorandom_10min_16cs_30pct_5rep
+2026-08-27 06:06:11 | INFO | OK (68/600): pseudorandom_10min_16cs_30pct_2rep
+2026-08-27 06:06:25 | INFO | OK (69/600): pseudorandom_10min_16cs_30pct_3rep
+2026-08-27 06:09:28 | INFO | OK (70/600): pseudorandom_10min_25cs_15pct_3rep
+2026-08-27 06:30:11 | INFO | OK (71/600): pseudorandom_10min_25cs_15pct_2rep
+2026-08-27 06:33:55 | INFO | OK (72/600): pseudorandom_10min_16cs_30pct_4rep
+2026-08-27 06:49:54 | INFO | OK (73/600): pseudorandom_10min_25cs_15pct_5rep
+2026-08-27 06:54:27 | INFO | OK (74/600): pseudorandom_10min_25cs_15pct_1rep
+2026-08-27 06:56:14 | INFO | OK (75/600): pseudorandom_10min_36cs_5pct_2rep
+2026-08-27 06:57:33 | INFO | OK (76/600): pseudorandom_10min_36cs_5pct_1rep
+2026-08-27 07:00:23 | INFO | OK (77/600): pseudorandom_10min_25cs_15pct_4rep
+2026-08-27 07:03:56 | INFO | OK (78/600): pseudorandom_10min_36cs_5pct_3rep
+2026-08-27 07:52:35 | INFO | OK (79/600): pseudorandom_10min_36cs_5pct_4rep
+2026-08-27 08:04:41 | INFO | OK (80/600): pseudorandom_10min_25cs_20pct_3rep
+2026-08-27 08:19:55 | INFO | OK (81/600): pseudorandom_10min_36cs_5pct_5rep
+2026-08-27 08:38:33 | INFO | OK (82/600): pseudorandom_10min_25cs_20pct_2rep
+2026-08-27 09:12:46 | INFO | OK (83/600): pseudorandom_10min_25cs_20pct_1rep
+2026-08-27 09:27:03 | INFO | OK (84/600): pseudorandom_10min_25cs_20pct_4rep
+2026-08-27 09:48:40 | INFO | OK (85/600): pseudorandom_10min_25cs_20pct_5rep
+2026-08-27 10:31:45 | INFO | OK (86/600): pseudorandom_10min_36cs_10pct_1rep
+2026-08-27 10:40:58 | INFO | OK (87/600): pseudorandom_10min_36cs_10pct_2rep
+2026-08-27 10:54:05 | INFO | OK (88/600): pseudorandom_10min_36cs_10pct_3rep
+2026-08-27 11:11:43 | INFO | OK (89/600): pseudorandom_10min_25cs_25pct_3rep
+2026-08-27 11:17:08 | INFO | OK (90/600): pseudorandom_10min_36cs_10pct_4rep
+2026-08-27 11:42:33 | INFO | OK (91/600): pseudorandom_10min_36cs_10pct_5rep
+2026-08-27 11:59:24 | INFO | OK (92/600): pseudorandom_10min_25cs_25pct_1rep
+2026-08-27 12:43:55 | INFO | OK (93/600): pseudorandom_10min_25cs_25pct_5rep
+2026-08-27 13:29:56 | INFO | OK (94/600): pseudorandom_10min_25cs_25pct_4rep
+2026-08-27 13:36:59 | INFO | OK (95/600): pseudorandom_10min_36cs_15pct_2rep
+2026-08-27 13:42:58 | INFO | OK (96/600): pseudorandom_10min_25cs_30pct_3rep
+2026-08-27 14:00:37 | INFO | OK (97/600): pseudorandom_10min_36cs_15pct_4rep
+2026-08-27 14:03:32 | INFO | OK (98/600): pseudorandom_10min_36cs_15pct_1rep
+2026-08-27 14:16:19 | INFO | OK (99/600): pseudorandom_10min_36cs_15pct_3rep
+2026-08-27 14:34:02 | INFO | OK (100/600): pseudorandom_10min_36cs_15pct_5rep
+2026-08-27 14:54:05 | INFO | OK (101/600): pseudorandom_10min_25cs_30pct_5rep
+2026-08-27 14:55:54 | INFO | OK (102/600): pseudorandom_10min_25cs_30pct_2rep
+2026-08-27 14:57:22 | INFO | OK (103/600): pseudorandom_10min_25cs_30pct_4rep
+2026-08-27 15:18:03 | INFO | OK (104/600): pseudorandom_10min_25cs_30pct_1rep
+2026-08-27 16:11:22 | INFO | OK (105/600): pseudorandom_10min_49cs_5pct_1rep
+2026-08-27 16:52:23 | INFO | OK (106/600): pseudorandom_10min_49cs_5pct_2rep
+2026-08-27 16:59:29 | INFO | OK (107/600): pseudorandom_10min_36cs_20pct_1rep
+2026-08-27 17:03:09 | INFO | OK (108/600): pseudorandom_10min_49cs_5pct_4rep
+2026-08-27 17:08:06 | INFO | OK (109/600): pseudorandom_10min_49cs_5pct_3rep
+2026-08-27 17:09:44 | INFO | OK (110/600): pseudorandom_10min_36cs_20pct_2rep
+2026-08-27 17:27:42 | INFO | OK (111/600): pseudorandom_10min_49cs_5pct_5rep
+2026-08-27 17:31:28 | INFO | OK (112/600): pseudorandom_10min_36cs_20pct_4rep
+2026-08-27 17:51:04 | INFO | OK (113/600): pseudorandom_10min_36cs_20pct_3rep
+2026-08-27 19:05:37 | INFO | OK (114/600): pseudorandom_10min_36cs_20pct_5rep
+2026-08-27 20:48:54 | INFO | OK (115/600): pseudorandom_10min_36cs_25pct_2rep
+2026-08-27 20:51:20 | INFO | OK (116/600): pseudorandom_10min_49cs_10pct_2rep
+2026-08-27 21:03:42 | INFO | OK (117/600): pseudorandom_10min_49cs_10pct_1rep
+2026-08-27 21:09:10 | INFO | OK (118/600): pseudorandom_10min_36cs_25pct_1rep
+2026-08-27 21:28:05 | INFO | OK (119/600): pseudorandom_10min_49cs_10pct_3rep
+2026-08-27 21:49:00 | INFO | OK (120/600): pseudorandom_10min_49cs_10pct_4rep
+2026-08-27 21:51:11 | INFO | OK (121/600): pseudorandom_10min_49cs_10pct_5rep
+2026-08-27 21:57:41 | INFO | OK (122/600): pseudorandom_10min_36cs_25pct_4rep
+2026-08-27 22:29:37 | INFO | OK (123/600): pseudorandom_10min_36cs_25pct_3rep
+2026-08-27 23:11:42 | INFO | OK (124/600): pseudorandom_20min_9cs_5pct_1rep
+2026-08-27 23:45:31 | INFO | OK (125/600): pseudorandom_10min_36cs_25pct_5rep
+2026-08-27 23:53:00 | INFO | OK (126/600): pseudorandom_20min_9cs_5pct_2rep
+2026-08-28 00:38:57 | INFO | OK (127/600): pseudorandom_20min_9cs_5pct_3rep
+2026-08-28 00:39:14 | INFO | OK (128/600): pseudorandom_20min_9cs_5pct_4rep
+2026-08-28 00:43:32 | INFO | OK (129/600): pseudorandom_10min_49cs_15pct_2rep
+2026-08-28 00:53:37 | INFO | OK (130/600): pseudorandom_10min_49cs_15pct_1rep
+2026-08-28 00:56:14 | INFO | OK (131/600): pseudorandom_10min_36cs_30pct_2rep
+2026-08-28 01:09:15 | INFO | OK (132/600): pseudorandom_10min_36cs_30pct_1rep
+2026-08-28 01:21:30 | INFO | OK (133/600): pseudorandom_20min_9cs_5pct_5rep
+2026-08-28 01:48:53 | INFO | OK (134/600): pseudorandom_10min_36cs_30pct_3rep
+2026-08-28 01:58:00 | INFO | OK (135/600): pseudorandom_10min_36cs_30pct_4rep
+2026-08-28 02:00:55 | INFO | OK (136/600): pseudorandom_20min_9cs_10pct_1rep
+2026-08-28 02:03:25 | INFO | OK (137/600): pseudorandom_20min_9cs_10pct_2rep
+2026-08-28 02:18:02 | INFO | OK (138/600): pseudorandom_10min_49cs_15pct_3rep
+2026-08-28 02:22:09 | INFO | OK (139/600): pseudorandom_20min_9cs_10pct_4rep
+2026-08-28 02:26:25 | INFO | OK (140/600): pseudorandom_20min_9cs_10pct_5rep
+2026-08-28 02:27:20 | INFO | OK (141/600): pseudorandom_20min_9cs_10pct_3rep
+2026-08-28 03:12:28 | INFO | OK (142/600): pseudorandom_10min_36cs_30pct_5rep
+2026-08-28 03:18:17 | INFO | OK (143/600): pseudorandom_10min_49cs_15pct_4rep
+2026-08-28 03:27:45 | INFO | OK (144/600): pseudorandom_20min_9cs_15pct_1rep
+2026-08-28 03:37:57 | INFO | OK (145/600): pseudorandom_10min_49cs_15pct_5rep
+2026-08-28 03:47:04 | INFO | OK (146/600): pseudorandom_20min_9cs_15pct_2rep
+2026-08-28 04:08:29 | INFO | OK (147/600): pseudorandom_20min_9cs_15pct_5rep
+2026-08-28 04:08:57 | INFO | OK (148/600): pseudorandom_20min_9cs_15pct_4rep
+2026-08-28 04:14:38 | INFO | OK (149/600): pseudorandom_20min_9cs_15pct_3rep
+2026-08-28 04:52:45 | INFO | OK (150/600): pseudorandom_20min_9cs_20pct_1rep
+2026-08-28 04:55:47 | INFO | OK (151/600): pseudorandom_20min_9cs_20pct_2rep
+2026-08-28 05:12:48 | INFO | OK (152/600): pseudorandom_20min_9cs_20pct_4rep
+2026-08-28 05:31:28 | INFO | OK (153/600): pseudorandom_20min_9cs_20pct_3rep
+2026-08-28 05:57:41 | INFO | OK (154/600): pseudorandom_20min_9cs_20pct_5rep
+2026-08-28 06:24:38 | INFO | OK (155/600): pseudorandom_10min_49cs_20pct_1rep
+2026-08-28 06:31:32 | INFO | OK (156/600): pseudorandom_20min_16cs_5pct_1rep
+2026-08-28 06:36:01 | INFO | OK (157/600): pseudorandom_20min_9cs_25pct_2rep
+2026-08-28 06:36:33 | INFO | OK (158/600): pseudorandom_20min_9cs_25pct_1rep
+2026-08-28 06:36:57 | INFO | OK (159/600): pseudorandom_10min_49cs_20pct_2rep
+2026-08-28 07:11:25 | INFO | OK (160/600): pseudorandom_20min_16cs_5pct_2rep
+2026-08-28 07:15:48 | INFO | OK (161/600): pseudorandom_10min_49cs_20pct_4rep
+2026-08-28 07:16:12 | INFO | OK (162/600): pseudorandom_10min_49cs_20pct_5rep
+2026-08-28 07:18:27 | INFO | OK (163/600): pseudorandom_20min_9cs_25pct_4rep
+2026-08-28 07:19:19 | INFO | OK (164/600): pseudorandom_10min_49cs_20pct_3rep
+2026-08-28 07:31:19 | INFO | OK (165/600): pseudorandom_20min_9cs_25pct_5rep
+2026-08-28 07:34:58 | INFO | OK (166/600): pseudorandom_20min_9cs_25pct_3rep
+2026-08-28 07:36:41 | INFO | OK (167/600): pseudorandom_20min_16cs_5pct_3rep
+2026-08-28 07:39:21 | INFO | OK (168/600): pseudorandom_20min_16cs_5pct_4rep
+2026-08-28 07:46:47 | INFO | OK (169/600): pseudorandom_20min_16cs_5pct_5rep
+2026-08-28 08:05:33 | INFO | OK (170/600): pseudorandom_20min_9cs_30pct_2rep
+2026-08-28 08:16:10 | INFO | OK (171/600): pseudorandom_20min_9cs_30pct_1rep
+2026-08-28 08:48:47 | INFO | OK (172/600): pseudorandom_20min_16cs_10pct_1rep
+2026-08-28 09:00:05 | INFO | OK (173/600): pseudorandom_20min_16cs_10pct_2rep
+2026-08-28 09:00:24 | INFO | OK (174/600): pseudorandom_20min_9cs_30pct_4rep
+2026-08-28 09:20:07 | INFO | OK (175/600): pseudorandom_20min_9cs_30pct_5rep
+2026-08-28 09:28:00 | INFO | OK (176/600): pseudorandom_20min_16cs_10pct_5rep
+2026-08-28 09:28:24 | INFO | OK (177/600): pseudorandom_20min_9cs_30pct_3rep
+2026-08-28 09:32:40 | INFO | OK (178/600): pseudorandom_20min_16cs_10pct_3rep
+2026-08-28 09:38:52 | INFO | OK (179/600): pseudorandom_20min_16cs_10pct_4rep
+2026-08-28 10:30:27 | INFO | OK (180/600): pseudorandom_20min_16cs_15pct_1rep
+2026-08-28 10:50:01 | INFO | OK (181/600): pseudorandom_20min_16cs_15pct_5rep
+2026-08-28 10:53:35 | INFO | OK (182/600): pseudorandom_10min_49cs_25pct_1rep
+2026-08-28 10:54:16 | INFO | OK (183/600): pseudorandom_20min_16cs_15pct_3rep
+2026-08-28 11:03:08 | INFO | OK (184/600): pseudorandom_20min_16cs_15pct_2rep
+2026-08-28 11:04:03 | INFO | OK (185/600): pseudorandom_20min_16cs_15pct_4rep
+2026-08-28 11:38:31 | INFO | OK (186/600): pseudorandom_20min_16cs_20pct_1rep
+2026-08-28 11:39:02 | INFO | OK (187/600): pseudorandom_10min_49cs_25pct_2rep
+2026-08-28 12:39:24 | INFO | OK (188/600): pseudorandom_20min_16cs_20pct_3rep
+2026-08-28 12:40:09 | INFO | OK (189/600): pseudorandom_20min_16cs_20pct_2rep
+2026-08-28 12:41:59 | INFO | OK (190/600): pseudorandom_20min_25cs_5pct_3rep
+2026-08-28 12:48:03 | INFO | OK (191/600): pseudorandom_20min_25cs_5pct_2rep
+2026-08-28 12:50:33 | INFO | OK (192/600): pseudorandom_20min_16cs_20pct_5rep
+2026-08-28 12:50:48 | INFO | OK (193/600): pseudorandom_20min_25cs_5pct_1rep
+2026-08-28 12:56:16 | INFO | OK (194/600): pseudorandom_20min_16cs_20pct_4rep
+2026-08-28 13:30:21 | INFO | OK (195/600): pseudorandom_20min_25cs_5pct_5rep
+2026-08-28 13:35:26 | INFO | OK (196/600): pseudorandom_20min_25cs_5pct_4rep
+2026-08-28 13:46:42 | INFO | OK (197/600): pseudorandom_10min_49cs_25pct_3rep
+2026-08-28 14:09:57 | INFO | OK (198/600): pseudorandom_20min_16cs_25pct_1rep
+2026-08-28 14:12:23 | INFO | OK (199/600): pseudorandom_10min_49cs_25pct_4rep
+2026-08-28 14:16:05 | INFO | OK (200/600): pseudorandom_10min_49cs_25pct_5rep
+2026-08-28 14:37:03 | INFO | OK (201/600): pseudorandom_20min_16cs_25pct_5rep
+2026-08-28 14:53:57 | INFO | OK (202/600): pseudorandom_20min_16cs_25pct_3rep
+2026-08-28 15:09:00 | INFO | OK (203/600): pseudorandom_20min_16cs_25pct_2rep
+2026-08-28 15:12:02 | INFO | OK (204/600): pseudorandom_20min_16cs_25pct_4rep
+2026-08-28 15:52:29 | INFO | OK (205/600): pseudorandom_20min_16cs_30pct_1rep
+2026-08-28 16:01:56 | INFO | OK (206/600): pseudorandom_20min_25cs_10pct_3rep
+2026-08-28 16:10:15 | INFO | OK (207/600): pseudorandom_20min_25cs_10pct_2rep
+2026-08-28 16:23:13 | INFO | OK (208/600): pseudorandom_20min_25cs_10pct_1rep
+2026-08-28 16:26:53 | INFO | OK (209/600): pseudorandom_20min_25cs_10pct_5rep
+2026-08-28 16:37:55 | INFO | OK (210/600): pseudorandom_20min_25cs_10pct_4rep
+2026-08-28 16:57:33 | INFO | OK (211/600): pseudorandom_20min_16cs_30pct_2rep
+2026-08-28 17:10:03 | INFO | OK (212/600): pseudorandom_20min_16cs_30pct_5rep
+2026-08-28 17:14:47 | INFO | OK (213/600): pseudorandom_20min_16cs_30pct_3rep
+2026-08-28 17:18:29 | INFO | OK (214/600): pseudorandom_10min_49cs_30pct_2rep
+2026-08-28 17:25:39 | INFO | OK (215/600): pseudorandom_10min_49cs_30pct_1rep
+2026-08-28 17:51:32 | INFO | OK (216/600): pseudorandom_20min_16cs_30pct_4rep
+2026-08-28 18:00:29 | INFO | OK (217/600): pseudorandom_10min_49cs_30pct_3rep
+2026-08-28 18:14:45 | INFO | OK (218/600): pseudorandom_20min_25cs_15pct_2rep
+2026-08-28 18:18:14 | INFO | OK (219/600): pseudorandom_20min_25cs_15pct_1rep
+2026-08-28 18:26:22 | INFO | OK (220/600): pseudorandom_20min_25cs_15pct_3rep
+2026-08-28 18:40:02 | INFO | OK (221/600): pseudorandom_10min_49cs_30pct_5rep
+2026-08-28 18:50:37 | INFO | OK (222/600): pseudorandom_10min_49cs_30pct_4rep
+2026-08-28 18:58:29 | INFO | OK (223/600): pseudorandom_20min_25cs_15pct_5rep
+2026-08-28 19:25:20 | INFO | OK (224/600): pseudorandom_20min_25cs_15pct_4rep
+2026-08-28 19:34:55 | INFO | OK (225/600): pseudorandom_20min_36cs_5pct_2rep
+2026-08-28 19:37:56 | INFO | OK (226/600): pseudorandom_20min_36cs_5pct_1rep
+2026-08-28 19:47:54 | INFO | OK (227/600): pseudorandom_20min_36cs_5pct_3rep
+2026-08-28 20:20:06 | INFO | OK (228/600): pseudorandom_20min_36cs_5pct_4rep
+2026-08-28 20:29:19 | INFO | OK (229/600): pseudorandom_20min_36cs_5pct_5rep
+2026-08-28 21:00:15 | INFO | OK (230/600): pseudorandom_20min_25cs_20pct_3rep
+2026-08-28 21:44:31 | INFO | OK (231/600): pseudorandom_20min_25cs_20pct_1rep
+2026-08-28 21:53:29 | INFO | OK (232/600): pseudorandom_20min_25cs_20pct_5rep
+2026-08-28 22:07:48 | INFO | OK (233/600): pseudorandom_20min_25cs_20pct_4rep
+2026-08-28 22:56:03 | INFO | OK (234/600): pseudorandom_20min_36cs_10pct_2rep
+2026-08-28 23:02:43 | INFO | OK (235/600): pseudorandom_20min_36cs_10pct_1rep
+2026-08-28 23:18:29 | INFO | OK (236/600): pseudorandom_20min_36cs_10pct_3rep
+2026-08-28 23:21:02 | INFO | OK (237/600): pseudorandom_20min_36cs_10pct_4rep
+2026-08-28 23:48:12 | INFO | OK (238/600): pseudorandom_20min_25cs_25pct_2rep
+2026-08-29 00:00:56 | INFO | OK (239/600): pseudorandom_20min_36cs_10pct_5rep
+2026-08-29 00:08:48 | INFO | OK (240/600): pseudorandom_20min_25cs_25pct_3rep
+2026-08-29 00:43:08 | INFO | OK (241/600): pseudorandom_20min_25cs_25pct_1rep
+2026-08-29 01:01:54 | INFO | OK (242/600): pseudorandom_20min_25cs_25pct_5rep
+2026-08-29 01:42:57 | INFO | OK (243/600): pseudorandom_20min_25cs_25pct_4rep
+2026-08-29 02:03:17 | INFO | OK (244/600): pseudorandom_20min_36cs_15pct_1rep
+2026-08-29 02:15:40 | INFO | OK (245/600): pseudorandom_20min_36cs_15pct_2rep
+2026-08-29 02:23:35 | INFO | OK (246/600): pseudorandom_20min_25cs_30pct_3rep
+2026-08-29 02:36:27 | INFO | OK (247/600): pseudorandom_20min_36cs_15pct_4rep
+2026-08-29 02:50:17 | INFO | OK (248/600): pseudorandom_20min_25cs_30pct_2rep
+2026-08-29 03:12:01 | INFO | OK (249/600): pseudorandom_20min_36cs_15pct_3rep
+2026-08-29 03:31:00 | INFO | OK (250/600): pseudorandom_20min_25cs_30pct_1rep
+2026-08-29 03:40:05 | INFO | OK (251/600): pseudorandom_20min_36cs_15pct_5rep
+2026-08-29 03:52:18 | INFO | OK (252/600): pseudorandom_20min_25cs_30pct_5rep
+2026-08-29 04:14:37 | INFO | OK (253/600): pseudorandom_20min_25cs_30pct_4rep
+2026-08-29 05:14:35 | INFO | OK (254/600): pseudorandom_20min_49cs_5pct_2rep
+2026-08-29 05:17:28 | INFO | OK (255/600): pseudorandom_20min_49cs_5pct_1rep
+2026-08-29 05:36:04 | INFO | OK (256/600): pseudorandom_20min_36cs_20pct_2rep
+2026-08-29 05:48:44 | INFO | OK (257/600): pseudorandom_20min_49cs_5pct_3rep
+2026-08-29 05:52:00 | INFO | OK (258/600): pseudorandom_20min_49cs_5pct_4rep
+2026-08-29 06:02:15 | INFO | OK (259/600): pseudorandom_20min_49cs_5pct_5rep
+2026-08-29 06:14:00 | INFO | OK (260/600): pseudorandom_20min_36cs_20pct_1rep
+2026-08-29 06:55:29 | INFO | OK (261/600): pseudorandom_20min_36cs_20pct_3rep
+2026-08-29 07:03:50 | INFO | OK (262/600): pseudorandom_20min_36cs_20pct_4rep
+2026-08-29 08:06:49 | INFO | OK (263/600): pseudorandom_20min_36cs_20pct_5rep
+2026-08-29 09:31:35 | INFO | OK (264/600): pseudorandom_20min_49cs_10pct_1rep
+2026-08-29 09:53:38 | INFO | OK (265/600): pseudorandom_20min_49cs_10pct_2rep
+2026-08-29 10:01:56 | INFO | OK (266/600): pseudorandom_20min_36cs_25pct_1rep
+2026-08-29 10:14:20 | INFO | OK (267/600): pseudorandom_20min_36cs_25pct_2rep
+2026-08-29 10:17:26 | INFO | OK (268/600): pseudorandom_20min_49cs_10pct_3rep
+2026-08-29 10:35:13 | INFO | OK (269/600): pseudorandom_20min_49cs_10pct_5rep
+2026-08-29 10:45:19 | INFO | OK (270/600): pseudorandom_20min_49cs_10pct_4rep
+2026-08-29 11:12:11 | INFO | OK (271/600): pseudorandom_20min_36cs_25pct_4rep
+2026-08-29 11:52:06 | INFO | OK (272/600): pseudorandom_20min_36cs_25pct_5rep
+2026-08-29 11:53:17 | INFO | OK (273/600): pseudorandom_20min_36cs_25pct_3rep
+2026-08-29 12:32:49 | INFO | OK (274/600): pseudorandom_40min_9cs_5pct_1rep
+2026-08-29 13:08:01 | INFO | OK (275/600): pseudorandom_40min_9cs_5pct_2rep
+2026-08-29 13:34:14 | INFO | OK (276/600): pseudorandom_20min_36cs_30pct_2rep
+2026-08-29 13:59:55 | INFO | OK (277/600): pseudorandom_40min_9cs_5pct_3rep
+2026-08-29 14:19:58 | INFO | OK (278/600): pseudorandom_40min_9cs_5pct_4rep
+2026-08-29 14:25:56 | INFO | OK (279/600): pseudorandom_20min_36cs_30pct_1rep
+2026-08-29 14:30:13 | INFO | OK (280/600): pseudorandom_20min_49cs_15pct_1rep
+2026-08-29 14:39:47 | INFO | OK (281/600): pseudorandom_40min_9cs_5pct_5rep
+2026-08-29 14:51:49 | INFO | OK (282/600): pseudorandom_20min_36cs_30pct_4rep
+2026-08-29 15:07:14 | INFO | OK (283/600): pseudorandom_20min_49cs_15pct_2rep
+2026-08-29 15:22:54 | INFO | OK (284/600): pseudorandom_20min_36cs_30pct_3rep
+2026-08-29 15:41:04 | INFO | OK (285/600): pseudorandom_20min_49cs_15pct_4rep
+2026-08-29 15:42:10 | INFO | OK (286/600): pseudorandom_40min_9cs_10pct_2rep
+2026-08-29 15:43:21 | INFO | OK (287/600): pseudorandom_40min_9cs_10pct_1rep
+2026-08-29 15:56:59 | INFO | OK (288/600): pseudorandom_20min_49cs_15pct_3rep
+2026-08-29 16:00:30 | INFO | OK (289/600): pseudorandom_40min_9cs_10pct_3rep
+2026-08-29 16:07:02 | INFO | OK (290/600): pseudorandom_40min_9cs_10pct_4rep
+2026-08-29 16:14:52 | INFO | OK (291/600): pseudorandom_40min_9cs_10pct_5rep
+2026-08-29 16:21:02 | INFO | OK (292/600): pseudorandom_20min_36cs_30pct_5rep
+2026-08-29 16:23:54 | INFO | OK (293/600): pseudorandom_20min_49cs_15pct_5rep
+2026-08-29 17:07:21 | INFO | OK (294/600): pseudorandom_40min_9cs_15pct_1rep
+2026-08-29 17:17:24 | INFO | OK (295/600): pseudorandom_40min_9cs_15pct_2rep
+2026-08-29 17:40:19 | INFO | OK (296/600): pseudorandom_40min_9cs_15pct_4rep
+2026-08-29 17:42:42 | INFO | OK (297/600): pseudorandom_40min_9cs_15pct_5rep
+2026-08-29 18:06:47 | INFO | OK (298/600): pseudorandom_40min_9cs_15pct_3rep
+2026-08-29 18:31:41 | INFO | OK (299/600): pseudorandom_40min_9cs_20pct_1rep
+2026-08-29 18:37:17 | INFO | OK (300/600): pseudorandom_40min_9cs_20pct_2rep
+2026-08-29 19:02:36 | INFO | OK (301/600): pseudorandom_40min_9cs_20pct_4rep
+2026-08-29 19:07:58 | INFO | OK (302/600): pseudorandom_20min_49cs_20pct_2rep
+2026-08-29 19:11:23 | INFO | OK (303/600): pseudorandom_40min_9cs_20pct_5rep
+2026-08-29 19:19:01 | INFO | OK (304/600): pseudorandom_40min_9cs_20pct_3rep
+2026-08-29 19:27:34 | INFO | OK (305/600): pseudorandom_20min_49cs_20pct_1rep
+2026-08-29 19:46:51 | INFO | OK (306/600): pseudorandom_20min_49cs_20pct_3rep
+2026-08-29 19:48:41 | INFO | OK (307/600): pseudorandom_40min_9cs_25pct_1rep
+2026-08-29 20:18:31 | INFO | OK (308/600): pseudorandom_40min_16cs_5pct_1rep
+2026-08-29 20:19:03 | INFO | OK (309/600): pseudorandom_40min_9cs_25pct_2rep
+2026-08-29 20:34:25 | INFO | OK (310/600): pseudorandom_40min_16cs_5pct_2rep
+2026-08-29 20:42:36 | INFO | OK (311/600): pseudorandom_40min_16cs_5pct_3rep
+2026-08-29 20:54:32 | INFO | OK (312/600): pseudorandom_20min_49cs_20pct_4rep
+2026-08-29 20:55:48 | INFO | OK (313/600): pseudorandom_40min_16cs_5pct_5rep
+2026-08-29 20:59:52 | INFO | OK (314/600): pseudorandom_40min_9cs_25pct_4rep
+2026-08-29 21:02:20 | INFO | OK (315/600): pseudorandom_40min_16cs_5pct_4rep
+2026-08-29 21:03:21 | INFO | OK (316/600): pseudorandom_20min_49cs_20pct_5rep
+2026-08-29 21:07:26 | INFO | OK (317/600): pseudorandom_40min_9cs_25pct_3rep
+2026-08-29 21:12:48 | INFO | OK (318/600): pseudorandom_40min_9cs_25pct_5rep
+2026-08-29 22:01:53 | INFO | OK (319/600): pseudorandom_40min_9cs_30pct_1rep
+2026-08-29 22:23:11 | INFO | OK (320/600): pseudorandom_40min_16cs_10pct_1rep
+2026-08-29 22:31:38 | INFO | OK (321/600): pseudorandom_40min_9cs_30pct_2rep
+2026-08-29 22:46:26 | INFO | OK (322/600): pseudorandom_40min_16cs_10pct_2rep
+2026-08-29 23:01:33 | INFO | OK (323/600): pseudorandom_40min_16cs_10pct_3rep
+2026-08-29 23:01:55 | INFO | OK (324/600): pseudorandom_40min_16cs_10pct_4rep
+2026-08-29 23:03:35 | INFO | OK (325/600): pseudorandom_40min_16cs_10pct_5rep
+2026-08-29 23:11:26 | INFO | OK (326/600): pseudorandom_40min_9cs_30pct_4rep
+2026-08-29 23:13:30 | INFO | OK (327/600): pseudorandom_40min_9cs_30pct_5rep
+2026-08-29 23:31:15 | INFO | OK (328/600): pseudorandom_40min_9cs_30pct_3rep
+2026-08-30 00:08:49 | INFO | OK (329/600): pseudorandom_40min_16cs_15pct_1rep
+2026-08-30 00:23:33 | INFO | OK (330/600): pseudorandom_40min_16cs_15pct_5rep
+2026-08-30 00:30:35 | INFO | OK (331/600): pseudorandom_40min_16cs_15pct_3rep
+2026-08-30 00:33:46 | INFO | OK (332/600): pseudorandom_40min_16cs_15pct_4rep
+2026-08-30 00:41:15 | INFO | OK (333/600): pseudorandom_40min_16cs_15pct_2rep
+2026-08-30 00:53:01 | INFO | OK (334/600): pseudorandom_20min_49cs_25pct_1rep
+2026-08-30 01:27:19 | INFO | OK (335/600): pseudorandom_40min_16cs_20pct_1rep
+2026-08-30 02:03:02 | INFO | OK (336/600): pseudorandom_20min_49cs_25pct_2rep
+2026-08-30 02:36:57 | INFO | OK (337/600): pseudorandom_40min_25cs_5pct_1rep
+2026-08-30 02:39:25 | INFO | OK (338/600): pseudorandom_40min_16cs_20pct_3rep
+2026-08-30 02:44:57 | INFO | OK (339/600): pseudorandom_40min_25cs_5pct_2rep
+2026-08-30 02:56:37 | INFO | OK (340/600): pseudorandom_40min_16cs_20pct_2rep
+2026-08-30 03:08:28 | INFO | OK (341/600): pseudorandom_40min_16cs_20pct_5rep
+2026-08-30 03:09:07 | INFO | OK (342/600): pseudorandom_40min_25cs_5pct_3rep
+2026-08-30 03:13:17 | INFO | OK (343/600): pseudorandom_20min_49cs_25pct_5rep
+2026-08-30 03:13:36 | INFO | OK (344/600): pseudorandom_20min_49cs_25pct_3rep
+2026-08-30 03:15:11 | INFO | OK (345/600): pseudorandom_20min_49cs_25pct_4rep
+2026-08-30 03:17:45 | INFO | OK (346/600): pseudorandom_40min_16cs_20pct_4rep
+2026-08-30 04:03:25 | INFO | OK (347/600): pseudorandom_40min_25cs_5pct_4rep
+2026-08-30 04:20:32 | INFO | OK (348/600): pseudorandom_40min_16cs_25pct_1rep
+2026-08-30 04:23:47 | INFO | OK (349/600): pseudorandom_40min_25cs_5pct_5rep
+2026-08-30 04:36:51 | INFO | OK (350/600): pseudorandom_40min_16cs_25pct_3rep
+2026-08-30 04:38:42 | INFO | OK (351/600): pseudorandom_40min_16cs_25pct_5rep
+2026-08-30 05:05:38 | INFO | OK (352/600): pseudorandom_40min_16cs_25pct_4rep
+2026-08-30 05:09:25 | INFO | OK (353/600): pseudorandom_40min_16cs_25pct_2rep
+2026-08-30 06:02:49 | INFO | OK (354/600): pseudorandom_40min_16cs_30pct_1rep
+2026-08-30 06:07:52 | INFO | OK (355/600): pseudorandom_20min_49cs_30pct_2rep
+2026-08-30 06:10:07 | INFO | OK (356/600): pseudorandom_40min_25cs_10pct_3rep
+2026-08-30 06:22:11 | INFO | OK (357/600): pseudorandom_40min_25cs_10pct_2rep
+2026-08-30 06:26:24 | INFO | OK (358/600): pseudorandom_40min_25cs_10pct_1rep
+2026-08-30 06:33:51 | INFO | OK (359/600): pseudorandom_20min_49cs_30pct_1rep
+2026-08-30 06:40:29 | INFO | OK (360/600): pseudorandom_40min_25cs_10pct_5rep
+2026-08-30 06:52:16 | ERROR | FALHOU (361/600): pseudorandom_40min_25cs_10pct_4rep -- FatalTraCIError: connection closed by SUMO
+2026-08-30 06:54:08 | INFO | OK (362/600): pseudorandom_40min_16cs_30pct_5rep
+2026-08-30 06:58:49 | INFO | OK (363/600): pseudorandom_40min_16cs_30pct_3rep
+2026-08-30 07:02:30 | INFO | OK (364/600): pseudorandom_20min_49cs_30pct_3rep
+2026-08-30 07:33:53 | INFO | OK (365/600): pseudorandom_40min_16cs_30pct_2rep
+2026-08-30 07:39:42 | INFO | OK (366/600): pseudorandom_40min_16cs_30pct_4rep
+2026-08-30 08:08:21 | INFO | OK (367/600): pseudorandom_20min_49cs_30pct_5rep
+2026-08-30 08:13:35 | INFO | OK (368/600): pseudorandom_40min_25cs_15pct_3rep
+2026-08-30 08:35:39 | INFO | OK (369/600): pseudorandom_40min_25cs_15pct_2rep
+2026-08-30 08:37:19 | INFO | OK (370/600): pseudorandom_20min_49cs_30pct_4rep
+2026-08-30 08:47:12 | INFO | OK (371/600): pseudorandom_40min_25cs_15pct_1rep
+2026-08-30 09:19:51 | INFO | OK (372/600): pseudorandom_40min_25cs_15pct_4rep
+2026-08-30 09:20:11 | INFO | OK (373/600): pseudorandom_40min_36cs_5pct_2rep
+2026-08-30 09:26:17 | INFO | OK (374/600): pseudorandom_40min_25cs_15pct_5rep
+2026-08-30 09:28:33 | INFO | OK (375/600): pseudorandom_40min_36cs_5pct_1rep
+2026-08-30 09:58:52 | INFO | OK (376/600): pseudorandom_40min_36cs_5pct_3rep
+2026-08-30 10:02:00 | INFO | OK (377/600): pseudorandom_40min_36cs_5pct_4rep
+2026-08-30 10:51:30 | INFO | OK (378/600): pseudorandom_40min_36cs_5pct_5rep
+2026-08-30 11:21:03 | INFO | OK (379/600): pseudorandom_40min_25cs_20pct_3rep
+2026-08-30 11:32:12 | INFO | OK (380/600): pseudorandom_40min_25cs_20pct_2rep
+2026-08-30 12:12:02 | INFO | OK (381/600): pseudorandom_40min_25cs_20pct_1rep
+2026-08-30 12:21:31 | INFO | OK (382/600): pseudorandom_40min_25cs_20pct_4rep
+2026-08-30 12:22:04 | INFO | OK (383/600): pseudorandom_40min_25cs_20pct_5rep
+2026-08-30 12:58:28 | INFO | OK (384/600): pseudorandom_40min_36cs_10pct_1rep
+2026-08-30 13:16:37 | INFO | OK (385/600): pseudorandom_40min_36cs_10pct_2rep
+2026-08-30 13:41:38 | INFO | OK (386/600): pseudorandom_40min_36cs_10pct_4rep
+2026-08-30 13:43:36 | INFO | OK (387/600): pseudorandom_40min_36cs_10pct_3rep
+2026-08-30 14:05:31 | INFO | OK (388/600): pseudorandom_40min_25cs_25pct_3rep
+2026-08-30 14:32:40 | INFO | OK (389/600): pseudorandom_40min_36cs_10pct_5rep
+2026-08-30 14:47:50 | INFO | OK (390/600): pseudorandom_40min_25cs_25pct_2rep
+2026-08-30 14:50:33 | INFO | OK (391/600): pseudorandom_40min_25cs_25pct_1rep
+2026-08-30 15:27:42 | INFO | OK (392/600): pseudorandom_40min_25cs_25pct_5rep
+2026-08-30 15:51:40 | INFO | OK (393/600): pseudorandom_40min_25cs_25pct_4rep
+2026-08-30 16:16:58 | INFO | OK (394/600): pseudorandom_40min_25cs_30pct_3rep
+2026-08-30 16:29:29 | INFO | OK (395/600): pseudorandom_40min_36cs_15pct_2rep
+2026-08-30 16:41:41 | INFO | OK (396/600): pseudorandom_40min_36cs_15pct_1rep
+2026-08-30 16:47:06 | INFO | OK (397/600): pseudorandom_40min_36cs_15pct_4rep
+2026-08-30 17:16:12 | INFO | OK (398/600): pseudorandom_40min_25cs_30pct_2rep
+2026-08-30 17:19:08 | INFO | OK (399/600): pseudorandom_40min_36cs_15pct_3rep
+2026-08-30 17:33:29 | INFO | OK (400/600): pseudorandom_40min_25cs_30pct_5rep
+2026-08-30 17:51:45 | INFO | OK (401/600): pseudorandom_40min_36cs_15pct_5rep
+2026-08-30 17:58:08 | INFO | OK (402/600): pseudorandom_40min_25cs_30pct_1rep
+2026-08-30 18:14:59 | INFO | OK (403/600): pseudorandom_40min_25cs_30pct_4rep
+2026-08-30 19:19:05 | INFO | OK (404/600): pseudorandom_40min_49cs_5pct_1rep
+2026-08-30 19:25:30 | INFO | OK (405/600): pseudorandom_40min_49cs_5pct_2rep
+2026-08-30 19:58:42 | INFO | OK (406/600): pseudorandom_40min_49cs_5pct_3rep
+2026-08-30 20:08:20 | INFO | OK (407/600): pseudorandom_40min_49cs_5pct_4rep
+2026-08-30 20:19:33 | INFO | OK (408/600): pseudorandom_40min_49cs_5pct_5rep
+2026-08-30 20:41:43 | INFO | OK (409/600): pseudorandom_40min_36cs_20pct_1rep
+2026-08-30 20:47:19 | INFO | OK (410/600): pseudorandom_40min_36cs_20pct_2rep
+2026-08-30 21:27:13 | INFO | OK (411/600): pseudorandom_40min_36cs_20pct_3rep
+2026-08-30 21:55:44 | INFO | OK (412/600): pseudorandom_40min_36cs_20pct_4rep
+2026-08-30 22:42:44 | INFO | OK (413/600): pseudorandom_40min_36cs_20pct_5rep
+2026-08-30 23:56:05 | INFO | OK (414/600): pseudorandom_40min_49cs_10pct_2rep
+2026-08-31 00:08:50 | INFO | OK (415/600): pseudorandom_40min_49cs_10pct_1rep
+2026-08-31 00:25:58 | INFO | OK (416/600): pseudorandom_40min_36cs_25pct_2rep
+2026-08-31 00:34:24 | INFO | OK (417/600): pseudorandom_40min_49cs_10pct_3rep
+2026-08-31 00:34:25 | INFO | OK (418/600): pseudorandom_40min_36cs_25pct_1rep
+2026-08-31 00:54:55 | ERROR | FALHOU (419/600): pseudorandom_40min_49cs_10pct_5rep -- FatalTraCIError: connection closed by SUMO
+2026-08-31 00:58:10 | INFO | OK (420/600): pseudorandom_40min_49cs_10pct_4rep
+2026-08-31 01:38:31 | INFO | OK (421/600): pseudorandom_40min_36cs_25pct_3rep
+2026-08-31 01:42:01 | INFO | OK (422/600): pseudorandom_40min_36cs_25pct_4rep
+2026-08-31 02:40:08 | ERROR | FALHOU (423/600): pseudorandom_40min_36cs_25pct_5rep -- FatalTraCIError: connection closed by SUMO
+2026-08-31 03:24:44 | INFO | OK (424/600): pseudorandom_60min_9cs_5pct_1rep
+2026-08-31 04:05:59 | INFO | OK (425/600): pseudorandom_60min_9cs_5pct_2rep
+2026-08-31 04:40:46 | INFO | OK (426/600): pseudorandom_40min_49cs_15pct_1rep
+2026-08-31 04:58:47 | INFO | OK (427/600): pseudorandom_60min_9cs_5pct_3rep
+2026-08-31 05:00:51 | INFO | OK (428/600): pseudorandom_40min_49cs_15pct_2rep
+2026-08-31 05:00:56 | INFO | OK (429/600): pseudorandom_40min_36cs_30pct_1rep
+2026-08-31 05:08:14 | INFO | OK (430/600): pseudorandom_40min_36cs_30pct_2rep
+2026-08-31 05:23:32 | INFO | OK (431/600): pseudorandom_60min_9cs_5pct_4rep
+2026-08-31 05:39:56 | INFO | OK (432/600): pseudorandom_60min_9cs_5pct_5rep
+2026-08-31 05:42:29 | INFO | OK (433/600): pseudorandom_40min_36cs_30pct_4rep
+2026-08-31 05:59:50 | INFO | OK (434/600): pseudorandom_40min_49cs_15pct_3rep
+2026-08-31 06:09:01 | INFO | OK (435/600): pseudorandom_40min_36cs_30pct_3rep
+2026-08-31 06:19:56 | INFO | OK (436/600): pseudorandom_60min_9cs_10pct_2rep
+2026-08-31 06:22:35 | INFO | OK (437/600): pseudorandom_60min_9cs_10pct_1rep
+2026-08-31 06:44:20 | INFO | OK (438/600): pseudorandom_40min_36cs_30pct_5rep
+2026-08-31 06:49:59 | INFO | OK (439/600): pseudorandom_40min_49cs_15pct_4rep
+2026-08-31 06:51:15 | INFO | OK (440/600): pseudorandom_60min_9cs_10pct_4rep
+2026-08-31 06:52:04 | INFO | OK (441/600): pseudorandom_60min_9cs_10pct_3rep
+2026-08-31 06:55:14 | INFO | OK (442/600): pseudorandom_40min_49cs_15pct_5rep
+2026-08-31 07:03:20 | INFO | OK (443/600): pseudorandom_60min_9cs_10pct_5rep
+2026-08-31 07:51:22 | INFO | OK (444/600): pseudorandom_60min_9cs_15pct_1rep
+2026-08-31 07:56:42 | INFO | OK (445/600): pseudorandom_60min_9cs_15pct_2rep
+2026-08-31 08:22:53 | INFO | OK (446/600): pseudorandom_60min_9cs_15pct_5rep
+2026-08-31 08:27:31 | INFO | OK (447/600): pseudorandom_60min_9cs_15pct_4rep
+2026-08-31 08:33:57 | INFO | OK (448/600): pseudorandom_60min_9cs_15pct_3rep
+2026-08-31 09:25:53 | INFO | OK (449/600): pseudorandom_60min_9cs_20pct_2rep
+2026-08-31 09:33:40 | INFO | OK (450/600): pseudorandom_60min_9cs_20pct_1rep
+2026-08-31 09:44:20 | INFO | OK (451/600): pseudorandom_60min_9cs_20pct_4rep
+2026-08-31 09:49:12 | INFO | OK (452/600): pseudorandom_60min_9cs_20pct_5rep
+2026-08-31 10:03:10 | INFO | OK (453/600): pseudorandom_40min_49cs_20pct_1rep
+2026-08-31 10:06:07 | INFO | OK (454/600): pseudorandom_60min_9cs_20pct_3rep
+2026-08-31 10:08:49 | INFO | OK (455/600): pseudorandom_40min_49cs_20pct_2rep
+2026-08-31 10:28:27 | INFO | OK (456/600): pseudorandom_40min_49cs_20pct_3rep
+2026-08-31 10:36:11 | INFO | OK (457/600): pseudorandom_60min_9cs_25pct_1rep
+2026-08-31 11:07:58 | INFO | OK (458/600): pseudorandom_60min_16cs_5pct_1rep
+2026-08-31 11:11:19 | INFO | OK (459/600): pseudorandom_60min_9cs_25pct_2rep
+2026-08-31 11:20:09 | INFO | OK (460/600): pseudorandom_60min_16cs_5pct_3rep
+2026-08-31 11:21:38 | INFO | OK (461/600): pseudorandom_60min_16cs_5pct_2rep
+2026-08-31 11:37:54 | INFO | OK (462/600): pseudorandom_60min_16cs_5pct_4rep
+2026-08-31 11:40:53 | INFO | OK (463/600): pseudorandom_60min_16cs_5pct_5rep
+2026-08-31 11:41:21 | INFO | OK (464/600): pseudorandom_40min_49cs_20pct_5rep
+2026-08-31 11:46:10 | INFO | OK (465/600): pseudorandom_40min_49cs_20pct_4rep
+2026-08-31 11:51:06 | INFO | OK (466/600): pseudorandom_60min_9cs_25pct_4rep
+2026-08-31 12:06:24 | INFO | OK (467/600): pseudorandom_60min_9cs_25pct_3rep
+2026-08-31 12:06:55 | INFO | OK (468/600): pseudorandom_60min_9cs_25pct_5rep
+2026-08-31 12:44:24 | INFO | OK (469/600): pseudorandom_60min_9cs_30pct_1rep
+2026-08-31 13:18:24 | INFO | OK (470/600): pseudorandom_60min_16cs_10pct_1rep
+2026-08-31 13:29:52 | INFO | OK (471/600): pseudorandom_60min_9cs_30pct_2rep
+2026-08-31 13:36:41 | INFO | OK (472/600): pseudorandom_60min_16cs_10pct_4rep
+2026-08-31 13:38:42 | INFO | OK (473/600): pseudorandom_60min_16cs_10pct_2rep
+2026-08-31 13:40:29 | INFO | OK (474/600): pseudorandom_60min_16cs_10pct_3rep
+2026-08-31 13:49:41 | INFO | OK (475/600): pseudorandom_60min_16cs_10pct_5rep
+2026-08-31 13:53:04 | INFO | OK (476/600): pseudorandom_60min_9cs_30pct_4rep
+2026-08-31 14:05:45 | INFO | OK (477/600): pseudorandom_60min_9cs_30pct_5rep
+2026-08-31 14:17:22 | INFO | OK (478/600): pseudorandom_60min_9cs_30pct_3rep
+2026-08-31 14:56:09 | INFO | OK (479/600): pseudorandom_60min_16cs_15pct_1rep
+2026-08-31 15:11:05 | INFO | OK (480/600): pseudorandom_60min_16cs_15pct_3rep
+2026-08-31 15:22:02 | INFO | OK (481/600): pseudorandom_60min_16cs_15pct_4rep
+2026-08-31 15:25:35 | INFO | OK (482/600): pseudorandom_60min_16cs_15pct_2rep
+2026-08-31 15:28:02 | INFO | OK (483/600): pseudorandom_60min_16cs_15pct_5rep
+2026-08-31 15:43:50 | INFO | OK (484/600): pseudorandom_40min_49cs_25pct_1rep
+2026-08-31 16:25:23 | INFO | OK (485/600): pseudorandom_60min_16cs_20pct_1rep
+2026-08-31 16:54:29 | INFO | OK (486/600): pseudorandom_40min_49cs_25pct_2rep
+2026-08-31 17:29:35 | INFO | OK (487/600): pseudorandom_60min_25cs_5pct_1rep
+2026-08-31 17:36:27 | INFO | OK (488/600): pseudorandom_60min_25cs_5pct_2rep
+2026-08-31 17:40:44 | INFO | OK (489/600): pseudorandom_60min_16cs_20pct_2rep
+2026-08-31 17:47:03 | INFO | OK (490/600): pseudorandom_60min_16cs_20pct_3rep
+2026-08-31 17:50:51 | INFO | OK (491/600): pseudorandom_60min_16cs_20pct_5rep
+2026-08-31 17:59:43 | INFO | OK (492/600): pseudorandom_40min_49cs_25pct_3rep
+2026-08-31 18:00:50 | INFO | OK (493/600): pseudorandom_40min_49cs_25pct_5rep
+2026-08-31 18:03:31 | INFO | OK (494/600): pseudorandom_40min_49cs_25pct_4rep
+2026-08-31 18:07:51 | INFO | OK (495/600): pseudorandom_60min_25cs_5pct_3rep
+2026-08-31 18:14:29 | INFO | OK (496/600): pseudorandom_60min_16cs_20pct_4rep
+2026-08-31 18:46:54 | INFO | OK (497/600): pseudorandom_60min_25cs_5pct_4rep
+2026-08-31 18:58:03 | INFO | OK (498/600): pseudorandom_60min_16cs_25pct_1rep
+2026-08-31 19:15:00 | INFO | OK (499/600): pseudorandom_60min_16cs_25pct_3rep
+2026-08-31 19:23:09 | INFO | OK (500/600): pseudorandom_60min_25cs_5pct_5rep
+2026-08-31 19:32:21 | INFO | OK (501/600): pseudorandom_60min_16cs_25pct_5rep
+2026-08-31 19:55:36 | INFO | OK (502/600): pseudorandom_60min_16cs_25pct_2rep
+2026-08-31 19:59:31 | INFO | OK (503/600): pseudorandom_60min_16cs_25pct_4rep
+2026-08-31 20:45:24 | INFO | OK (504/600): pseudorandom_60min_16cs_30pct_1rep
+2026-08-31 20:53:44 | INFO | OK (505/600): pseudorandom_60min_25cs_10pct_3rep
+2026-08-31 21:06:39 | INFO | OK (506/600): pseudorandom_40min_49cs_30pct_2rep
+2026-08-31 21:06:59 | INFO | OK (507/600): pseudorandom_40min_49cs_30pct_1rep
+2026-08-31 21:11:30 | ERROR | FALHOU (508/600): pseudorandom_60min_25cs_10pct_1rep -- FatalTraCIError: connection closed by SUMO
+2026-08-31 21:19:59 | INFO | OK (509/600): pseudorandom_60min_25cs_10pct_2rep
+2026-08-31 21:30:34 | INFO | OK (510/600): pseudorandom_60min_25cs_10pct_5rep
+2026-08-31 21:45:38 | INFO | OK (511/600): pseudorandom_60min_25cs_10pct_4rep
+2026-08-31 21:48:21 | INFO | OK (512/600): pseudorandom_60min_16cs_30pct_5rep
+2026-08-31 22:02:09 | INFO | OK (513/600): pseudorandom_60min_16cs_30pct_3rep
+2026-08-31 22:14:37 | INFO | OK (514/600): pseudorandom_40min_49cs_30pct_3rep
+2026-08-31 22:18:59 | INFO | OK (515/600): pseudorandom_60min_16cs_30pct_4rep
+2026-08-31 22:27:17 | INFO | OK (516/600): pseudorandom_60min_16cs_30pct_2rep
+2026-08-31 22:36:22 | INFO | OK (517/600): pseudorandom_40min_49cs_30pct_4rep
+2026-08-31 22:37:43 | INFO | OK (518/600): pseudorandom_40min_49cs_30pct_5rep
+2026-08-31 23:08:43 | INFO | OK (519/600): pseudorandom_60min_25cs_15pct_3rep
+2026-08-31 23:15:50 | INFO | OK (520/600): pseudorandom_60min_25cs_15pct_2rep
+2026-08-31 23:50:44 | INFO | OK (521/600): pseudorandom_60min_25cs_15pct_1rep
+2026-09-01 00:10:36 | INFO | OK (522/600): pseudorandom_60min_25cs_15pct_4rep
+2026-09-01 00:20:53 | INFO | OK (523/600): pseudorandom_60min_25cs_15pct_5rep
+2026-09-01 00:31:27 | INFO | OK (524/600): pseudorandom_60min_36cs_5pct_2rep
+2026-09-01 00:38:18 | INFO | OK (525/600): pseudorandom_60min_36cs_5pct_1rep
+2026-09-01 00:47:43 | INFO | OK (526/600): pseudorandom_60min_36cs_5pct_3rep
+2026-09-01 01:02:10 | INFO | OK (527/600): pseudorandom_60min_36cs_5pct_4rep
+2026-09-01 01:13:26 | INFO | OK (528/600): pseudorandom_60min_36cs_5pct_5rep
+2026-09-01 02:13:33 | INFO | OK (529/600): pseudorandom_60min_25cs_20pct_3rep
+2026-09-01 02:20:57 | INFO | OK (530/600): pseudorandom_60min_25cs_20pct_2rep
+2026-09-01 02:43:53 | INFO | OK (531/600): pseudorandom_60min_25cs_20pct_1rep
+2026-09-01 02:46:24 | INFO | OK (532/600): pseudorandom_60min_25cs_20pct_5rep
+2026-09-01 03:05:21 | INFO | OK (533/600): pseudorandom_60min_25cs_20pct_4rep
+2026-09-01 03:35:51 | INFO | OK (534/600): pseudorandom_60min_36cs_10pct_1rep
+2026-09-01 03:46:55 | INFO | OK (535/600): pseudorandom_60min_36cs_10pct_2rep
+2026-09-01 04:20:21 | INFO | OK (536/600): pseudorandom_60min_36cs_10pct_3rep
+2026-09-01 04:50:14 | INFO | OK (537/600): pseudorandom_60min_36cs_10pct_4rep
+2026-09-01 05:08:14 | INFO | OK (538/600): pseudorandom_60min_25cs_25pct_3rep
+2026-09-01 05:29:13 | INFO | OK (539/600): pseudorandom_60min_25cs_25pct_2rep
+2026-09-01 05:29:17 | INFO | OK (540/600): pseudorandom_60min_36cs_10pct_5rep
+2026-09-01 05:33:02 | INFO | OK (541/600): pseudorandom_60min_25cs_25pct_1rep
+2026-09-01 05:41:50 | INFO | OK (542/600): pseudorandom_60min_25cs_25pct_5rep
+2026-09-01 06:45:12 | INFO | OK (543/600): pseudorandom_60min_25cs_25pct_4rep
+2026-09-01 07:16:40 | INFO | OK (544/600): pseudorandom_60min_25cs_30pct_3rep
+2026-09-01 07:35:40 | INFO | OK (545/600): pseudorandom_60min_36cs_15pct_2rep
+2026-09-01 07:35:54 | INFO | OK (546/600): pseudorandom_60min_36cs_15pct_1rep
+2026-09-01 07:52:59 | INFO | OK (547/600): pseudorandom_60min_36cs_15pct_4rep
+2026-09-01 08:11:08 | INFO | OK (548/600): pseudorandom_60min_25cs_30pct_2rep
+2026-09-01 08:19:55 | INFO | OK (549/600): pseudorandom_60min_36cs_15pct_3rep
+2026-09-01 08:23:36 | INFO | OK (550/600): pseudorandom_60min_25cs_30pct_1rep
+2026-09-01 08:45:46 | INFO | OK (551/600): pseudorandom_60min_36cs_15pct_5rep
+2026-09-01 08:51:25 | INFO | OK (552/600): pseudorandom_60min_25cs_30pct_5rep
+2026-09-01 09:07:12 | INFO | OK (553/600): pseudorandom_60min_25cs_30pct_4rep
+2026-09-01 10:00:48 | INFO | OK (554/600): pseudorandom_60min_49cs_5pct_1rep
+2026-09-01 10:43:49 | INFO | OK (555/600): pseudorandom_60min_49cs_5pct_2rep
+2026-09-01 11:07:25 | INFO | OK (556/600): pseudorandom_60min_36cs_20pct_1rep
+2026-09-01 11:08:29 | INFO | OK (557/600): pseudorandom_60min_49cs_5pct_4rep
+2026-09-01 11:08:39 | INFO | OK (558/600): pseudorandom_60min_49cs_5pct_3rep
+2026-09-01 11:18:35 | INFO | OK (559/600): pseudorandom_60min_49cs_5pct_5rep
+2026-09-01 11:27:15 | INFO | OK (560/600): pseudorandom_60min_36cs_20pct_2rep
+2026-09-01 12:20:27 | INFO | OK (561/600): pseudorandom_60min_36cs_20pct_3rep
+2026-09-01 12:32:33 | INFO | OK (562/600): pseudorandom_60min_36cs_20pct_4rep
+2026-09-01 12:53:39 | INFO | OK (563/600): pseudorandom_60min_36cs_20pct_5rep
+2026-09-01 14:46:32 | INFO | OK (564/600): pseudorandom_60min_36cs_25pct_2rep
+2026-09-01 14:53:07 | INFO | OK (565/600): pseudorandom_60min_49cs_10pct_1rep
+2026-09-01 15:08:37 | INFO | OK (566/600): pseudorandom_60min_49cs_10pct_3rep
+2026-09-01 15:08:48 | INFO | OK (567/600): pseudorandom_60min_49cs_10pct_2rep
+2026-09-01 15:32:08 | INFO | OK (568/600): pseudorandom_60min_49cs_10pct_4rep
+2026-09-01 15:33:53 | INFO | OK (569/600): pseudorandom_60min_36cs_25pct_1rep
+2026-09-01 16:00:07 | INFO | OK (570/600): pseudorandom_60min_36cs_25pct_3rep
+2026-09-01 16:01:16 | INFO | OK (571/600): pseudorandom_60min_49cs_10pct_5rep
+2026-09-01 16:08:54 | INFO | OK (572/600): pseudorandom_60min_36cs_25pct_4rep
+2026-09-01 17:20:51 | INFO | OK (573/600): pseudorandom_60min_36cs_25pct_5rep
+2026-09-01 18:53:44 | INFO | OK (574/600): pseudorandom_60min_49cs_15pct_1rep
+2026-09-01 19:00:22 | INFO | OK (575/600): pseudorandom_60min_36cs_30pct_2rep
+2026-09-01 19:44:31 | INFO | OK (576/600): pseudorandom_60min_36cs_30pct_1rep
+2026-09-01 19:48:14 | INFO | OK (577/600): pseudorandom_60min_49cs_15pct_2rep
+2026-09-01 19:57:51 | INFO | OK (578/600): pseudorandom_60min_36cs_30pct_4rep
+2026-09-01 20:04:33 | INFO | OK (579/600): pseudorandom_60min_36cs_30pct_3rep
+2026-09-01 20:40:08 | INFO | OK (580/600): pseudorandom_60min_36cs_30pct_5rep
+2026-09-01 20:47:23 | INFO | OK (581/600): pseudorandom_60min_49cs_15pct_3rep
+2026-09-01 20:59:17 | INFO | OK (582/600): pseudorandom_60min_49cs_15pct_4rep
+2026-09-01 20:59:44 | INFO | OK (583/600): pseudorandom_60min_49cs_15pct_5rep
+2026-09-01 22:50:48 | INFO | OK (584/600): pseudorandom_60min_49cs_20pct_2rep
+2026-09-01 23:04:32 | INFO | OK (585/600): pseudorandom_60min_49cs_20pct_1rep
+2026-09-01 23:17:28 | INFO | OK (586/600): pseudorandom_60min_49cs_20pct_3rep
+2026-09-01 23:48:34 | INFO | OK (587/600): pseudorandom_60min_49cs_20pct_4rep
+2026-09-01 23:56:17 | INFO | OK (588/600): pseudorandom_60min_49cs_20pct_5rep
+2026-09-02 01:08:54 | INFO | OK (589/600): pseudorandom_60min_49cs_25pct_1rep
+2026-09-02 01:55:08 | INFO | OK (590/600): pseudorandom_60min_49cs_25pct_2rep
+2026-09-02 02:39:22 | INFO | OK (591/600): pseudorandom_60min_49cs_25pct_5rep
+2026-09-02 02:39:40 | INFO | OK (592/600): pseudorandom_60min_49cs_25pct_4rep
+2026-09-02 02:40:31 | INFO | OK (593/600): pseudorandom_60min_49cs_25pct_3rep
+2026-09-02 03:32:07 | INFO | OK (594/600): pseudorandom_60min_49cs_30pct_2rep
+2026-09-02 03:55:28 | INFO | OK (595/600): pseudorandom_60min_49cs_30pct_1rep
+2026-09-02 04:05:26 | INFO | OK (596/600): pseudorandom_60min_49cs_30pct_5rep
+2026-09-02 04:08:39 | INFO | OK (597/600): pseudorandom_60min_49cs_30pct_3rep
+2026-09-02 04:11:58 | INFO | OK (598/600): pseudorandom_60min_49cs_30pct_4rep
+2026-09-07 14:08:32 | ERROR | FALHOU (599/600): pseudorandom_10min_25cs_25pct_2rep -- FatalTraCIError: connection closed by SUMO
+2026-09-07 14:08:32 | ERROR | FALHOU (600/600): pseudorandom_20min_25cs_20pct_2rep -- FatalTraCIError: connection closed by SUMO
+2026-09-07 14:08:32 | INFO | === retry 1/3: 6 job(s) falharam, tentando de novo com 14 workers ===
+2026-09-07 15:21:53 | INFO | OK (1/6): pseudorandom_60min_25cs_10pct_1rep
+2026-09-07 15:22:58 | INFO | OK (2/6): pseudorandom_40min_25cs_10pct_4rep
+2026-09-07 16:16:24 | INFO | OK (3/6): pseudorandom_40min_49cs_10pct_5rep
+2026-09-07 17:43:06 | INFO | OK (4/6): pseudorandom_40min_36cs_25pct_5rep
