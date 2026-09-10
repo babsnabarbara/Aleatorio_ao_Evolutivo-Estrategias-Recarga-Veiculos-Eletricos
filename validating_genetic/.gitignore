@@ -1,7 +1,7 @@
-worker_*.out
 logs/
 checkpoints/
 __pycache__/
 *.pyc
+worker_*.out
 input/
 tarefas_completas.json
