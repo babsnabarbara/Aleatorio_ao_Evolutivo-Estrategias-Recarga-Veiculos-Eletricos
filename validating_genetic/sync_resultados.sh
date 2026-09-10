@@ -2,12 +2,11 @@
 # sync_resultados.sh
 #
 # Roda em background em CADA servidor, junto com o worker. A cada
-# INTERVALO_SEGUNDOS, adiciona os resultados novos em resultados/,
-# commita e envia pro repositório remoto. Como os ids de tarefa nunca
-# se repetem entre servidores, isso nunca gera conflito de merge —
-# na pior hipótese, um "git pull --rebase" resolve um push rejeitado
-# por não ser fast-forward (outro servidor commitou entre seu pull e
-# seu push).
+# INTERVALO_SEGUNDOS:
+#   1) Puxa (git pull) o que os outros servidores já enviaram -- assim a
+#      pasta resultados/ local sempre reflete o progresso de TODOS os
+#      servidores, não só deste.
+#   2) Se tiver resultado novo aqui, commita e envia (git push).
 #
 # USO:
 #   chmod +x sync_resultados.sh
@@ -20,6 +19,11 @@ INTERVALO_SEGUNDOS=300   # a cada 5 minutos
 while true; do
     sleep "$INTERVALO_SEGUNDOS"
 
+    if ! git pull --rebase --quiet; then
+        echo "[$(date)] git pull falhou (provavelmente edição local pendente em outro arquivo rastreado). Verifique manualmente." >&2
+        continue
+    fi
+
     if [ -z "$(git status --porcelain resultados/ 2>/dev/null)" ]; then
         continue   # nada novo desde o último sync
     fi
@@ -28,10 +32,8 @@ while true; do
     git commit -m "resultados servidor ${SERVIDOR_ID} — $(date '+%Y-%m-%d %H:%M:%S')" \
         --quiet
 
-    # Tenta enviar; se o remoto tiver commits novos de outro servidor,
-    # faz rebase e tenta de novo (poucas tentativas, pra não travar
-    # rodando pra sempre num loop de erro real).
     tentativas=0
+    sucesso=0
     until git push --quiet; do
         tentativas=$((tentativas + 1))
         if [ "$tentativas" -ge 5 ]; then
@@ -41,5 +43,7 @@ while true; do
         git pull --rebase --quiet
     done
 
-    echo "[$(date)] Resultados sincronizados (servidor ${SERVIDOR_ID})."
+    if [ "$tentativas" -lt 5 ]; then
+        echo "[$(date)] Resultados sincronizados (servidor ${SERVIDOR_ID})."
+    fi
 done
