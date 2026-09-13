@@ -6,3 +6,4 @@ worker_*.out
 input/
 tarefas_completas.json
 sync_*.out
+sync_*.out
