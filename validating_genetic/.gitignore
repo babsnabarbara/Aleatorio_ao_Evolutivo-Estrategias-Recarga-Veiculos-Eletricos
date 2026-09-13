@@ -5,3 +5,4 @@ __pycache__/
 worker_*.out
 input/
 tarefas_completas.json
+sync_*.out
