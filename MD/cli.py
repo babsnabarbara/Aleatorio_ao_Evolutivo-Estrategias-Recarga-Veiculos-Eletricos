@@ -248,19 +248,29 @@ def _init_worker() -> None:
     _worker_graph = graph_utils.default_graph()
 
 
-def _run_job_in_worker(manifest_path_str: str, sumo_command: str) -> tuple[str, str | None]:
+def _run_job_in_worker(manifest_path_str: str, sumo_command: str,
+                        max_sim_hours: float | None) -> tuple[str, str | None]:
     """Roda dentro do processo worker. Devolve (manifest_id, erro_ou_None)
     -- nunca deixa a exceção vazar pro ProcessPoolExecutor, pra um job com
-    problema não derrubar o resto do lote."""
+    problema não derrubar o resto do lote.
+
+    `max_sim_hours` repassado pra simulation.run_simulation -- FIX: sem
+    isso, um job com um veículo genuinamente preso (ver
+    config.DEFAULT_MAX_SIMULATION_HOURS) roda pra sempre e nunca chega a
+    devolver nada aqui, travando o worker (e exigindo kill -9 manual).
+    Com o timeout, esse caso vira um erro comum, tratado pelo retry
+    automático abaixo como qualquer outro crash do SUMO."""
     job = SimJob.from_manifest(Path(manifest_path_str))
     try:
-        simulation.run_simulation(job, graph=_worker_graph, sumo_command=sumo_command)
+        simulation.run_simulation(job, graph=_worker_graph, sumo_command=sumo_command,
+                                   max_hours=max_sim_hours)
         return job.manifest_id, None
     except Exception as exc:  # noqa: BLE001 -- queremos capturar qualquer falha do SUMO
         return job.manifest_id, f"{type(exc).__name__}: {exc}"
 
 
-def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
+def run_combo(jobs: list[SimJob], workers: int, sumo_command: str,
+              max_sim_hours: float | None = None) -> list[str]:
     """Roda uma lista de jobs em paralelo (pode ser de uma combinação só,
     ou do grid inteiro -- ver batch()). Devolve a lista de manifest_ids
     que FALHARAM (vazia se tudo deu certo)."""
@@ -272,7 +282,7 @@ def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
 
     with ProcessPoolExecutor(max_workers=workers, initializer=_init_worker) as pool:
         futures = {
-            pool.submit(_run_job_in_worker, path, sumo_command): path
+            pool.submit(_run_job_in_worker, path, sumo_command, max_sim_hours): path
             for path in manifest_paths
         }
         for future in as_completed(futures):
@@ -286,13 +296,31 @@ def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
     return failed
 
 
+def _is_successfully_completed(job: SimJob) -> bool:
+    """True se já existe um REPORT de SUCESSO ('FIM DA SIMULAÇÃO') para
+    este job -- usado por batch() para pular jobs já concluídos numa
+    reexecução, em vez de refazer o grid inteiro do zero (job.report_file
+    é sempre o MESMO caminho fixo, sobrescrito a cada tentativa -- ver
+    simulation.py::_write_report -- então checar seu conteúdo reflete
+    sempre o resultado da tentativa mais recente)."""
+    report_file = job.report_file
+    if not report_file.exists():
+        return False
+    try:
+        content = report_file.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return False
+    return "FIM DA SIMULAÇÃO" in content
+
+
 # ---------------------------------------------------------------------------
 # Modo batch -- grid inteiro
 # ---------------------------------------------------------------------------
 def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs: int,
           sumo_command: str, routing_threads: int | None,
           minutes_list=None, cs_list=None, percentages_list=None,
-          repetitions_list=None) -> None:
+          repetitions_list=None, max_sim_hours: float | None = None,
+          force_rerun_all: bool = False) -> None:
     minutes_values = minutes_list or config.MINUTES_RECHARGING
     cs_values = cs_list or config.STATIONS_AMOUNTS
     percentage_values = percentages_list or config.PERCENTAGES
@@ -336,15 +364,37 @@ def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs
                     )
                     all_jobs.extend(jobs)
 
-        resolved_workers = workers if workers is not None else _auto_workers(len(all_jobs))
-        log.info(
-            f"{len(all_jobs)} job(s) gerados, rodando com {resolved_workers} "
-            f"workers em paralelo "
-            f"({'auto-detectado por CPU+RAM' if workers is None else 'fixo via --workers'})"
-        )
-
         jobs_by_manifest_id = {job.manifest_id: job for job in all_jobs}
-        all_failed = run_combo(all_jobs, workers=resolved_workers, sumo_command=sumo_command)
+
+        # FIX: reexecutar `batch` não deve repetir jobs que já têm REPORT
+        # de sucesso -- antes disso, rodar `batch` de novo sempre refazia
+        # o grid inteiro (inclusive jobs concluídos há dias), caro demais
+        # pra usar como forma de "só terminar o que falta" depois de matar
+        # um processo travado manualmente. --force-rerun-all restaura o
+        # comportamento antigo (roda tudo, mesmo já concluído).
+        if force_rerun_all:
+            pending_jobs = all_jobs
+        else:
+            pending_jobs = [job for job in all_jobs if not _is_successfully_completed(job)]
+            n_skipped = len(all_jobs) - len(pending_jobs)
+            if n_skipped:
+                log.info(
+                    f"{n_skipped} job(s) já têm relatório de sucesso -- "
+                    f"pulando (use --force-rerun-all pra ignorar isso)"
+                )
+
+        if not pending_jobs:
+            log.info("Nada a fazer -- todos os jobs do grid já têm relatório de sucesso.")
+            all_failed: list[str] = []
+        else:
+            resolved_workers = workers if workers is not None else _auto_workers(len(pending_jobs))
+            log.info(
+                f"{len(pending_jobs)} job(s) pendentes, rodando com "
+                f"{resolved_workers} workers em paralelo "
+                f"({'auto-detectado por CPU+RAM' if workers is None else 'fixo via --workers'})"
+            )
+            all_failed = run_combo(pending_jobs, workers=resolved_workers, sumo_command=sumo_command,
+                                    max_sim_hours=max_sim_hours)
 
         # FIX: retry automático com paralelismo reduzido -- alguns crashes
         # (ex: "malloc_consolidate" do SUMO sob concorrência excessiva) não
@@ -364,7 +414,8 @@ def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs
                 f"falharam, tentando de novo com {retry_workers} workers ==="
             )
             retry_jobs = [jobs_by_manifest_id[mid] for mid in all_failed]
-            all_failed = run_combo(retry_jobs, workers=retry_workers, sumo_command=sumo_command)
+            all_failed = run_combo(retry_jobs, workers=retry_workers, sumo_command=sumo_command,
+                                    max_sim_hours=max_sim_hours)
             attempt += 1
 
         if all_failed:
@@ -421,7 +472,7 @@ def run_single(args: argparse.Namespace) -> None:
     else:
         log.info(f"--skip-generation: reaproveitando arquivos já gerados de {job.manifest_id}")
 
-    simulation.run_simulation(job, sumo_command=args.sumo_command)
+    simulation.run_simulation(job, sumo_command=args.sumo_command, max_hours=args.max_sim_hours)
     log.info(f"OK: {job.manifest_id}")
 
 
@@ -465,6 +516,21 @@ def _build_parser() -> argparse.ArgumentParser:
     p_batch.add_argument("--routing-threads", type=int, default=None,
                           help="Sobrescreve config.ROUTING_THREADS (ajuste fino para "
                                "quando várias simulações rodam ao mesmo tempo)")
+    p_batch.add_argument(
+        "--max-sim-hours", type=float, default=config.DEFAULT_MAX_SIMULATION_HOURS,
+        help="Timeout de segurança por simulação, em horas (default: "
+             f"{config.DEFAULT_MAX_SIMULATION_HOURS}h). Um job que passar "
+             "disso é abortado e tratado como falha comum (entra no retry "
+             "automático) em vez de rodar indefinidamente -- ver "
+             "config.DEFAULT_MAX_SIMULATION_HOURS.",
+    )
+
+    p_batch.add_argument(
+        "--force-rerun-all", action="store_true",
+        help="Ignora relatórios de sucesso já existentes e roda o grid "
+             "inteiro de novo, mesmo jobs já concluídos (comportamento "
+             "antigo do batch, antes do skip automático).",
+    )
 
     p_run = sub.add_parser("run", help="Roda (ou reroda) UMA simulação específica")
     p_run.add_argument("--from-manifest", type=str, default=None)
@@ -480,6 +546,12 @@ def _build_parser() -> argparse.ArgumentParser:
     p_run.add_argument("--skip-generation", action="store_true",
                         help="Não regera .cfg/.add/.trips se já existirem -- só roda o SUMO")
     p_run.add_argument("--sumo-command", default="sumo")
+    p_run.add_argument(
+        "--max-sim-hours", type=float, default=config.DEFAULT_MAX_SIMULATION_HOURS,
+        help="Timeout de segurança pra essa simulação, em horas (default: "
+             f"{config.DEFAULT_MAX_SIMULATION_HOURS}h) -- ver "
+             "config.DEFAULT_MAX_SIMULATION_HOURS.",
+    )
 
     return parser
 
@@ -492,7 +564,8 @@ def main() -> None:
         batch(args.approach, args.workers, args.vehicles, args.max_vehicles_per_cs,
               args.sumo_command, args.routing_threads,
               minutes_list=args.minutes_list, cs_list=args.cs_list,
-              percentages_list=args.percentages_list, repetitions_list=args.repetitions_list)
+              percentages_list=args.percentages_list, repetitions_list=args.repetitions_list,
+              max_sim_hours=args.max_sim_hours, force_rerun_all=args.force_rerun_all)
     elif args.mode == "run":
         if not args.from_manifest and not all(
             v is not None for v in (args.approach, args.minutes, args.cs, args.percentage, args.repetition)
