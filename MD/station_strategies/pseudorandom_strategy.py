@@ -33,6 +33,20 @@ candidato -- resquício de quando essa checagem servia pra validar um ciclo
 entre as 3 (removido numa limpeza anterior). Sortear 1 lane direto por vez
 é mais rápido (menos sorteios desperdiçados quando alguma das 3 falha à
 toa) sem mudar qual candidato acaba sendo aceito.
+
+FIX (2026-09-19): o componente gigante (default_giant_graph) é construído
+no nível de EDGE, ignorando de qual LANE cada <connection> parte -- um edge
+com 2 lanes, onde só uma delas tem conexão de saída, aparece inteiro como
+"conectado", e a lane sem nenhuma conexão própria passava despercebida por
+"lane[:-2] not in graph" (que só confere o edge, não a lane específica).
+Isso deixou uma estação ser colocada numa lane SEM NENHUMA conexão de
+saída (lane 96049309#0_0, seed 4/9cs) -- qualquer veículo que fosse
+recarregar ali ficava preso para sempre, sem conseguir seguir viagem,
+travando a simulação num loop infinito de "emergency stop" (2026-09-19,
+pseudorandom rep4/9cs, 5 combinações). Agora, além de pertencer ao
+componente gigante pelo edge, a lane candidata também precisa estar em
+graph_utils.lanes_with_outgoing_connection() -- ou seja, ser ela mesma a
+origem de pelo menos uma <connection> no net.xml.
 """
 from __future__ import annotations
 
@@ -42,6 +56,7 @@ import xml.etree.ElementTree as ET
 import networkx as nx
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 
@@ -60,6 +75,7 @@ def _quadrants_for(cs_amount: int) -> list:
 
 def _build(cs_amount: int, graph: nx.DiGraph) -> set:
     quadrants = _quadrants_for(cs_amount)
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     chosen: set = set()
     max_attempts_per_quadrant = 5000
@@ -77,6 +93,8 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
             # lane[:-2] converte lane id -> edge id (remove o sufixo "_0")
             if lane[:-2] not in graph:
                 continue
+            if lane not in connected_lanes:
+                continue  # lane sem conexão de saída própria -- veículo ficaria preso
             if lane in chosen:
                 continue
             chosen.add(lane)
