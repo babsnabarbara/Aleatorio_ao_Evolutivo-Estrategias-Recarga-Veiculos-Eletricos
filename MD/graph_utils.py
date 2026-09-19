@@ -138,6 +138,29 @@ def lanes_with_outgoing_connection(netfile: Path | str = None) -> frozenset:
 
 
 @lru_cache(maxsize=1)
+def edge_to_lanes(netfile: Path | str = None) -> dict[str, tuple[str, ...]]:
+    """
+    Mapeia cada EDGE id pra tupla ordenada dos ids de LANE que pertencem a
+    ele (na ordem em que aparecem no net.xml -- tipicamente índice 0, 1,
+    2...). Necessário pro approach 'genetic', que recebe apenas edge ids de
+    um algoritmo externo (o GA opera no nível de rua/edge, não de lane
+    específica) e precisa escolher UMA lane concreta desse edge pra virar
+    estação -- ver docstring de genetic_strategy.py.
+    """
+    netfile = Path(netfile) if netfile else config.NET_FILE
+    with open(netfile) as f:
+        data = f.read()
+    soup = BeautifulSoup(data, "xml")
+    result: dict[str, tuple[str, ...]] = {}
+    for edge_tag in soup.find_all("edge"):
+        edge_id = edge_tag["id"]
+        lane_ids = tuple(lane_tag["id"] for lane_tag in edge_tag.find_all("lane"))
+        if lane_ids:
+            result[edge_id] = lane_ids
+    return result
+
+
+@lru_cache(maxsize=1)
 def lane_lengths(netfile: Path | str = None) -> dict:
     """
     Comprimento de cada LANE (não edge) do net.xml, indexado pelo id da
