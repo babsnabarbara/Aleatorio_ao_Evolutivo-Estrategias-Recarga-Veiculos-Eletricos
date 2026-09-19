@@ -42,6 +42,26 @@ em y), não uma noção nova de "central". Um quadrante só continua sem
 estação se não tiver NENHUMA lane elegível (nem visitada, nem qualquer
 outra) -- caso bem mais raro que antes.
 
+<<<<<<< HEAD
+=======
+FIX (2026-09-19): tanto o loop principal (lanes mais visitadas) quanto o
+fallback geométrico só conferiam "lane_id[:-2] not in graph" -- isto é, se
+o EDGE da lane pertence ao componente gigante -- sem nunca checar se a
+LANE especificamente escolhida tem alguma <connection> de saída própria.
+Isso é o mesmo bug já corrigido em graph_utils.py/pseudorandom_strategy.py:
+um edge com 2+ lanes pode estar bem conectado ao resto do mapa via UMA
+lane, enquanto outra lane do mesmo edge não tem nenhuma conexão de saída
+-- uma estação posicionada ali prende pra sempre qualquer veículo que for
+recarregar. O fallback geométrico era o ponto mais exposto: ele considera
+TODAS as lanes do quadrante (não só as visitadas), então tinha mais chance
+de cair numa lane sem saída -- inclusive podendo escolher uma lane
+"perfeitamente central" (distância 0 do centroide) só pra descobrir, na
+simulação, que ela é um beco sem saída. Agora as duas checagens também
+exigem lane_id in graph_utils.lanes_with_outgoing_connection() -- mesmo
+filtro adicional usado no pseudorandom, sem mudar o critério de "mais
+central" em si, só reduzindo o pool de candidatas elegíveis.
+
+>>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
 As funções de coordenada (_conv_boundary/_lanes_and_coordinates) são
 intencionalmente duplicadas de greedy_voronoi_strategy.py (que já precisava
 da mesma informação pro diagrama de Voronoi) em vez de compartilhadas via
@@ -59,6 +79,7 @@ from functools import lru_cache
 import networkx as nx
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 
@@ -158,7 +179,13 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
     Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
     associa à primeira quadrante ainda vazia que a contém E cujo edge
+<<<<<<< HEAD
     pertença ao componente gigante do mapa.
+=======
+    pertença ao componente gigante do mapa E que ela mesma tenha uma
+    <connection> de saída própria (ver FIX 2026-09-19 no docstring do
+    módulo).
+>>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
 
     FALLBACK: quadrantes que sobram vazios depois dessa fase (nenhuma lane
     visitada elegível caiu neles) recebem a lane geograficamente mais
@@ -176,6 +203,7 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
 
     quadrants = _quadrants_lanes(job.cs_amount)
     most_visited = _most_visited_lanes()  # já ordenado por count decrescente
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     quadrant_filled = [False] * len(quadrants)
     chosen: set[str] = set()
@@ -188,6 +216,8 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
         # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
         if lane_id[:-2] not in graph:
             continue
+        if lane_id not in connected_lanes:
+            continue  # lane sem conexão de saída própria -- veículo ficaria preso
 
         for idx, (_x, _y, lanes) in enumerate(quadrants):
             if quadrant_filled[idx]:
@@ -217,6 +247,11 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
                 continue
             if lane_id[:-2] not in graph:
                 continue
+<<<<<<< HEAD
+=======
+            if lane_id not in connected_lanes:
+                continue  # idem -- não deixa o fallback escolher um beco sem saída
+>>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
             coords = lanes_and_coords.get(lane_id)
             if not coords:
                 continue
