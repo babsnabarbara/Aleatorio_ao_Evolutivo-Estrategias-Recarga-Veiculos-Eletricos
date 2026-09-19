@@ -24,6 +24,39 @@ mesmo local de arquivo que random/pseudorandom usam para os estágios --
 aqui cada arquivo é independente, não uma cadeia) para não recalcular o
 mesmo diagrama para cada combinação de percentage/minutes que passar por
 aqui.
+
+FIX: fallback geométrico para regiões de Voronoi sem nenhuma lane visitada
+elegível. Antes, essas regiões ficavam permanentemente sem estação (mesma
+decisão tomada em greedy_strategy.py, documentada ali e aqui). Agora, cada
+região que sobra vazia depois da fase por visitação recebe a lane mais
+próxima do PRÓPRIO NÚCLEO da região -- ou seja, o ponto (x, y) sorteado por
+np.random.uniform que deu origem àquela região do diagrama de Voronoi. Não
+é uma escolha arbitrária de "centro": por definição de um diagrama de
+Voronoi, uma região é exatamente o conjunto de pontos mais próximos do seu
+núcleo do que de qualquer outro -- o núcleo já É o centro geométrico exato
+da região, sem precisar calcular nada a mais (ao contrário do 'greedy', que
+precisou calcular o centroide do quadrante na mão). Entre TODAS as lanes do
+mapa (não só as visitadas) que são elegíveis (componente gigante, ainda não
+escolhidas) e cujo ponto mais próximo entre os `cs_amount` núcleos é o
+núcleo dessa região, escolhe a mais próxima desse núcleo. Uma região só
+continua sem estação se não tiver NENHUMA lane elegível nessas condições
+(caso bem mais raro que antes).
+
+FIX (2026-09-19): tanto o loop principal quanto o fallback só conferiam
+"lane_id[:-2] not in graph" -- se o EDGE da lane pertence ao componente
+gigante -- sem nunca checar se a LANE especificamente escolhida tem alguma
+<connection> de saída própria. Mesmo bug já corrigido em
+graph_utils.py/pseudorandom_strategy.py/greedy_strategy.py: um edge com 2+
+lanes pode estar bem conectado ao resto do mapa via UMA lane, enquanto
+outra lane do mesmo edge não tem nenhuma conexão de saída -- uma estação
+ali prende pra sempre qualquer veículo que for recarregar. O fallback aqui
+era o ponto mais exposto: escolhe a lane mais próxima do NÚCLEO da região
+entre TODAS as lanes do mapa, e o núcleo é um ponto sorteado livremente
+(np.random.uniform) que pode cair bem perto -- ou até coincidir -- com uma
+lane sem saída nenhuma. Agora as duas checagens também exigem lane_id in
+graph_utils.lanes_with_outgoing_connection(), sem mudar o critério de
+"mais próxima do núcleo" em si, só reduzindo o pool de candidatas
+elegíveis -- mesmo padrão usado nos outros approaches.
 """
 from __future__ import annotations
 
@@ -38,6 +71,7 @@ import numpy as np
 from scipy.spatial import Voronoi
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 from station_strategies.greedy_strategy import _most_visited_lanes
@@ -66,6 +100,15 @@ def _lanes_and_coordinates():
                 points.append((float(x_str), float(y_str)))
             lanes[lane.attrib["id"]] = points
     return lanes
+
+
+def _lane_centroid(points: list[tuple[float, float]]) -> tuple[float, float]:
+    """Ponto representativo de uma lane -- média dos pontos do seu shape.
+    Usado só pelo fallback (a fase principal usa _find_regions, que olha
+    todos os pontos do shape, não um único representante)."""
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
+    return sum(xs) / len(xs), sum(ys) / len(ys)
 
 
 def _find_regions(coords, vor: Voronoi) -> set:
@@ -121,6 +164,7 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
 
     most_visited = _most_visited_lanes()
     lanes_and_coords = _lanes_and_coordinates()
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     region_filled = {region: False for region in vor.point_region}
     chosen: set = set()
@@ -133,6 +177,8 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
         # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
         if lane_id[:-2] not in graph:
             continue
+        if lane_id not in connected_lanes:
+            continue  # lane sem conexão de saída própria -- veículo ficaria preso
         touched = _find_regions(lanes_and_coords[lane_id], vor)
         for region in touched:
             if not region_filled.get(region, True):
@@ -140,22 +186,55 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
                 chosen.add(lane_id)
                 break
 
+    # Fallback: regiões que sobraram vazias recebem a lane mais próxima do
+    # PRÓPRIO NÚCLEO da região -- ver docstring do módulo. Percorre TODAS
+    # as lanes do mapa (não só as mais visitadas), já que uma região vazia
+    # por definição não tem nenhuma lane visitada elegível dentro dela.
+    empty_regions = {region for region, filled in region_filled.items() if not filled}
+    if empty_regions:
+        best_by_region: dict[int, tuple[float, str]] = {}
+        for lane_id, coords in lanes_and_coords.items():
+            if lane_id in chosen:
+                continue
+            if lane_id[:-2] not in graph:
+                continue
+            if lane_id not in connected_lanes:
+                continue  # idem -- não deixa o fallback escolher um beco sem saída
+            lane_point = np.array(_lane_centroid(coords))
+            distances = np.linalg.norm(vor.points - lane_point, axis=1)
+            nearest_point_idx = int(np.argmin(distances))
+            region = vor.point_region[nearest_point_idx]
+            if region not in empty_regions:
+                continue
+            distance = float(distances[nearest_point_idx])
+            current_best = best_by_region.get(region)
+            if current_best is None or distance < current_best[0]:
+                best_by_region[region] = (distance, lane_id)
+
+        for region, (_distance, lane_id) in best_by_region.items():
+            region_filled[region] = True
+            chosen.add(lane_id)
+
     ok = len(chosen) >= cs_amount
     return chosen, points, vor, ok
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     """
-    Se sobrarem regiões sem nenhuma lane visitada elegível tocando nelas, o
-    resultado pode ter menos de `cs_amount` estações -- não é erro (mesma
-    decisão aplicada ao approach 'greedy'). O `FLAGARCHIVE-*.txt` continua
-    registrando "deu certo"/"não deu certo" como diagnóstico, só não trava
-    mais a execução.
+    FALLBACK: regiões que sobram vazias depois da fase por visitação
+    recebem a lane mais próxima do núcleo da própria região -- ver
+    docstring do módulo. Uma região só continua sem estação se não tiver
+    NENHUMA lane elegível (visitada ou não), caso bem mais raro que antes.
+    O `FLAGARCHIVE-*.txt` continua registrando "deu certo"/"não deu certo"
+    como diagnóstico com base em `len(chosen) >= cs_amount`.
 
     FIX: agora também exige que a lane pertença ao componente gigante do
     mapa (o `graph` recebido já vem restrito a esse componente -- ver
     cli.py/graph_utils.default_giant_graph), mesmo padrão unificado nos 5
     approaches.
+
+    FIX (2026-09-19): e que a lane tenha conexão de saída própria -- ver
+    docstring do módulo.
 
     NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
     cada estação é calculada depois, na hora de gerar o .add.xml (ver
