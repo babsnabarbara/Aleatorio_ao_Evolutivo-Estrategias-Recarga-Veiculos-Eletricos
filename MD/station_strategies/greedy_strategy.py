@@ -42,8 +42,6 @@ em y), não uma noção nova de "central". Um quadrante só continua sem
 estação se não tiver NENHUMA lane elegível (nem visitada, nem qualquer
 outra) -- caso bem mais raro que antes.
 
-<<<<<<< HEAD
-=======
 FIX (2026-09-19): tanto o loop principal (lanes mais visitadas) quanto o
 fallback geométrico só conferiam "lane_id[:-2] not in graph" -- isto é, se
 o EDGE da lane pertence ao componente gigante -- sem nunca checar se a
@@ -61,7 +59,6 @@ exigem lane_id in graph_utils.lanes_with_outgoing_connection() -- mesmo
 filtro adicional usado no pseudorandom, sem mudar o critério de "mais
 central" em si, só reduzindo o pool de candidatas elegíveis.
 
->>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
 As funções de coordenada (_conv_boundary/_lanes_and_coordinates) são
 intencionalmente duplicadas de greedy_voronoi_strategy.py (que já precisava
 da mesma informação pro diagrama de Voronoi) em vez de compartilhadas via
@@ -179,13 +176,9 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
     Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
     associa à primeira quadrante ainda vazia que a contém E cujo edge
-<<<<<<< HEAD
-    pertença ao componente gigante do mapa.
-=======
     pertença ao componente gigante do mapa E que ela mesma tenha uma
     <connection> de saída própria (ver FIX 2026-09-19 no docstring do
     módulo).
->>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
 
     FALLBACK: quadrantes que sobram vazios depois dessa fase (nenhuma lane
     visitada elegível caiu neles) recebem a lane geograficamente mais
@@ -247,11 +240,8 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
                 continue
             if lane_id[:-2] not in graph:
                 continue
-<<<<<<< HEAD
-=======
             if lane_id not in connected_lanes:
                 continue  # idem -- não deixa o fallback escolher um beco sem saída
->>>>>>> 46528952 (greedy: usa lanes_with_outgoing_connection() como filtro adicional (loop principal + fallback))
             coords = lanes_and_coords.get(lane_id)
             if not coords:
                 continue
