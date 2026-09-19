@@ -41,6 +41,22 @@ escolhidas) e cujo ponto mais próximo entre os `cs_amount` núcleos é o
 núcleo dessa região, escolhe a mais próxima desse núcleo. Uma região só
 continua sem estação se não tiver NENHUMA lane elegível nessas condições
 (caso bem mais raro que antes).
+
+FIX (2026-09-19): tanto o loop principal quanto o fallback só conferiam
+"lane_id[:-2] not in graph" -- se o EDGE da lane pertence ao componente
+gigante -- sem nunca checar se a LANE especificamente escolhida tem alguma
+<connection> de saída própria. Mesmo bug já corrigido em
+graph_utils.py/pseudorandom_strategy.py/greedy_strategy.py: um edge com 2+
+lanes pode estar bem conectado ao resto do mapa via UMA lane, enquanto
+outra lane do mesmo edge não tem nenhuma conexão de saída -- uma estação
+ali prende pra sempre qualquer veículo que for recarregar. O fallback aqui
+era o ponto mais exposto: escolhe a lane mais próxima do NÚCLEO da região
+entre TODAS as lanes do mapa, e o núcleo é um ponto sorteado livremente
+(np.random.uniform) que pode cair bem perto -- ou até coincidir -- com uma
+lane sem saída nenhuma. Agora as duas checagens também exigem lane_id in
+graph_utils.lanes_with_outgoing_connection(), sem mudar o critério de
+"mais próxima do núcleo" em si, só reduzindo o pool de candidatas
+elegíveis -- mesmo padrão usado nos outros approaches.
 """
 from __future__ import annotations
 
@@ -55,6 +71,7 @@ import numpy as np
 from scipy.spatial import Voronoi
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 from station_strategies.greedy_strategy import _most_visited_lanes
@@ -147,6 +164,7 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
 
     most_visited = _most_visited_lanes()
     lanes_and_coords = _lanes_and_coordinates()
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     region_filled = {region: False for region in vor.point_region}
     chosen: set = set()
@@ -159,6 +177,8 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
         # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
         if lane_id[:-2] not in graph:
             continue
+        if lane_id not in connected_lanes:
+            continue  # lane sem conexão de saída própria -- veículo ficaria preso
         touched = _find_regions(lanes_and_coords[lane_id], vor)
         for region in touched:
             if not region_filled.get(region, True):
@@ -178,6 +198,8 @@ def _build(cs_amount: int, graph: nx.DiGraph) -> set:
                 continue
             if lane_id[:-2] not in graph:
                 continue
+            if lane_id not in connected_lanes:
+                continue  # idem -- não deixa o fallback escolher um beco sem saída
             lane_point = np.array(_lane_centroid(coords))
             distances = np.linalg.norm(vor.points - lane_point, axis=1)
             nearest_point_idx = int(np.argmin(distances))
@@ -210,6 +232,9 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     mapa (o `graph` recebido já vem restrito a esse componente -- ver
     cli.py/graph_utils.default_giant_graph), mesmo padrão unificado nos 5
     approaches.
+
+    FIX (2026-09-19): e que a lane tenha conexão de saída própria -- ver
+    docstring do módulo.
 
     NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
     cada estação é calculada depois, na hora de gerar o .add.xml (ver
