@@ -1,0 +1,13 @@
+Timeout de segurança por simulação + skip de jobs já concluídos no batch
+
+- simulation.py: run_simulation aceita max_hours (default 30h, calibrado
+  com find_longest_success.py -- a simulação de sucesso mais demorada do
+  grid levou 21.1h). Um job com veículo genuinamente preso (bug de
+  roteamento numa lane específica, achado real em pseudorandom/rep4/cs9)
+  agora levanta TimeoutError em vez de rodar indefinidamente, entrando no
+  retry automático existente como qualquer outro erro do SUMO.
+- cli.py: max_sim_hours repassado por toda a cadeia (_run_job_in_worker,
+  run_combo, batch, run_single) + flag --max-sim-hours no CLI.
+- cli.py: batch() agora pula jobs que já têm REPORT de sucesso
+  (_is_successfully_completed), em vez de sempre refazer o grid inteiro
+  numa reexecução -- --force-rerun-all restaura o comportamento antigo.

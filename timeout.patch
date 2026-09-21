@@ -1,0 +1,227 @@
+--- a/MD/config.py	2026-09-18 17:07:10.386580408 -0300
++++ b/MD/config.py	2026-09-18 17:16:40.202538996 -0300
+@@ -74,6 +74,29 @@
+ # maior; rede densa de pontos pequenos de bairro -> valor menor).
+ DEFAULT_MAX_VEHICLES_PER_CS = 6
+ 
++# FIX: timeout de segurança por simulação. Achado real (ver investigação
++# de set/2026): um job pode ficar preso INDEFINIDAMENTE -- não é lentidão,
++# é um veículo genuinamente incapaz de se mover (mensagem repetida no log
++# "performs emergency stop ... because there is no connection to the next
++# edge", todo segundo simulado, para sempre), o que mantém
++# traci.simulation.getMinExpectedNumber() > 0 pra sempre e o loop de
++# run_simulation nunca termina sozinho. Antes disso só era detectado
++# manualmente (via `ps`/`top`, processo `sumo` com dias de tempo de CPU
++# acumulado) e resolvido com `kill -9`. Esse limite faz o próprio
++# run_simulation desistir sozinho, levantando uma exceção comum (capturada
++# pelo mesmo fluxo de erro que já existe para qualquer outro crash do
++# SUMO) -- o retry automático de cli.py entra em ação normalmente a
++# partir daí. Não é sobre "SUMO estar lento"; é um limite de tempo de
++# execução, não de tempo simulado.
++#
++# Valor calibrado com dados reais (find_longest_success.py, set/2026): a
++# simulação de SUCESSO mais demorada de todo o grid já rodado levou 21.1h
++# (pseudorandom, 30%/49cs, cenário pesado mas legítimo, sem nenhum
++# problema). 30h dá uma folga confortável acima disso (evita abortar job
++# legítimo por engano) e ainda corta MUITO abaixo dos 5-9 DIAS que os
++# jobs realmente travados levavam antes de serem descobertos manualmente.
++DEFAULT_MAX_SIMULATION_HOURS = 30.0
++
+ # ---------------------------------------------------------------------------
+ # Parâmetros de infraestrutura do SUMO -- antes espalhados como literais
+ # mágicos ("20000.00", "100", "4", ...) repetidos em 5+ arquivos diferentes.
+--- a/MD/simulation.py	2026-09-18 17:07:10.386622385 -0300
++++ b/MD/simulation.py	2026-09-18 17:05:21.409802245 -0300
+@@ -24,10 +24,12 @@
+ import os
+ import re
+ import sys
++import time
+ import xml.etree.ElementTree as ET
+ 
+ import networkx as nx
+ 
++import config
+ import graph_utils
+ from sim_job import SimJob
+ 
+@@ -226,7 +228,8 @@
+     job.report_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
+ 
+ 
+-def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo") -> None:
++def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo",
++                    max_hours: float | None = None) -> None:
+     """
+     Executa UMA simulação completa: conecta ao SUMO via TraCI, injeta as
+     rotas dos veículos elétricos (estação + rota decididas pelo grafo),
+@@ -249,6 +252,18 @@
+     livre automaticamente por processo -- suficiente para evitar conflito
+     entre simulações rodando em paralelo (ProcessPoolExecutor) sem precisar
+     de nenhuma coordenação manual de portas.
++
++    `max_hours`: FIX -- timeout de segurança (ver config.py::
++    DEFAULT_MAX_SIMULATION_HOURS). Achado real (investigação set/2026): um
++    job pode ficar com um veículo genuinamente incapaz de se mover (bug de
++    roteamento numa lane específica -- rota topologicamente "válida" no
++    grafo abstrato usado aqui, mas que o SUMO recusa em tempo de
++    simulação), o que mantém getMinExpectedNumber() > 0 para sempre e o
++    loop abaixo nunca termina sozinho -- só descoberto antes via
++    `ps`/`top` mostrando um processo `sumo` com DIAS de CPU acumulado,
++    resolvido manualmente com `kill -9`. Preferimos `time.monotonic()` a
++    `datetime.now()` aqui porque não é afetado por ajuste de relógio do
++    sistema durante uma execução de horas.
+     """
+     if not job.is_generated():
+         raise RuntimeError(
+@@ -280,15 +295,28 @@
+         # KB/MB), que é tudo que o pipeline realmente usa.
+     ]
+ 
++    max_hours = max_hours if max_hours is not None else config.DEFAULT_MAX_SIMULATION_HOURS
++    max_seconds = max_hours * 3600.0
++
+     start_time = datetime.datetime.now()
+     started = False
+     try:
+         traci.start(sumo_cmd, port=job.port)
+         started = True
+         _inject_electric_vehicles(job, graph)
++        loop_start = time.monotonic()
+         while traci.simulation.getMinExpectedNumber() > 0:
++            elapsed = time.monotonic() - loop_start
++            if elapsed > max_seconds:
++                raise TimeoutError(
++                    f"Simulação excedeu {max_hours}h sem terminar (rodou "
++                    f"{elapsed / 3600:.1f}h) -- provavelmente um veículo "
++                    f"genuinamente preso (ver log do job), não lentidão "
++                    f"normal. Abortando pra permitir retry/investigação em "
++                    f"vez de rodar indefinidamente."
++                )
+             traci.simulationStep()
+-    except Exception as exc:  # inclui traci.exceptions.FatalTraCIError
++    except Exception as exc:  # inclui traci.exceptions.FatalTraCIError e o TimeoutError acima
+         _write_report(job, start_time, datetime.datetime.now(), error=str(exc))
+         raise
+     else:
+--- a/MD/cli.py	2026-09-18 17:07:10.386655697 -0300
++++ b/MD/cli.py	2026-09-18 17:06:20.569801176 -0300
+@@ -248,19 +248,29 @@
+     _worker_graph = graph_utils.default_graph()
+ 
+ 
+-def _run_job_in_worker(manifest_path_str: str, sumo_command: str) -> tuple[str, str | None]:
++def _run_job_in_worker(manifest_path_str: str, sumo_command: str,
++                        max_sim_hours: float | None) -> tuple[str, str | None]:
+     """Roda dentro do processo worker. Devolve (manifest_id, erro_ou_None)
+     -- nunca deixa a exceção vazar pro ProcessPoolExecutor, pra um job com
+-    problema não derrubar o resto do lote."""
++    problema não derrubar o resto do lote.
++
++    `max_sim_hours` repassado pra simulation.run_simulation -- FIX: sem
++    isso, um job com um veículo genuinamente preso (ver
++    config.DEFAULT_MAX_SIMULATION_HOURS) roda pra sempre e nunca chega a
++    devolver nada aqui, travando o worker (e exigindo kill -9 manual).
++    Com o timeout, esse caso vira um erro comum, tratado pelo retry
++    automático abaixo como qualquer outro crash do SUMO."""
+     job = SimJob.from_manifest(Path(manifest_path_str))
+     try:
+-        simulation.run_simulation(job, graph=_worker_graph, sumo_command=sumo_command)
++        simulation.run_simulation(job, graph=_worker_graph, sumo_command=sumo_command,
++                                   max_hours=max_sim_hours)
+         return job.manifest_id, None
+     except Exception as exc:  # noqa: BLE001 -- queremos capturar qualquer falha do SUMO
+         return job.manifest_id, f"{type(exc).__name__}: {exc}"
+ 
+ 
+-def run_combo(jobs: list[SimJob], workers: int, sumo_command: str) -> list[str]:
++def run_combo(jobs: list[SimJob], workers: int, sumo_command: str,
++              max_sim_hours: float | None = None) -> list[str]:
+     """Roda uma lista de jobs em paralelo (pode ser de uma combinação só,
+     ou do grid inteiro -- ver batch()). Devolve a lista de manifest_ids
+     que FALHARAM (vazia se tudo deu certo)."""
+@@ -272,7 +282,7 @@
+ 
+     with ProcessPoolExecutor(max_workers=workers, initializer=_init_worker) as pool:
+         futures = {
+-            pool.submit(_run_job_in_worker, path, sumo_command): path
++            pool.submit(_run_job_in_worker, path, sumo_command, max_sim_hours): path
+             for path in manifest_paths
+         }
+         for future in as_completed(futures):
+@@ -292,7 +302,7 @@
+ def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs: int,
+           sumo_command: str, routing_threads: int | None,
+           minutes_list=None, cs_list=None, percentages_list=None,
+-          repetitions_list=None) -> None:
++          repetitions_list=None, max_sim_hours: float | None = None) -> None:
+     minutes_values = minutes_list or config.MINUTES_RECHARGING
+     cs_values = cs_list or config.STATIONS_AMOUNTS
+     percentage_values = percentages_list or config.PERCENTAGES
+@@ -344,7 +354,8 @@
+         )
+ 
+         jobs_by_manifest_id = {job.manifest_id: job for job in all_jobs}
+-        all_failed = run_combo(all_jobs, workers=resolved_workers, sumo_command=sumo_command)
++        all_failed = run_combo(all_jobs, workers=resolved_workers, sumo_command=sumo_command,
++                                max_sim_hours=max_sim_hours)
+ 
+         # FIX: retry automático com paralelismo reduzido -- alguns crashes
+         # (ex: "malloc_consolidate" do SUMO sob concorrência excessiva) não
+@@ -364,7 +375,8 @@
+                 f"falharam, tentando de novo com {retry_workers} workers ==="
+             )
+             retry_jobs = [jobs_by_manifest_id[mid] for mid in all_failed]
+-            all_failed = run_combo(retry_jobs, workers=retry_workers, sumo_command=sumo_command)
++            all_failed = run_combo(retry_jobs, workers=retry_workers, sumo_command=sumo_command,
++                                    max_sim_hours=max_sim_hours)
+             attempt += 1
+ 
+         if all_failed:
+@@ -421,7 +433,7 @@
+     else:
+         log.info(f"--skip-generation: reaproveitando arquivos já gerados de {job.manifest_id}")
+ 
+-    simulation.run_simulation(job, sumo_command=args.sumo_command)
++    simulation.run_simulation(job, sumo_command=args.sumo_command, max_hours=args.max_sim_hours)
+     log.info(f"OK: {job.manifest_id}")
+ 
+ 
+@@ -465,6 +477,14 @@
+     p_batch.add_argument("--routing-threads", type=int, default=None,
+                           help="Sobrescreve config.ROUTING_THREADS (ajuste fino para "
+                                "quando várias simulações rodam ao mesmo tempo)")
++    p_batch.add_argument(
++        "--max-sim-hours", type=float, default=config.DEFAULT_MAX_SIMULATION_HOURS,
++        help="Timeout de segurança por simulação, em horas (default: "
++             f"{config.DEFAULT_MAX_SIMULATION_HOURS}h). Um job que passar "
++             "disso é abortado e tratado como falha comum (entra no retry "
++             "automático) em vez de rodar indefinidamente -- ver "
++             "config.DEFAULT_MAX_SIMULATION_HOURS.",
++    )
+ 
+     p_run = sub.add_parser("run", help="Roda (ou reroda) UMA simulação específica")
+     p_run.add_argument("--from-manifest", type=str, default=None)
+@@ -480,6 +500,12 @@
+     p_run.add_argument("--skip-generation", action="store_true",
+                         help="Não regera .cfg/.add/.trips se já existirem -- só roda o SUMO")
+     p_run.add_argument("--sumo-command", default="sumo")
++    p_run.add_argument(
++        "--max-sim-hours", type=float, default=config.DEFAULT_MAX_SIMULATION_HOURS,
++        help="Timeout de segurança pra essa simulação, em horas (default: "
++             f"{config.DEFAULT_MAX_SIMULATION_HOURS}h) -- ver "
++             "config.DEFAULT_MAX_SIMULATION_HOURS.",
++    )
+ 
+     return parser
+ 
+@@ -492,7 +518,8 @@
+         batch(args.approach, args.workers, args.vehicles, args.max_vehicles_per_cs,
+               args.sumo_command, args.routing_threads,
+               minutes_list=args.minutes_list, cs_list=args.cs_list,
+-              percentages_list=args.percentages_list, repetitions_list=args.repetitions_list)
++              percentages_list=args.percentages_list, repetitions_list=args.repetitions_list,
++              max_sim_hours=args.max_sim_hours)
+     elif args.mode == "run":
+         if not args.from_manifest and not all(
+             v is not None for v in (args.approach, args.minutes, args.cs, args.percentage, args.repetition)

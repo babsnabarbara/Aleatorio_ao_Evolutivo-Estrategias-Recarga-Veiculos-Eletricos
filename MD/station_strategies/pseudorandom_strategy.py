@@ -26,6 +26,27 @@ algoritmo genético original, agora unificado nos 5 approaches. Como todo
 par de nós dentro do componente gigante já é mutuamente alcançável por
 definição, "pertence ao grafo recebido" já é suficiente -- não precisa
 mais confirmar caminho entre eles com nx.has_path.
+
+FIX: antes sorteava uma TRINCA de lanes do quadrante e exigia que as 3
+pertencessem ao componente gigante, mesmo só usando a do meio como
+candidato -- resquício de quando essa checagem servia pra validar um ciclo
+entre as 3 (removido numa limpeza anterior). Sortear 1 lane direto por vez
+é mais rápido (menos sorteios desperdiçados quando alguma das 3 falha à
+toa) sem mudar qual candidato acaba sendo aceito.
+
+FIX (2026-09-19): o componente gigante (default_giant_graph) é construído
+no nível de EDGE, ignorando de qual LANE cada <connection> parte -- um edge
+com 2 lanes, onde só uma delas tem conexão de saída, aparece inteiro como
+"conectado", e a lane sem nenhuma conexão própria passava despercebida por
+"lane[:-2] not in graph" (que só confere o edge, não a lane específica).
+Isso deixou uma estação ser colocada numa lane SEM NENHUMA conexão de
+saída (lane 96049309#0_0, seed 4/9cs) -- qualquer veículo que fosse
+recarregar ali ficava preso para sempre, sem conseguir seguir viagem,
+travando a simulação num loop infinito de "emergency stop" (2026-09-19,
+pseudorandom rep4/9cs, 5 combinações). Agora, além de pertencer ao
+componente gigante pelo edge, a lane candidata também precisa estar em
+graph_utils.lanes_with_outgoing_connection() -- ou seja, ser ela mesma a
+origem de pelo menos uma <connection> no net.xml.
 """
 from __future__ import annotations
 
@@ -35,6 +56,7 @@ import xml.etree.ElementTree as ET
 import networkx as nx
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 
@@ -53,26 +75,29 @@ def _quadrants_for(cs_amount: int) -> list:
 
 def _build(cs_amount: int, graph: nx.DiGraph) -> set:
     quadrants = _quadrants_for(cs_amount)
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     chosen: set = set()
     max_attempts_per_quadrant = 5000
 
     for quadrant_lanes in quadrants:
-        if len(quadrant_lanes) < 3:
+        if len(quadrant_lanes) < 1:
             raise ValueError(
-                f"Quadrante com só {len(quadrant_lanes)} lane(s) -- "
-                f"impossível sortear trinca (cs_amount={cs_amount})."
+                f"Quadrante sem nenhuma lane -- "
+                f"impossível sortear candidato (cs_amount={cs_amount})."
             )
 
         found = False
         for _ in range(max_attempts_per_quadrant):
-            a, b, c = random.sample(quadrant_lanes, 3)
-            # a[:-2] converte lane id -> edge id (remove o sufixo "_0")
-            if not all(lane[:-2] in graph for lane in (a, b, c)):
+            lane = random.choice(quadrant_lanes)
+            # lane[:-2] converte lane id -> edge id (remove o sufixo "_0")
+            if lane[:-2] not in graph:
                 continue
-            if b in chosen:
+            if lane not in connected_lanes:
+                continue  # lane sem conexão de saída própria -- veículo ficaria preso
+            if lane in chosen:
                 continue
-            chosen.add(b)
+            chosen.add(lane)
             found = True
             break
 
