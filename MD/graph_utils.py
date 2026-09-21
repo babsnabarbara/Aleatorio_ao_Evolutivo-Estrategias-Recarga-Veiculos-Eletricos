@@ -80,28 +80,6 @@ def default_giant_graph() -> nx.DiGraph:
     "grafo de trabalho" usado na fase de SELEÇÃO de estação, pelas 5
     station strategies (ver cli.py: generate_combo/run_single), não o
     grafo completo.
-
-    IMPORTANTE: isso é diferente do grafo usado na fase de SIMULAÇÃO (ver
-    cli.py: _worker_graph / simulation.run_simulation), que continua sendo
-    o grafo completo -- um veículo pode legitimamente estar em qualquer
-    edge do mapa quando é sorteado para recarregar, então o cálculo de
-    rota até a estação precisa poder buscar a partir de qualquer posição,
-    não só dentro do componente gigante.
-
-    FIX: esta restrição já era usada internamente pelo algoritmo genético
-    original (get_giant_component/candidate_nodes ali) -- mas nunca tinha
-    sido aplicada às outras 4 estratégias, que validavam conectividade de
-    um jeito mais fraco e inconsistente entre si (random/pseudorandom só
-    conferiam se as 3 lanes sorteadas formavam ciclo ENTRE SI, sem garantir
-    que pertenciam ao núcleo bem conectado do mapa; greedy/greedyvoronoi
-    não conferiam nada; genetic_strategy.py só conferia "existe no grafo
-    completo"). Unificar todos os 5 approaches para escolherem estações
-    apenas dentro do mesmo componente gigante corrige essa inconsistência.
-
-    Efeito colateral útil: como todo par de nós dentro do componente
-    fortemente conexo é, por definição, mutuamente alcançável, a checagem
-    de ciclo (_forms_cycle) em random/pseudorandom deixa de ser necessária
-    -- basta o candidato pertencer a este grafo.
     """
     return get_giant_component(default_graph())
 
@@ -122,6 +100,64 @@ def list_connections(netfile: Path | str = None) -> tuple[dict, ...]:
         {"from": tag["from"], "to": tag["to"], "fromLane": tag.get("fromLane", "0")}
         for tag in soup.find_all("connection")
     )
+
+
+@lru_cache(maxsize=1)
+def lanes_with_outgoing_connection(netfile: Path | str = None) -> frozenset:
+    """
+    Conjunto de ids de LANE (não edge) que são a origem de pelo menos uma
+    <connection> no net.xml -- ou seja, lanes que, uma vez ocupadas por um
+    veículo estacionado pra recarregar, permitem que ele continue viagem
+    depois.
+
+    Isso é diferente (e mais estrito) do que "o edge pertence ao componente
+    gigante" (default_giant_graph): build_graph_from_netfile monta o grafo
+    no nível de EDGE e ignora 'fromLane' -- um edge com 2 lanes, onde só a
+    lane 1 tem conexão de saída, aparece no grafo como conectado mesmo
+    assim, e a lane 0 (sem conexão nenhuma) passa despercebida pela checagem
+    de componente gigante feita pelas station strategies.
+
+    Uma estação posicionada numa lane SEM conexão de saída própria prende
+    para sempre qualquer veículo que for recarregar ali -- ele termina de
+    carregar e não tem como seguir viagem, gerando "performs emergency stop
+    ... because there is no connection to the next edge" a cada passo de
+    simulação, indefinidamente (foi exatamente o que travou 5 simulações do
+    pseudorandom presas na lane 96049309#0_0, seed 4/9cs, 2026-09-19 --
+    ela pertencia ao componente gigante pelo edge, mas não tinha nenhuma
+    <connection> saindo dela mesma).
+
+    Use este conjunto como filtro ADICIONAL ao componente gigante, nunca
+    como substituto -- o componente gigante ainda garante que o EDGE como
+    um todo está bem conectado ao resto do mapa; este conjunto garante que
+    a LANE específica escolhida tem por onde sair.
+    """
+    netfile = Path(netfile) if netfile else config.NET_FILE
+    return frozenset(
+        f"{c['from']}_{c['fromLane']}" for c in list_connections(netfile)
+    )
+
+
+@lru_cache(maxsize=1)
+def edge_to_lanes(netfile: Path | str = None) -> dict[str, tuple[str, ...]]:
+    """
+    Mapeia cada EDGE id pra tupla ordenada dos ids de LANE que pertencem a
+    ele (na ordem em que aparecem no net.xml -- tipicamente índice 0, 1,
+    2...). Necessário pro approach 'genetic', que recebe apenas edge ids de
+    um algoritmo externo (o GA opera no nível de rua/edge, não de lane
+    específica) e precisa escolher UMA lane concreta desse edge pra virar
+    estação -- ver docstring de genetic_strategy.py.
+    """
+    netfile = Path(netfile) if netfile else config.NET_FILE
+    with open(netfile) as f:
+        data = f.read()
+    soup = BeautifulSoup(data, "xml")
+    result: dict[str, tuple[str, ...]] = {}
+    for edge_tag in soup.find_all("edge"):
+        edge_id = edge_tag["id"]
+        lane_ids = tuple(lane_tag["id"] for lane_tag in edge_tag.find_all("lane"))
+        if lane_ids:
+            result[edge_id] = lane_ids
+    return result
 
 
 @lru_cache(maxsize=1)
@@ -146,26 +182,6 @@ def lane_lengths(netfile: Path | str = None) -> dict:
 
 def realized_capacity(lane_id: str, max_vehicles_per_cs: int,
                        lane_lengths_dict: dict, vehicle_length: float) -> int:
-    """
-    Capacidade REAL de uma estação, dado o comprimento físico da lane onde
-    ela vai ficar: min(max_vehicles_per_cs, quantos veículos cabem de
-    verdade), nunca menos que 1.
-
-    Decisão metodológica (não um bug/limitação técnica): em vez de REJEITAR
-    uma posição de estação por não caber `max_vehicles_per_cs` veículos (o
-    que travaria approaches sem candidato alternativo, como o genetic, cujas
-    posições vêm de um algoritmo externo já publicado), a capacidade da
-    estação se ADAPTA ao que a rua realmente comporta -- min() com o pedido,
-    nunca inventando espaço que não existe. Isso espelha uma restrição real
-    de infraestrutura (não dá pra instalar uma estação de 6 vagas numa rua
-    que só cabe 2) e se aplica igualmente aos 5 approaches -- nenhum se
-    beneficia ou é prejudicado sistematicamente por isso.
-
-    A seleção de ONDE colocar uma estação não depende mais deste valor --
-    qualquer lane escolhida por qualquer approach é aceita; só a capacidade
-    escrita no .add.xml (ver io_utils.write_add_file) é que se ajusta à
-    geometria real de cada uma.
-    """
     length = lane_lengths_dict.get(lane_id)
     if length is None:
         return 1
