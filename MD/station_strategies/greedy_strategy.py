@@ -27,14 +27,56 @@ chamada, mesmo sendo sempre o mesmo resultado para um dado cs_amount (até
 600 vezes redundantes ao longo de um grid completo). Como 'greedy' não usa
 seed nenhuma, o cache aqui é só por (approach, repetition, cs_amount) --
 sem StationSeedRegistry envolvida.
+
+FIX: fallback geométrico para quadrantes sem nenhuma lane visitada
+elegível. Antes, esses quadrantes ficavam permanentemente sem estação
+(comportamento documentado e aceito inicialmente -- mesma decisão tomada
+em greedy_voronoi_strategy.py). Agora, cada quadrante que sobra vazio
+depois da fase por visitação recebe a lane GEOGRAFICAMENTE MAIS CENTRAL
+dele: entre as lanes que pertencem aquele quadrante (mesma lista de
+_quadrants_lanes, não só as visitadas) e que passam pela checagem de
+componente gigante, escolhe a mais próxima do centro geométrico exato do
+quadrante -- centro calculado com a MESMA fórmula que quadrants.py usa pra
+decidir a quem cada lane pertence (x_min + (x+0.5)*tamanho_quadrant_x, idem
+em y), não uma noção nova de "central". Um quadrante só continua sem
+estação se não tiver NENHUMA lane elegível (nem visitada, nem qualquer
+outra) -- caso bem mais raro que antes.
+
+FIX (2026-09-19): tanto o loop principal (lanes mais visitadas) quanto o
+fallback geométrico só conferiam "lane_id[:-2] not in graph" -- isto é, se
+o EDGE da lane pertence ao componente gigante -- sem nunca checar se a
+LANE especificamente escolhida tem alguma <connection> de saída própria.
+Isso é o mesmo bug já corrigido em graph_utils.py/pseudorandom_strategy.py:
+um edge com 2+ lanes pode estar bem conectado ao resto do mapa via UMA
+lane, enquanto outra lane do mesmo edge não tem nenhuma conexão de saída
+-- uma estação posicionada ali prende pra sempre qualquer veículo que for
+recarregar. O fallback geométrico era o ponto mais exposto: ele considera
+TODAS as lanes do quadrante (não só as visitadas), então tinha mais chance
+de cair numa lane sem saída -- inclusive podendo escolher uma lane
+"perfeitamente central" (distância 0 do centroide) só pra descobrir, na
+simulação, que ela é um beco sem saída. Agora as duas checagens também
+exigem lane_id in graph_utils.lanes_with_outgoing_connection() -- mesmo
+filtro adicional usado no pseudorandom, sem mudar o critério de "mais
+central" em si, só reduzindo o pool de candidatas elegíveis.
+
+As funções de coordenada (_conv_boundary/_lanes_and_coordinates) são
+intencionalmente duplicadas de greedy_voronoi_strategy.py (que já precisava
+da mesma informação pro diagrama de Voronoi) em vez de compartilhadas via
+um módulo comum -- evita import circular (greedy_voronoi_strategy já
+importa de greedy_strategy) e mantém essa mudança contida neste arquivo.
+Se um dia mais approaches precisarem da mesma coisa, vale extrair pra
+graph_utils.py.
 """
 from __future__ import annotations
 
+import math
 import xml.etree.ElementTree as ET
+from functools import lru_cache
 
 import networkx as nx
 
 import config
+import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
 
@@ -79,14 +121,70 @@ def _quadrants_lanes(cs_amount: int) -> list[tuple[str, str, list[str]]]:
     return result
 
 
+@lru_cache(maxsize=1)
+def _conv_boundary() -> tuple[float, float, float, float]:
+    """Duplicado de greedy_voronoi_strategy.py::_conv_boundary -- ver
+    docstring do módulo (evita import circular entre as duas estratégias)."""
+    root = ET.parse(config.NET_FILE).getroot()
+    conv_boundary = root.find(".//location").attrib["convBoundary"]
+    x_min, y_min, x_max, y_max = map(float, conv_boundary.split(","))
+    return x_min, y_min, x_max, y_max
+
+
+@lru_cache(maxsize=1)
+def _lanes_and_coordinates() -> dict[str, list[tuple[float, float]]]:
+    """Duplicado de greedy_voronoi_strategy.py::_lanes_and_coordinates --
+    ver docstring do módulo (evita import circular entre as duas
+    estratégias)."""
+    root = ET.parse(config.NET_FILE).getroot()
+    lanes: dict[str, list[tuple[float, float]]] = {}
+    for edge in root.findall(".//edge[@type]"):
+        for lane in edge.findall("./lane"):
+            coords_raw = lane.attrib["shape"].split(" ")
+            points = []
+            for pair in coords_raw:
+                if not pair.strip():
+                    continue
+                x_str, y_str = pair.split(",")
+                points.append((float(x_str), float(y_str)))
+            lanes[lane.attrib["id"]] = points
+    return lanes
+
+
+def _quadrant_centroid(x_idx: int, y_idx: int, cs_amount: int) -> tuple[float, float]:
+    """Centro geométrico exato do quadrante (x_idx, y_idx), usando a MESMA
+    divisão de grade que quadrants.py::dividir_em_quadrants usa pra decidir
+    a quem cada lane pertence -- não introduz uma noção nova de 'central'."""
+    x_min, y_min, x_max, y_max = _conv_boundary()
+    quadrant_raiz = int(math.sqrt(cs_amount))
+    tamanho_x = (x_max - x_min) / quadrant_raiz
+    tamanho_y = (y_max - y_min) / quadrant_raiz
+    return (
+        x_min + (x_idx + 0.5) * tamanho_x,
+        y_min + (y_idx + 0.5) * tamanho_y,
+    )
+
+
+def _lane_centroid(points: list[tuple[float, float]]) -> tuple[float, float]:
+    """Ponto representativo de uma lane -- média dos pontos do seu shape."""
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
+    return sum(xs) / len(xs), sum(ys) / len(ys)
+
+
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
     Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
     associa à primeira quadrante ainda vazia que a contém E cujo edge
-    pertença ao componente gigante do mapa. Um quadrante sem NENHUMA lane
-    visitada elegível simplesmente fica sem estação -- não é erro, é
-    esperado. O resultado pode ter menos de `cs_amount` estações nesse
-    caso.
+    pertença ao componente gigante do mapa E que ela mesma tenha uma
+    <connection> de saída própria (ver FIX 2026-09-19 no docstring do
+    módulo).
+
+    FALLBACK: quadrantes que sobram vazios depois dessa fase (nenhuma lane
+    visitada elegível caiu neles) recebem a lane geograficamente mais
+    central do próprio quadrante -- ver docstring do módulo. Só continua
+    sem estação um quadrante sem NENHUMA lane elegível (visitada ou não),
+    caso bem mais raro que antes.
 
     NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
     cada estação é calculada depois, na hora de gerar o .add.xml (ver
@@ -98,6 +196,7 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
 
     quadrants = _quadrants_lanes(job.cs_amount)
     most_visited = _most_visited_lanes()  # já ordenado por count decrescente
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
 
     quadrant_filled = [False] * len(quadrants)
     chosen: set[str] = set()
@@ -110,6 +209,8 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
         # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
         if lane_id[:-2] not in graph:
             continue
+        if lane_id not in connected_lanes:
+            continue  # lane sem conexão de saída própria -- veículo ficaria preso
 
         for idx, (_x, _y, lanes) in enumerate(quadrants):
             if quadrant_filled[idx]:
@@ -118,6 +219,40 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
                 quadrant_filled[idx] = True
                 chosen.add(lane_id)
                 break
+
+    # Fallback: quadrantes que sobraram vazios recebem a lane geograficamente
+    # mais central deles -- ver docstring do módulo. lanes_and_coords só é
+    # carregado sob demanda (nenhum custo extra quando não há quadrante
+    # vazio, caso comum quando cs_amount é pequeno).
+    lanes_and_coords: dict[str, list[tuple[float, float]]] | None = None
+    for idx, (x_str, y_str, lanes) in enumerate(quadrants):
+        if quadrant_filled[idx]:
+            continue
+
+        if lanes_and_coords is None:
+            lanes_and_coords = _lanes_and_coordinates()
+
+        centroid = _quadrant_centroid(int(x_str), int(y_str), job.cs_amount)
+        best_lane = None
+        best_distance = float("inf")
+        for lane_id in lanes:
+            if lane_id in chosen:
+                continue
+            if lane_id[:-2] not in graph:
+                continue
+            if lane_id not in connected_lanes:
+                continue  # idem -- não deixa o fallback escolher um beco sem saída
+            coords = lanes_and_coords.get(lane_id)
+            if not coords:
+                continue
+            distance = math.dist(_lane_centroid(coords), centroid)
+            if distance < best_distance:
+                best_distance = distance
+                best_lane = lane_id
+
+        if best_lane is not None:
+            quadrant_filled[idx] = True
+            chosen.add(best_lane)
 
     evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
     return chosen

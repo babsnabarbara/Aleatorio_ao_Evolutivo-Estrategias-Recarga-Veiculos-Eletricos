@@ -9,8 +9,8 @@ StationSeedRegistry, não passa por station_strategies/evolution.py (não
 tem sentido "cachear" algo que já É um arquivo estático em disco). A única
 responsabilidade daqui é: dado (cs_amount, repetition), decidir qual seed
 do GA usar e converter o resultado (lista de edge ids) para o formato de
-lane id que o resto do pipeline espera (<edge_id>_0 -- primeira lane de
-cada edge; o GA opera no nível de rua/edge, não de lane específica).
+lane id que o resto do pipeline espera -- o GA opera no nível de rua/edge,
+não de lane específica.
 
 Usa o campo "solucao_final_refinada" do JSON (pós-refinamento), não
 "solucao_ga" (saída bruta, pré-refinamento) -- decisão explícita.
@@ -30,6 +30,23 @@ script original do algoritmo genético usa internamente
 grafo" abaixo já é consistente com o universo de candidatos que o próprio
 GA usou pra gerar essas posições, e com os outros 4 approaches (que agora
 também só escolhem estações dentro desse mesmo componente).
+
+FIX (2026-09-19): a conversão de edge pra lane usava sempre `f"{edge_id}_0"`
+-- a PRIMEIRA lane do edge, sem checar se é justamente essa lane que tem
+uma <connection> de saída própria. Mesmo bug já corrigido nas outras 4
+estratégias (graph_utils.py/pseudorandom_strategy.py/greedy_strategy.py/
+greedy_voronoi_strategy.py): um edge pode estar bem conectado ao resto do
+mapa via UMA lane (ex. a lane 1), enquanto a lane 0 (escolhida às cegas
+aqui) não tem conexão de saída nenhuma -- uma estação ali prende pra
+sempre qualquer veículo que for recarregar. Diferença importante em
+relação às outras estratégias: aqui NÃO existe um "candidato alternativo"
+pra pular pra outro -- o GA decidiu o EDGE, não a lane, então a correção é
+escolher, DENTRE as lanes desse mesmo edge, a que realmente tem conexão de
+saída (em vez de assumir cegamente a lane 0). Isso sempre tem solução:
+como o `graph` recebido é o componente FORTEMENTE CONEXO, por definição
+todo edge nele tem pelo menos uma conexão de saída própria (senão não
+poderia fazer parte de um ciclo) -- então sempre existe ao menos uma lane
+válida entre as lanes do edge, só não necessariamente a de índice 0.
 """
 from __future__ import annotations
 
@@ -38,6 +55,7 @@ import json
 import networkx as nx
 
 import config
+import graph_utils
 from sim_job import SimJob
 
 
@@ -49,6 +67,29 @@ def _seed_for_repetition(repetition: int) -> int:
             f"seeds pré-computadas: {config.GENETIC_SEEDS})."
         )
     return config.GENETIC_SEEDS[repetition - 1]
+
+
+def _lane_for_edge(edge_id: str, connected_lanes: frozenset,
+                    lanes_by_edge: dict[str, tuple[str, ...]]) -> str:
+    """
+    Escolhe, dentre as lanes do edge (na ordem em que aparecem no net.xml),
+    a primeira que tem conexão de saída própria -- ver FIX no docstring do
+    módulo. Sempre encontra uma (dado que `edge_id` já passou pela checagem
+    de componente gigante em select_charging_points), mas levanta um erro
+    claro em vez de devolver algo inválido se por algum motivo isso não
+    for verdade (ex. net.xml trocado sem re-executar o GA).
+    """
+    candidates = lanes_by_edge.get(edge_id, ())
+    for lane_id in candidates:
+        if lane_id in connected_lanes:
+            return lane_id
+    raise ValueError(
+        f"Edge '{edge_id}' está no componente gigante mas NENHUMA de suas "
+        f"lanes ({candidates}) tem conexão de saída própria -- isso não "
+        f"deveria acontecer para um edge de um componente fortemente "
+        f"conexo. Confirme se o net.xml usado é o mesmo que o algoritmo "
+        f"genético usou pra gerar '{edge_id}' como candidato."
+    )
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
@@ -92,4 +133,10 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
             f"{missing}"
         )
 
-    return {f"{edge_id}_0" for edge_id in edge_ids}
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
+    lanes_by_edge = graph_utils.edge_to_lanes()
+
+    return {
+        _lane_for_edge(edge_id, connected_lanes, lanes_by_edge)
+        for edge_id in edge_ids
+    }
