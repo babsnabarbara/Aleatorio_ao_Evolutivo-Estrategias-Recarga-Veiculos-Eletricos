@@ -74,6 +74,22 @@ DEFAULT_VEHICLES = 8000
 # maior; rede densa de pontos pequenos de bairro -> valor menor).
 DEFAULT_MAX_VEHICLES_PER_CS = 6
 
+# FIX: timeout de segurança por simulação. Achado real (ver investigação
+# de set/2026): um job pode ficar preso INDEFINIDAMENTE -- não é lentidão,
+# é um veículo genuinamente incapaz de se mover (mensagem repetida no log
+# "performs emergency stop ... because there is no connection to the next
+# edge", todo segundo simulado, para sempre), o que mantém
+# traci.simulation.getMinExpectedNumber() > 0 pra sempre e o loop de
+# run_simulation nunca termina sozinho. Antes disso só era detectado
+# manualmente (via `ps`/`top`, processo `sumo` com dias de tempo de CPU
+# acumulado) e resolvido com `kill -9`. Esse limite faz o próprio
+# run_simulation desistir sozinho, levantando uma exceção comum (capturada
+# pelo mesmo fluxo de erro que já existe para qualquer outro crash do
+# SUMO) -- o retry automático de cli.py entra em ação normalmente a
+# partir daí. Não é sobre "SUMO estar lento"; é um limite de tempo de
+# execução, não de tempo simulado.
+DEFAULT_MAX_SIMULATION_HOURS = 30.0
+
 # ---------------------------------------------------------------------------
 # Parâmetros de infraestrutura do SUMO -- antes espalhados como literais
 # mágicos ("20000.00", "100", "4", ...) repetidos em 5+ arquivos diferentes.
@@ -164,15 +180,19 @@ def trip_seed_registry_file(approach: str) -> Path:
 
 def station_evolution_dir(approach: str, repetition: int) -> Path:
     """
-    Onde fica a sequência incremental de estações de UMA seed (repetition)
-    de UM approach -- independente de percentage/minutes, já que a partir
-    de agora a posição das estações não varia com esses dois parâmetros.
+    Onde fica a seleção de estações de UMA seed (repetition) de UM
+    approach -- independente de percentage/minutes, já que a posição das
+    estações não varia com esses dois parâmetros.
 
         output/<approach>/stations_evolution/seed_<repetition>/<cs>stations.xml
 
-    Cada arquivo contém a seleção COMPLETA daquele estágio (ex.
-    16stations.xml tem as 16 lanes, sendo as 9 primeiras idênticas às de
-    9stations.xml) -- é o que garante o requisito de "nada se move, só se
-    adiciona": quem lê um estágio não precisa recalcular nada, só carregar.
+    Cada arquivo contém a seleção completa daquele cs_amount, calculada e
+    cacheada uma única vez (ver station_strategies/evolution.py) -- não
+    reaproveitada entre cs_amounts diferentes (cada um sorteia do zero, de
+    forma independente; não existe mais crescimento incremental entre
+    tamanhos de estação em nenhum dos 5 approaches). O cache serve só para
+    não recalcular a MESMA seleção toda vez que uma combinação diferente
+    de minutes/percentage passar pela mesma (approach, repetition,
+    cs_amount).
     """
     return OUTPUT_DIR / approach / "stations_evolution" / f"seed_{repetition}"

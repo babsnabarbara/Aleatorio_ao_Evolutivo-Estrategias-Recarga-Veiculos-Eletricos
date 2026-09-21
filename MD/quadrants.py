@@ -47,9 +47,11 @@ def dividir_em_quadrants(conv_boundary, num_quadrants, lanes):
 
     # Preenchendo os quadrants com as lanes correspondentes
     for lane in lanes:
-        coords = lane["coords"]
-        for j in coords:
-            x, y = map(float, j.split(" "))
+        # FIX: antes, "coords" vinha de um parsing quebrado em parse_xml
+        # (split(",") na string inteira misturava o Y de um ponto com o X
+        # do ponto seguinte -- ver histórico/comentário em parse_xml).
+        # Agora "coords" já chega como lista de tuplas (x, y) corretas.
+        for x, y in lane["coords"]:
             quadrant_x = int((x - x_min) / tamanho_quadrant_x)
             quadrant_y = int((y - y_min) / tamanho_quadrant_y)
 
@@ -82,13 +84,29 @@ def parse_xml(xml_content):
     for edge in edges:
         for lane in edge.findall("./lane"):
             lane_id = f"{lane.attrib['id']}"
-            coords = lane.attrib["shape"].split(",")
-            if " " in coords[0]:
-                lanes.append({"lane_id": lane_id, "coords": coords})
-            else:
-                coords.pop(0)
-                coords.pop()
-                lanes.append({"lane_id": lane_id, "coords": coords})
+
+            # FIX: antes fazia lane.attrib["shape"].split(",") -- separava
+            # por VÍRGULA a string inteira ("x1,y1 x2,y2 x3,y3"), o que
+            # embaralha o Y de um ponto com o X do ponto seguinte (ex:
+            # "x1", "y1 x2", "y2 x3", "y3" -- nada disso é um par x,y
+            # correto). O formato real do SUMO é pontos separados por
+            # ESPAÇO, com x,y de cada ponto separados por vírgula DENTRO
+            # do par -- então o parsing certo é separar por espaço
+            # primeiro, e só depois por vírgula em cada par. Esse bug já
+            # existia no código original (achado ao investigar por que a
+            # visualização de disposição de estações mostrava quadrantes
+            # com várias estações e outros vazios, mesmo pseudorandom e
+            # greedy escolhendo exatamente 1 candidato por quadrante --
+            # a atribuição de lane a quadrante nunca foi geograficamente
+            # coerente).
+            coords = []
+            for pair in lane.attrib["shape"].split(" "):
+                if not pair.strip():
+                    continue
+                x_str, y_str = pair.split(",")
+                coords.append((float(x_str), float(y_str)))
+
+            lanes.append({"lane_id": lane_id, "coords": coords})
 
     return conv_boundary, lanes
 

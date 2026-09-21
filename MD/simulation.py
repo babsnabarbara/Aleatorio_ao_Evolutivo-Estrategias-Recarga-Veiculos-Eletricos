@@ -24,10 +24,12 @@ import datetime
 import os
 import re
 import sys
+import time
 import xml.etree.ElementTree as ET
 
 import networkx as nx
 
+import config
 import graph_utils
 from sim_job import SimJob
 
@@ -93,14 +95,19 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
     Escolhe, entre as estações disponíveis (já com 'edge' resolvido -- ver
     _inject_electric_vehicles), a de menor distância a partir de `source`.
 
-    NOTA (comportamento preservado do original): a distância usada é a
-    soma do atributo 'weight' das arestas do caminho, que graph_utils
-    sempre fixa em 1 -- ou seja, isto é contagem de SALTOS (nº de edges no
-    caminho), não distância física em metros (que estaria em 'length').
-    Era assim no main.py original; mantido para não mudar o resultado das
-    simulações por conta da refatoração. Se um dia fizer sentido usar
-    distância real, é só trocar weight="weight" por weight="length" aqui
-    e em reroute().
+    A distância usada é a soma do atributo 'length' das arestas do
+    caminho (comprimento real da via, em metros) -- ou seja, o Dijkstra
+    minimiza distância física, não número de saltos (que seria com
+    weight="weight", sempre fixo em 1 no grafo, e é o que graph_utils usa
+    para outros fins, como a busca de ciclo das station strategies).
+
+    2026-09-21: trocado de weight="weight" (contagem de saltos, do
+    main.py original) para weight="length" (distância real) -- mais
+    realista, já que veículos/GPS de verdade não escolhem rota pelo menor
+    número de cruzamentos. Isso muda os resultados das simulações em
+    relação à versão anterior (rota e/ou estação escolhida pode ser
+    diferente); o grid precisa ser regerado e rerrodado pra refletir essa
+    mudança.
     """
     best_path = None
     best_id = None
@@ -109,11 +116,11 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
     for station_id, info in charging_stations.items():
         edge = info["edge"]
         try:
-            path = nx.dijkstra_path(graph, source, edge, weight="weight")
+            path = nx.dijkstra_path(graph, source, edge, weight="length")
         except nx.NetworkXNoPath:
             continue
         distance = sum(
-            graph[path[i]][path[i + 1]]["weight"] for i in range(len(path) - 1)
+            graph[path[i]][path[i + 1]]["length"] for i in range(len(path) - 1)
         )
         if distance < best_distance:
             best_distance = distance
@@ -129,9 +136,10 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
 
 
 def reroute(graph: nx.DiGraph, source: str, target: str) -> list:
-    """Caminho de `source` até `target`, sem o próprio `source` (já
-    ocupado pela ponta do trecho anterior da rota)."""
-    route = nx.dijkstra_path(graph, source, target, weight="weight")
+    """Caminho de `source` até `target` (por distância real, ver
+    docstring de decide_station), sem o próprio `source` (já ocupado
+    pela ponta do trecho anterior da rota)."""
+    route = nx.dijkstra_path(graph, source, target, weight="length")
     return route[1:] if route else route
 
 
@@ -226,7 +234,8 @@ def _write_report(job: SimJob, start: datetime.datetime,
     job.report_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo") -> None:
+def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo",
+                    max_hours: float | None = None) -> None:
     """
     Executa UMA simulação completa: conecta ao SUMO via TraCI, injeta as
     rotas dos veículos elétricos (estação + rota decididas pelo grafo),
@@ -249,6 +258,18 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
     livre automaticamente por processo -- suficiente para evitar conflito
     entre simulações rodando em paralelo (ProcessPoolExecutor) sem precisar
     de nenhuma coordenação manual de portas.
+
+    `max_hours`: FIX -- timeout de segurança (ver config.py::
+    DEFAULT_MAX_SIMULATION_HOURS). Achado real (investigação set/2026): um
+    job pode ficar com um veículo genuinamente incapaz de se mover (bug de
+    roteamento numa lane específica -- rota topologicamente "válida" no
+    grafo abstrato usado aqui, mas que o SUMO recusa em tempo de
+    simulação), o que mantém getMinExpectedNumber() > 0 para sempre e o
+    loop abaixo nunca termina sozinho -- só descoberto antes via
+    `ps`/`top` mostrando um processo `sumo` com DIAS de CPU acumulado,
+    resolvido manualmente com `kill -9`. Preferimos `time.monotonic()` a
+    `datetime.now()` aqui porque não é afetado por ajuste de relógio do
+    sistema durante uma execução de horas.
     """
     if not job.is_generated():
         raise RuntimeError(
@@ -280,15 +301,28 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
         # KB/MB), que é tudo que o pipeline realmente usa.
     ]
 
+    max_hours = max_hours if max_hours is not None else config.DEFAULT_MAX_SIMULATION_HOURS
+    max_seconds = max_hours * 3600.0
+
     start_time = datetime.datetime.now()
     started = False
     try:
         traci.start(sumo_cmd, port=job.port)
         started = True
         _inject_electric_vehicles(job, graph)
+        loop_start = time.monotonic()
         while traci.simulation.getMinExpectedNumber() > 0:
+            elapsed = time.monotonic() - loop_start
+            if elapsed > max_seconds:
+                raise TimeoutError(
+                    f"Simulação excedeu {max_hours}h sem terminar (rodou "
+                    f"{elapsed / 3600:.1f}h) -- provavelmente um veículo "
+                    f"genuinamente preso (ver log do job), não lentidão "
+                    f"normal. Abortando pra permitir retry/investigação em "
+                    f"vez de rodar indefinidamente."
+                )
             traci.simulationStep()
-    except Exception as exc:  # inclui traci.exceptions.FatalTraCIError
+    except Exception as exc:  # inclui traci.exceptions.FatalTraCIError e o TimeoutError acima
         _write_report(job, start_time, datetime.datetime.now(), error=str(exc))
         raise
     else:

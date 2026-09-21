@@ -3,7 +3,4 @@ input/cologne.net.xml
 MD/batch.log
 __pycache__/
 *.pyc
-output/
-.gitignore
 validating-genetic/
-
