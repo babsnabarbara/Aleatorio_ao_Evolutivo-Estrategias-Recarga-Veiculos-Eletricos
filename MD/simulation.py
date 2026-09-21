@@ -95,14 +95,19 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
     Escolhe, entre as estações disponíveis (já com 'edge' resolvido -- ver
     _inject_electric_vehicles), a de menor distância a partir de `source`.
 
-    NOTA (comportamento preservado do original): a distância usada é a
-    soma do atributo 'weight' das arestas do caminho, que graph_utils
-    sempre fixa em 1 -- ou seja, isto é contagem de SALTOS (nº de edges no
-    caminho), não distância física em metros (que estaria em 'length').
-    Era assim no main.py original; mantido para não mudar o resultado das
-    simulações por conta da refatoração. Se um dia fizer sentido usar
-    distância real, é só trocar weight="weight" por weight="length" aqui
-    e em reroute().
+    A distância usada é a soma do atributo 'length' das arestas do
+    caminho (comprimento real da via, em metros) -- ou seja, o Dijkstra
+    minimiza distância física, não número de saltos (que seria com
+    weight="weight", sempre fixo em 1 no grafo, e é o que graph_utils usa
+    para outros fins, como a busca de ciclo das station strategies).
+
+    2026-09-21: trocado de weight="weight" (contagem de saltos, do
+    main.py original) para weight="length" (distância real) -- mais
+    realista, já que veículos/GPS de verdade não escolhem rota pelo menor
+    número de cruzamentos. Isso muda os resultados das simulações em
+    relação à versão anterior (rota e/ou estação escolhida pode ser
+    diferente); o grid precisa ser regerado e rerrodado pra refletir essa
+    mudança.
     """
     best_path = None
     best_id = None
@@ -111,11 +116,11 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
     for station_id, info in charging_stations.items():
         edge = info["edge"]
         try:
-            path = nx.dijkstra_path(graph, source, edge, weight="weight")
+            path = nx.dijkstra_path(graph, source, edge, weight="length")
         except nx.NetworkXNoPath:
             continue
         distance = sum(
-            graph[path[i]][path[i + 1]]["weight"] for i in range(len(path) - 1)
+            graph[path[i]][path[i + 1]]["length"] for i in range(len(path) - 1)
         )
         if distance < best_distance:
             best_distance = distance
@@ -131,9 +136,10 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
 
 
 def reroute(graph: nx.DiGraph, source: str, target: str) -> list:
-    """Caminho de `source` até `target`, sem o próprio `source` (já
-    ocupado pela ponta do trecho anterior da rota)."""
-    route = nx.dijkstra_path(graph, source, target, weight="weight")
+    """Caminho de `source` até `target` (por distância real, ver
+    docstring de decide_station), sem o próprio `source` (já ocupado
+    pela ponta do trecho anterior da rota)."""
+    route = nx.dijkstra_path(graph, source, target, weight="length")
     return route[1:] if route else route
 
 
