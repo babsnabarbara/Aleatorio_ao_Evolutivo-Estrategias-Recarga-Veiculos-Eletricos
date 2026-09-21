@@ -91,6 +91,8 @@ Totalizando 600 simulações por abordagem.
 
 Por simulação: duração média de rota, comprimento de rota, tempo de espera, tempo perdido (`time loss`), atraso de partida, número de teleportes (colisão, engarrafamento, yield, faixa errada) e paradas de emergência.
 
-## Análise dos resultados
+## 📊 Análise de Dados dos Resultados
 
-A análise estatística (notebook separado, em `pandas`) normaliza os dados brutos, agrega por (abordagem, quantidade de estações, percentual), calcula média e intervalo de confiança de 95% (distribuição t de Student) por métrica, e compara cada abordagem contra uma baseline sem estações. Os hiperparâmetros do algoritmo genético (taxa de crossover, mutação, tamanho de população, elitismo, torneio, número de gerações) foram validados por um grid search de 729 combinações, analisando o efeito de cada parâmetro sobre o fitness e o tempo de execução.
+A análise estatística dos resultados é feita em um notebook no Google Colab: normaliza os dados brutos, agrega por (abordagem, quantidade de estações, percentual), calcula média e intervalo de confiança de 95% (distribuição t de Student) por métrica, e compara cada abordagem contra uma baseline sem estações. Os hiperparâmetros do algoritmo genético (taxa de crossover, mutação, tamanho de população, elitismo, torneio, número de gerações) foram validados por um grid search de 729 combinações, analisando o efeito de cada parâmetro sobre o fitness e o tempo de execução.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_nZP1TkM0w6r_qnXkJOje96UVX-2MK5J?usp=sharing)
