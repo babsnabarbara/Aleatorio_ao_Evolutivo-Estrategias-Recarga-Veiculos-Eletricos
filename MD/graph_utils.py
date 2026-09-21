@@ -22,9 +22,9 @@ def build_graph_from_netfile(netfile: Path | str) -> nx.DiGraph:
     """
     Lê o .net.xml do SUMO e monta um DiGraph onde cada edge do net vira um
     nó do grafo, ligado aos edges seguintes via as tags <connection>.
-    O atributo 'length' de cada aresta vem do comprimento da lane; 'weight'
-    é fixo em 1 (usado pela busca de ciclo das estratégias de estação, que
-    conta número de saltos, não distância).
+    O atributo 'length' de cada aresta vem do comprimento da lane -- usado
+    pelo roteamento em tempo de simulação (ver simulation.py::decide_station/
+    reroute, que faz Dijkstra ponderado por distância real).
     """
     netfile = Path(netfile)
     with open(netfile) as f:
@@ -48,7 +48,6 @@ def build_graph_from_netfile(netfile: Path | str) -> nx.DiGraph:
                 source_edge,
                 dest_edge,
                 length=edges_length[source_edge],
-                weight=1,
             )
     return graph
 
