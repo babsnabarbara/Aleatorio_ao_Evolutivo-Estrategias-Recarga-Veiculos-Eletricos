@@ -177,8 +177,7 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
     ET.SubElement(input_el, "route-files").set("value", job.trips_file.name)
     # O .add.xml (estações) sozinho aqui NÃO carrega o vType "soulEV65" --
     # sem isso, traci.vehicle.add(..., typeID="soulEV65", ...) usa um tipo
-    # padrão silenciosamente, com atributos (ex. comprimento) diferentes do
-    # que graph_utils.realized_capacity assume ao calcular roadsideCapacity.
+    # padrão silenciosamente, com atributos diferentes do esperado.
     # electric_vehicle.xml continua sendo carregado por isso -- só não tem
     # mais device.battery no vType (recarga foi removida do projeto, ver
     # write_add_file), então "soulEV65" hoje é só um nome legado do tipo de
@@ -232,34 +231,49 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
     usa como fonte de verdade.
 
     A cada estação:
-    - <parkingArea roadsideCapacity=...> -- capacidade REAL, calculada por
-      lane (ver graph_utils.realized_capacity): min(job.max_vehicles_per_cs,
-      quantos veículos cabem fisicamente naquela lane específica), nunca
-      menos que 1. Decisão metodológica: a seleção de estação (nas 5
-      strategies) NÃO filtra mais por capacidade -- qualquer lane escolhida
-      é aceita, e a capacidade só se ajusta aqui, na hora de gerar o
-      arquivo, à geometria real daquela posição específica.
+    - <parkingArea roadsideCapacity="0" onRoad="false" friendlyPos="true">
+      -- capacidade NÃO depende mais do comprimento da rua (FIX 2026-09-23,
+      substitui a versão anterior que usava graph_utils.realized_capacity,
+      limitada por quantos veículos cabiam fisicamente na lane). Agora
+      sempre `job.max_vehicles_per_cs` vagas (default: config.
+      DEFAULT_MAX_VEHICLES_PER_CS = 6), cada uma um <space> fora da via
+      (onRoad="false" -- não compete por espaço de tráfego real da lane).
+      As posições dos <space> vêm de graph_utils.parking_space_positions
+      (coladas à geometria real da lane, só um pequeno deslocamento
+      perpendicular pra não ficarem desenhadas sobrepostas no sumo-gui) --
+      isso é cosmético, não afeta roteamento nem a distância percorrida
+      pelos veículos (calculada pelo grafo até a LANE da parkingArea, não
+      até a coordenada do <space>). friendlyPos="true" evita erro de
+      validação de posição, já que a área declarada não precisa mais caber
+      dentro do comprimento real da lane. A seleção de estação (nas 5
+      strategies) continua sem filtrar por capacidade -- qualquer lane
+      escolhida é aceita.
     """
     if lanes is None:
         lanes = read_selected_lanes_file(job.selected_lanes_file)
 
-    lane_lengths = graph_utils.lane_lengths()
-    veh_length = vehicle_length("soulEV65")
+    shapes = graph_utils.lane_shapes()
 
     root = ET.Element("additional")
     root.set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root.set("xsi:noNamespaceSchemaLocation", "http://sumo.dlr.de/xsd/additional_file.xsd")
 
     for i, lane_id in enumerate(sorted(lanes)):
-        capacity = graph_utils.realized_capacity(
-            lane_id, job.max_vehicles_per_cs, lane_lengths, veh_length
-        )
-
         pa = ET.SubElement(root, "parkingArea")
         pa.set("id", str(i))
         pa.set("name", "parkingArea")
         pa.set("lane", lane_id)
-        pa.set("roadsideCapacity", str(capacity))
+        pa.set("roadsideCapacity", "0")
+        pa.set("onRoad", "false")
+        pa.set("friendlyPos", "true")
+
+        shape = shapes.get(lane_id, ())
+        positions = graph_utils.parking_space_positions(shape, job.max_vehicles_per_cs)
+        for x, y in positions:
+            space = ET.SubElement(pa, "space")
+            space.set("x", f"{x:.2f}")
+            space.set("y", f"{y:.2f}")
+            space.set("angle", "0")
 
     _pretty_write(root, job.add_file)
 
