@@ -9,6 +9,7 @@ generatingPseudoRandom.py. Esta é a única versão daqui pra frente.
 """
 from __future__ import annotations
 
+import math
 from functools import lru_cache
 from pathlib import Path
 
@@ -179,10 +180,75 @@ def lane_lengths(netfile: Path | str = None) -> dict:
     return lengths
 
 
-def realized_capacity(lane_id: str, max_vehicles_per_cs: int,
-                       lane_lengths_dict: dict, vehicle_length: float) -> int:
-    length = lane_lengths_dict.get(lane_id)
-    if length is None:
-        return 1
-    fits = int(length // vehicle_length)
-    return max(1, min(max_vehicles_per_cs, fits))
+@lru_cache(maxsize=1)
+def lane_shapes(netfile: Path | str = None) -> dict[str, tuple[tuple[float, float], ...]]:
+    """
+    Mapeia cada LANE id para sua geometria -- a lista de pontos (x, y) do
+    atributo 'shape' no net.xml, na ordem em que aparecem (do início ao fim
+    da lane). Usado só para posicionar as vagas de estacionamento fora da
+    via (<space> de uma parkingArea com onRoad="false") coladas à lane real,
+    em vez de coordenadas arbitrárias -- ver parking_space_positions().
+    """
+    netfile = Path(netfile) if netfile else config.NET_FILE
+    with open(netfile) as f:
+        data = f.read()
+    soup = BeautifulSoup(data, "xml")
+    shapes: dict[str, tuple[tuple[float, float], ...]] = {}
+    for edge_tag in soup.find_all("edge"):
+        for lane_tag in edge_tag.find_all("lane"):
+            shape_raw = lane_tag.get("shape")
+            if not shape_raw:
+                continue
+            points = tuple(
+                tuple(map(float, pair.split(",")))
+                for pair in shape_raw.split(" ")
+                if pair.strip()
+            )
+            if points:
+                shapes[lane_tag["id"]] = points
+    return shapes
+
+
+def parking_space_positions(shape: tuple[tuple[float, float], ...], n: int,
+                             offset: float = 1.5, spacing: float = 2.5) -> list[tuple[float, float]]:
+    """
+    Calcula N posições (x, y) para as vagas (<space>) de uma parkingArea
+    fora da via (onRoad="false"), coladas à lane real -- um pequeno
+    deslocamento perpendicular ao ponto médio da lane (offset, em metros),
+    em grade de até 3 colunas por linha (spacing entre vagas).
+
+    IMPORTANTE: isso é puramente cosmético/estrutural -- evita que todas as
+    vagas fiquem desenhadas exatamente sobrepostas no sumo-gui. NÃO afeta
+    roteamento nem a distância percorrida pelos veículos: a rota é
+    calculada pelo grafo (decide_station/reroute em simulation.py, via
+    Dijkstra por 'length') até a LANE da parkingArea, não até a coordenada
+    do <space> -- a posição exata da vaga não entra nesse cálculo.
+
+    Fallback: se a lane não tiver geometria (`shape` vazio -- não deveria
+    acontecer para uma lane real do net.xml, mas por segurança), usa (0, 0)
+    como base em vez de falhar.
+    """
+    if len(shape) < 2:
+        x0, y0 = shape[0] if shape else (0.0, 0.0)
+        return [(x0 + i * spacing, y0) for i in range(n)]
+
+    x1, y1 = shape[0]
+    x2, y2 = shape[-1]
+    dx, dy = x2 - x1, y2 - y1
+    lane_len = math.hypot(dx, dy) or 1.0
+    dir_x, dir_y = dx / lane_len, dy / lane_len   # vetor unitário ao longo da lane
+    perp_x, perp_y = -dir_y, dir_x                # vetor unitário perpendicular
+
+    mid_x = (x1 + x2) / 2.0
+    mid_y = (y1 + y2) / 2.0
+
+    cols = 3
+    positions = []
+    for i in range(n):
+        row, col = divmod(i, cols)
+        along = (col - (cols - 1) / 2.0) * spacing
+        across = offset + row * spacing
+        x = mid_x + dir_x * along + perp_x * across
+        y = mid_y + dir_y * along + perp_y * across
+        positions.append((x, y))
+    return positions
