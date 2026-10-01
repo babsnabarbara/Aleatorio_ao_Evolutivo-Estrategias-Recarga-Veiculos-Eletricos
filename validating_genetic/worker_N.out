@@ -1,0 +1,4 @@
+nohup: ignoring input
+usage: 3_worker.py [-h] --servidor SERVIDOR [--netfile NETFILE]
+                   [--local-search]
+3_worker.py: error: argument --servidor: invalid int value: 'N'
