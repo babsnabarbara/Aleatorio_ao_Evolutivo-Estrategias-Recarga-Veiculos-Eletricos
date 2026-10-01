@@ -14,3 +14,9 @@ validating_genetic/*.out
 output/*.log
 MD/*.log
 validating_genetic/*.out
+
+# Resultados gerados localmente - nao versionar
+output/random/
+validating_genetic/checkpoints/
+validating_genetic/logs/
+
