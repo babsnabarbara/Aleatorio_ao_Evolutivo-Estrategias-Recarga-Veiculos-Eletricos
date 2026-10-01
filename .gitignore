@@ -4,3 +4,8 @@ MD/batch.log
 __pycache__/
 *.pyc
 validating-genetic/
+
+# Logs e resultados de execução
+output/*.log
+MD/*.log
+validating_genetic/*.out
