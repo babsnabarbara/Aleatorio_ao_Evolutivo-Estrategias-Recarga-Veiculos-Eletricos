@@ -1,0 +1,7 @@
+libc6
+libcom-err2
+libexpat1
+libgcc-s1
+libkeyutils1
+liblzma5
+zlib1g

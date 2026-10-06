@@ -1,0 +1,20 @@
+host: LCAD1
+gerado em: 2026-10-05 21:52:16
+python: Python 3.10.12
+SUMO_HOME original neste servidor: /home/barbara/sumo
+SO: Ubuntu 22.04.5 LTS
+
+--- sumo (binário) ---
+Eclipse SUMO Version v1_2_0+0382-3754aed092
+
+--- traci (Python) ---
+arquivo: /home/barbara/sumo/tools/traci/__init__.py
+traci.__version__: n/a -- essa versão não expõe isso
+traci API version (TRACI_VERSION): 20
+
+--- sumolib (Python) ---
+arquivo: /home/barbara/sumo/tools/sumolib/__init__.py
+sumolib.__version__: n/a -- essa versão não expõe isso
+
+--- libsumo (Python, bindings compilados -- opcional) ---
+libsumo: NAO DISPONIVEL/NAO COMPILADO nesse build -> ModuleNotFoundError No module named 'libsumo.libsumo'
