@@ -1,0 +1,2926 @@
+[
+  {
+    "arquivo": "tarefa_14.json",
+    "id": 14,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 205631613,
+    "tempo_real_segundos_original": 4526.423734903336
+  },
+  {
+    "arquivo": "tarefa_15.json",
+    "id": 15,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 206470801,
+    "tempo_real_segundos_original": 1914.3022220134735
+  },
+  {
+    "arquivo": "tarefa_16.json",
+    "id": 16,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 200127125,
+    "tempo_real_segundos_original": 3198.5143225193024
+  },
+  {
+    "arquivo": "tarefa_28.json",
+    "id": 28,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 209714128,
+    "tempo_real_segundos_original": 4897.43754696846
+  },
+  {
+    "arquivo": "tarefa_29.json",
+    "id": 29,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 206734087,
+    "tempo_real_segundos_original": 6866.2786257267
+  },
+  {
+    "arquivo": "tarefa_32.json",
+    "id": 32,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 204167366,
+    "tempo_real_segundos_original": 6791.274755239487
+  },
+  {
+    "arquivo": "tarefa_37.json",
+    "id": 37,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 209489380,
+    "tempo_real_segundos_original": 4843.61105966568
+  },
+  {
+    "arquivo": "tarefa_40.json",
+    "id": 40,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 206938670,
+    "tempo_real_segundos_original": 4817.1916563510895
+  },
+  {
+    "arquivo": "tarefa_41.json",
+    "id": 41,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 202991762,
+    "tempo_real_segundos_original": 6722.85079574585
+  },
+  {
+    "arquivo": "tarefa_52.json",
+    "id": 52,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 204618888,
+    "tempo_real_segundos_original": 4811.360009431839
+  },
+  {
+    "arquivo": "tarefa_53.json",
+    "id": 53,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 201296289,
+    "tempo_real_segundos_original": 6744.504873752594
+  },
+  {
+    "arquivo": "tarefa_55.json",
+    "id": 55,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 204062929,
+    "tempo_real_segundos_original": 8191.289367198944
+  },
+  {
+    "arquivo": "tarefa_56.json",
+    "id": 56,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 203085934,
+    "tempo_real_segundos_original": 11477.44626379013
+  },
+  {
+    "arquivo": "tarefa_59.json",
+    "id": 59,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 200931051,
+    "tempo_real_segundos_original": 11485.400301933289
+  },
+  {
+    "arquivo": "tarefa_63.json",
+    "id": 63,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 213086289,
+    "tempo_real_segundos_original": 4877.571088552475
+  },
+  {
+    "arquivo": "tarefa_64.json",
+    "id": 64,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 207752267,
+    "tempo_real_segundos_original": 8136.798224449158
+  },
+  {
+    "arquivo": "tarefa_66.json",
+    "id": 66,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 208882948,
+    "tempo_real_segundos_original": 4807.078800201416
+  },
+  {
+    "arquivo": "tarefa_67.json",
+    "id": 67,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 203570564,
+    "tempo_real_segundos_original": 8032.128661870956
+  },
+  {
+    "arquivo": "tarefa_68.json",
+    "id": 68,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 201427168,
+    "tempo_real_segundos_original": 11259.956614494324
+  },
+  {
+    "arquivo": "tarefa_69.json",
+    "id": 69,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 205833654,
+    "tempo_real_segundos_original": 4865.386668920517
+  },
+  {
+    "arquivo": "tarefa_78.json",
+    "id": 78,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 204559783,
+    "tempo_real_segundos_original": 4801.691803455353
+  },
+  {
+    "arquivo": "tarefa_79.json",
+    "id": 79,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 200372580,
+    "tempo_real_segundos_original": 8009.981116533279
+  },
+  {
+    "arquivo": "tarefa_80.json",
+    "id": 80,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 199879919,
+    "tempo_real_segundos_original": 11237.702140569687
+  },
+  {
+    "arquivo": "tarefa_83.json",
+    "id": 83,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 212901833,
+    "tempo_real_segundos_original": 6504.878787755966
+  },
+  {
+    "arquivo": "tarefa_84.json",
+    "id": 84,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 215717087,
+    "tempo_real_segundos_original": 2772.245388507843
+  },
+  {
+    "arquivo": "tarefa_85.json",
+    "id": 85,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 214229287,
+    "tempo_real_segundos_original": 4644.074727058411
+  },
+  {
+    "arquivo": "tarefa_98.json",
+    "id": 98,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 206097006,
+    "tempo_real_segundos_original": 6400.662435531616
+  },
+  {
+    "arquivo": "tarefa_108.json",
+    "id": 108,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 214290949,
+    "tempo_real_segundos_original": 4169.2481479644775
+  },
+  {
+    "arquivo": "tarefa_118.json",
+    "id": 118,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 221605843,
+    "tempo_real_segundos_original": 6924.64294552803
+  },
+  {
+    "arquivo": "tarefa_119.json",
+    "id": 119,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 219451238,
+    "tempo_real_segundos_original": 9698.193246603012
+  },
+  {
+    "arquivo": "tarefa_122.json",
+    "id": 122,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 211104847,
+    "tempo_real_segundos_original": 9608.315241336823
+  },
+  {
+    "arquivo": "tarefa_124.json",
+    "id": 124,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 210716036,
+    "tempo_real_segundos_original": 6875.920713424683
+  },
+  {
+    "arquivo": "tarefa_125.json",
+    "id": 125,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 208040117,
+    "tempo_real_segundos_original": 9588.743228197098
+  },
+  {
+    "arquivo": "tarefa_134.json",
+    "id": 134,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 207186108,
+    "tempo_real_segundos_original": 9627.702566623688
+  },
+  {
+    "arquivo": "tarefa_144.json",
+    "id": 144,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 219025630,
+    "tempo_real_segundos_original": 6945.7311816215515
+  },
+  {
+    "arquivo": "tarefa_145.json",
+    "id": 145,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 217364633,
+    "tempo_real_segundos_original": 11497.183643102646
+  },
+  {
+    "arquivo": "tarefa_146.json",
+    "id": 146,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 216672002,
+    "tempo_real_segundos_original": 16101.850515842438
+  },
+  {
+    "arquivo": "tarefa_148.json",
+    "id": 148,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 214661942,
+    "tempo_real_segundos_original": 11660.873555660248
+  },
+  {
+    "arquivo": "tarefa_149.json",
+    "id": 149,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 211912615,
+    "tempo_real_segundos_original": 16300.073343038559
+  },
+  {
+    "arquivo": "tarefa_151.json",
+    "id": 151,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 207772838,
+    "tempo_real_segundos_original": 11663.680805206299
+  },
+  {
+    "arquivo": "tarefa_152.json",
+    "id": 152,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 205640090,
+    "tempo_real_segundos_original": 16315.594508886337
+  },
+  {
+    "arquivo": "tarefa_159.json",
+    "id": 159,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 213572034,
+    "tempo_real_segundos_original": 6860.3821976184845
+  },
+  {
+    "arquivo": "tarefa_160.json",
+    "id": 160,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 210457759,
+    "tempo_real_segundos_original": 11479.728432655334
+  },
+  {
+    "arquivo": "tarefa_161.json",
+    "id": 161,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 209643612,
+    "tempo_real_segundos_original": 16029.056794404984
+  },
+  {
+    "arquivo": "tarefa_173.json",
+    "id": 173,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 221226479,
+    "tempo_real_segundos_original": 9160.309745788574
+  },
+  {
+    "arquivo": "tarefa_174.json",
+    "id": 174,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 226508254,
+    "tempo_real_segundos_original": 3916.3350994586945
+  },
+  {
+    "arquivo": "tarefa_175.json",
+    "id": 175,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 220033560,
+    "tempo_real_segundos_original": 6510.155852556229
+  },
+  {
+    "arquivo": "tarefa_188.json",
+    "id": 188,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 216986895,
+    "tempo_real_segundos_original": 9061.864575862885
+  },
+  {
+    "arquivo": "tarefa_192.json",
+    "id": 192,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 222318644,
+    "tempo_real_segundos_original": 6048.605663776398
+  },
+  {
+    "arquivo": "tarefa_200.json",
+    "id": 200,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 220694051,
+    "tempo_real_segundos_original": 13865.240133285522
+  },
+  {
+    "arquivo": "tarefa_202.json",
+    "id": 202,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 219108878,
+    "tempo_real_segundos_original": 9944.536175012589
+  },
+  {
+    "arquivo": "tarefa_203.json",
+    "id": 203,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 219108878,
+    "tempo_real_segundos_original": 13911.737094640732
+  },
+  {
+    "arquivo": "tarefa_215.json",
+    "id": 215,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 214563806,
+    "tempo_real_segundos_original": 13757.156369924545
+  },
+  {
+    "arquivo": "tarefa_216.json",
+    "id": 216,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 231456277,
+    "tempo_real_segundos_original": 10106.69267821312
+  },
+  {
+    "arquivo": "tarefa_218.json",
+    "id": 218,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 225947708,
+    "tempo_real_segundos_original": 23577.064884662628
+  },
+  {
+    "arquivo": "tarefa_226.json",
+    "id": 226,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 219738885,
+    "tempo_real_segundos_original": 16652.798094511032
+  },
+  {
+    "arquivo": "tarefa_229.json",
+    "id": 229,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 217757303,
+    "tempo_real_segundos_original": 16623.85583305359
+  },
+  {
+    "arquivo": "tarefa_230.json",
+    "id": 230,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 214468030,
+    "tempo_real_segundos_original": 23294.403856515884
+  },
+  {
+    "arquivo": "tarefa_231.json",
+    "id": 231,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 219451232,
+    "tempo_real_segundos_original": 10048.792830705643
+  },
+  {
+    "arquivo": "tarefa_241.json",
+    "id": 241,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 213238417,
+    "tempo_real_segundos_original": 16515.012941122055
+  },
+  {
+    "arquivo": "tarefa_242.json",
+    "id": 242,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 212579215,
+    "tempo_real_segundos_original": 23127.970019102097
+  },
+  {
+    "arquivo": "tarefa_257.json",
+    "id": 257,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 203787484,
+    "tempo_real_segundos_original": 4570.610640048981
+  },
+  {
+    "arquivo": "tarefa_258.json",
+    "id": 258,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 210376680,
+    "tempo_real_segundos_original": 1918.9178321361542
+  },
+  {
+    "arquivo": "tarefa_259.json",
+    "id": 259,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 205717106,
+    "tempo_real_segundos_original": 3218.3484699726105
+  },
+  {
+    "arquivo": "tarefa_272.json",
+    "id": 272,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 206867085,
+    "tempo_real_segundos_original": 6853.943339347839
+  },
+  {
+    "arquivo": "tarefa_280.json",
+    "id": 280,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 209067956,
+    "tempo_real_segundos_original": 4886.856120586395
+  },
+  {
+    "arquivo": "tarefa_281.json",
+    "id": 281,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 206315942,
+    "tempo_real_segundos_original": 6838.19051027298
+  },
+  {
+    "arquivo": "tarefa_282.json",
+    "id": 282,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 208246983,
+    "tempo_real_segundos_original": 2896.2780663967133
+  },
+  {
+    "arquivo": "tarefa_284.json",
+    "id": 284,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 202592206,
+    "tempo_real_segundos_original": 6716.1693704128265
+  },
+  {
+    "arquivo": "tarefa_295.json",
+    "id": 295,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 202277024,
+    "tempo_real_segundos_original": 4794.113476276398
+  },
+  {
+    "arquivo": "tarefa_296.json",
+    "id": 296,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 200140394,
+    "tempo_real_segundos_original": 6711.558953046799
+  },
+  {
+    "arquivo": "tarefa_298.json",
+    "id": 298,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 205978562,
+    "tempo_real_segundos_original": 8128.279147386551
+  },
+  {
+    "arquivo": "tarefa_299.json",
+    "id": 299,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 205497973,
+    "tempo_real_segundos_original": 11359.385526895523
+  },
+  {
+    "arquivo": "tarefa_302.json",
+    "id": 302,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 201145482,
+    "tempo_real_segundos_original": 11307.82361483574
+  },
+  {
+    "arquivo": "tarefa_307.json",
+    "id": 307,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 208760490,
+    "tempo_real_segundos_original": 8074.1850554943085
+  },
+  {
+    "arquivo": "tarefa_309.json",
+    "id": 309,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 208312732,
+    "tempo_real_segundos_original": 4830.671537160873
+  },
+  {
+    "arquivo": "tarefa_310.json",
+    "id": 310,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 204945143,
+    "tempo_real_segundos_original": 8015.7327926158905
+  },
+  {
+    "arquivo": "tarefa_311.json",
+    "id": 311,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 203050052,
+    "tempo_real_segundos_original": 11239.673994541168
+  },
+  {
+    "arquivo": "tarefa_322.json",
+    "id": 322,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 202249116,
+    "tempo_real_segundos_original": 8057.54737663269
+  },
+  {
+    "arquivo": "tarefa_323.json",
+    "id": 323,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 200373097,
+    "tempo_real_segundos_original": 11294.404392242432
+  },
+  {
+    "arquivo": "tarefa_326.json",
+    "id": 326,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 213962801,
+    "tempo_real_segundos_original": 6535.722331762314
+  },
+  {
+    "arquivo": "tarefa_341.json",
+    "id": 341,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 210475585,
+    "tempo_real_segundos_original": 6376.09278512001
+  },
+  {
+    "arquivo": "tarefa_348.json",
+    "id": 348,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 209892954,
+    "tempo_real_segundos_original": 2690.0295367240906
+  },
+  {
+    "arquivo": "tarefa_349.json",
+    "id": 349,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 206115903,
+    "tempo_real_segundos_original": 4484.096498012543
+  },
+  {
+    "arquivo": "tarefa_352.json",
+    "id": 352,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 216947712,
+    "tempo_real_segundos_original": 7035.565001487732
+  },
+  {
+    "arquivo": "tarefa_362.json",
+    "id": 362,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 215753382,
+    "tempo_real_segundos_original": 9586.316460132599
+  },
+  {
+    "arquivo": "tarefa_365.json",
+    "id": 365,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 210479275,
+    "tempo_real_segundos_original": 9573.402092695236
+  },
+  {
+    "arquivo": "tarefa_366.json",
+    "id": 366,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 216926356,
+    "tempo_real_segundos_original": 4135.7697558403015
+  },
+  {
+    "arquivo": "tarefa_367.json",
+    "id": 367,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 211379206,
+    "tempo_real_segundos_original": 6981.590212106705
+  },
+  {
+    "arquivo": "tarefa_368.json",
+    "id": 368,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 208568019,
+    "tempo_real_segundos_original": 9705.488420248032
+  },
+  {
+    "arquivo": "tarefa_377.json",
+    "id": 377,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 208716067,
+    "tempo_real_segundos_original": 9602.992111206055
+  },
+  {
+    "arquivo": "tarefa_387.json",
+    "id": 387,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 217821199,
+    "tempo_real_segundos_original": 6938.857246637344
+  },
+  {
+    "arquivo": "tarefa_388.json",
+    "id": 388,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 214505095,
+    "tempo_real_segundos_original": 11541.534332036972
+  },
+  {
+    "arquivo": "tarefa_389.json",
+    "id": 389,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 212443558,
+    "tempo_real_segundos_original": 16148.660517454147
+  },
+  {
+    "arquivo": "tarefa_391.json",
+    "id": 391,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 214232207,
+    "tempo_real_segundos_original": 11407.033583402634
+  },
+  {
+    "arquivo": "tarefa_392.json",
+    "id": 392,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 211575222,
+    "tempo_real_segundos_original": 15912.497503042221
+  },
+  {
+    "arquivo": "tarefa_394.json",
+    "id": 394,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 207208685,
+    "tempo_real_segundos_original": 11497.434354782104
+  },
+  {
+    "arquivo": "tarefa_395.json",
+    "id": 395,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 205361754,
+    "tempo_real_segundos_original": 16133.114730358124
+  },
+  {
+    "arquivo": "tarefa_402.json",
+    "id": 402,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 210397232,
+    "tempo_real_segundos_original": 6887.622960329056
+  },
+  {
+    "arquivo": "tarefa_403.json",
+    "id": 403,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 206572834,
+    "tempo_real_segundos_original": 11445.082815170288
+  },
+  {
+    "arquivo": "tarefa_404.json",
+    "id": 404,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 204898881,
+    "tempo_real_segundos_original": 16066.622560739517
+  },
+  {
+    "arquivo": "tarefa_410.json",
+    "id": 410,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 222352306,
+    "tempo_real_segundos_original": 9323.237396478653
+  },
+  {
+    "arquivo": "tarefa_431.json",
+    "id": 431,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 212871995,
+    "tempo_real_segundos_original": 8952.763629198074
+  },
+  {
+    "arquivo": "tarefa_443.json",
+    "id": 443,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 224705767,
+    "tempo_real_segundos_original": 13818.243386268616
+  },
+  {
+    "arquivo": "tarefa_445.json",
+    "id": 445,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 224060415,
+    "tempo_real_segundos_original": 9918.270996570587
+  },
+  {
+    "arquivo": "tarefa_446.json",
+    "id": 446,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 221928031,
+    "tempo_real_segundos_original": 13877.7754778862
+  },
+  {
+    "arquivo": "tarefa_456.json",
+    "id": 456,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 219705781,
+    "tempo_real_segundos_original": 5881.2415018081665
+  },
+  {
+    "arquivo": "tarefa_458.json",
+    "id": 458,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 217252104,
+    "tempo_real_segundos_original": 13857.082138061523
+  },
+  {
+    "arquivo": "tarefa_459.json",
+    "id": 459,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 229213359,
+    "tempo_real_segundos_original": 10107.60674571991
+  },
+  {
+    "arquivo": "tarefa_469.json",
+    "id": 469,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 220472099,
+    "tempo_real_segundos_original": 16587.388839006424
+  },
+  {
+    "arquivo": "tarefa_470.json",
+    "id": 470,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 217373011,
+    "tempo_real_segundos_original": 23182.756056070328
+  },
+  {
+    "arquivo": "tarefa_472.json",
+    "id": 472,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 219759118,
+    "tempo_real_segundos_original": 16590.23528623581
+  },
+  {
+    "arquivo": "tarefa_473.json",
+    "id": 473,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 218336851,
+    "tempo_real_segundos_original": 23259.43865776062
+  },
+  {
+    "arquivo": "tarefa_474.json",
+    "id": 474,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 217613791,
+    "tempo_real_segundos_original": 10032.15774011612
+  },
+  {
+    "arquivo": "tarefa_484.json",
+    "id": 484,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 218327687,
+    "tempo_real_segundos_original": 16554.76024365425
+  },
+  {
+    "arquivo": "tarefa_485.json",
+    "id": 485,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.8,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 215516533,
+    "tempo_real_segundos_original": 23214.542738437653
+  },
+  {
+    "arquivo": "tarefa_486.json",
+    "id": 486,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 214300526,
+    "tempo_real_segundos_original": 1960.909523010254
+  },
+  {
+    "arquivo": "tarefa_487.json",
+    "id": 487,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 207440732,
+    "tempo_real_segundos_original": 3268.8062121868134
+  },
+  {
+    "arquivo": "tarefa_500.json",
+    "id": 500,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 205050786,
+    "tempo_real_segundos_original": 4481.192239522934
+  },
+  {
+    "arquivo": "tarefa_515.json",
+    "id": 515,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 206774822,
+    "tempo_real_segundos_original": 6862.513139247894
+  },
+  {
+    "arquivo": "tarefa_523.json",
+    "id": 523,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 205883650,
+    "tempo_real_segundos_original": 4898.0184507369995
+  },
+  {
+    "arquivo": "tarefa_524.json",
+    "id": 524,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 204730058,
+    "tempo_real_segundos_original": 6847.199741840363
+  },
+  {
+    "arquivo": "tarefa_527.json",
+    "id": 527,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 204452125,
+    "tempo_real_segundos_original": 6844.027875185013
+  },
+  {
+    "arquivo": "tarefa_538.json",
+    "id": 538,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 203077860,
+    "tempo_real_segundos_original": 4811.256455421448
+  },
+  {
+    "arquivo": "tarefa_539.json",
+    "id": 539,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 201403032,
+    "tempo_real_segundos_original": 6718.6272394657135
+  },
+  {
+    "arquivo": "tarefa_541.json",
+    "id": 541,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 207537541,
+    "tempo_real_segundos_original": 8078.974670171738
+  },
+  {
+    "arquivo": "tarefa_542.json",
+    "id": 542,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 206590444,
+    "tempo_real_segundos_original": 11344.640484571457
+  },
+  {
+    "arquivo": "tarefa_544.json",
+    "id": 544,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 204362655,
+    "tempo_real_segundos_original": 8186.813414812088
+  },
+  {
+    "arquivo": "tarefa_551.json",
+    "id": 551,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 204221562,
+    "tempo_real_segundos_original": 11252.892228603363
+  },
+  {
+    "arquivo": "tarefa_552.json",
+    "id": 552,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 207822125,
+    "tempo_real_segundos_original": 4857.001462221146
+  },
+  {
+    "arquivo": "tarefa_553.json",
+    "id": 553,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 204965960,
+    "tempo_real_segundos_original": 8093.349700927734
+  },
+  {
+    "arquivo": "tarefa_554.json",
+    "id": 554,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 200997213,
+    "tempo_real_segundos_original": 11352.91190958023
+  },
+  {
+    "arquivo": "tarefa_565.json",
+    "id": 565,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 202740419,
+    "tempo_real_segundos_original": 8027.50825214386
+  },
+  {
+    "arquivo": "tarefa_566.json",
+    "id": 566,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.08,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 199781447,
+    "tempo_real_segundos_original": 11227.558084726334
+  },
+  {
+    "arquivo": "tarefa_569.json",
+    "id": 569,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 217224345,
+    "tempo_real_segundos_original": 6574.913717031479
+  },
+  {
+    "arquivo": "tarefa_570.json",
+    "id": 570,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 219586207,
+    "tempo_real_segundos_original": 2791.5428993701935
+  },
+  {
+    "arquivo": "tarefa_571.json",
+    "id": 571,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 216182575,
+    "tempo_real_segundos_original": 4652.005182504654
+  },
+  {
+    "arquivo": "tarefa_584.json",
+    "id": 584,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 208757035,
+    "tempo_real_segundos_original": 6400.608397483826
+  },
+  {
+    "arquivo": "tarefa_594.json",
+    "id": 594,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 220712669,
+    "tempo_real_segundos_original": 4190.161867856979
+  },
+  {
+    "arquivo": "tarefa_595.json",
+    "id": 595,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 214992414,
+    "tempo_real_segundos_original": 7035.340089082718
+  },
+  {
+    "arquivo": "tarefa_605.json",
+    "id": 605,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 211724014,
+    "tempo_real_segundos_original": 9678.560417890549
+  },
+  {
+    "arquivo": "tarefa_608.json",
+    "id": 608,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 209629047,
+    "tempo_real_segundos_original": 9633.171585798264
+  },
+  {
+    "arquivo": "tarefa_610.json",
+    "id": 610,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 210242438,
+    "tempo_real_segundos_original": 6903.11806344986
+  },
+  {
+    "arquivo": "tarefa_611.json",
+    "id": 611,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 208993088,
+    "tempo_real_segundos_original": 9647.913615703583
+  },
+  {
+    "arquivo": "tarefa_620.json",
+    "id": 620,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 209383253,
+    "tempo_real_segundos_original": 9469.98359298706
+  },
+  {
+    "arquivo": "tarefa_622.json",
+    "id": 622,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 215164822,
+    "tempo_real_segundos_original": 11617.256141901016
+  },
+  {
+    "arquivo": "tarefa_630.json",
+    "id": 630,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 221768071,
+    "tempo_real_segundos_original": 6969.35600066185
+  },
+  {
+    "arquivo": "tarefa_632.json",
+    "id": 632,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 217844891,
+    "tempo_real_segundos_original": 16191.770924568176
+  },
+  {
+    "arquivo": "tarefa_634.json",
+    "id": 634,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 213712000,
+    "tempo_real_segundos_original": 11551.98071026802
+  },
+  {
+    "arquivo": "tarefa_635.json",
+    "id": 635,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 210683563,
+    "tempo_real_segundos_original": 16260.9836332798
+  },
+  {
+    "arquivo": "tarefa_637.json",
+    "id": 637,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 208496767,
+    "tempo_real_segundos_original": 11554.802439212799
+  },
+  {
+    "arquivo": "tarefa_638.json",
+    "id": 638,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 205576405,
+    "tempo_real_segundos_original": 16198.205294370651
+  },
+  {
+    "arquivo": "tarefa_645.json",
+    "id": 645,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 212149854,
+    "tempo_real_segundos_original": 6873.970131158829
+  },
+  {
+    "arquivo": "tarefa_646.json",
+    "id": 646,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 209489002,
+    "tempo_real_segundos_original": 11441.956968545914
+  },
+  {
+    "arquivo": "tarefa_647.json",
+    "id": 647,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.12,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 206399838,
+    "tempo_real_segundos_original": 16064.94854092598
+  },
+  {
+    "arquivo": "tarefa_653.json",
+    "id": 653,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 220083672,
+    "tempo_real_segundos_original": 9416.66576385498
+  },
+  {
+    "arquivo": "tarefa_660.json",
+    "id": 660,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 221056003,
+    "tempo_real_segundos_original": 3941.7565710544586
+  },
+  {
+    "arquivo": "tarefa_661.json",
+    "id": 661,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 219739374,
+    "tempo_real_segundos_original": 6575.698191165924
+  },
+  {
+    "arquivo": "tarefa_674.json",
+    "id": 674,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 200,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 214486001,
+    "tempo_real_segundos_original": 9011.474389076233
+  },
+  {
+    "arquivo": "tarefa_678.json",
+    "id": 678,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 4,
+      "tournament_size": 7,
+      "num_generations": 150
+    },
+    "fitness_original": 223369998,
+    "tempo_real_segundos_original": 6025.1316640377045
+  },
+  {
+    "arquivo": "tarefa_686.json",
+    "id": 686,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 222721260,
+    "tempo_real_segundos_original": 13944.210532188416
+  },
+  {
+    "arquivo": "tarefa_688.json",
+    "id": 688,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 221701439,
+    "tempo_real_segundos_original": 9900.74922657013
+  },
+  {
+    "arquivo": "tarefa_689.json",
+    "id": 689,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 218291152,
+    "tempo_real_segundos_original": 13855.687664747238
+  },
+  {
+    "arquivo": "tarefa_701.json",
+    "id": 701,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 300,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 215408909,
+    "tempo_real_segundos_original": 13917.625752210617
+  },
+  {
+    "arquivo": "tarefa_702.json",
+    "id": 702,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 150
+    },
+    "fitness_original": 227463223,
+    "tempo_real_segundos_original": 10115.846834897995
+  },
+  {
+    "arquivo": "tarefa_703.json",
+    "id": 703,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 4,
+      "tournament_size": 5,
+      "num_generations": 250
+    },
+    "fitness_original": 227463223,
+    "tempo_real_segundos_original": 16793.037222146988
+  },
+  {
+    "arquivo": "tarefa_713.json",
+    "id": 713,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 5,
+      "num_generations": 350
+    },
+    "fitness_original": 220722768,
+    "tempo_real_segundos_original": 23350.962246418
+  },
+  {
+    "arquivo": "tarefa_715.json",
+    "id": 715,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 250
+    },
+    "fitness_original": 223932717,
+    "tempo_real_segundos_original": 16706.415252923965
+  },
+  {
+    "arquivo": "tarefa_716.json",
+    "id": 716,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 7,
+      "num_generations": 350
+    },
+    "fitness_original": 216850047,
+    "tempo_real_segundos_original": 23399.410160541534
+  },
+  {
+    "arquivo": "tarefa_717.json",
+    "id": 717,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 8,
+      "tournament_size": 10,
+      "num_generations": 150
+    },
+    "fitness_original": 225087767,
+    "tempo_real_segundos_original": 9918.380590200424
+  },
+  {
+    "arquivo": "tarefa_727.json",
+    "id": 727,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 250
+    },
+    "fitness_original": 217447922,
+    "tempo_real_segundos_original": 16543.943614006042
+  },
+  {
+    "arquivo": "tarefa_728.json",
+    "id": 728,
+    "k": 27,
+    "seed": null,
+    "servidor_atribuido": 0,
+    "params": {
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.18,
+      "population_size": 500,
+      "elitism_size": 12,
+      "tournament_size": 10,
+      "num_generations": 350
+    },
+    "fitness_original": 217447922,
+    "tempo_real_segundos_original": 23203.388603925705
+  }
+]
