@@ -7,12 +7,12 @@ import networkx as nx
 from bs4 import BeautifulSoup
 from concurrent.futures import ProcessPoolExecutor
 
-CROSSOVER_RATE = 0.8
-MUTATION_RATE = 0.12
-NUM_GENERATIONS = 250
-POPULATION_SIZE = 300
+CROSSOVER_RATE = 0.9
+MUTATION_RATE = 0.08
+NUM_GENERATIONS = 150
+POPULATION_SIZE = 200
 NUM_STATIONS = 16
-ELITISM_SIZE = 8
+ELITISM_SIZE = 12
 TOURNAMENT_SIZE = 7
 NUM_WORKERS = os.cpu_count()
 
