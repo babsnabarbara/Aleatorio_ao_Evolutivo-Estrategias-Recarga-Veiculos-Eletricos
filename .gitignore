@@ -4,3 +4,4 @@ MD/batch.log
 __pycache__/
 *.pyc
 output/
+*.log
