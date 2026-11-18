@@ -146,12 +146,12 @@ def reroute(graph: nx.DiGraph, source: str, target: str) -> list:
 # ---------------------------------------------------------------------------
 # Injeção dos veículos elétricos via TraCI
 # ---------------------------------------------------------------------------
-def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> None:
+def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> dict:
     import traci  # import tardio -- ver docstring do módulo
-
+    ev_station_edge = {}
     charging_stations = read_charging_stations(job)
     if not charging_stations:
-        return  # cenário sem estações (cs_amount=0) -- nada a injetar
+        return ev_station_edge# cenário sem estações (cs_amount=0) -- nada a injetar
 
     for info in charging_stations.values():
         info["edge"] = traci.lane.getEdgeID(info["lane"])
@@ -186,8 +186,8 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> None:
         # inclusive: parar numa parkingArea sem STOP_PARKING não faz
         # sentido fisicamente).
         traci.vehicle.setParkingAreaStop(car_id, stop_spot, duration=duration_s, flags=1)
-
-
+        ev_station_edge[car_id] = charging_edge
+    return ev_station_edge
 # ---------------------------------------------------------------------------
 # Execução completa de um job
 # ---------------------------------------------------------------------------
@@ -203,7 +203,11 @@ def _ensure_traci_importable() -> None:
 
 
 def _write_report(job: SimJob, start: datetime.datetime,
-                   end: datetime.datetime, error: str | None) -> None:
+                   end: datetime.datetime, error: str | None,
+                   extra_lines: list | None = None) -> None:
+    """Grava o relatório de texto da simulação. `extra_lines` são linhas
+    opcionais acrescentadas ao final -- hoje, as contagens do stuck_monitor
+    (ver stuck_monitor.StuckMonitor.resumo)."""
     lines = [
         f"PORCENTAGEM DE VEÍCULOS: {job.percentage}",
         f"NÚMERO DE ESTAÇÕES DE RECARGA: {job.cs_amount}",
@@ -230,9 +234,9 @@ def _write_report(job: SimJob, start: datetime.datetime,
             f"data: {end.strftime('%d/%m/%Y')}",
             f"erro: {error}",
         ]
+    lines += list(extra_lines or [])
     job.report_file.parent.mkdir(parents=True, exist_ok=True)
     job.report_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
 
 def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo",
                     max_hours: float | None = None) -> None:
@@ -306,10 +310,22 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
 
     start_time = datetime.datetime.now()
     started = False
+    monitor = None
     try:
         traci.start(sumo_cmd, port=job.port)
         started = True
-        _inject_electric_vehicles(job, graph)
+
+        ev_station_edge = _inject_electric_vehicles(job, graph)
+        if config.USE_STUCK_MONITOR:
+            from stuck_monitor import StuckMonitor
+            monitor = StuckMonitor(
+                traci, ev_station_edge,
+                intervalo_s=config.STUCK_CHECK_INTERVAL_S,
+                limite_s=config.STUCK_LIMIT_S,
+                mapa_faixas=graph_utils.edge_to_lanes,
+            )
+
+        
         loop_start = time.monotonic()
         while traci.simulation.getMinExpectedNumber() > 0:
             elapsed = time.monotonic() - loop_start
@@ -322,6 +338,8 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
                     f"vez de rodar indefinidamente."
                 )
             traci.simulationStep()
+            if monitor is not None:
+                monitor.apos_passo()
     except Exception as exc:  # inclui traci.exceptions.FatalTraCIError e o TimeoutError acima
         _write_report(job, start_time, datetime.datetime.now(), error=str(exc))
         raise

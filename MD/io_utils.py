@@ -198,7 +198,10 @@ def write_cfg_file(job: SimJob, routing_threads: int | None = None) -> None:
     ET.SubElement(routing_el, "device.rerouting.adaptation-steps").set("value", "18")
     ET.SubElement(routing_el, "device.rerouting.adaptation-interval").set("value", "10")
     ET.SubElement(routing_el, "device.rerouting.threads").set("value", str(threads))
-
+    processing_el = ET.SubElement(root, "processing")
+    ET.SubElement(processing_el, "time-to-teleport").set(
+        "value", str(config.TIME_TO_TELEPORT_S)
+    )
     report_el = ET.SubElement(root, "report")
     ET.SubElement(report_el, "verbose").set("value", "true")
     ET.SubElement(report_el, "log").set("value", "cologne6to8.log")
