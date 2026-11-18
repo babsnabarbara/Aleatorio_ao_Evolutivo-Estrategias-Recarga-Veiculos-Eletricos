@@ -53,7 +53,7 @@ APPROACHES = ("random", "pseudorandom", "greedy", "greedyvoronoi", "genetic")
 
 MINUTES_RECHARGING = (10, 20, 40, 60)
 STATIONS_AMOUNTS = (9, 16, 25, 36, 49)
-PERCENTAGES = tuple(range(5, 31, 5))     # 5, 10, 15, 20, 25, 30
+PERCENTAGES = tuple(range(1,6))     # 1, 2, 3, 4, 5
 REPETITIONS = tuple(range(1, 6))         # 1..5
 
 # Seeds usadas nas rodadas pré-computadas do algoritmo genético (exhaustive
