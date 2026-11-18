@@ -74,38 +74,35 @@ def _quadrants_for(cs_amount: int) -> list:
 
 
 def _build(cs_amount: int, graph: nx.DiGraph) -> set:
+    """
+    FIX (2026-11-18): em cada quadrante, sorteio em dois passos, uniforme
+    sobre os VÉRTICES do quadrante.
+      1. sorteia um trecho entre os trechos candidatos do quadrante
+         (graph_utils.candidate_edges que têm alguma faixa listada no
+         quadrante e ainda não receberam estação), todos com a mesma chance;
+      2. o trecho vira estação na faixa dada por graph_utils.lane_for_edge
+         (a mesma regra do 'genetic' e do 'random').
+    Antes sorteava faixas: um trecho com 3 faixas tinha 3 vezes mais chance
+    que um trecho com 1.
+    """
     quadrants = _quadrants_for(cs_amount)
-    connected_lanes = graph_utils.lanes_with_outgoing_connection()
+    candidates = set(graph_utils.candidate_edges(graph))
 
+    chosen_edges: set = set()
     chosen: set = set()
-    max_attempts_per_quadrant = 5000
-
     for quadrant_lanes in quadrants:
-        if len(quadrant_lanes) < 1:
-            raise ValueError(
-                f"Quadrante sem nenhuma lane -- "
-                f"impossível sortear candidato (cs_amount={cs_amount})."
-            )
-
-        found = False
-        for _ in range(max_attempts_per_quadrant):
-            lane = random.choice(quadrant_lanes)
-            # lane[:-2] converte lane id -> edge id (remove o sufixo "_0")
-            if lane[:-2] not in graph:
-                continue
-            if lane not in connected_lanes:
-                continue  # lane sem conexão de saída própria -- veículo ficaria preso
-            if lane in chosen:
-                continue
-            chosen.add(lane)
-            found = True
-            break
-
-        if not found:
+        edges = sorted(
+            {lane.rsplit("_", 1)[0] for lane in quadrant_lanes} & candidates
+            - chosen_edges
+        )
+        if not edges:
             raise RuntimeError(
-                f"Não achei estação válida para um quadrante em "
-                f"{max_attempts_per_quadrant} tentativas (cs_amount={cs_amount})."
+                f"Quadrante sem nenhum trecho candidato -- impossível "
+                f"sortear estação (cs_amount={cs_amount})."
             )
+        edge = random.choice(edges)
+        chosen_edges.add(edge)
+        chosen.add(graph_utils.lane_for_edge(edge))
 
     return chosen
 

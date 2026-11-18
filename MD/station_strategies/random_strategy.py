@@ -1,8 +1,9 @@
 """
 Approach 'random' -- substitui findingRandom.py::findValidChargingPoints.
 
-Sorteia UMA <connection> aleatória por vez; sua lane vira o id da estação
-("<edge>_<fromLane>"), desde que o edge pertença ao componente gigante
+Sorteia trechos (vértices) com a mesma chance e põe a estação na faixa dada
+por graph_utils.lane_for_edge -- ver FIX em _build. Critério de elegibilidade:
+o edge pertence ao componente gigante e a própria faixa tem conexão de saída
 (giant strongly-connected component) do mapa -- o `graph` recebido aqui já
 vem restrito a esse componente (ver cli.py/graph_utils.default_giant_graph).
 
@@ -40,29 +41,24 @@ from station_strategies import evolution
 
 
 def _build(cs_amount: int, graph: nx.DiGraph) -> set:
-    connections = graph_utils.list_connections()
-    if not connections:
-        raise ValueError("net.xml não tem nenhuma <connection> -- impossível sortear candidato")
-
-    chosen: set = set()
-    max_attempts = max(cs_amount, 1) * 2000
-    attempts = 0
-    while len(chosen) < cs_amount and attempts < max_attempts:
-        attempts += 1
-        conn = random.choice(connections)
-        edge = conn["from"]
-        if edge not in graph:
-            continue
-        candidate = f"{edge}_{conn['fromLane']}"
-        if candidate not in chosen:
-            chosen.add(candidate)
-
-    if len(chosen) < cs_amount:
+    """
+    FIX (2026-11-18): sorteio em dois passos, uniforme sobre os VÉRTICES.
+      1. sorteia `cs_amount` trechos distintos entre os candidatos
+         (graph_utils.candidate_edges), todos com a mesma chance;
+      2. cada trecho vira estação na faixa dada por graph_utils.lane_for_edge
+         (a mesma regra do approach 'genetic').
+    Antes sorteava uma <connection> e usava a faixa de origem: faixas com
+    mais conexões de saída, e trechos com mais faixas, tinham mais chance.
+    Também não permite duas estações no mesmo trecho.
+    """
+    candidates = graph_utils.candidate_edges(graph)
+    if len(candidates) < cs_amount:
         raise RuntimeError(
-            f"Não foi possível completar {cs_amount} estações "
-            f"(achadas: {len(chosen)}, tentativas: {attempts})."
+            f"Só existem {len(candidates)} trechos candidatos; "
+            f"impossível escolher {cs_amount} estações."
         )
-    return chosen
+    return {graph_utils.lane_for_edge(edge)
+            for edge in random.sample(candidates, cs_amount)}
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:

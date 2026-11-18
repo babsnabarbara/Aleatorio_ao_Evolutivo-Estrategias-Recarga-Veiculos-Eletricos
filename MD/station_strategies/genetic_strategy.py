@@ -80,9 +80,9 @@ def _lane_for_edge(edge_id: str, connected_lanes: frozenset,
     for verdade (ex. net.xml trocado sem re-executar o GA).
     """
     candidates = lanes_by_edge.get(edge_id, ())
-    for lane_id in candidates:
-        if lane_id in connected_lanes:
-            return lane_id
+    lane_id = graph_utils.lane_for_edge(edge_id)  # regra única (graph_utils)
+    if lane_id is not None:
+        return lane_id
     raise ValueError(
         f"Edge '{edge_id}' está no componente gigante mas NENHUMA de suas "
         f"lanes ({candidates}) tem conexão de saída própria -- isso não "

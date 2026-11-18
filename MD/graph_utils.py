@@ -1,254 +1,142 @@
 """
-Construção do grafo de roteamento a partir do cologne.net.xml.
+Approach 'genetic' -- NÃO calcula nada, só LÊ o resultado de um algoritmo
+genético que já rodou fora deste pipeline (script separado, rodado uma
+vez por cs_amount x seed, salvando em
+input/exhaustive_genetic<cs_amount>/resultado_final_k<cs_amount>_seed<seed>.json).
 
-No código original essa mesma lógica existia, praticamente idêntica, em
-7 lugares: diagnosis.py, genetic_algorithm.py, main.py (como generate_graph),
-e inline dentro de findingPseudoRandom.py, findingRandom.py,
-findingStationsGreedy.py/findingStationsGreedyVoronoi.py e
-generatingPseudoRandom.py. Esta é a única versão daqui pra frente.
+Diferente dos outros 4 approaches: não sorteia nada, não usa
+StationSeedRegistry, não passa por station_strategies/evolution.py (não
+tem sentido "cachear" algo que já É um arquivo estático em disco). A única
+responsabilidade daqui é: dado (cs_amount, repetition), decidir qual seed
+do GA usar e converter o resultado (lista de edge ids) para o formato de
+lane id que o resto do pipeline espera -- o GA opera no nível de rua/edge,
+não de lane específica.
+
+Usa o campo "solucao_final_refinada" do JSON (pós-refinamento), não
+"solucao_ga" (saída bruta, pré-refinamento) -- decisão explícita.
+
+Sempre aceita as posições exatas do GA, sem filtrar por
+capacidade/comprimento de lane -- a capacidade real de cada estação é
+calculada depois, na hora de gerar o .add.xml (ver
+graph_utils.realized_capacity), adaptada à geometria de cada lane. Isso é
+especialmente importante aqui: como as posições vêm de um algoritmo
+externo já publicado, não faz sentido rejeitar ou alterar o que ele
+decidiu por um critério (comprimento de rua) que ele nunca considerou.
+
+O `graph` recebido aqui já vem restrito ao componente gigante do mapa
+(ver cli.py/graph_utils.default_giant_graph) -- mesmo componente que o
+script original do algoritmo genético usa internamente
+(get_giant_component/candidate_nodes), então a checagem "edge existe no
+grafo" abaixo já é consistente com o universo de candidatos que o próprio
+GA usou pra gerar essas posições, e com os outros 4 approaches (que agora
+também só escolhem estações dentro desse mesmo componente).
+
+FIX (2026-09-19): a conversão de edge pra lane usava sempre `f"{edge_id}_0"`
+-- a PRIMEIRA lane do edge, sem checar se é justamente essa lane que tem
+uma <connection> de saída própria. Mesmo bug já corrigido nas outras 4
+estratégias (graph_utils.py/pseudorandom_strategy.py/greedy_strategy.py/
+greedy_voronoi_strategy.py): um edge pode estar bem conectado ao resto do
+mapa via UMA lane (ex. a lane 1), enquanto a lane 0 (escolhida às cegas
+aqui) não tem conexão de saída nenhuma -- uma estação ali prende pra
+sempre qualquer veículo que for recarregar. Diferença importante em
+relação às outras estratégias: aqui NÃO existe um "candidato alternativo"
+pra pular pra outro -- o GA decidiu o EDGE, não a lane, então a correção é
+escolher, DENTRE as lanes desse mesmo edge, a que realmente tem conexão de
+saída (em vez de assumir cegamente a lane 0). Isso sempre tem solução:
+como o `graph` recebido é o componente FORTEMENTE CONEXO, por definição
+todo edge nele tem pelo menos uma conexão de saída própria (senão não
+poderia fazer parte de um ciclo) -- então sempre existe ao menos uma lane
+válida entre as lanes do edge, só não necessariamente a de índice 0.
 """
 from __future__ import annotations
 
-import math
-from functools import lru_cache
-from pathlib import Path
+import json
 
 import networkx as nx
-from bs4 import BeautifulSoup
 
 import config
+import graph_utils
+from sim_job import SimJob
 
 
-def build_graph_from_netfile(netfile: Path | str) -> nx.DiGraph:
+def _seed_for_repetition(repetition: int) -> int:
+    if not (1 <= repetition <= len(config.GENETIC_SEEDS)):
+        raise ValueError(
+            f"repetition={repetition} fora do intervalo suportado pelo "
+            f"approach genetic (só existem {len(config.GENETIC_SEEDS)} "
+            f"seeds pré-computadas: {config.GENETIC_SEEDS})."
+        )
+    return config.GENETIC_SEEDS[repetition - 1]
+
+
+def _lane_for_edge(edge_id: str, connected_lanes: frozenset,
+                    lanes_by_edge: dict[str, tuple[str, ...]]) -> str:
     """
-    Lê o .net.xml do SUMO e monta um DiGraph onde cada edge do net vira um
-    nó do grafo, ligado aos edges seguintes via as tags <connection>.
-    O atributo 'length' de cada aresta vem do comprimento da lane -- usado
-    pelo roteamento em tempo de simulação (ver simulation.py::decide_station/
-    reroute, que faz Dijkstra ponderado por distância real).
+    Escolhe, dentre as lanes do edge (na ordem em que aparecem no net.xml),
+    a primeira que tem conexão de saída própria -- ver FIX no docstring do
+    módulo. Sempre encontra uma (dado que `edge_id` já passou pela checagem
+    de componente gigante em select_charging_points), mas levanta um erro
+    claro em vez de devolver algo inválido se por algum motivo isso não
+    for verdade (ex. net.xml trocado sem re-executar o GA).
     """
-    netfile = Path(netfile)
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-
-    edges_length: dict[str, int] = {}
-    for edge_tag in soup.find_all("edge"):
-        edge_id = edge_tag["id"]
-        lane_tag = edge_tag.find("lane")
-        if lane_tag is None:
-            continue
-        edges_length[edge_id] = int(float(lane_tag["length"]))
-
-    graph = nx.DiGraph()
-    for connection_tag in soup.find_all("connection"):
-        source_edge = connection_tag["from"]
-        dest_edge = connection_tag["to"]
-        if source_edge in edges_length:
-            graph.add_edge(
-                source_edge,
-                dest_edge,
-                length=edges_length[source_edge],
-            )
-    return graph
-
-
-@lru_cache(maxsize=1)
-def default_graph() -> nx.DiGraph:
-    """
-    Cache em processo -- útil quando várias combinações do mesmo approach
-    são geradas em sequência no mesmo processo (evita reparsear o net.xml,
-    ~70 mil nós, a cada combinação). Em execução paralela (multiprocessing),
-    cada worker tem seu próprio cache -- combine com um `initializer` que
-    chama esta função uma vez por worker, como já é feito hoje em
-    genetic_algorithm.py.
-    """
-    return build_graph_from_netfile(config.NET_FILE)
-
-
-def get_giant_component(graph: nx.DiGraph) -> nx.DiGraph:
-    """Maior componente fortemente conexo -- evita que nós inalcançáveis
-    do grafo completo distorçam buscas de caminho/fitness."""
-    components = sorted(nx.strongly_connected_components(graph), key=len, reverse=True)
-    return graph.subgraph(components[0]).copy()
-
-
-@lru_cache(maxsize=1)
-def default_giant_graph() -> nx.DiGraph:
-    """
-    Versão cacheada de get_giant_component(default_graph()) -- é este o
-    "grafo de trabalho" usado na fase de SELEÇÃO de estação, pelas 5
-    station strategies (ver cli.py: generate_combo/run_single), não o
-    grafo completo.
-    """
-    return get_giant_component(default_graph())
-
-
-@lru_cache(maxsize=1)
-def list_connections(netfile: Path | str = None) -> tuple[dict, ...]:
-    """
-    Lista bruta das tags <connection> do net.xml, com 'from'/'to'/'fromLane'
-    preservados -- necessário para a estratégia 'random', que sorteia
-    conexões inteiras (não só edges) para formar o id "edge_lane" da
-    estação. Cacheado por processo (mesmo motivo do default_graph()).
-    """
-    netfile = Path(netfile) if netfile else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    return tuple(
-        {"from": tag["from"], "to": tag["to"], "fromLane": tag.get("fromLane", "0")}
-        for tag in soup.find_all("connection")
+    candidates = lanes_by_edge.get(edge_id, ())
+    lane_id = graph_utils.lane_for_edge(edge_id)  # regra única (graph_utils)
+    if lane_id is not None:
+        return lane_id
+    raise ValueError(
+        f"Edge '{edge_id}' está no componente gigante mas NENHUMA de suas "
+        f"lanes ({candidates}) tem conexão de saída própria -- isso não "
+        f"deveria acontecer para um edge de um componente fortemente "
+        f"conexo. Confirme se o net.xml usado é o mesmo que o algoritmo "
+        f"genético usou pra gerar '{edge_id}' como candidato."
     )
 
 
-@lru_cache(maxsize=1)
-def lanes_with_outgoing_connection(netfile: Path | str = None) -> frozenset:
-    """
-    Conjunto de ids de LANE (não edge) que são a origem de pelo menos uma
-    <connection> no net.xml -- ou seja, lanes que, uma vez ocupadas por um
-    veículo estacionado pra recarregar, permitem que ele continue viagem
-    depois.
+def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
+    seed = _seed_for_repetition(job.repetition)
+    result_file = config.genetic_result_file(job.cs_amount, seed)
 
-    Isso é diferente (e mais estrito) do que "o edge pertence ao componente
-    gigante" (default_giant_graph): build_graph_from_netfile monta o grafo
-    no nível de EDGE e ignora 'fromLane' -- um edge com 2 lanes, onde só a
-    lane 1 tem conexão de saída, aparece no grafo como conectado mesmo
-    assim, e a lane 0 (sem conexão nenhuma) passa despercebida pela checagem
-    de componente gigante feita pelas station strategies.
+    if not result_file.exists():
+        raise FileNotFoundError(
+            f"{result_file} não existe -- confirme que o algoritmo genético "
+            f"já rodou para cs_amount={job.cs_amount} com seed={seed}, e "
+            f"que o resultado foi copiado para essa pasta. Rode "
+            f"`python3 check_genetic_files.py` para ver de uma vez quais "
+            f"arquivos faltam em TODOS os cs_amount/seeds, antes de disparar "
+            f"um batch inteiro (evita descobrir um por um, job a job)."
+        )
 
-    Uma estação posicionada numa lane SEM conexão de saída própria prende
-    para sempre qualquer veículo que for recarregar ali -- ele termina de
-    carregar e não tem como seguir viagem, gerando "performs emergency stop
-    ... because there is no connection to the next edge" a cada passo de
-    simulação, indefinidamente (foi exatamente o que travou 5 simulações do
-    pseudorandom presas na lane 96049309#0_0, seed 4/9cs, 2026-09-19 --
-    ela pertencia ao componente gigante pelo edge, mas não tinha nenhuma
-    <connection> saindo dela mesma).
+    with open(result_file, encoding="utf-8") as f:
+        data = json.load(f)
 
-    Use este conjunto como filtro ADICIONAL ao componente gigante, nunca
-    como substituto -- o componente gigante ainda garante que o EDGE como
-    um todo está bem conectado ao resto do mapa; este conjunto garante que
-    a LANE específica escolhida tem por onde sair.
-    """
-    netfile = Path(netfile) if netfile else config.NET_FILE
-    return frozenset(
-        f"{c['from']}_{c['fromLane']}" for c in list_connections(netfile)
-    )
+    num_estacoes = data.get("num_estacoes")
+    if num_estacoes != job.cs_amount:
+        raise ValueError(
+            f"{result_file} diz num_estacoes={num_estacoes}, mas o job "
+            f"pediu cs_amount={job.cs_amount} -- arquivo na pasta errada?"
+        )
 
+    edge_ids = data["solucao_final_refinada"]
+    if len(edge_ids) != job.cs_amount:
+        raise ValueError(
+            f"{result_file} tem {len(edge_ids)} estações em "
+            f"'solucao_final_refinada', esperado {job.cs_amount}."
+        )
 
-@lru_cache(maxsize=1)
-def edge_to_lanes(netfile: Path | str = None) -> dict[str, tuple[str, ...]]:
-    """
-    Mapeia cada EDGE id pra tupla ordenada dos ids de LANE que pertencem a
-    ele (na ordem em que aparecem no net.xml -- tipicamente índice 0, 1,
-    2...). Necessário pro approach 'genetic', que recebe apenas edge ids de
-    um algoritmo externo (o GA opera no nível de rua/edge, não de lane
-    específica) e precisa escolher UMA lane concreta desse edge pra virar
-    estação -- ver docstring de genetic_strategy.py.
-    """
-    netfile = Path(netfile) if netfile else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    result: dict[str, tuple[str, ...]] = {}
-    for edge_tag in soup.find_all("edge"):
-        edge_id = edge_tag["id"]
-        lane_ids = tuple(lane_tag["id"] for lane_tag in edge_tag.find_all("lane"))
-        if lane_ids:
-            result[edge_id] = lane_ids
-    return result
+    missing = [e for e in edge_ids if e not in graph]
+    if missing:
+        raise ValueError(
+            f"{result_file}: {len(missing)} edge(s) de 'solucao_final_refinada' "
+            f"não pertencem ao componente gigante do grafo atual (net.xml "
+            f"mudou desde que o GA rodou? Ou o `graph` recebido aqui não é "
+            f"o componente gigante -- ver cli.py/graph_utils.default_giant_graph): "
+            f"{missing}"
+        )
 
+    connected_lanes = graph_utils.lanes_with_outgoing_connection()
+    lanes_by_edge = graph_utils.edge_to_lanes()
 
-@lru_cache(maxsize=1)
-def lane_lengths(netfile: Path | str = None) -> dict:
-    """
-    Comprimento de cada LANE (não edge) do net.xml, indexado pelo id da
-    própria lane (ex. "24484032#0_0"). Usado para validar se uma estação
-    candidata comporta `max_vehicles_per_cs` veículos sem depender de uma
-    simulação SUMO viva (traci.lane.getLength) -- a fase de geração roda
-    antes de qualquer SUMO ser iniciado.
-    """
-    netfile = Path(netfile) if netfile else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    lengths = {}
-    for edge_tag in soup.find_all("edge"):
-        for lane_tag in edge_tag.find_all("lane"):
-            lengths[lane_tag["id"]] = float(lane_tag["length"])
-    return lengths
-
-
-@lru_cache(maxsize=1)
-def lane_shapes(netfile: Path | str = None) -> dict[str, tuple[tuple[float, float], ...]]:
-    """
-    Mapeia cada LANE id para sua geometria -- a lista de pontos (x, y) do
-    atributo 'shape' no net.xml, na ordem em que aparecem (do início ao fim
-    da lane). Usado só para posicionar as vagas de estacionamento fora da
-    via (<space> de uma parkingArea com onRoad="false") coladas à lane real,
-    em vez de coordenadas arbitrárias -- ver parking_space_positions().
-    """
-    netfile = Path(netfile) if netfile else config.NET_FILE
-    with open(netfile) as f:
-        data = f.read()
-    soup = BeautifulSoup(data, "xml")
-    shapes: dict[str, tuple[tuple[float, float], ...]] = {}
-    for edge_tag in soup.find_all("edge"):
-        for lane_tag in edge_tag.find_all("lane"):
-            shape_raw = lane_tag.get("shape")
-            if not shape_raw:
-                continue
-            points = tuple(
-                tuple(map(float, pair.split(",")))
-                for pair in shape_raw.split(" ")
-                if pair.strip()
-            )
-            if points:
-                shapes[lane_tag["id"]] = points
-    return shapes
-
-
-def parking_space_positions(shape: tuple[tuple[float, float], ...], n: int,
-                             offset: float = 1.5, spacing: float = 2.5) -> list[tuple[float, float]]:
-    """
-    Calcula N posições (x, y) para as vagas (<space>) de uma parkingArea
-    fora da via (onRoad="false"), coladas à lane real -- um pequeno
-    deslocamento perpendicular ao ponto médio da lane (offset, em metros),
-    em grade de até 3 colunas por linha (spacing entre vagas).
-
-    IMPORTANTE: isso é puramente cosmético/estrutural -- evita que todas as
-    vagas fiquem desenhadas exatamente sobrepostas no sumo-gui. NÃO afeta
-    roteamento nem a distância percorrida pelos veículos: a rota é
-    calculada pelo grafo (decide_station/reroute em simulation.py, via
-    Dijkstra por 'length') até a LANE da parkingArea, não até a coordenada
-    do <space> -- a posição exata da vaga não entra nesse cálculo.
-
-    Fallback: se a lane não tiver geometria (`shape` vazio -- não deveria
-    acontecer para uma lane real do net.xml, mas por segurança), usa (0, 0)
-    como base em vez de falhar.
-    """
-    if len(shape) < 2:
-        x0, y0 = shape[0] if shape else (0.0, 0.0)
-        return [(x0 + i * spacing, y0) for i in range(n)]
-
-    x1, y1 = shape[0]
-    x2, y2 = shape[-1]
-    dx, dy = x2 - x1, y2 - y1
-    lane_len = math.hypot(dx, dy) or 1.0
-    dir_x, dir_y = dx / lane_len, dy / lane_len   # vetor unitário ao longo da lane
-    perp_x, perp_y = -dir_y, dir_x                # vetor unitário perpendicular
-
-    mid_x = (x1 + x2) / 2.0
-    mid_y = (y1 + y2) / 2.0
-
-    cols = 3
-    positions = []
-    for i in range(n):
-        row, col = divmod(i, cols)
-        along = (col - (cols - 1) / 2.0) * spacing
-        across = offset + row * spacing
-        x = mid_x + dir_x * along + perp_x * across
-        y = mid_y + dir_y * along + perp_y * across
-        positions.append((x, y))
-    return positions
+    return {
+        _lane_for_edge(edge_id, connected_lanes, lanes_by_edge)
+        for edge_id in edge_ids
+    }
