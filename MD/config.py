@@ -175,7 +175,7 @@ def trip_seed_registry_file(approach: str) -> Path:
     recarrega não deveria influenciar onde as estações foram colocadas, e
     vice-versa.
     """
-    return OUTPUT_DIR / approach / "seeds_trips_registry.json"
+    return OUTPUT_DIR / "seeds_trips_registry.json"
 
 
 def station_evolution_dir(approach: str, repetition: int) -> Path:
