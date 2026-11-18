@@ -1,6 +1,12 @@
 """
 Approach 'greedy' -- substitui findingStationsGreedy.py::findCSInQuadrants.
 
+ATUALIZAÇÃO (2026-11-18): a descrição abaixo é da versão antiga
+(determinística, por faixa). A versão atual sorteia, em cada quadrante, um
+TRECHO entre os 100 mais visitados (visitas somadas por trecho em
+most_visited_edges.py) e converte em faixa com graph_utils.lane_for_edge --
+ver _build e select_charging_points.
+
 Estratégia determinística: lê as lanes mais visitadas (input/mostVisited.xml)
 e ordena por contagem de visitas decrescente (não confia na ordem do
 arquivo -- ver _most_visited_lanes) e, para cada uma, associa à primeira
@@ -70,6 +76,7 @@ graph_utils.py.
 from __future__ import annotations
 
 import math
+import random
 import xml.etree.ElementTree as ET
 from functools import lru_cache
 
@@ -172,87 +179,79 @@ def _lane_centroid(points: list[tuple[float, float]]) -> tuple[float, float]:
     return sum(xs) / len(xs), sum(ys) / len(ys)
 
 
+def _build(cs_amount: int, graph: nx.DiGraph) -> tuple[set[str], list[dict]]:
+    """
+    Para cada quadrante:
+      1. trechos do quadrante = trechos de alguma faixa listada nele, que
+         sejam candidatos (graph_utils.candidate_edges) e ainda não tenham
+         estação;
+      2. sorteia, com chance igual, um entre os TOP_VISITED_PER_REGION
+         trechos mais visitados do quadrante (visitas somadas por trecho,
+         most_visited_edges.load());
+      3. se nenhum trecho do quadrante tem visita, usa o trecho mais
+         próximo do centro do quadrante (fallback geométrico);
+      4. a estação vai na faixa dada por graph_utils.lane_for_edge (mesma
+         regra das outras abordagens).
+    Devolve (faixas escolhidas, origem de cada estação) -- a origem é
+    gravada em <k>stations_origem.csv (evolution.save_origins).
+    """
+    import most_visited_edges
+
+    quadrants = _quadrants_lanes(cs_amount)
+    visits = most_visited_edges.load()
+    candidates = set(graph_utils.candidate_edges(graph))
+    shapes = graph_utils.lane_shapes()
+
+    chosen_edges: set[str] = set()
+    chosen: set[str] = set()
+    origins: list[dict] = []
+    for x_str, y_str, lanes in quadrants:
+        edges = ({most_visited_edges.edge_of(l) for l in lanes} & candidates) - chosen_edges
+        if not edges:
+            raise RuntimeError(
+                f"greedy: quadrante ({x_str}, {y_str}) sem nenhum trecho "
+                f"candidato (cs_amount={cs_amount})."
+            )
+        visited = most_visited_edges.top_visited(edges, visits, len(edges))
+        top = visited[:config.TOP_VISITED_PER_REGION]
+        row = {"quadrante_ou_regiao": f"quadrante ({x_str},{y_str})",
+               "trechos_visitados_na_regiao": len(visited)}
+        if top:
+            edge = random.choice(top)
+            row.update(origem="visitacao", tamanho_do_sorteio=len(top))
+        else:
+            centro = _quadrant_centroid(int(x_str), int(y_str), cs_amount)
+            dist = lambda e: math.dist(
+                _lane_centroid(shapes[graph_utils.lane_for_edge(e)]), centro)
+            edge = min(sorted(edges), key=dist)
+            row.update(origem="fallback", distancia_ao_centro_m=round(dist(edge)))
+        lane = graph_utils.lane_for_edge(edge)
+        chosen_edges.add(edge)
+        chosen.add(lane)
+        row.update(trecho=edge, faixa=lane, visitas_do_trecho=visits.get(edge, 0))
+        origins.append(row)
+    return chosen, origins
+
+
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
     """
-    Para cada lane mais visitada (na ordem de mostVisited.xml, decrescente),
-    associa à primeira quadrante ainda vazia que a contém E cujo edge
-    pertença ao componente gigante do mapa E que ela mesma tenha uma
-    <connection> de saída própria (ver FIX 2026-09-19 no docstring do
-    módulo).
-
-    FALLBACK: quadrantes que sobram vazios depois dessa fase (nenhuma lane
-    visitada elegível caiu neles) recebem a lane geograficamente mais
-    central do próprio quadrante -- ver docstring do módulo. Só continua
-    sem estação um quadrante sem NENHUMA lane elegível (visitada ou não),
-    caso bem mais raro que antes.
+    MUDANÇA (2026-11-18): o greedy deixou de ser determinístico. Em vez da
+    FAIXA mais visitada de cada quadrante, sorteia um TRECHO entre os
+    TOP_VISITED_PER_REGION (100) trechos mais visitados do quadrante -- ver
+    _build. Por isso agora usa seed de estação por (repetition, cs_amount),
+    igual a random/pseudorandom/greedyvoronoi.
 
     NÃO filtra por capacidade/comprimento de lane -- a capacidade real de
-    cada estação é calculada depois, na hora de gerar o .add.xml (ver
-    graph_utils.realized_capacity).
+    cada estação é calculada depois, na hora de gerar o .add.xml.
     """
+    from seed_registry import StationSeedRegistry
+    StationSeedRegistry(job.approach).apply(job.repetition, job.cs_amount)
+
     cached = evolution.load_stage(job.approach, job.repetition, job.cs_amount)
     if cached is not None:
         return cached
 
-    quadrants = _quadrants_lanes(job.cs_amount)
-    most_visited = _most_visited_lanes()  # já ordenado por count decrescente
-    connected_lanes = graph_utils.lanes_with_outgoing_connection()
-
-    quadrant_filled = [False] * len(quadrants)
-    chosen: set[str] = set()
-
-    for lane_id in most_visited:
-        if len(chosen) >= len(quadrants):
-            break
-        if lane_id in chosen:
-            continue
-        # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
-        if lane_id[:-2] not in graph:
-            continue
-        if lane_id not in connected_lanes:
-            continue  # lane sem conexão de saída própria -- veículo ficaria preso
-
-        for idx, (_x, _y, lanes) in enumerate(quadrants):
-            if quadrant_filled[idx]:
-                continue
-            if lane_id in lanes:
-                quadrant_filled[idx] = True
-                chosen.add(lane_id)
-                break
-
-    # Fallback: quadrantes que sobraram vazios recebem a lane geograficamente
-    # mais central deles -- ver docstring do módulo. lanes_and_coords só é
-    # carregado sob demanda (nenhum custo extra quando não há quadrante
-    # vazio, caso comum quando cs_amount é pequeno).
-    lanes_and_coords: dict[str, list[tuple[float, float]]] | None = None
-    for idx, (x_str, y_str, lanes) in enumerate(quadrants):
-        if quadrant_filled[idx]:
-            continue
-
-        if lanes_and_coords is None:
-            lanes_and_coords = _lanes_and_coordinates()
-
-        centroid = _quadrant_centroid(int(x_str), int(y_str), job.cs_amount)
-        best_lane = None
-        best_distance = float("inf")
-        for lane_id in lanes:
-            if lane_id in chosen:
-                continue
-            if lane_id[:-2] not in graph:
-                continue
-            if lane_id not in connected_lanes:
-                continue  # idem -- não deixa o fallback escolher um beco sem saída
-            coords = lanes_and_coords.get(lane_id)
-            if not coords:
-                continue
-            distance = math.dist(_lane_centroid(coords), centroid)
-            if distance < best_distance:
-                best_distance = distance
-                best_lane = lane_id
-
-        if best_lane is not None:
-            quadrant_filled[idx] = True
-            chosen.add(best_lane)
-
+    chosen, origins = _build(job.cs_amount, graph)
     evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
+    evolution.save_origins(job.approach, job.repetition, job.cs_amount, origins)
     return chosen

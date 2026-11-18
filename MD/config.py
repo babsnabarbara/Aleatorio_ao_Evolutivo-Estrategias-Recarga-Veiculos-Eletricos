@@ -30,6 +30,8 @@ NET_FILE = INPUT_DIR / "cologne.net.xml"
 TRIPS_FILE = INPUT_DIR / "cologne6to8.trips.xml"
 ELECTRIC_VEHICLE_TYPE_FILE = INPUT_DIR / "electric_vehicle.xml"
 MOST_VISITED_FILE = INPUT_DIR / "mostVisited.xml"
+TOP_VISITED_PER_REGION = 100
+MOST_VISITED_EDGES_FILE = INPUT_DIR / "mostVisitedEdges.xml"
 LANDMARK_DISTANCES_FILE = INPUT_DIR / "cologne_landmark_distances.txt"
 
 LANES_IN_EACH_QUADRANT_DIR = INPUT_DIR / "lanesInEachQuadrant"

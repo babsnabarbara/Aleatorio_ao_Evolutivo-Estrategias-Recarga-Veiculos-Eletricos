@@ -2,6 +2,11 @@
 Approach 'greedyvoronoi' -- substitui
 findingStationsGreedyVoronoi.py::findCSinRegions.
 
+ATUALIZAÇÃO (2026-11-18): partes da descrição abaixo são da versão antiga
+(faixa mais visitada que encosta em cada região). A versão atual sorteia,
+em cada região, um TRECHO entre os 100 mais visitados e converte em faixa
+com graph_utils.lane_for_edge -- ver _build.
+
 AO CONTRÁRIO de random/pseudorandom, este approach NÃO tem crescimento
 incremental: cada cs_amount sorteia seu próprio diagrama de Voronoi do
 zero, de forma independente. Isso é intencional -- diferente do 'greedy'
@@ -61,6 +66,7 @@ elegíveis -- mesmo padrão usado nos outros approaches.
 from __future__ import annotations
 
 import xml.etree.ElementTree as ET
+import random
 from functools import lru_cache
 
 import matplotlib
@@ -74,7 +80,6 @@ import config
 import graph_utils
 from sim_job import SimJob
 from station_strategies import evolution
-from station_strategies.greedy_strategy import _most_visited_lanes
 
 
 @lru_cache(maxsize=1)
@@ -157,66 +162,99 @@ def _save_diagnostic(repetition: int, cs_amount: int, points: np.ndarray,
     (out_dir / f"FLAGARCHIVE-{tag}.txt").write_text("deu certo" if ok else "não deu certo")
 
 
-def _build(cs_amount: int, graph: nx.DiGraph) -> set:
+def _candidate_edges_and_centroids(graph: nx.DiGraph):
+    """Trechos candidatos (graph_utils.candidate_edges) e, para cada um, o
+    centroide da faixa que receberia a estação (graph_utils.lane_for_edge).
+    É esse ponto que decide a qual região de Voronoi o trecho pertence."""
+    edges = graph_utils.candidate_edges(graph)
+    shapes = graph_utils.lane_shapes()
+    centroids = np.array([_lane_centroid(shapes[graph_utils.lane_for_edge(e)])
+                          for e in edges])
+    return edges, centroids
+
+
+def _owner(centroids: np.ndarray, points: np.ndarray) -> np.ndarray:
+    """Índice do núcleo mais próximo de cada centroide (= região dele)."""
+    return np.argmin(((centroids[:, None, :] - points[None, :, :]) ** 2).sum(axis=2),
+                     axis=1)
+
+
+def _draw_nuclei(cs_amount: int, centroids: np.ndarray,
+                 max_rounds: int = 1000) -> np.ndarray:
+    """
+    Sorteia os `cs_amount` núcleos uniformemente no retângulo convBoundary
+    e SORTEIA DE NOVO os núcleos cuja região não contém nenhum trecho
+    candidato.
+
+    FIX (2026-11-18): antes os núcleos eram sorteados uma única vez no
+    retângulo. A rede de Colônia não preenche o retângulo (cerca de 24% da
+    área fica a mais de 500 m de qualquer via), então às vezes um núcleo
+    caía num canto vazio, a região dele não tinha via nenhuma e o approach
+    terminava com menos de `cs_amount` estações (ex.: repetição 4, k=49 ->
+    45 estações). Ressortear só esses núcleos mantém o sorteio uniforme,
+    condicionado a "a região tem pelo menos um trecho candidato".
+    """
     x_min, y_min, x_max, y_max = _conv_boundary()
     points = np.random.uniform([x_min, y_min], [x_max, y_max], size=(cs_amount, 2))
+    for _ in range(max_rounds):
+        empty = np.setdiff1d(np.arange(cs_amount), _owner(centroids, points))
+        if empty.size == 0:
+            return points
+        points[empty] = np.random.uniform([x_min, y_min], [x_max, y_max],
+                                          size=(empty.size, 2))
+    raise RuntimeError("greedyvoronoi: não foi possível sortear núcleos com "
+                       f"vias em todas as regiões após {max_rounds} rodadas")
+
+
+def _build(cs_amount: int, graph: nx.DiGraph):
+    """
+    MUDANÇA (2026-11-18), mesma lógica do greedy, trocando quadrante por
+    região de Voronoi:
+      1. sorteia os núcleos (_draw_nuclei) e atribui cada trecho candidato
+         à região do núcleo mais próximo do centroide da sua faixa -- cada
+         trecho pertence a UMA região só, então não há estação repetida;
+      2. em cada região, sorteia com chance igual um entre os
+         TOP_VISITED_PER_REGION (100) trechos mais visitados (visitas
+         somadas por trecho, most_visited_edges.load());
+      3. se nenhum trecho da região tem visita, usa o trecho mais próximo
+         do núcleo (fallback geométrico);
+      4. a estação vai na faixa dada por graph_utils.lane_for_edge.
+    Antes: percorria as FAIXAS mais visitadas do mapa todo e dava a cada
+    região a primeira que encostasse nela (determinístico dado o diagrama).
+    """
+    import most_visited_edges
+
+    edges, centroids = _candidate_edges_and_centroids(graph)
+    points = _draw_nuclei(cs_amount, centroids)
     vor = Voronoi(points)
+    owner = _owner(centroids, points)
+    visits = most_visited_edges.load()
 
-    most_visited = _most_visited_lanes()
-    lanes_and_coords = _lanes_and_coordinates()
-    connected_lanes = graph_utils.lanes_with_outgoing_connection()
-
-    region_filled = {region: False for region in vor.point_region}
     chosen: set = set()
+    origins: list[dict] = []
+    for region in range(cs_amount):
+        idx = np.flatnonzero(owner == region)
+        region_edges = [edges[i] for i in idx]
+        visited = most_visited_edges.top_visited(region_edges, visits, len(region_edges))
+        top = visited[:config.TOP_VISITED_PER_REGION]
+        x, y = points[region]
+        row = {"quadrante_ou_regiao": f"nucleo {region} ({x:.0f},{y:.0f})",
+               "trechos_visitados_na_regiao": len(visited)}
+        if top:
+            edge = random.choice(top)
+            row.update(origem="visitacao", tamanho_do_sorteio=len(top))
+        else:
+            dist = np.linalg.norm(centroids[idx] - points[region], axis=1)
+            j = int(np.argmin(dist))
+            edge = edges[idx[j]]
+            row.update(origem="fallback", distancia_ao_centro_m=round(float(dist[j])))
+        lane = graph_utils.lane_for_edge(edge)
+        chosen.add(lane)
+        row.update(trecho=edge, faixa=lane, visitas_do_trecho=visits.get(edge, 0))
+        origins.append(row)
 
-    for lane_id in most_visited:
-        if len(chosen) >= cs_amount:
-            break
-        if lane_id not in lanes_and_coords:
-            continue
-        # lane_id[:-2] converte lane id -> edge id (remove o sufixo "_0")
-        if lane_id[:-2] not in graph:
-            continue
-        if lane_id not in connected_lanes:
-            continue  # lane sem conexão de saída própria -- veículo ficaria preso
-        touched = _find_regions(lanes_and_coords[lane_id], vor)
-        for region in touched:
-            if not region_filled.get(region, True):
-                region_filled[region] = True
-                chosen.add(lane_id)
-                break
-
-    # Fallback: regiões que sobraram vazias recebem a lane mais próxima do
-    # PRÓPRIO NÚCLEO da região -- ver docstring do módulo. Percorre TODAS
-    # as lanes do mapa (não só as mais visitadas), já que uma região vazia
-    # por definição não tem nenhuma lane visitada elegível dentro dela.
-    empty_regions = {region for region, filled in region_filled.items() if not filled}
-    if empty_regions:
-        best_by_region: dict[int, tuple[float, str]] = {}
-        for lane_id, coords in lanes_and_coords.items():
-            if lane_id in chosen:
-                continue
-            if lane_id[:-2] not in graph:
-                continue
-            if lane_id not in connected_lanes:
-                continue  # idem -- não deixa o fallback escolher um beco sem saída
-            lane_point = np.array(_lane_centroid(coords))
-            distances = np.linalg.norm(vor.points - lane_point, axis=1)
-            nearest_point_idx = int(np.argmin(distances))
-            region = vor.point_region[nearest_point_idx]
-            if region not in empty_regions:
-                continue
-            distance = float(distances[nearest_point_idx])
-            current_best = best_by_region.get(region)
-            if current_best is None or distance < current_best[0]:
-                best_by_region[region] = (distance, lane_id)
-
-        for region, (_distance, lane_id) in best_by_region.items():
-            region_filled[region] = True
-            chosen.add(lane_id)
-
-    ok = len(chosen) >= cs_amount
-    return chosen, points, vor, ok
+    ok = len(chosen) == cs_amount
+    return chosen, points, vor, ok, origins
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
@@ -247,8 +285,9 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set:
     if cached is not None:
         return cached
 
-    chosen, points, vor, ok = _build(job.cs_amount, graph)
+    chosen, points, vor, ok, origins = _build(job.cs_amount, graph)
     _save_diagnostic(job.repetition, job.cs_amount, points, vor, ok)
 
     evolution.save_stage(job.approach, job.repetition, job.cs_amount, chosen)
+    evolution.save_origins(job.approach, job.repetition, job.cs_amount, origins)
     return chosen
