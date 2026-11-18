@@ -135,6 +135,66 @@ def decide_station(graph: nx.DiGraph, source: str, charging_stations: dict) -> d
     return {"path": best_path, "id": best_id}
 
 
+def nearest_station_table(graph: nx.DiGraph, charging_stations: dict) -> dict:
+    """
+    UM Dijkstra multi-fonte por simulação, partindo de todas as estações no
+    grafo invertido (mesmo cálculo da aptidão do AG). Para cada trecho v
+    do grafo, guarda:
+      dist[v]    -- distância (soma de 'length') de v até a estação mais próxima;
+      station[v] -- id dessa estação;
+      nxt[v]     -- próximo trecho no caminho de v até ela.
+    Relaxar a aresta u -> v no grafo invertido é usar a aresta v -> u do
+    grafo original, com o mesmo 'length' -- então dist[v] é exatamente a
+    distância que decide_station calcularia de v até a estação mais próxima.
+
+    OTIMIZAÇÃO (2026-11-18): antes, decide_station rodava um Dijkstra do
+    ponto de partida até CADA estação, para CADA elétrico (k x nº de
+    elétricos execuções antes da simulação começar); era o que dominava o
+    tempo de máquina (k=49 levava ~6x mais que k=9 com o mesmo tempo
+    simulado). Agora é uma execução por simulação. A estação escolhida é a
+    mesma, exceto em empate exato de distância (aí pode ser outra estação
+    à mesma distância).
+    """
+    import heapq
+
+    dist: dict = {}
+    station: dict = {}
+    nxt: dict = {}
+    heap = []
+    for order, (station_id, info) in enumerate(charging_stations.items()):
+        edge = info["edge"]
+        if edge not in graph or edge in station:
+            continue
+        dist[edge], station[edge], nxt[edge] = 0.0, station_id, None
+        heapq.heappush(heap, (0.0, order, edge))
+
+    done = set()
+    counter = len(charging_stations)
+    while heap:
+        d, _, u = heapq.heappop(heap)
+        if u in done:
+            continue
+        done.add(u)
+        for v in graph.predecessors(u):       # aresta v -> u no grafo original
+            nd = d + graph[v][u]["length"]
+            if nd < dist.get(v, float("inf")):
+                dist[v], station[v], nxt[v] = nd, station[u], u
+                counter += 1
+                heapq.heappush(heap, (nd, counter, v))
+    return {"dist": dist, "station": station, "nxt": nxt}
+
+
+def decide_station_from_table(table: dict, source: str) -> dict:
+    """Mesmo retorno de decide_station ({"path": [...], "id": ...}), lido
+    da tabela de nearest_station_table em vez de rodar k Dijkstras."""
+    if source not in table["station"]:
+        raise RuntimeError(f"Nenhuma estação alcançável a partir de '{source}'.")
+    path = [source]
+    while table["nxt"][path[-1]] is not None:
+        path.append(table["nxt"][path[-1]])
+    return {"path": path, "id": table["station"][source]}
+
+
 def reroute(graph: nx.DiGraph, source: str, target: str) -> list:
     """Caminho de `source` até `target` (por distância real, ver
     docstring de decide_station), sem o próprio `source` (já ocupado
@@ -156,6 +216,7 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> dict:
     for info in charging_stations.values():
         info["edge"] = traci.lane.getEdgeID(info["lane"])
 
+    table = nearest_station_table(graph, charging_stations)
     cars = read_sorted_cars(job)
     duration_s = job.minutes * 60.0  # float, não string -- versões recentes do
     # TraCI empacotam 'duration' diretamente como double (struct.pack "...d...");
@@ -167,7 +228,7 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> dict:
         destination = attrs["to"]
         depart = attrs["depart"]
 
-        decision = decide_station(graph, source, charging_stations)
+        decision = decide_station_from_table(table, source)
         first_path = decision["path"]
         stop_spot = decision["id"]
         charging_edge = first_path[-1]
@@ -341,10 +402,12 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
             if monitor is not None:
                 monitor.apos_passo()
     except Exception as exc:  # inclui traci.exceptions.FatalTraCIError e o TimeoutError acima
-        _write_report(job, start_time, datetime.datetime.now(), error=str(exc))
+        _write_report(job, start_time, datetime.datetime.now(), error=str(exc),
+                      extra_lines=monitor.resumo() if monitor else None)
         raise
     else:
-        _write_report(job, start_time, datetime.datetime.now(), error=None)
+        _write_report(job, start_time, datetime.datetime.now(), error=None,
+                      extra_lines=monitor.resumo() if monitor else None)
     finally:
         if started:
             try:
