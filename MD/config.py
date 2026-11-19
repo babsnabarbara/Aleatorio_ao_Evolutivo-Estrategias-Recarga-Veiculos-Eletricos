@@ -90,7 +90,7 @@ DEFAULT_MAX_VEHICLES_PER_CS = 6
 # SUMO) -- o retry automático de cli.py entra em ação normalmente a
 # partir daí. Não é sobre "SUMO estar lento"; é um limite de tempo de
 # execução, não de tempo simulado.
-DEFAULT_MAX_SIMULATION_HOURS = 30.0
+DEFAULT_MAX_SIMULATION_HOURS = 10.0
 TIME_TO_TELEPORT_S = -1
 USE_STUCK_MONITOR = True
 STUCK_CHECK_INTERVAL_S = 60

@@ -316,6 +316,64 @@ def _write_report(job: SimJob, start: datetime.datetime,
     job.report_file.parent.mkdir(parents=True, exist_ok=True)
     job.report_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+# ---------------------------------------------------------------------------
+# Detector de impasse (19/11): o timeout de config.DEFAULT_MAX_SIMULATION_HOURS
+# mede tempo de RELÓGIO (30 h) -- um job travado gastava até 30 h x 4
+# tentativas do batch antes de ser dado como falho. Este detector mede tempo
+# SIMULADO sem nenhum progresso (nenhuma partida, chegada, início ou fim de
+# estacionamento) e aborta em minutos de relógio, gravando o estado dos
+# elétricos em <REPORT>.impasse.txt. Só observa: não muda regra nenhuma.
+# Com recarga de até 60 min, toda estação ocupada gera pelo menos um fim de
+# estacionamento a cada 60 min simulados, então 2 h sem nada = travado.
+# ---------------------------------------------------------------------------
+LIMITE_SEM_PROGRESSO_S = 7200
+
+
+class ImpasseError(RuntimeError):
+    pass
+
+
+def _dump_impasse(job: SimJob, ev_station_edge: dict, monitor, agora: float) -> None:
+    from collections import Counter
+    import traci  # import tardio -- ver docstring do módulo
+
+    def seg(fn, *a):
+        try:
+            return fn(*a)
+        except Exception as e:  # um veículo pode ter saído entre uma chamada e outra
+            return f"erro:{e}"
+
+    linhas = [f"t={agora:.0f} veiculos_na_rede={traci.vehicle.getIDCount()}"]
+    if monitor is not None:
+        linhas += monitor.resumo()
+        for est in sorted(set(ev_station_edge.values())):
+            linhas.append(
+                f"ESTACAO {est} estacionados={monitor.estacionados[est]} "
+                f"em_espera={sum(1 for v in monitor.em_espera if ev_station_edge.get(v) == est)} "
+                f"autorizados={sum(1 for v in monitor.autorizados if ev_station_edge.get(v) == est)}")
+    estados = Counter()
+    evs = []
+    for v in traci.vehicle.getIDList():
+        if v not in ev_station_edge:
+            continue
+        m = monitor
+        st = (f"esp={bool(m and v in m.em_espera)} aut={bool(m and v in m.autorizados)} "
+              f"rec={bool(m and v in m.recarregados)} "
+              f"parado={seg(traci.vehicle.isStopped, v)} "
+              f"park={seg(traci.vehicle.isStoppedParking, v)}")
+        estados[st] += 1
+        evs.append(
+            f"EV {v} est={ev_station_edge[v]} {st} road={seg(traci.vehicle.getRoadID, v)} "
+            f"lane={seg(traci.vehicle.getLaneID, v)} pos={seg(traci.vehicle.getLanePosition, v)} "
+            f"vel={seg(traci.vehicle.getSpeed, v)} espera_s={seg(traci.vehicle.getWaitingTime, v)} "
+            f"lider={seg(traci.vehicle.getLeader, v, 100.0)}")
+    linhas.append("RESUMO_ESTADOS")
+    linhas += [f"  {n:4d}  {st}" for st, n in estados.most_common()]
+    linhas += evs
+    destino = job.report_file.with_name(job.report_file.name + ".impasse.txt")
+    destino.write_text("\n".join(linhas) + "\n", encoding="utf-8")
+
+
 def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "sumo",
                     max_hours: float | None = None) -> None:
     """
@@ -424,6 +482,7 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
 
         
         loop_start = time.monotonic()
+        ultimo_progresso = None
         while traci.simulation.getMinExpectedNumber() > 0:
             elapsed = time.monotonic() - loop_start
             if elapsed > max_seconds:
@@ -437,6 +496,23 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
             traci.simulationStep()
             if monitor is not None:
                 monitor.apos_passo()
+            agora = traci.simulation.getTime()
+            if (ultimo_progresso is None
+                    or traci.simulation.getArrivedNumber()
+                    or traci.simulation.getDepartedNumber()
+                    or traci.simulation.getParkingStartingVehiclesIDList()
+                    or traci.simulation.getParkingEndingVehiclesIDList()):
+                ultimo_progresso = agora
+            elif agora - ultimo_progresso > LIMITE_SEM_PROGRESSO_S:
+                try:
+                    _dump_impasse(job, ev_station_edge, monitor, agora)
+                except Exception as dump_exc:
+                    print(f"falha ao gravar o diagnóstico de impasse: {dump_exc}")
+                raise ImpasseError(
+                    f"Impasse: nenhuma partida, chegada nem estacionamento há "
+                    f"{LIMITE_SEM_PROGRESSO_S} s simulados (t={agora:.0f}); "
+                    f"ver {job.report_file.name}.impasse.txt"
+                )
     except Exception as exc:  # inclui traci.exceptions.FatalTraCIError e o TimeoutError acima
         _write_report(job, start_time, datetime.datetime.now(), error=str(exc),
                       extra_lines=monitor.resumo() if monitor else None)
