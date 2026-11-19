@@ -95,7 +95,9 @@ TIME_TO_TELEPORT_S = -1
 USE_STUCK_MONITOR = True
 STUCK_CHECK_INTERVAL_S = 60
 STUCK_LIMIT_S = 300
-
+QUEUE_BEFORE_STATION = True
+PARKING_ZONE_HALF_M = 6.0
+QUEUE_GAP_M = 10.0
 # ---------------------------------------------------------------------------
 # Parâmetros de infraestrutura do SUMO -- antes espalhados como literais
 # mágicos ("20000.00", "100", "4", ...) repetidos em 5+ arquivos diferentes.

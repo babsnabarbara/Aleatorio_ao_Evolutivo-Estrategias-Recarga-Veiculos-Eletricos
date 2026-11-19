@@ -184,6 +184,15 @@ def nearest_station_table(graph: nx.DiGraph, charging_stations: dict) -> dict:
     return {"dist": dist, "station": station, "nxt": nxt}
 
 
+def _ate_n_ruas_antes(graph: nx.DiGraph, trecho: str, n: int) -> set:
+    """Trechos de onde se chega a `trecho` em até n passos (sem ele mesmo)."""
+    vistos, fronteira = set(), {trecho}
+    for _ in range(n):
+        fronteira = {p for f in fronteira for p in graph.predecessors(f)} - vistos - {trecho}
+        vistos |= fronteira
+    return vistos
+
+
 def decide_station_from_table(table: dict, source: str) -> dict:
     """Mesmo retorno de decide_station ({"path": [...], "id": ...}), lido
     da tabela de nearest_station_table em vez de rodar k Dijkstras."""
@@ -206,6 +215,10 @@ def reroute(graph: nx.DiGraph, source: str, target: str) -> list:
 # ---------------------------------------------------------------------------
 # Injeção dos veículos elétricos via TraCI
 # ---------------------------------------------------------------------------
+# estação -> trechos de saída, preenchido por _inject_electric_vehicles
+SAIDA_ESTACOES: dict = {}
+
+
 def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> dict:
     import traci  # import tardio -- ver docstring do módulo
     ev_station_edge = {}
@@ -248,6 +261,10 @@ def _inject_electric_vehicles(job: SimJob, graph: nx.DiGraph) -> dict:
         # sentido fisicamente).
         traci.vehicle.setParkingAreaStop(car_id, stop_spot, duration=duration_s, flags=1)
         ev_station_edge[car_id] = charging_edge
+        # trechos por onde este elétrico sai da estação (ver
+        # StuckMonitor._local_de_espera): a fila de NENHUMA estação pode
+        # ficar parada neles
+        SAIDA_ESTACOES.setdefault(charging_edge, set()).update(second_path[:2])
     return ev_station_edge
 # ---------------------------------------------------------------------------
 # Execução completa de um job
@@ -354,6 +371,12 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
         "-c", str(job.cfg_file),
         "--log", str(job.log_file),
         "--tripinfo-output", str(job.tripinfo_output_file),
+        # Uma linha por parada (início, fim, parkingArea): separa a recarga
+        # (parada na parkingArea) da espera na fila (parada comum dada pelo
+        # stuck_monitor). Sem isso, o stopTime do tripinfo soma as duas, e a
+        # espera na fila pareceria tempo de recarga.
+        "--stop-output", str(job.tripinfo_output_file.with_name(
+            job.tripinfo_output_file.name.replace("simulation", "stops"))),
         # FIX: --battery-output removido. Esse arquivo não é lido por
         # NENHUMA parte do pipeline (verify_recharge.py usa o tripinfo,
         # não o battery-output) -- e, no requisito real deste projeto, a
@@ -376,6 +399,7 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
         traci.start(sumo_cmd, port=job.port)
         started = True
 
+        SAIDA_ESTACOES.clear()
         ev_station_edge = _inject_electric_vehicles(job, graph)
         if config.USE_STUCK_MONITOR:
             from stuck_monitor import StuckMonitor
@@ -384,6 +408,18 @@ def run_simulation(job: SimJob, graph: nx.DiGraph = None, sumo_command: str = "s
                 intervalo_s=config.STUCK_CHECK_INTERVAL_S,
                 limite_s=config.STUCK_LIMIT_S,
                 mapa_faixas=graph_utils.edge_to_lanes,
+                # fila na rua da estação, parando antes das vagas
+                # (ver StuckMonitor._controlar_fila)
+                capacidade=job.max_vehicles_per_cs if config.QUEUE_BEFORE_STATION else None,
+                # trechos até 5 ruas antes da estação: o elétrico recebe a
+                # parada de espera cedo, antes de chegar perto dela
+                aproximacao={s: sorted(_ate_n_ruas_antes(graph, s, 5))
+                             for s in set(ev_station_edge.values()) if s in graph},
+                faixa_estacao={traci.lane.getEdgeID(info["lane"]): info["lane"]
+                               for info in read_charging_stations(job).values()},
+                folga_saida_m=config.PARKING_ZONE_HALF_M + config.QUEUE_GAP_M,
+                saida_estacoes=SAIDA_ESTACOES,
+                meia_zona_m=config.PARKING_ZONE_HALF_M,
             )
 
         

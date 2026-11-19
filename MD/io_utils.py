@@ -256,6 +256,7 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
         lanes = read_selected_lanes_file(job.selected_lanes_file)
 
     shapes = graph_utils.lane_shapes()
+    lengths = graph_utils.lane_lengths()
 
     root = ET.Element("additional")
     root.set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
@@ -269,6 +270,12 @@ def write_add_file(job: SimJob, lanes: Iterable[str] | None = None) -> None:
         pa.set("roadsideCapacity", "0")
         pa.set("onRoad", "false")
         pa.set("friendlyPos", "true")
+        # zona das vagas no meio da faixa (ver config.PARKING_ZONE_HALF_M)
+        comprimento = lengths.get(lane_id, 0.0)
+        meio = comprimento / 2.0
+        if meio - config.PARKING_ZONE_HALF_M - config.QUEUE_GAP_M >= 5.0:
+            pa.set("startPos", f"{meio - config.PARKING_ZONE_HALF_M:.2f}")
+            pa.set("endPos", f"{meio + config.PARKING_ZONE_HALF_M:.2f}")
 
         shape = shapes.get(lane_id, ())
         positions = graph_utils.parking_space_positions(shape, job.max_vehicles_per_cs)
