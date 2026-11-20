@@ -366,7 +366,8 @@ def _dump_impasse(job: SimJob, ev_station_edge: dict, monitor, agora: float) -> 
             f"EV {v} est={ev_station_edge[v]} {st} road={seg(traci.vehicle.getRoadID, v)} "
             f"lane={seg(traci.vehicle.getLaneID, v)} pos={seg(traci.vehicle.getLanePosition, v)} "
             f"vel={seg(traci.vehicle.getSpeed, v)} espera_s={seg(traci.vehicle.getWaitingTime, v)} "
-            f"lider={seg(traci.vehicle.getLeader, v, 100.0)}")
+            f"lider={seg(traci.vehicle.getLeader, v, 100.0)} "
+            f"paradas={str(seg(traci.vehicle.getNextStops, v))[:200]}")
     linhas.append("RESUMO_ESTADOS")
     linhas += [f"  {n:4d}  {st}" for st, n in estados.most_common()]
     linhas += evs

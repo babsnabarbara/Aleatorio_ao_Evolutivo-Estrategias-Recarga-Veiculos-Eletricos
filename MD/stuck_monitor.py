@@ -56,7 +56,7 @@ FUNCOES_NECESSARIAS = {
     "vehicle": ["getIDList", "getIDCount", "isStoppedParking", "getSignals", "getWaitingTime", "getLeader", "getRouteIndex",
                 "getRoute", "getRoadID", "isStopped", "moveTo", "remove",
                 "getLanePosition", "getLength", "getMinGap", "setStop", "resume",
-                "getLaneID", "getSpeed", "getDrivingDistance", "getDecel"],
+                "getLaneID", "getSpeed", "getDrivingDistance", "getDecel", "getNextStops", "setParkingAreaStop"],
     "edge": ["getLastStepVehicleIDs"],
     "lane": ["getLastStepVehicleIDs", "getAllowed", "getLength", "getLinks"],
 }
@@ -153,6 +153,8 @@ class StuckMonitor:
         if controle and self.passo % 60 == 0:
             self._destravar_saidas()
             self._ajudar_troca_de_faixa()
+        if controle and self.passo % 10 == 0:
+            self._apagar_esperas_esquecidas()
         if controle and self.passo % self.fila_intervalo_s == 0:
             self._controlar_fila()
         if self.log_intervalo_s and self.passo % self.log_intervalo_s == 0:
@@ -273,6 +275,51 @@ class StuckMonitor:
         if origem:
             self.contagem[f"movido_do_{origem}"] += 1
 
+    def _mover_na_rua(self, v: str, faixa: str, pos: float) -> None:
+        """moveTo que NÃO perde as paradas da rua de onde o carro sai.
+
+        No SUMO 1.2, moveTo tira o veículo da faixa como num teletransporte
+        (leaveLane com NOTIFICATION_TELEPORT), e isso descarta toda parada
+        que ele tinha na rua em que estava ("Vehicle ... skips stop on
+        lane"), mesmo se o destino for na MESMA rua. A ajuda na troca de
+        faixa e o recuo para destravar movem elétricos dentro da rua da
+        própria estação, então eles perdiam a parada de recarga e seguiam
+        viagem sem recarregar. Na grade de 19/11, 70% dos elétricos sem
+        recarga (10.488 de 14.900) chegaram ao destino sem parar, e por
+        abordagem isso acompanha o número de ajudas na troca de faixa.
+
+        Guarda as paradas que o carro tem na rua de destino, faz o moveTo e
+        recoloca as que sumiram e ainda estão à frente da nova posição: a de
+        recarga (setParkingAreaStop, com a duração original) e a de espera
+        do monitor (setStop na pista).
+        """
+        t = self.traci
+        trecho = faixa.rsplit("_", 1)[0]
+        try:
+            antes = [p for p in t.vehicle.getNextStops(v) if p[0].rsplit("_", 1)[0] == trecho]
+        except t.exceptions.TraCIException:
+            antes = []
+        t.vehicle.moveTo(v, faixa, pos)
+        if not antes:
+            return
+        try:
+            depois = {(p[0], round(p[1], 2), p[2]) for p in t.vehicle.getNextStops(v)}
+        except t.exceptions.TraCIException:
+            depois = set()
+        # recoloca na ordem em que estavam (a de espera vem antes da de recarga)
+        for f, fim, lugar, _flags, duracao, _ate in antes:
+            if (f, round(fim, 2), lugar) in depois or fim < pos:
+                continue
+            try:
+                if lugar:
+                    t.vehicle.setParkingAreaStop(v, lugar, duration=duracao)
+                else:
+                    t.vehicle.setStop(v, trecho, pos=fim, laneIndex=int(f.rsplit("_", 1)[1]),
+                                      duration=duracao)
+                self.contagem["parada_recolocada_apos_mover"] += 1
+            except t.exceptions.TraCIException:
+                self.contagem["falha_ao_recolocar_parada"] += 1
+
     def _faixas(self, trecho: str) -> tuple[str, ...]:
         if trecho in self._cache_faixas:
             return self._cache_faixas[trecho]
@@ -345,6 +392,39 @@ class StuckMonitor:
             self.contagem["recontagem_corrigiu"] += 1
         self.estacionados = real
 
+    def _apagar_esperas_esquecidas(self) -> None:
+        """
+        Elétrico já autorizado (liberado da fila) não pode continuar com a
+        parada de espera do monitor. Na grade de 19/11 (genetic, 36 est.,
+        estação 319929496, 7 impasses), o primeiro da fila estava autorizado
+        mas ainda parado na parada de espera (getNextStops: parada sem
+        estação, alcançada, ~19 h restantes), em frente às vagas vazias, com
+        ~40 autorizados atrás dele. A liberação de emergência apaga a parada
+        com setStop(duração 0), que só funciona se ela ainda não foi
+        alcançada; se o carro chega a ela no mesmo instante, ela fica.
+        A cada 10 s, toda parada sem estação (só o monitor cria paradas
+        assim) de um autorizado é encerrada: resume() se ele está parado
+        nela, setStop(duração 0) se ainda não chegou.
+        """
+        t = self.traci
+        presentes = set(t.vehicle.getIDList())
+        for v in list(self.autorizados):
+            if v not in presentes or v in self.recarregados:
+                continue
+            try:
+                paradas = t.vehicle.getNextStops(v)
+                if not paradas or paradas[0][2]:
+                    continue  # nenhuma parada, ou a próxima é a da estação
+                faixa, pos = paradas[0][0], paradas[0][1]
+                if t.vehicle.isStopped(v) and not t.vehicle.isStoppedParking(v):
+                    t.vehicle.resume(v)
+                else:
+                    trecho, idx = faixa.rsplit("_", 1)
+                    t.vehicle.setStop(v, trecho, pos=pos, laneIndex=int(idx), duration=0.0)
+                self.contagem["espera_esquecida_apagada"] += 1
+            except t.exceptions.TraCIException:
+                self.contagem["falha_ao_apagar_espera"] += 1
+
     def _destravar_saidas(self) -> None:
         """
         Última garantia contra o travamento na saída. Se uma estação tem
@@ -357,12 +437,14 @@ class StuckMonitor:
         """
         t = self.traci
         bloqueadas = set()
+        estacionados_em = {}
         for v in t.vehicle.getIDList():
             estacao = self.ev_station_edge.get(v)
             if (estacao is not None and v not in self.em_espera
-                    and v not in self.saindo_da_espera and t.vehicle.isStoppedParking(v)
-                    and t.vehicle.getSignals(v) & 0b11):
-                bloqueadas.add(estacao)
+                    and v not in self.saindo_da_espera and t.vehicle.isStoppedParking(v)):
+                estacionados_em.setdefault(estacao, []).append(v)
+                if t.vehicle.getSignals(v) & 0b11:
+                    bloqueadas.add(estacao)
         for estacao in list(self._bloqueio_desde):
             if estacao not in bloqueadas:
                 del self._bloqueio_desde[estacao]
@@ -388,7 +470,7 @@ class StuckMonitor:
                 destino = self._vaga_atras(faixa, ponto, na_faixa, v) if ponto is not None else None
                 try:
                     if destino is not None:
-                        t.vehicle.moveTo(v, faixa, destino)
+                        self._mover_na_rua(v, faixa, destino)
                         self.autorizados.discard(v)
                         self.contagem["recuado_para_destravar"] += 1
                     else:
@@ -398,7 +480,71 @@ class StuckMonitor:
                         self.contagem["removido_para_destravar"] += 1
                 except t.exceptions.TraCIException:
                     self.contagem["falha_ao_destravar"] += 1
+            self._destravar_fila_na_saida(estacao, inicio_zona, estacionados_em.get(estacao, []))
             self._bloqueio_desde[estacao] = self.passo
+
+    def _destravar_fila_na_saida(self, estacao: str, inicio_zona: float,
+                                 estacionados: list) -> None:
+        """
+        Fila que dá a volta no quarteirão e tampa a própria saída (grade de
+        19/11: random 49 est. rep. 5, estação 131959462, e pseudorandom 16
+        est. rep. 3, estação 320389127#0). A saída da estação leva, pelo
+        quarteirão, de volta à rua onde a fila espera; a fila cresce para
+        trás até ocupar essa saída. Quem recarregou (ou passa por ali indo
+        para outra estação) fica parado na rua da estação, atrás da fila, e
+        os estacionados não conseguem voltar à faixa. Ninguém anda.
+
+        Com a saída bloqueada há mais de 5 min, além do que _destravar_saidas
+        já faz:
+        (a) outros veículos parados na rua da estação, da zona das vagas em
+            diante (comuns, já recarregados, elétricos de outras estações),
+            vão para a frente na própria rota, como no teletransporte do
+            SUMO (_mover_para_proximo_trecho, até 10 ruas se preciso);
+        (b) elétricos desta estação ainda não recarregados (na fila ou
+            autorizados) parados no caminho de saída -- as ruas da rota de
+            quem está estacionado depois da estação, até 8, parando antes da
+            primeira rua onde a fila espera -- são retirados da simulação
+            (contados em "removido_fila_na_saida": não recarregam).
+        """
+        t = self.traci
+        for f in self._faixas(estacao):
+            for v in t.lane.getLastStepVehicleIDs(f):
+                if (self.ev_station_edge.get(v) == estacao and v not in self.recarregados):
+                    continue  # tratado em _destravar_saidas
+                if (t.vehicle.isStoppedParking(v) or t.vehicle.getSpeed(v) > 0.1
+                        or t.vehicle.getLanePosition(v) < inicio_zona - 1.0):
+                    continue
+                try:
+                    self._mover_para_proximo_trecho(v, "saida_bloqueada")
+                except t.exceptions.TraCIException:
+                    self.contagem["falha_ao_destravar"] += 1
+        espera = {loc[0] for w, loc in self._local_espera.items()
+                  if w in self.em_espera and self.ev_station_edge.get(w) == estacao}
+        caminho = set()
+        for v in estacionados:
+            try:
+                rota = t.vehicle.getRoute(v)
+                i = rota.index(estacao, max(t.vehicle.getRouteIndex(v), 0))
+            except (ValueError, t.exceptions.TraCIException):
+                continue
+            for e in rota[i + 1:i + 9]:
+                if e in espera or e == estacao:
+                    break
+                caminho.add(e)
+        for e in caminho:
+            for f in self._faixas(e):
+                for v in t.lane.getLastStepVehicleIDs(f):
+                    if (self.ev_station_edge.get(v) != estacao or v in self.recarregados
+                            or v not in self.em_espera and v not in self.autorizados
+                            or t.vehicle.getSpeed(v) > 0.1):
+                        continue
+                    try:
+                        t.vehicle.remove(v)
+                        self.em_espera.pop(v, None)
+                        self.autorizados.discard(v)
+                        self.contagem["removido_fila_na_saida"] += 1
+                    except t.exceptions.TraCIException:
+                        self.contagem["falha_ao_destravar"] += 1
 
     def _ajudar_troca_de_faixa(self) -> None:
         """
@@ -431,7 +577,7 @@ class StuckMonitor:
                     if destino is None:
                         continue
                     try:
-                        t.vehicle.moveTo(v, faixa, destino)
+                        self._mover_na_rua(v, faixa, destino)
                         na_faixa.append((destino, v))
                         self.contagem["ajuda_troca_de_faixa"] += 1
                     except t.exceptions.TraCIException:
@@ -514,15 +660,32 @@ class StuckMonitor:
         # greedy, estação 5667170): a rua anterior tinha 3,7 m, não havia
         # onde esperar, 133 elétricos seguiram direto para a estação cheia
         # e 79 tiveram de ser removidos. Limite: até 4 ruas para trás.
+        #
+        # Folga até as vagas (grade de 19/11): entre o primeiro da fila e o
+        # início da zona das vagas ficam sempre folga_saida_m - meia_zona_m
+        # (10 m), também quando a fila espera numa rua anterior. Antes, ela
+        # parava a 1 m do fim da rua anterior; com a estação numa faixa
+        # curta (sem zona, vagas na faixa inteira), quem recarregou não
+        # conseguia voltar à faixa -- o SUMO 1.2 exige distância segura até
+        # o carro de trás -- e a estação travava para sempre (greedyvoronoi
+        # 16 est. rep. 3, estação 23787966#0 com 4,4 m: 16 impasses; random
+        # 49 est. rep. 5, estação 131959462 com 16 m: 6 impasses).
+        folga = self.folga_saida_m - self.meia_zona_m
+        comp_est = t.lane.getLength(self.faixa_estacao[estacao])
+        meio = comp_est / 2.0
+        inicio_zona = meio - self.meia_zona_m if meio - self.folga_saida_m >= 5.0 else 0.0
+        distancia = inicio_zona          # do fim da rua j até o início das vagas
         j = i - 1
         while j >= 0 and i - j <= 4:
             if rota[j] not in proibido:
                 trecho, seguinte = rota[j], rota[j + 1]
                 faixa_idx = self._faixa_para(trecho, seguinte)
                 if faixa_idx is not None:
-                    pos = t.lane.getLength(f"{trecho}_{faixa_idx}") - 1.0
+                    comp = t.lane.getLength(f"{trecho}_{faixa_idx}")
+                    pos = comp - max(1.0, folga - distancia)
                     if pos >= 5.0:
                         return trecho, pos, faixa_idx, j
+            distancia += t.lane.getLength(f"{rota[j]}_0")
             j -= 1
         return None
 
