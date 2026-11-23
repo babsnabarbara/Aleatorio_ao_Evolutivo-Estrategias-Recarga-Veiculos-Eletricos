@@ -55,7 +55,7 @@ APPROACHES = ("random", "pseudorandom", "greedy", "greedyvoronoi", "genetic")
 
 MINUTES_RECHARGING = (10, 20, 40, 60)
 STATIONS_AMOUNTS = (9, 16, 25, 36, 49)
-PERCENTAGES = (1, 3, 5, 7, 9)    # 1, 3,5,7,9
+PERCENTAGES = (1, 5, 10, 20, 30)    # 1, 3,5,7,9
 REPETITIONS = tuple(range(1, 6))         # 1..5
 
 # Seeds usadas nas rodadas pré-computadas do algoritmo genético (exhaustive
@@ -90,7 +90,7 @@ DEFAULT_MAX_VEHICLES_PER_CS = 6
 # SUMO) -- o retry automático de cli.py entra em ação normalmente a
 # partir daí. Não é sobre "SUMO estar lento"; é um limite de tempo de
 # execução, não de tempo simulado.
-DEFAULT_MAX_SIMULATION_HOURS = 10.0
+DEFAULT_MAX_SIMULATION_HOURS = 24.0
 TIME_TO_TELEPORT_S = -1
 USE_STUCK_MONITOR = True
 STUCK_CHECK_INTERVAL_S = 60

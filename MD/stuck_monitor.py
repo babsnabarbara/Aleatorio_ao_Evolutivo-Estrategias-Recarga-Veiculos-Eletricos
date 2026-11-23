@@ -83,7 +83,7 @@ class StuckMonitor:
                  capacidade: int | None = None, aproximacao: dict | None = None,
                  faixa_estacao: dict | None = None, fila_intervalo_s: int = 1,
                  folga_saida_m: float = 12.0, saida_estacoes: dict | None = None,
-                 meia_zona_m: float = 6.0) -> None:
+                 meia_zona_m: float = 6.0, limite_autorizado_s: float = 1800.0) -> None:
         """
         ev_station_edge: {id do elétrico: id do trecho (edge) da sua estação}
         intervalo_s:     de quantos em quantos passos (s) a varredura roda
@@ -126,6 +126,7 @@ class StuckMonitor:
         self._diag_restantes = 3
         self._diag_fila_restantes = 3
         self.meia_zona_m = meia_zona_m
+        self.limite_autorizado_s = limite_autorizado_s   # ver _autorizado_travado
         self._bloqueio_desde: dict[str, int] = {}   # estação -> passo desde que a saída está bloqueada
         self._fila_parada_desde: dict[str, int] = {}   # quantas vezes imprimir o diagnóstico de bloqueio
 
@@ -181,6 +182,9 @@ class StuckMonitor:
                     self._mover_para_proximo_trecho(v, origem="cruzamento")
                 continue
             if self._esperando_vaga(v, trecho):
+                if self._autorizado_travado(v, trecho):
+                    self._mover_para_proximo_trecho(v, origem="autorizado_travado")
+                    continue
                 self.contagem["eletrico_aguardando_vaga"] += 1
                 continue
             if not self._primeiro_da_fila(v):
@@ -222,6 +226,31 @@ class StuckMonitor:
         rota = self.traci.vehicle.getRoute(v)
         idx = self.traci.vehicle.getRouteIndex(v)
         return idx + 1 < len(rota) and rota[idx + 1] == estacao
+
+    def _autorizado_travado(self, v: str, trecho: str) -> bool:
+        """Elétrico autorizado (com vaga garantida, a caminho dela) parado há
+        mais de `limite_autorizado_s` fora da rua da estação.
+
+        Autorizados nunca eram movidos (ver _esperando_vaga), para não
+        passarem do ponto de espera. Mas autorizado não espera em ponto
+        nenhum: ele só precisa chegar à vaga. Na grade 3 (22/11, 30%,
+        estações próximas), 27 autorizados da mesma estação -- vazia --
+        ficaram presos uns aos outros nos cruzamentos ao redor dela, em anel,
+        por ~9 h simuladas, até o detector de impasse abortar. Sem o
+        teletransporte do SUMO, ninguém desfazia o anel.
+
+        O limite é longo (30 min) para só pegar travamento de verdade: numa
+        fila normal o autorizado anda em minutos. Exige também ser o primeiro
+        da fila (mesma regra do teletransporte do SUMO). O movimento é o de
+        sempre: para a rua seguinte da rota, nunca além da rua anterior à
+        estação, então a parada de recarga continua à frente."""
+        if v not in self.autorizados or v in self.em_espera or v in self.recarregados:
+            return False
+        if trecho == self.ev_station_edge.get(v):
+            return False
+        if self.traci.vehicle.getWaitingTime(v) < self.limite_autorizado_s:
+            return False
+        return self._primeiro_da_fila(v)
 
     def _mover_para_proximo_trecho(self, v: str, origem: str = "") -> None:
         t = self.traci
