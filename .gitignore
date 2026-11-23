@@ -18,3 +18,4 @@ validating_genetic/*.out
 validating_genetic/checkpoints/
 validating_genetic/logs/
 
+output/
