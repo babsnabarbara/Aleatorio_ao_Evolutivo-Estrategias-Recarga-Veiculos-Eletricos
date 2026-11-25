@@ -373,7 +373,7 @@ def main(seed):
     log.info(f"Seed utilizada: {seed}")
     _flush_log()
 
-    netfile = "../input/cologne.net.xml"
+    netfile = "../cologne.net.xml"
     log.info(f"Arquivo existe? {os.path.exists(netfile)}")
 
     graph = generate_graph(netfile)
@@ -404,7 +404,7 @@ def main(seed):
         refine_start = time.time()
         refined_solution, refined_fitness = local_search(
             executor, best_solution, candidate_nodes, run_tag,
-            local_search_checkpoint_file, exhaustive=True, max_no_improve=2
+            local_search_checkpoint_file, exhaustive=True, max_no_improve=1
         )
         refine_elapsed = time.time() - refine_start
         log.info(f"Refinamento concluído em {_fmt_hms(refine_elapsed)}")
