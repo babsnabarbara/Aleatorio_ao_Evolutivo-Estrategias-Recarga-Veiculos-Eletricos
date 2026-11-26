@@ -51,7 +51,7 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 
-APPROACHES = ["random", "pseudorandom", "greedy", "greedyvoronoi", "genetic"]
+APPROACHES = ["random", "pseudorandom", "greedy", "greedyvoronoi", "genetic", "geneticpure"]
 GRUPOS = ["eletricos", "nao_eletricos", "geral"]
 METRICAS = ["duration", "duration_sem_parada", "route_length", "waiting_time",
             "time_loss", "depart_delay", "stop_time",
@@ -94,6 +94,18 @@ def ler_tripinfo(arquivo: Path, paradas: dict | None = None) -> dict[str, dict[s
     return dados
 
 
+def concluida(pasta: Path, rep: int, minutos: int) -> bool:
+    """True se o REPORT da repetição diz 'FIM DA SIMULAÇÃO'. Uma simulação
+    abortada (impasse, limite de tempo) ou ainda rodando pode ter tripinfo
+    parcial, que entraria nas médias só com os veículos que chegaram."""
+    for r in (pasta / "reports").glob(f"REPORT-{rep}file-{minutos}time-*"):
+        if r.name.endswith(".impasse.txt"):
+            continue
+        if "FIM DA SIMULAÇÃO" in r.read_text(encoding="utf-8", errors="ignore"):
+            return True
+    return False
+
+
 def medias(valores: list[dict[str, float]]) -> dict[str, float]:
     if not valores:
         return {m: float("nan") for m in METRICAS}
@@ -105,6 +117,13 @@ def main() -> None:
     ap.add_argument("--output-dir", default="output")
     ap.add_argument("--vehicles", type=int, default=8000)
     ap.add_argument("--approach", nargs="+", default=APPROACHES)
+    ap.add_argument("--percentuais", nargs="+", type=int, default=None,
+                    help="só esses percentuais (ex.: 1 5 10 20 30)")
+    ap.add_argument("--repeticoes", nargs="+", type=int, default=list(range(1, 11)),
+                    help="repetições a ler (default 1..10; as que não existem são ignoradas)")
+    ap.add_argument("--incluir-incompletos", action="store_true",
+                    help="inclui simulações sem 'FIM DA SIMULAÇÃO' no REPORT "
+                         "(falhas, impasses, ainda rodando) -- por padrão ficam de fora")
     args = ap.parse_args()
 
     base = Path(args.output_dir)
@@ -122,12 +141,17 @@ def main() -> None:
                 if not m:
                     continue
                 pct, cs = int(m.group(1)), int(m.group(2))
-                for rep in range(1, 6):
+                if args.percentuais and pct not in args.percentuais:
+                    continue
+                for rep in args.repeticoes:
                     f_sorted = pasta / f"sortedCars-{args.vehicles}" / f"sortedCars{rep}.xml"
                     f_trip = pasta / f"{rep}simulation{pct}percentual{cs}cs.xml"
                     ident = f"{approach}_{minutos}min_{cs}cs_{pct}pct_{rep}rep"
                     if not f_sorted.exists() or not f_trip.exists():
                         problemas.append(f"{ident}: arquivo ausente")
+                        continue
+                    if not args.incluir_incompletos and not concluida(pasta, rep, minutos):
+                        problemas.append(f"{ident}: sem 'FIM DA SIMULAÇÃO' (falhou ou ainda rodando)")
                         continue
                     if "git-lfs" in f_trip.read_text(errors="ignore")[:200]:
                         problemas.append(f"{ident}: tripinfo é ponteiro do Git LFS")

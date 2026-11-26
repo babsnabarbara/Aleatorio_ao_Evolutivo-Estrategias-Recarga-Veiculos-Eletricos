@@ -12,8 +12,12 @@ do GA usar e converter o resultado (lista de edge ids) para o formato de
 lane id que o resto do pipeline espera -- o GA opera no nível de rua/edge,
 não de lane específica.
 
-Usa o campo "solucao_final_refinada" do JSON (pós-refinamento), não
-"solucao_ga" (saída bruta, pré-refinamento) -- decisão explícita.
+Dois approaches leem o MESMO JSON, cada um um campo:
+  - 'genetic'     -> "solucao_final_refinada" (AG + busca local);
+  - 'geneticpure' -> "solucao_ga" (saída do AG puro, antes da busca local).
+Mesma seed por repetição (config.GENETIC_SEEDS), mesmas trips (registro
+de seeds de trips é compartilhado por todos os approaches) -- a única
+diferença entre as duas grades é a busca local.
 
 Sempre aceita as posições exatas do GA, sem filtrar por
 capacidade/comprimento de lane -- a capacidade real de cada estação é
@@ -93,6 +97,16 @@ def _lane_for_edge(edge_id: str, connected_lanes: frozenset,
 
 
 def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
+    """Approach 'genetic': solução após a busca local."""
+    return _select_from_field(job, graph, "solucao_final_refinada")
+
+
+def select_charging_points_pure(job: SimJob, graph: nx.DiGraph) -> set[str]:
+    """Approach 'geneticpure': solução do AG puro, sem a busca local."""
+    return _select_from_field(job, graph, "solucao_ga")
+
+
+def _select_from_field(job: SimJob, graph: nx.DiGraph, field: str) -> set[str]:
     seed = _seed_for_repetition(job.repetition)
     result_file = config.genetic_result_file(job.cs_amount, seed)
 
@@ -116,17 +130,17 @@ def select_charging_points(job: SimJob, graph: nx.DiGraph) -> set[str]:
             f"pediu cs_amount={job.cs_amount} -- arquivo na pasta errada?"
         )
 
-    edge_ids = data["solucao_final_refinada"]
+    edge_ids = data[field]
     if len(edge_ids) != job.cs_amount:
         raise ValueError(
             f"{result_file} tem {len(edge_ids)} estações em "
-            f"'solucao_final_refinada', esperado {job.cs_amount}."
+            f"'{field}', esperado {job.cs_amount}."
         )
 
     missing = [e for e in edge_ids if e not in graph]
     if missing:
         raise ValueError(
-            f"{result_file}: {len(missing)} edge(s) de 'solucao_final_refinada' "
+            f"{result_file}: {len(missing)} edge(s) de '{field}' "
             f"não pertencem ao componente gigante do grafo atual (net.xml "
             f"mudou desde que o GA rodou? Ou o `graph` recebido aqui não é "
             f"o componente gigante -- ver cli.py/graph_utils.default_giant_graph): "

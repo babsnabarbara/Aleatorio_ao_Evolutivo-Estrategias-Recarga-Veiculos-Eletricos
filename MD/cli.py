@@ -386,6 +386,7 @@ def batch(approach: str, workers: int | None, vehicles: int, max_vehicles_per_cs
         if not pending_jobs:
             log.info("Nada a fazer -- todos os jobs do grid já têm relatório de sucesso.")
             all_failed: list[str] = []
+            resolved_workers = workers or 1
         else:
             resolved_workers = workers if workers is not None else _auto_workers(len(pending_jobs))
             log.info(

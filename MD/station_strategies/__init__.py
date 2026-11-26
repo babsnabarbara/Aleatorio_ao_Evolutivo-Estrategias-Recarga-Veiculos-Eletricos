@@ -20,6 +20,7 @@ REGISTRY: dict[str, StationStrategy] = {
     "greedy": greedy_strategy.select_charging_points,
     "greedyvoronoi": greedy_voronoi_strategy.select_charging_points,
     "genetic": genetic_strategy.select_charging_points,
+    "geneticpure": genetic_strategy.select_charging_points_pure,
 }
 
 

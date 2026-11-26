@@ -2,10 +2,11 @@
 
 Rode da raiz do repositório, DEPOIS do metricas_por_grupo.py:
 
-    python3 metricas_por_grupo.py
-    python3 checar_grade.py
+    python3 metricas_por_grupo.py --percentuais 1 5 10 20 30
+    python3 checar_grade.py                      # grade 3: 1 5 10 20 30
+    python3 checar_grade.py --percentuais 1 3 5 7 9   # grade 2
 
-Para cada uma das 2.500 simulações esperadas (5 abordagens x 4 tempos x
+Para cada uma das 2.000 simulações esperadas (4 abordagens x 4 tempos x
 5 números de estações x 5 percentuais x 5 repetições), confere:
   - se há relatório de sucesso, de falha ou nenhum;
   - se há diagnóstico de impasse (.impasse.txt);
@@ -16,6 +17,7 @@ Para cada uma das 2.500 simulações esperadas (5 abordagens x 4 tempos x
 Grava tudo em checagem_grade.csv (uma linha por simulação) e imprime um
 resumo curto, que dá para copiar do terminal.
 """
+import argparse
 import csv
 import glob
 import os
@@ -23,15 +25,21 @@ import re
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 
-ABORDAGENS = ["random", "pseudorandom", "greedy", "greedyvoronoi", "genetic"]
+_ap = argparse.ArgumentParser()
+_ap.add_argument("--percentuais", nargs="+", type=int, default=[1, 5, 10, 20, 30])
+_ap.add_argument("--abordagens", nargs="+", default=["random", "pseudorandom", "greedy", "genetic"])
+_ap.add_argument("--repeticoes", nargs="+", type=int, default=[1, 2, 3, 4, 5])
+_args = _ap.parse_args()
+
+ABORDAGENS = _args.abordagens
 MINUTOS = [10, 20, 40, 60]
 ESTACOES = [9, 16, 25, 36, 49]
-PERCENTUAIS = [1, 3, 5, 7, 9]
-REPETICOES = [1, 2, 3, 4, 5]
+PERCENTUAIS = _args.percentuais
+REPETICOES = _args.repeticoes
 VEICULOS = 8001
 CONTADORES = ["removido_para_destravar", "removido_no_fim_da_rota", "recuado_para_destravar",
               "movido_eletrico", "movido_comum", "pulou_engarrafamento", "ajuda_troca_de_faixa",
-              "passou_do_ponto_de_espera", "removido_fila_na_saida", "espera_esquecida_apagada", "parada_recolocada_apos_mover"]
+              "passou_do_ponto_de_espera", "removido_fila_na_saida", "espera_esquecida_apagada", "parada_recolocada_apos_mover", "movido_do_autorizado_travado"]
 
 
 def ler_relatorio(caminho):
