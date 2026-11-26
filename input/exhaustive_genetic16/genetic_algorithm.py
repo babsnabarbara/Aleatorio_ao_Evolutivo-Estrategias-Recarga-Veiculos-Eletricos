@@ -19,7 +19,7 @@ NUM_WORKERS = os.cpu_count()
 # Lista de seeds a rodar em sequência, cada uma com seu próprio conjunto de
 # arquivos (log, checkpoints, resultado) -- não colidem entre si nem com
 # execuções anteriores de uma seed só.
-SEEDS_PARA_TESTAR = [42, 123, 777, 2024, 555]
+SEEDS_PARA_TESTAR = [1, 7, 13, 99, 314]  # novas; originais: [42, 123, 777, 2024, 555]
 
 log = logging.getLogger(__name__)
 log.setLevel(logging.INFO)
