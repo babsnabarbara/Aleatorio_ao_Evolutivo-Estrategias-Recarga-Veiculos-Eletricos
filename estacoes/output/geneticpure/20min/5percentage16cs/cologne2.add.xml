@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <parkingArea id="0" name="parkingArea" lane="-132705052#2_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="59.83" endPos="71.83">
+        <space x="22763.04" y="4795.67" angle="0"/>
+        <space x="22764.52" y="4797.68" angle="0"/>
+        <space x="22766.00" y="4799.70" angle="0"/>
+        <space x="22761.03" y="4797.15" angle="0"/>
+        <space x="22762.51" y="4799.17" angle="0"/>
+        <space x="22763.99" y="4801.18" angle="0"/>
+    </parkingArea>
+    <parkingArea id="1" name="parkingArea" lane="-190040363#5_0" roadsideCapacity="0" onRoad="false" friendlyPos="true">
+        <space x="9794.60" y="29884.40" angle="0"/>
+        <space x="9793.71" y="29886.74" angle="0"/>
+        <space x="9792.81" y="29889.07" angle="0"/>
+        <space x="9792.27" y="29883.50" angle="0"/>
+        <space x="9791.37" y="29885.84" angle="0"/>
+        <space x="9790.47" y="29888.17" angle="0"/>
+    </parkingArea>
+    <parkingArea id="2" name="parkingArea" lane="-23128219#1_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="66.87" endPos="78.87">
+        <space x="17072.22" y="29376.31" angle="0"/>
+        <space x="17074.37" y="29375.03" angle="0"/>
+        <space x="17076.52" y="29373.75" angle="0"/>
+        <space x="17073.49" y="29378.46" angle="0"/>
+        <space x="17075.64" y="29377.18" angle="0"/>
+        <space x="17077.79" y="29375.90" angle="0"/>
+    </parkingArea>
+    <parkingArea id="3" name="parkingArea" lane="-23720640#4_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="33.37" endPos="45.37">
+        <space x="9067.44" y="23665.35" angle="0"/>
+        <space x="9067.79" y="23662.88" angle="0"/>
+        <space x="9068.13" y="23660.40" angle="0"/>
+        <space x="9069.91" y="23665.70" angle="0"/>
+        <space x="9070.26" y="23663.23" angle="0"/>
+        <space x="9070.61" y="23660.75" angle="0"/>
+    </parkingArea>
+    <parkingArea id="4" name="parkingArea" lane="-238546449_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="192.46" endPos="204.46">
+        <space x="26407.76" y="29011.54" angle="0"/>
+        <space x="26408.46" y="29013.94" angle="0"/>
+        <space x="26409.15" y="29016.34" angle="0"/>
+        <space x="26405.36" y="29012.23" angle="0"/>
+        <space x="26406.06" y="29014.64" angle="0"/>
+        <space x="26406.75" y="29017.04" angle="0"/>
+    </parkingArea>
+    <parkingArea id="5" name="parkingArea" lane="-30851188#0_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="22.69" endPos="34.69">
+        <space x="4854.29" y="14635.96" angle="0"/>
+        <space x="4856.53" y="14634.85" angle="0"/>
+        <space x="4858.77" y="14633.75" angle="0"/>
+        <space x="4855.39" y="14638.20" angle="0"/>
+        <space x="4857.63" y="14637.09" angle="0"/>
+        <space x="4859.88" y="14635.99" angle="0"/>
+    </parkingArea>
+    <parkingArea id="6" name="parkingArea" lane="-37410909#2_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="101.88" endPos="113.88">
+        <space x="7841.11" y="7327.55" angle="0"/>
+        <space x="7843.56" y="7328.06" angle="0"/>
+        <space x="7846.00" y="7328.58" angle="0"/>
+        <space x="7840.60" y="7330.00" angle="0"/>
+        <space x="7843.04" y="7330.51" angle="0"/>
+        <space x="7845.49" y="7331.02" angle="0"/>
+    </parkingArea>
+    <parkingArea id="7" name="parkingArea" lane="-4369125#10_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="93.44" endPos="105.44">
+        <space x="25571.11" y="18644.54" angle="0"/>
+        <space x="25569.35" y="18642.77" angle="0"/>
+        <space x="25567.58" y="18641.00" angle="0"/>
+        <space x="25572.88" y="18642.77" angle="0"/>
+        <space x="25571.12" y="18641.00" angle="0"/>
+        <space x="25569.35" y="18639.23" angle="0"/>
+    </parkingArea>
+    <parkingArea id="8" name="parkingArea" lane="-50772571_0" roadsideCapacity="0" onRoad="false" friendlyPos="true">
+        <space x="29760.90" y="9555.97" angle="0"/>
+        <space x="29761.28" y="9558.44" angle="0"/>
+        <space x="29761.67" y="9560.91" angle="0"/>
+        <space x="29758.43" y="9556.35" angle="0"/>
+        <space x="29758.81" y="9558.82" angle="0"/>
+        <space x="29759.20" y="9561.29" angle="0"/>
+    </parkingArea>
+    <parkingArea id="9" name="parkingArea" lane="-85417941#1_0" roadsideCapacity="0" onRoad="false" friendlyPos="true">
+        <space x="18972.60" y="14166.68" angle="0"/>
+        <space x="18970.10" y="14166.60" angle="0"/>
+        <space x="18967.60" y="14166.52" angle="0"/>
+        <space x="18972.68" y="14164.18" angle="0"/>
+        <space x="18970.18" y="14164.10" angle="0"/>
+        <space x="18967.68" y="14164.02" angle="0"/>
+    </parkingArea>
+    <parkingArea id="10" name="parkingArea" lane="16661909#0_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="47.28" endPos="59.28">
+        <space x="16539.06" y="8350.70" angle="0"/>
+        <space x="16537.59" y="8352.72" angle="0"/>
+        <space x="16536.11" y="8354.74" angle="0"/>
+        <space x="16537.04" y="8349.23" angle="0"/>
+        <space x="16535.57" y="8351.25" angle="0"/>
+        <space x="16534.10" y="8353.27" angle="0"/>
+    </parkingArea>
+    <parkingArea id="11" name="parkingArea" lane="20428129#0_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="28.39" endPos="40.39">
+        <space x="12159.96" y="18225.18" angle="0"/>
+        <space x="12157.87" y="18223.82" angle="0"/>
+        <space x="12155.77" y="18222.46" angle="0"/>
+        <space x="12161.33" y="18223.09" angle="0"/>
+        <space x="12159.23" y="18221.73" angle="0"/>
+        <space x="12157.13" y="18220.36" angle="0"/>
+    </parkingArea>
+    <parkingArea id="12" name="parkingArea" lane="26411128#2_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="339.29" endPos="351.29">
+        <space x="4878.42" y="31014.33" angle="0"/>
+        <space x="4880.86" y="31014.86" angle="0"/>
+        <space x="4883.31" y="31015.39" angle="0"/>
+        <space x="4877.89" y="31016.77" angle="0"/>
+        <space x="4880.33" y="31017.30" angle="0"/>
+        <space x="4882.78" y="31017.83" angle="0"/>
+    </parkingArea>
+    <parkingArea id="13" name="parkingArea" lane="26929621#0_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="70.33" endPos="82.33">
+        <space x="18941.47" y="24487.85" angle="0"/>
+        <space x="18942.57" y="24490.09" angle="0"/>
+        <space x="18943.68" y="24492.34" angle="0"/>
+        <space x="18939.23" y="24488.95" angle="0"/>
+        <space x="18940.33" y="24491.19" angle="0"/>
+        <space x="18941.43" y="24493.44" angle="0"/>
+    </parkingArea>
+    <parkingArea id="14" name="parkingArea" lane="73356200#2_0" roadsideCapacity="0" onRoad="false" friendlyPos="true">
+        <space x="9838.46" y="2371.95" angle="0"/>
+        <space x="9835.96" y="2371.94" angle="0"/>
+        <space x="9833.46" y="2371.92" angle="0"/>
+        <space x="9838.48" y="2369.45" angle="0"/>
+        <space x="9835.98" y="2369.44" angle="0"/>
+        <space x="9833.48" y="2369.42" angle="0"/>
+    </parkingArea>
+    <parkingArea id="15" name="parkingArea" lane="8196629#4_0" roadsideCapacity="0" onRoad="false" friendlyPos="true" startPos="69.70" endPos="81.70">
+        <space x="13217.81" y="13118.90" angle="0"/>
+        <space x="13218.82" y="13121.18" angle="0"/>
+        <space x="13219.83" y="13123.47" angle="0"/>
+        <space x="13215.53" y="13119.91" angle="0"/>
+        <space x="13216.53" y="13122.19" angle="0"/>
+        <space x="13217.54" y="13124.48" angle="0"/>
+    </parkingArea>
+</additional>
